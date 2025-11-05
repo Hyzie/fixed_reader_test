@@ -1,4 +1,5 @@
 #include "eth.h"
+#include "network_config.h"
 #include <stdio.h>
 #include <string.h>
 #include "esp_netif.h"
@@ -99,9 +100,35 @@ void eth_init(void)
     ESP_ERROR_CHECK(esp_netif_init());
     // Create default event loop
     ESP_ERROR_CHECK(esp_event_loop_create_default());
-    // Create new Ethernet network interface
+    
+    // Create new Ethernet network interface with DHCP disabled
     esp_netif_config_t cfg = ESP_NETIF_DEFAULT_ETH();
     esp_netif_t *eth_netif = esp_netif_new(&cfg);
+    
+    // Disable DHCP client (we'll use static IP)
+    ESP_ERROR_CHECK(esp_netif_dhcpc_stop(eth_netif));
+    
+    // Configure static IP settings
+    esp_netif_ip_info_t ip_info;
+    IP4_ADDR(&ip_info.ip, STATIC_IP_OCTET1, STATIC_IP_OCTET2, STATIC_IP_OCTET3, STATIC_IP_OCTET4);        // Static IP from config
+    IP4_ADDR(&ip_info.gw, GATEWAY_OCTET1, GATEWAY_OCTET2, GATEWAY_OCTET3, GATEWAY_OCTET4);          // Gateway from config
+    IP4_ADDR(&ip_info.netmask, NETMASK_OCTET1, NETMASK_OCTET2, NETMASK_OCTET3, NETMASK_OCTET4);     // Subnet mask from config
+    
+    ESP_ERROR_CHECK(esp_netif_set_ip_info(eth_netif, &ip_info));
+    
+    ESP_LOGI(TAG, "Static IP configured: " IPSTR, IP2STR(&ip_info.ip));
+    ESP_LOGI(TAG, "Gateway: " IPSTR, IP2STR(&ip_info.gw));
+    ESP_LOGI(TAG, "Netmask: " IPSTR, IP2STR(&ip_info.netmask));
+    
+    // Configure DNS servers (optional but recommended for internet access)
+    esp_netif_dns_info_t dns_info;
+    IP4_ADDR(&dns_info.ip.u_addr.ip4, PRIMARY_DNS_OCTET1, PRIMARY_DNS_OCTET2, PRIMARY_DNS_OCTET3, PRIMARY_DNS_OCTET4);              // Primary DNS from config
+    ESP_ERROR_CHECK(esp_netif_set_dns_info(eth_netif, ESP_NETIF_DNS_MAIN, &dns_info));
+    
+    IP4_ADDR(&dns_info.ip.u_addr.ip4, SECONDARY_DNS_OCTET1, SECONDARY_DNS_OCTET2, SECONDARY_DNS_OCTET3, SECONDARY_DNS_OCTET4);            // Secondary DNS from config
+    ESP_ERROR_CHECK(esp_netif_set_dns_info(eth_netif, ESP_NETIF_DNS_BACKUP, &dns_info));
+    
+    ESP_LOGI(TAG, "DNS servers configured from network_config.h");
 
     // Init GPIO ISR service
     gpio_install_isr_service(0);

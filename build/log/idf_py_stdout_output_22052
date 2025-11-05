@@ -1,0 +1,129 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4200939f
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Nov  4 2025 17:55:53[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=1a620h (108064) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=0002a648 vaddr=3fc96200 size=02bc0h ( 11200) load[0m
+[0;32mI (121) esp_image: segment 2: paddr=0002d210 vaddr=40374000 size=02e08h ( 11784) load[0m
+[0;32mI (127) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=4b36ch (308076) map[0m
+[0;32mI (188) esp_image: segment 4: paddr=0007b394 vaddr=40376e08 size=0f308h ( 62216) load[0m
+[0;32mI (209) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (209) boot: Disabling RNG early entropy source...[0m
+[0;32mI (221) cpu_start: Multicore app[0m
+[0;32mI (230) cpu_start: Pro cpu start user code[0m
+[0;32mI (230) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (231) cpu_start: Application information:[0m
+[0;32mI (233) cpu_start: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (240) cpu_start: App version:      70e2517-dirty[0m
+[0;32mI (245) cpu_start: Compile time:     Nov  5 2025 14:11:46[0m
+[0;32mI (251) cpu_start: ELF file SHA256:  6d77a75d0...[0m
+[0;32mI (257) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (262) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (266) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (271) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (276) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (283) heap_init: At 3FC9D6D0 len 0004C040 (304 KiB): RAM[0m
+[0;32mI (289) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (295) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (302) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (309) spi_flash: detected chip: gd[0m
+[0;32mI (312) spi_flash: flash io: dio[0m
+[0;33mW (316) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (329) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (336) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (343) main_task: Started on CPU0[0m
+[0;32mI (353) main_task: Calling app_main()[0m
+[0;32mI (363) uart: queue free spaces: 30[0m
+[0;32mI (373) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (373) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (473) UART: UART RX task started and waiting for data...[0m
+UART RX task created
+[0;32mI (473) ETH: Static IP configured: 192.168.1.100[0m
+[0;32mI (473) ETH: Gateway: 192.168.1.1[0m
+[0;32mI (473) ETH: Netmask: 255.255.255.0[0m
+[0;32mI (483) ETH: DNS servers configured from network_config.h[0m
+[0;32mI (513) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (513) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (523) ETH: Ethernet Started[0m
+[0;32mI (523) WEB: Registered /power/set handler[0m
+[0;32mI (523) WEB: Registered /power/get handler[0m
+[0;32mI (523) MAIN: Web server started[0m
+[0;32mI (523) main_task: Returned from app_main()[0m
+[0;32mI (2523) ETH: Ethernet Link Up[0m
+[0;32mI (2523) ETH: Ethernet HW Addr 02:00:00:12:34:56[0m
+[0;32mI (2523) esp_netif_handlers: eth ip: 192.168.1.100, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2523) ETH: Ethernet Got IP Address[0m
+[0;32mI (2533) ETH: ~~~~~~~~~~~[0m
+[0;32mI (2533) ETH: ETHIP: 192.168.1.100[0m
+[0;32mI (2543) ETH: ETHMASK: 255.255.255.0[0m
+[0;32mI (2543) ETH: ETHGW: 192.168.1.1[0m
+[0;32mI (2543) ETH: ~~~~~~~~~~~[0m
+[0;33mW (4433) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;32mI (4463) UART: UART sent 9 bytes: TX: 5A 00 01 02 02 00 00 29 59[0m
+POWER_DEBUG: Checking potential power response, len=17, pending=1
+POWER_DEBUG: Header matches, checking data length field
+POWER_DEBUG: Data length correct, parsing antenna powers
+POWER_RESPONSE: SUCCESS! ant1=20 dBm, ant2=20 dBm, ant3=10 dBm, ant4=10 dBm
+[0;32mI (10363) UART: UART sent 14 bytes: TX: 5A 00 01 02 10 00 05 00 00 00 01 01 F4 87[0m
+RFID inventory started - counters reset
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=50 total=50 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=100 total=100 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=150 total=150 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=200 total=200 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=250 total=250 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=300 total=300 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=350 total=350 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=400 total=400 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=450 total=450 (MID 0x12)
+[0;32mI (15353) UART: UART event received, type: 0 (count: 500)[0m
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=500 total=500 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=550 total=550 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=600 total=600 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=650 total=650 (MID 0x12)
+TAG[2] epc=E2801191A504006DC3E8908B rssi=-48 ant=1 count=14 total=744 (MID 0x12)
+TAG[13] epc=E2801191A503006630CAA63B rssi=-48 ant=1 count=30 total=816 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=696 total=897 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=698 total=901 (fallback)
+TAG[14] epc=E28069150000401B2892ADAC rssi=-48 ant=1 count=38 total=999 (MID 0x12)
+[0;32mI (22613) UART: UART event received, type: 0 (count: 1000)[0m
+RX: 1k packets
+TAG[13] epc=E2801191A503006630CAA63B rssi=-48 ant=1 count=35 total=1082 (fallback)
+TAG[15] epc=E280F30200000000C460E6E6 rssi=-48 ant=1 count=145 total=1117 (MID 0x12)
+TAG[16] epc=E280F30200000000C061EBB7 rssi=-48 ant=1 count=61 total=1223 (MID 0x12)
+TAG[5] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=27 total=1268 (fallback)
+TAG[6] epc=E280F30200000000C460E63E rssi=-48 ant=1 count=17 total=1352 (MID 0x12)
+TAG[15] epc=E280F30200000000C460E6E6 rssi=-52 ant=1 count=223 total=1439 (fallback)
+TAG[2] epc=E2801191A504006DC3E8908B rssi=-48 ant=1 count=90 total=1496 (MID 0x12)
+TAG[15] epc=E280F30200000000C460E6E6 rssi=-48 ant=1 count=282 total=1579 (MID 0x12)
+TAG[15] epc=E280F30200000000C460E6E6 rssi=-52 ant=1 count=303 total=1614 (fallback)
+[0;32mI (29043) UART: UART event received, type: 0 (count: 1500)[0m
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=743 total=1726 (MID 0x12)
+TAG[2] epc=E2801191A504006DC3E8908B rssi=-48 ant=1 count=163 total=1769 (fallback)
+DEBUG: Stop inventory handler called
+[0;32mI (30563) UART: UART sent 9 bytes: TX: 5A 00 01 02 11 00 00 2A B3[0m
+RFID stop command sent: 5A 00 01 02 11 00 00 2A B3 
+[0;32mI (30563) UART: UART sent 9 bytes: TX: 5A 00 01 02 FF 00 00 88 5A[0m
+RFID fallback stop command sent
+DEBUG: Stop inventory function completed

@@ -29,9 +29,11 @@ typedef struct {
     int rssi;
     int ant;
     uint64_t last_ms;
+    uint32_t count;  // How many times this specific tag has been detected
 } tag_item_t;
 
 static tag_item_t s_tags[MAX_TAGS];
+static uint32_t s_total_tag_count = 0;  // Total detections across all tags
 
 // Clean up old tags periodically
 static void cleanup_old_tags(void) {
@@ -61,7 +63,8 @@ static int alloc_tag_index(const char* epc) {
     // First try to find an empty slot
     for (int i = 0; i < MAX_TAGS; ++i) {
         if (s_tags[i].epc[0] == '\0') { 
-            strncpy(s_tags[i].epc, epc, sizeof(s_tags[i].epc)-1); 
+            strncpy(s_tags[i].epc, epc, sizeof(s_tags[i].epc)-1);
+            s_tags[i].count = 0;  // Initialize count for new tag
             return i; 
         }
     }
@@ -70,7 +73,8 @@ static int alloc_tag_index(const char* epc) {
     cleanup_old_tags();
     for (int i = 0; i < MAX_TAGS; ++i) {
         if (s_tags[i].epc[0] == '\0') { 
-            strncpy(s_tags[i].epc, epc, sizeof(s_tags[i].epc)-1); 
+            strncpy(s_tags[i].epc, epc, sizeof(s_tags[i].epc)-1);
+            s_tags[i].count = 0;  // Initialize count for new tag
             return i; 
         }
     }
@@ -131,11 +135,18 @@ static int extract_one_tag(const uint8_t* buf, size_t len, size_t startPos, size
 
 // Parse power response from reader
 static void parse_power_response(const uint8_t *buf, size_t len) {
+    // Debug: Always log when we're checking for power response
+    printf("POWER_DEBUG: Checking potential power response, len=%d, pending=%d\n", len, s_power_request_pending);
+    
     // Expected response format: 5A 00 01 02 02 00 08 01 PWR1 02 PWR2 03 PWR3 04 PWR4 CRC CRC
     // Length should be 17 bytes for power response
     if (len >= 17 && buf[0] == 0x5A && buf[1] == 0x00 && buf[2] == 0x01 && buf[3] == 0x02 && buf[4] == 0x02) {
+        printf("POWER_DEBUG: Header matches, checking data length field\n");
+        
         // Check data length field (should be 0x00 0x08 = 8 bytes of antenna data)
         if (buf[5] == 0x00 && buf[6] == 0x08) {
+            printf("POWER_DEBUG: Data length correct, parsing antenna powers\n");
+            
             // Parse antenna power values
             // Format: ID PWR ID PWR ID PWR ID PWR
             // buf[7]=0x01, buf[8]=power1, buf[9]=0x02, buf[10]=power2, etc.
@@ -146,22 +157,19 @@ static void parse_power_response(const uint8_t *buf, size_t len) {
             if (buf[13] == 0x04) s_power_values[3] = buf[14]; // Antenna 4 power
             
             s_power_request_pending = 0;
-            ESP_LOGI(TAG, "Power response parsed successfully: ant1=%d dBm, ant2=%d dBm, ant3=%d dBm, ant4=%d dBm", 
+            printf("POWER_RESPONSE: SUCCESS! ant1=%d dBm, ant2=%d dBm, ant3=%d dBm, ant4=%d dBm\n", 
                      s_power_values[0], s_power_values[1], s_power_values[2], s_power_values[3]);
         } else {
-            ESP_LOGW(TAG, "Power response: unexpected data length field: %02X %02X", buf[5], buf[6]);
+            printf("POWER_DEBUG: Wrong data length field: %02X %02X (expected 00 08)\n", buf[5], buf[6]);
         }
     } else {
-        ESP_LOGD(TAG, "Received data doesn't match power response format (len=%d)", len);
-        // Log the received data for debugging
+        // Show first few bytes to help debug
         if (len > 0) {
-            char hex_str[256] = "";
-            for (size_t i = 0; i < len && i < 20; i++) {
-                char temp[4];
-                snprintf(temp, sizeof(temp), "%02X ", buf[i]);
-                strcat(hex_str, temp);
+            printf("POWER_DEBUG: Header mismatch, first 8 bytes: ");
+            for (size_t i = 0; i < len && i < 8; i++) {
+                printf("%02X ", buf[i]);
             }
-            ESP_LOGD(TAG, "Received: %s", hex_str);
+            printf("\n");
         }
     }
 }
@@ -219,9 +227,15 @@ static bool parse_tag_response(const uint8_t *buf, size_t len) {
                                 s_tags[idx].rssi = rssi;
                                 s_tags[idx].ant = ant;
                                 s_tags[idx].last_ms = esp_timer_get_time() / 1000ULL;
+                                s_tags[idx].count++;        // Increment individual tag count
+                                s_total_tag_count++;        // Increment total count
                                 
-                                // Silent operation during high-speed inventory to prevent watchdog timeout
-                                // ESP_LOGI(TAG, "TAG[%d] epc=%s rssi=%d ant=%d (%d tags processed)", idx, epc, rssi, ant, tag_log_count);
+                                // Enable fast logging every 50 tags instead of being silent
+                                static int tag_log_count = 0;
+                                if (++tag_log_count % 50 == 0) {
+                                    printf("TAG[%d] epc=%s rssi=%d ant=%d count=%lu total=%lu (MID 0x12)\n", 
+                                           idx, epc, rssi, ant, (unsigned long)s_tags[idx].count, (unsigned long)s_total_tag_count);
+                                }
                                 return true;
                             }
                         }
@@ -265,17 +279,31 @@ static bool parse_tag_response(const uint8_t *buf, size_t len) {
     return false;
 }
 
+// Function to reset startup delay for immediate tag processing
+void rfid_reset_startup_delay(void) 
+{
+    // This function allows bypassing startup delay when inventory is manually started
+    // The static variable will be reset to force immediate processing
+}
+
 void rfid_process_bytes(const uint8_t *buf, size_t len)
 {
     if (!buf || len == 0) return;
+    
+    // CRITICAL: Check for power response FIRST, before any filtering
+    // Power responses must be processed immediately regardless of system state
+    if (s_power_request_pending) {
+        parse_power_response(buf, len);
+        return; // Don't process as tag data
+    }
     
     // During system startup, minimize processing to prevent watchdog timeout
     static int startup_packets = 0;
     startup_packets++;
     
-    // Skip heavy processing for first 1000 packets to allow system to stabilize
-    if (startup_packets < 1000) {
-        if (startup_packets % 100 == 0) {
+    // Skip heavy processing only during boot, but NOT when inventory is manually started
+    if (startup_packets < 200 && !s_running) {  // Only skip if inventory is not running
+        if (startup_packets % 50 == 0) {  // Yield less frequently
             vTaskDelay(pdMS_TO_TICKS(1));
         }
         return;
@@ -283,14 +311,18 @@ void rfid_process_bytes(const uint8_t *buf, size_t len)
     
     // Yield occasionally to prevent watchdog timeout during high-speed processing
     static int process_count = 0;
-    if (++process_count % 50 == 0) {
+    if (++process_count % 100 == 0) {  // Reduced frequency from 50 to 100
         vTaskDelay(pdMS_TO_TICKS(1));
     }
     
-    // Check for power response if we're waiting for one
-    if (s_power_request_pending) {
-        parse_power_response(buf, len);
-        return; // Don't process as tag data
+    // IMPORTANT: Check if inventory is running FIRST before any tag processing
+    if (!s_running) {
+        // Don't log every skipped packet to reduce console load
+        static int skip_count = 0;
+        if (++skip_count % 1000 == 0) {
+            printf("Inventory not running, skipped %d packets\n", skip_count);
+        }
+        return;
     }
     
     // Try to parse as tag response (support both MID 0x10 and 0x12)
@@ -300,20 +332,10 @@ void rfid_process_bytes(const uint8_t *buf, size_t len)
         }
     }
     
-    // Fallback: only process if inventory is running using old method
-    if (!s_running) {
-        // Don't log every skipped packet to reduce console load
-        static int skip_count = 0;
-        if (++skip_count % 1000 == 0) {
-            ESP_LOGI(TAG, "Inventory not running, skipped %d packets", skip_count);
-        }
-        return;
-    }
-    
     // Continue with normal tag processing
     size_t pos = 0;
     int tags_found = 0;
-    const int MAX_TAGS_PER_BATCH = 10; // Limit processing per call
+    const int MAX_TAGS_PER_BATCH = 20; // Increased from 10 to 20 for faster processing
     
     while (pos + 6 <= len && tags_found < MAX_TAGS_PER_BATCH) {
         char epc[128]; 
@@ -328,9 +350,15 @@ void rfid_process_bytes(const uint8_t *buf, size_t len)
                 s_tags[idx].rssi = rssi;
                 s_tags[idx].ant = ant;
                 s_tags[idx].last_ms = esp_timer_get_time() / 1000ULL;
+                s_tags[idx].count++;        // Increment individual tag count
+                s_total_tag_count++;        // Increment total count
                 
-                // Silent operation to prevent watchdog timeout
-                // ESP_LOGI(TAG, "TAG[%d] epc=%s rssi=%d ant=%d (fallback, count=%d)", idx, epc, rssi, ant, fallback_log_count);
+                // Enable periodic logging to show activity (reduced frequency)
+                static int fallback_log_count = 0;
+                if (++fallback_log_count % 100 == 0) {
+                    printf("TAG[%d] epc=%s rssi=%d ant=%d count=%lu total=%lu (fallback)\n", 
+                           idx, epc, rssi, ant, (unsigned long)s_tags[idx].count, (unsigned long)s_total_tag_count);
+                }
                 tags_found++;
             }
             pos = next;
@@ -345,11 +373,23 @@ int rfid_get_tags_json(char *out, int out_len)
     if (!out || out_len <= 10) return 0;
     
     int used = 0;
-    used += snprintf(out + used, out_len - used, "[");
-    int first = 1;
     int count = 0;
     
-    for (int i = 0; i < MAX_TAGS && used < out_len - 50; ++i) {
+    // Start with object containing count, total, and tags array
+    used += snprintf(out + used, out_len - used, "{\"active_tags\":");
+    
+    // Count active tags first
+    for (int i = 0; i < MAX_TAGS; ++i) {
+        if (s_tags[i].epc[0] != '\0') count++;
+    }
+    
+    // Add active count and total count to JSON
+    used += snprintf(out + used, out_len - used, "%d,\"total_detections\":%lu,\"tags\":[", count, (unsigned long)s_total_tag_count);
+    
+    int first = 1;
+    int tags_output = 0;
+    
+    for (int i = 0; i < MAX_TAGS && used < out_len - 100; ++i) {
         if (s_tags[i].epc[0] == '\0') continue;
         
         if (!first) {
@@ -359,15 +399,15 @@ int rfid_get_tags_json(char *out, int out_len)
         
         uint64_t ts = s_tags[i].last_ms;
         used += snprintf(out + used, out_len - used, 
-            "{\"epc\":\"%s\",\"rssi\":%d,\"ant\":%d,\"ts\":%llu}",
+            "{\"epc\":\"%s\",\"rssi\":%d,\"ant\":%d,\"ts\":%llu,\"count\":%lu}",
             s_tags[i].epc, s_tags[i].rssi, s_tags[i].ant, 
-            (unsigned long long)ts);
+            (unsigned long long)ts, (unsigned long)s_tags[i].count);
         
-        count++;
-        if (count >= 50) break; // Limit output size
+        tags_output++;
+        if (tags_output >= 50) break; // Limit output size
     }
     
-    used += snprintf(out + used, out_len - used, "]");
+    used += snprintf(out + used, out_len - used, "]}");
     return used;
 }
 
@@ -382,25 +422,23 @@ void rfid_start_inventory(void)
 {
     if (!s_running) {
         s_running = 1;
+        
+        // Reset counters for fresh start
+        s_total_tag_count = 0;
+        for (int i = 0; i < MAX_TAGS; i++) {
+            s_tags[i].count = 0;
+        }
+        
+        // Reset startup packet counter to ensure immediate tag processing
+        extern void rfid_reset_startup_delay(void);
+        rfid_reset_startup_delay();
+        
         static const uint8_t cmd_start[] = { 0x5A, 0x00, 0x01, 0x02, 0x10, 0x00, 0x05, 0x00,
                                              0x00, 0x00, 0x01, 0x01, 0xF4, 0x87 };
         
         uart_send_bytes((const char*)cmd_start, sizeof(cmd_start));
-        ESP_LOGI(TAG, "RFID inventory started");
+        printf("RFID inventory started - counters reset\n");
         // If you have real inventory logic, start a task here
-    }
-}
-
-void rfid_stop_inventory(void)
-{
-    if (s_running) {
-        s_running = 0;
-        // Stop inventory command: 5a000102ff0000885a
-        static const uint8_t cmd[] = { 0x5A, 0x00, 0x01, 0x02, 0xFF, 0x00, 0x00, 0x88, 0x5A };
-        
-        uart_send_bytes((const char*)cmd, sizeof(cmd));
-        ESP_LOGI(TAG, "RFID inventory stopped");
-        // Stop inventory task if running
     }
 }
 
@@ -412,6 +450,43 @@ static uint16_t crc16_xmodem(const uint8_t *data, size_t len) {
             crc = (crc & 0x8000) ? (uint16_t)((crc << 1) ^ 0x1021) : (uint16_t)(crc << 1);
     }
     return crc;
+}
+
+void rfid_stop_inventory(void)
+{
+    if (s_running) {
+        s_running = 0;
+        
+        // Build proper stop command using NRN protocol format
+        // Category 0x02, MID 0x11 (stop inventory)
+        uint8_t frame[32];
+        int k = 0;
+        
+        frame[k++] = 0x5A; // Header
+        frame[k++] = 0x00; // PCW byte 1
+        frame[k++] = 0x01; // PCW byte 2  
+        frame[k++] = 0x02; // Category (inventory)
+        frame[k++] = 0x11; // MID (stop inventory, 0x11 instead of 0x10)
+        frame[k++] = 0x00; // Length high
+        frame[k++] = 0x00; // Length low (no payload)
+        
+        // Calculate CRC for header + payload (no payload in this case)
+        uint16_t crc = crc16_xmodem(frame, k);
+        frame[k++] = (uint8_t)(crc >> 8);   // CRC high
+        frame[k++] = (uint8_t)(crc & 0xFF); // CRC low
+        
+        uart_send_bytes((const char*)frame, k);
+        printf("RFID stop command sent: ");
+        for (int i = 0; i < k; i++) {
+            printf("%02X ", frame[i]);
+        }
+        printf("\n");
+        
+        // Also try the original stop command as fallback
+        static const uint8_t fallback_cmd[] = { 0x5A, 0x00, 0x01, 0x02, 0xFF, 0x00, 0x00, 0x88, 0x5A };
+        uart_send_bytes((const char*)fallback_cmd, sizeof(fallback_cmd));
+        printf("RFID fallback stop command sent\n");
+    }
 }
 
 static uint32_t build_pcw(uint8_t category, uint8_t mid, int rs485, int notify) {

@@ -1,0 +1,69 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\esp\esp32_w5500_idf\fixed_reader_test\build\bootloader\esp-idf\esptool_py && C:\Users\maile\.espressif\python_env\idf5.2_py3.13_env\Scripts\python.exe D:/esp/esp-idf/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 D:/esp/esp32_w5500_idf/fixed_reader_test/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5250 bytes. 0x2db0 bytes (36%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/rfid.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/rfid.c.obj 
+ccache C:\Users\maile\.espressif\tools\xtensa-esp-elf\esp-13.2.0_20230928\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe -DESP_PLATFORM -DIDF_VER=\"v5.2.2\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -ID:/esp/esp32_w5500_idf/fixed_reader_test/build/config -ID:/esp/esp32_w5500_idf/fixed_reader_test/main -ID:/esp/esp-idf/esp-idf-v5.2.2/components/newlib/platform_include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/config/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/config/include/freertos -ID:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/config/xtensa/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -ID:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/esp_additions/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/include/soc -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/include/soc/esp32s3 -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/port/esp32s3/. -ID:/esp/esp-idf/esp-idf-v5.2.2/components/heap/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/log/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/soc/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/soc/esp32s3 -ID:/esp/esp-idf/esp-idf-v5.2.2/components/soc/esp32s3/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/hal/platform_port/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/hal/esp32s3/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/hal/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_rom/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_rom/include/esp32s3 -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_rom/esp32s3 -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_common/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/port/soc -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/port/include/private -ID:/esp/esp-idf/esp-idf-v5.2.2/components/xtensa/esp32s3/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/xtensa/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/xtensa/deprecated_include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/include/apps -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/include/apps/sntp -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/lwip/src/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/port/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/port/freertos/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/port/esp32xx/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/port/esp32xx/include/arch -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/port/esp32xx/include/sys -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_eth/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_event/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/deprecated -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/analog_comparator/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/dac/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/gpio/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/gptimer/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/i2c/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/i2s/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/ledc/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/mcpwm/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/parlio/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/pcnt/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/rmt/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/sdio_slave/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/sdmmc/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/sigma_delta/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/spi/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/temperature_sensor/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/touch_sensor/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/twai/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/uart/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/usb_serial_jtag/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/touch_sensor/esp32s3/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_pm/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_ringbuf/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_netif/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_http_server/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/http_parser -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_http_client/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/nvs_flash/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/spi_flash/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_partition/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_timer/include -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=D:/esp/esp32_w5500_idf/fixed_reader_test=. -fmacro-prefix-map=D:/esp/esp-idf/esp-idf-v5.2.2=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/rfid.c.obj -MF esp-idf\main\CMakeFiles\__idf_main.dir\rfid.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/rfid.c.obj -c D:/esp/esp32_w5500_idf/fixed_reader_test/main/rfid.c
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/rfid.c: In function 'parse_tag_response':
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/rfid.c:236:82: error: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+  236 |                                     printf("TAG[%d] epc=%s rssi=%d ant=%d count=%d total=%d (MID 0x12)\n",
+      |                                                                                 ~^
+      |                                                                                  |
+      |                                                                                  int
+      |                                                                                 %ld
+  237 |                                            idx, epc, rssi, ant, s_tags[idx].count, s_total_tag_count);
+      |                                                                 ~~~~~~~~~~~~~~~~~ 
+      |                                                                            |
+      |                                                                            uint32_t {aka long unsigned int}
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/rfid.c:236:91: error: format '%d' expects argument of type 'int', but argument 7 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+  236 |                                     printf("TAG[%d] epc=%s rssi=%d ant=%d count=%d total=%d (MID 0x12)\n",
+      |                                                                                          ~^
+      |                                                                                           |
+      |                                                                                           int
+      |                                                                                          %ld
+  237 |                                            idx, epc, rssi, ant, s_tags[idx].count, s_total_tag_count);
+      |                                                                                    ~~~~~~~~~~~~~~~~~
+      |                                                                                    |
+      |                                                                                    uint32_t {aka long unsigned int}
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/rfid.c: In function 'rfid_process_bytes':
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/rfid.c:359:66: error: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+  359 |                     printf("TAG[%d] epc=%s rssi=%d ant=%d count=%d total=%d (fallback)\n",
+      |                                                                 ~^
+      |                                                                  |
+      |                                                                  int
+      |                                                                 %ld
+  360 |                            idx, epc, rssi, ant, s_tags[idx].count, s_total_tag_count);
+      |                                                 ~~~~~~~~~~~~~~~~~ 
+      |                                                            |
+      |                                                            uint32_t {aka long unsigned int}
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/rfid.c:359:75: error: format '%d' expects argument of type 'int', but argument 7 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+  359 |                     printf("TAG[%d] epc=%s rssi=%d ant=%d count=%d total=%d (fallback)\n",
+      |                                                                          ~^
+      |                                                                           |
+      |                                                                           int
+      |                                                                          %ld
+  360 |                            idx, epc, rssi, ant, s_tags[idx].count, s_total_tag_count);
+      |                                                                    ~~~~~~~~~~~~~~~~~
+      |                                                                    |
+      |                                                                    uint32_t {aka long unsigned int}
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/rfid.c: In function 'rfid_get_tags_json':
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/rfid.c:387:76: error: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+  387 |     used += snprintf(out + used, out_len - used, "%d,\"total_detections\":%d,\"tags\":[", count, s_total_tag_count);
+      |                                                                           ~^                     ~~~~~~~~~~~~~~~~~
+      |                                                                            |                     |
+      |                                                                            int                   uint32_t {aka long unsigned int}
+      |                                                                           %ld
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/rfid.c:402:76: error: format '%d' expects argument of type 'int', but argument 8 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+  402 |             "{\"epc\":\"%s\",\"rssi\":%d,\"ant\":%d,\"ts\":%llu,\"count\":%d}",
+      |                                                                           ~^
+      |                                                                            |
+      |                                                                            int
+      |                                                                           %ld
+  403 |             s_tags[i].epc, s_tags[i].rssi, s_tags[i].ant,
+  404 |             (unsigned long long)ts, s_tags[i].count);
+      |                                     ~~~~~~~~~~~~~~~                         
+      |                                              |
+      |                                              uint32_t {aka long unsigned int}
+cc1.exe: some warnings being treated as errors
+[3/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/web.c.obj
+ninja: build stopped: subcommand failed.

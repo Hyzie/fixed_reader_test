@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "esp32-w5500-uart-control",
-    "project_version":    "159598a-dirty",
+    "project_version":    "70e2517-dirty",
     "project_path":       "D:/esp/esp32_w5500_idf/fixed_reader_test",
     "idf_path":           "D:/esp/esp-idf/esp-idf-v5.2.2",
     "build_dir":          "D:/esp/esp32_w5500_idf/fixed_reader_test/build",

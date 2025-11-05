@@ -118,21 +118,25 @@ static const char* HTML_CONTENT = R"rawliteral(
     setInterval(fetchStatus, 1000);
     fetchStatus();
 
-    // Poll tags every 800ms
+    // Poll tags every 300ms (faster updates for real-time feeling)
     async function fetchTags(){
       try{
         const r = await fetch('/tags');
         if (!r.ok) return;
-        const j = await r.json();
+        const data = await r.json();
         const el = document.getElementById('tags');
-        el.textContent = '';
-        for (let i=0;i<j.length;i++){
-          const t = j[i];
-          el.textContent += `epc=${t.epc} rssi=${t.rssi} ant=${t.ant} ts=${t.ts}\n`;
+        
+        // Display tag counts at the top
+        el.textContent = `Active Tags: ${data.active_tags} | Total Detections: ${data.total_detections}\n\n`;
+        
+        // Display individual tags with their counts
+        for (let i=0; i<data.tags.length; i++){
+          const t = data.tags[i];
+          el.textContent += `epc=${t.epc} rssi=${t.rssi} ant=${t.ant} count=${t.count} ts=${t.ts}\n`;
         }
       }catch(e){ }
     }
-    setInterval(fetchTags, 800);
+    setInterval(fetchTags, 300);  // Reduced from 800ms to 300ms
     fetchTags();
 
     // Terminal polling
@@ -149,7 +153,7 @@ static const char* HTML_CONTENT = R"rawliteral(
         }
       }catch(e){ }
     }
-    setInterval(pollTerminal, 500);
+    setInterval(pollTerminal, 300);  // Faster terminal updates (was 500ms)
 
     function clearTerminal(){
       const term = document.getElementById('terminal');
@@ -187,8 +191,27 @@ static const char* HTML_CONTENT = R"rawliteral(
       fetchStatus();
     }
 
-    async function startInv(){ await fetch('/inventory/start', { method:'POST' }); fetchStatus(); }
-    async function stopInv(){ await fetch('/inventory/stop', { method:'POST' }); fetchStatus(); }
+    async function startInv(){ 
+      await fetch('/inventory/start', { method:'POST' }); 
+      fetchStatus(); 
+      // Immediately fetch tags after starting - no delay!
+      setTimeout(fetchTags, 50);  // Very short delay to let inventory start
+    }
+    async function stopInv(){ 
+      console.log("Stop button clicked");
+      try {
+        const response = await fetch('/inventory/stop', { method:'POST' });
+        console.log("Stop response:", response.status);
+        if (response.ok) {
+          console.log("Stop command sent successfully");
+        }
+      } catch (error) {
+        console.error("Stop failed:", error);
+      }
+      fetchStatus(); 
+      // Immediately update to show stopped status
+      setTimeout(fetchStatus, 100);
+    }
 
     async function setPower(){
       const pwr1 = document.getElementById('pwr1').value || '30';
@@ -339,7 +362,9 @@ static esp_err_t inventory_start_handler(httpd_req_t *req)
 
 static esp_err_t inventory_stop_handler(httpd_req_t *req)
 {
+  printf("DEBUG: Stop inventory handler called\n");
   rfid_stop_inventory();
+  printf("DEBUG: Stop inventory function completed\n");
   httpd_resp_send(req, "OK", 2);
   return ESP_OK;
 }

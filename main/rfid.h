@@ -24,5 +24,7 @@ void rfid_confirm_connection(void);
 void rfid_process_bytes(const uint8_t *buf, size_t len);
 // Fill provided buffer with JSON array of recent tags. Returns number of bytes written (not including terminating NUL)
 int rfid_get_tags_json(char *out, int out_len);
+// Reset startup delay for immediate tag processing (used when manually starting inventory)
+void rfid_reset_startup_delay(void);
 
 #endif // RFID_H
