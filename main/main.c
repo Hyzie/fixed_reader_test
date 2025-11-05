@@ -7,11 +7,10 @@
 #include "uart.h"
 #include "eth.h"
 #include "web.h"
+#include "rfid.h"
+
 
 static const char *TAG = "MAIN";
-
-#define UART_TXD  17
-#define UART_RXD  18
 
 void app_main(void)
 {
@@ -24,7 +23,12 @@ void app_main(void)
     ESP_ERROR_CHECK(ret);
 
     // Initialize modules
-    uart_init(UART_TXD, UART_RXD);
+    rfid_init();
+    
+    // Allow system to stabilize before starting UART task
+    vTaskDelay(pdMS_TO_TICKS(100));
+    
+    uart_start_rx_task();
     eth_init();
 
     // Start web server
@@ -34,7 +38,4 @@ void app_main(void)
         return;
     }
     ESP_LOGI(TAG, "Web server started");
-
-        // Start UART RX task
-    uart_start_rx_task();
 }

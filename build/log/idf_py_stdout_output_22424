@@ -1,0 +1,2048 @@
+[0;32mI (118) esp_image: segment 1: paddr=00029e28 vaddr=3fc962ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42003d53
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Nov  4 2025 17:55:53[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=19e00h (105984) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=00029e28 vaddr=3fc96200 size=02bc0h ( 11200) load[0m
+[0;32mI (121) esp_image: segment 2: paddr=0002c9f0 vaddr=40374000 size=03628h ( 13864) load[0m
+[0;32mI (127) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=4ac24h (306212) map[0m
+[0;32mI (187) esp_image: segment 4: paddr=0007ac4c vaddr=40377628 size=0eae8h ( 60136) load[0m
+[0;32mI (208) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (208) boot: Disabling RNG early entropy source...[0m
+[0;32mI (220) cpu_start: Multicore app[0m
+[0;32mI (229) cpu_start: Pro cpu start user code[0m
+[0;32mI (229) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (229) cpu_start: Application information:[0m
+[0;32mI (232) cpu_start: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (239) cpu_start: App version:      159598a-dirty[0m
+[0;32mI (244) cpu_start: Compile time:     Nov  4 2025 17:54:03[0m
+[0;32mI (250) cpu_start: ELF file SHA256:  d97731bd3...[0m
+[0;32mI (256) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (260) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (265) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (270) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (275) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (282) heap_init: At 3FC9D4B8 len 0004C258 (304 KiB): RAM[0m
+[0;32mI (288) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (294) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (300) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (308) spi_flash: detected chip: gd[0m
+[0;32mI (311) spi_flash: flash io: dio[0m
+[0;33mW (315) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (328) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (335) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (342) main_task: Started on CPU0[0m
+[0;32mI (352) main_task: Calling app_main()[0m
+[0;32mI (362) uart: queue free spaces: 30[0m
+[0;32mI (372) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (372) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (372) UART: UART RX task started and waiting for data...[0m
+[0;32mI (382) UART: UART event received, type: 0[0m
+[0;32mI (382) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (392) UART: UART event received, type: 0[0m
+[0;32mI (392) RFID: Inventory not running, skipping tag processing[0m
+UART RX task created
+[0;32mI (412) UART: UART event received, type: 0[0m
+[0;32mI (422) UART: UART event received, type: 0[0m
+[0;32mI (422) UART: UART event received, type: 0[0m
+[0;32mI (432) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (432) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (442) ETH: Ethernet Started[0m
+[0;32mI (442) UART: UART event received, type: 0[0m
+[0;32mI (442) WEB: Registered /power/set handler[0m
+[0;32mI (442) WEB: Registered /power/get handler[0m
+[0;32mI (442) UART: UART event received, type: 0[0m
+[0;32mI (452) UART: UART event received, type: 0[0m
+[0;32mI (462) MAIN: Web server started[0m
+[0;32mI (462) main_task: Returned from app_main()[0m
+[0;32mI (462) UART: UART event received, type: 0[0m
+[0;32mI (472) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (482) UART: UART event received, type: 0[0m
+[0;32mI (482) UART: UART event received, type: 0[0m
+[0;32mI (492) UART: UART event received, type: 0[0m
+[0;32mI (492) UART: UART event received, type: 0[0m
+[0;32mI (502) UART: UART event received, type: 0[0m
+[0;32mI (502) UART: UART event received, type: 0[0m
+[0;32mI (512) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (512) UART: UART event received, type: 0[0m
+[0;32mI (522) UART: UART event received, type: 0[0m
+[0;32mI (522) UART: UART event received, type: 0[0m
+[0;32mI (532) UART: UART event received, type: 0[0m
+[0;32mI (542) UART: UART event received, type: 0[0m
+[0;32mI (542) UART: UART event received, type: 0[0m
+[0;32mI (552) UART: UART event received, type: 0[0m
+[0;32mI (552) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (552) UART: UART event received, type: 0[0m
+[0;32mI (562) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (562) UART: UART event received, type: 0[0m
+[0;32mI (572) UART: UART event received, type: 0[0m
+[0;32mI (572) UART: UART event received, type: 0[0m
+[0;32mI (582) UART: UART event received, type: 0[0m
+[0;32mI (592) UART: UART event received, type: 0[0m
+[0;32mI (592) UART: UART event received, type: 0[0m
+[0;32mI (602) UART: UART event received, type: 0[0m
+[0;32mI (612) UART: UART event received, type: 0[0m
+[0;32mI (612) UART: UART event received, type: 0[0m
+[0;32mI (622) UART: UART event received, type: 0[0m
+[0;32mI (632) UART: UART event received, type: 0[0m
+[0;32mI (632) UART: UART event received, type: 0[0m
+[0;32mI (642) UART: UART event received, type: 0[0m
+[0;32mI (642) UART: UART event received, type: 0[0m
+[0;32mI (652) UART: UART event received, type: 0[0m
+[0;32mI (672) UART: UART event received, type: 0[0m
+[0;32mI (672) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (672) UART: UART event received, type: 0[0m
+[0;32mI (682) UART: UART event received, type: 0[0m
+[0;32mI (682) UART: UART event received, type: 0[0m
+[0;32mI (692) UART: UART event received, type: 0[0m
+[0;32mI (702) UART: UART event received, type: 0[0m
+[0;32mI (702) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (712) UART: UART event received, type: 0[0m
+[0;32mI (712) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (722) UART: UART event received, type: 0[0m
+[0;32mI (722) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (732) UART: UART event received, type: 0[0m
+[0;32mI (732) UART: UART event received, type: 0[0m
+[0;32mI (742) UART: UART event received, type: 0[0m
+[0;32mI (752) UART: UART event received, type: 0[0m
+[0;32mI (752) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (772) UART: UART event received, type: 0[0m
+[0;32mI (772) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (772) UART: UART event received, type: 0[0m
+[0;32mI (782) UART: UART event received, type: 0[0m
+[0;32mI (792) UART: UART event received, type: 0[0m
+[0;32mI (792) UART: UART event received, type: 0[0m
+[0;32mI (792) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (802) UART: UART event received, type: 0[0m
+[0;32mI (812) UART: UART event received, type: 0[0m
+[0;32mI (822) UART: UART event received, type: 0[0m
+[0;32mI (832) UART: UART event received, type: 0[0m
+[0;32mI (832) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (832) UART: UART event received, type: 0[0m
+[0;32mI (842) UART: UART event received, type: 0[0m
+[0;32mI (842) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (842) UART: UART event received, type: 0[0m
+[0;32mI (882) UART: UART event received, type: 0[0m
+[0;32mI (892) UART: UART event received, type: 0[0m
+[0;32mI (932) UART: UART event received, type: 0[0m
+[0;32mI (932) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (942) UART: UART event received, type: 0[0m
+[0;32mI (952) UART: UART event received, type: 0[0m
+[0;32mI (982) UART: UART event received, type: 0[0m
+[0;32mI (1002) UART: UART event received, type: 0[0m
+[0;32mI (1012) UART: UART event received, type: 0[0m
+[0;32mI (1012) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1062) UART: UART event received, type: 0[0m
+[0;32mI (1062) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1072) UART: UART event received, type: 0[0m
+[0;32mI (1082) UART: UART event received, type: 0[0m
+[0;32mI (1122) UART: UART event received, type: 0[0m
+[0;32mI (1142) UART: UART event received, type: 0[0m
+[0;32mI (1172) UART: UART event received, type: 0[0m
+[0;32mI (1172) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1182) UART: UART event received, type: 0[0m
+[0;32mI (1182) UART: UART event received, type: 0[0m
+[0;32mI (1222) UART: UART event received, type: 0[0m
+[0;32mI (1232) UART: UART event received, type: 0[0m
+[0;32mI (1232) UART: UART event received, type: 0[0m
+[0;32mI (1262) UART: UART event received, type: 0[0m
+[0;32mI (1262) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1272) UART: UART event received, type: 0[0m
+[0;32mI (1282) UART: UART event received, type: 0[0m
+[0;32mI (1292) UART: UART event received, type: 0[0m
+[0;32mI (1292) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1302) UART: UART event received, type: 0[0m
+[0;32mI (1312) UART: UART event received, type: 0[0m
+[0;32mI (1312) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1312) UART: UART event received, type: 0[0m
+[0;32mI (1322) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1332) UART: UART event received, type: 0[0m
+[0;32mI (1342) UART: UART event received, type: 0[0m
+[0;32mI (1342) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1352) UART: UART event received, type: 0[0m
+[0;32mI (1352) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1352) UART: UART event received, type: 0[0m
+[0;32mI (1352) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1362) UART: UART event received, type: 0[0m
+[0;32mI (1372) UART: UART event received, type: 0[0m
+[0;32mI (1372) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1382) UART: UART event received, type: 0[0m
+[0;32mI (1382) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1392) UART: UART event received, type: 0[0m
+[0;32mI (1392) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1402) UART: UART event received, type: 0[0m
+[0;32mI (1412) UART: UART event received, type: 0[0m
+[0;32mI (1412) UART: UART event received, type: 0[0m
+[0;32mI (1412) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1422) UART: UART event received, type: 0[0m
+RX: 100 packets
+[0;32mI (1442) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1442) UART: UART event received, type: 0[0m
+[0;32mI (1472) UART: UART event received, type: 0[0m
+[0;32mI (1472) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1472) UART: UART event received, type: 0[0m
+[0;32mI (1482) UART: UART event received, type: 0[0m
+[0;32mI (1532) UART: UART event received, type: 0[0m
+[0;32mI (1542) UART: UART event received, type: 0[0m
+[0;32mI (1552) UART: UART event received, type: 0[0m
+[0;32mI (1562) UART: UART event received, type: 0[0m
+[0;32mI (1562) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1562) UART: UART event received, type: 0[0m
+[0;32mI (1572) UART: UART event received, type: 0[0m
+[0;32mI (1572) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1582) UART: UART event received, type: 0[0m
+[0;32mI (1582) UART: UART event received, type: 0[0m
+[0;32mI (1592) UART: UART event received, type: 0[0m
+[0;32mI (1602) UART: UART event received, type: 0[0m
+[0;32mI (1612) UART: UART event received, type: 0[0m
+[0;32mI (1612) UART: UART event received, type: 0[0m
+[0;32mI (1622) UART: UART event received, type: 0[0m
+[0;32mI (1632) UART: UART event received, type: 0[0m
+[0;32mI (1642) UART: UART event received, type: 0[0m
+[0;32mI (1642) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1652) UART: UART event received, type: 0[0m
+[0;32mI (1662) UART: UART event received, type: 0[0m
+[0;32mI (1662) UART: UART event received, type: 0[0m
+[0;32mI (1682) UART: UART event received, type: 0[0m
+[0;32mI (1692) UART: UART event received, type: 0[0m
+[0;32mI (1692) UART: UART event received, type: 0[0m
+[0;32mI (1702) UART: UART event received, type: 0[0m
+[0;32mI (1712) UART: UART event received, type: 0[0m
+[0;32mI (1712) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1722) UART: UART event received, type: 0[0m
+[0;32mI (1732) UART: UART event received, type: 0[0m
+[0;32mI (1732) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1732) UART: UART event received, type: 0[0m
+[0;32mI (1742) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1752) UART: UART event received, type: 0[0m
+[0;32mI (1752) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1762) UART: UART event received, type: 0[0m
+[0;32mI (1762) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1772) UART: UART event received, type: 0[0m
+[0;32mI (1782) UART: UART event received, type: 0[0m
+[0;32mI (1792) UART: UART event received, type: 0[0m
+[0;32mI (1802) UART: UART event received, type: 0[0m
+[0;32mI (1812) UART: UART event received, type: 0[0m
+[0;32mI (1812) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1822) UART: UART event received, type: 0[0m
+[0;32mI (1822) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1842) UART: UART event received, type: 0[0m
+[0;32mI (1842) UART: UART event received, type: 0[0m
+[0;32mI (1842) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1852) UART: UART event received, type: 0[0m
+[0;32mI (1852) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1862) UART: UART event received, type: 0[0m
+[0;32mI (1872) UART: UART event received, type: 0[0m
+[0;32mI (1872) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1872) UART: UART event received, type: 0[0m
+[0;32mI (1872) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1882) UART: UART event received, type: 0[0m
+[0;32mI (1892) UART: UART event received, type: 0[0m
+[0;32mI (1892) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1902) UART: UART event received, type: 0[0m
+[0;32mI (1902) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1912) UART: UART event received, type: 0[0m
+[0;32mI (1912) UART: UART event received, type: 0[0m
+[0;32mI (1922) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1922) UART: UART event received, type: 0[0m
+[0;32mI (1932) UART: UART event received, type: 0[0m
+[0;32mI (1932) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1942) UART: UART event received, type: 0[0m
+[0;32mI (1952) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1952) UART: UART event received, type: 0[0m
+[0;32mI (1962) UART: UART event received, type: 0[0m
+[0;32mI (1962) UART: UART event received, type: 0[0m
+[0;32mI (1972) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1972) UART: UART event received, type: 0[0m
+[0;32mI (1982) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1982) UART: UART event received, type: 0[0m
+[0;32mI (1992) UART: UART event received, type: 0[0m
+[0;32mI (1992) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2002) UART: UART event received, type: 0[0m
+[0;32mI (2012) UART: UART event received, type: 0[0m
+[0;32mI (2012) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2022) UART: UART event received, type: 0[0m
+[0;32mI (2022) UART: UART event received, type: 0[0m
+[0;32mI (2032) UART: UART event received, type: 0[0m
+[0;32mI (2032) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2042) UART: UART event received, type: 0[0m
+[0;32mI (2042) UART: UART event received, type: 0[0m
+[0;32mI (2052) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2052) UART: UART event received, type: 0[0m
+[0;32mI (2062) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2072) UART: UART event received, type: 0[0m
+[0;32mI (2072) UART: UART event received, type: 0[0m
+[0;32mI (2072) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2082) UART: UART event received, type: 0[0m
+[0;32mI (2092) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2092) UART: UART event received, type: 0[0m
+[0;32mI (2102) UART: UART event received, type: 0[0m
+[0;32mI (2102) UART: UART event received, type: 0[0m
+[0;32mI (2112) UART: UART event received, type: 0[0m
+[0;32mI (2112) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2122) UART: UART event received, type: 0[0m
+[0;32mI (2122) UART: UART event received, type: 0[0m
+[0;32mI (2132) UART: UART event received, type: 0[0m
+[0;32mI (2132) UART: UART event received, type: 0[0m
+[0;32mI (2142) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2142) UART: UART event received, type: 0[0m
+[0;32mI (2152) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2162) UART: UART event received, type: 0[0m
+[0;32mI (2162) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2172) UART: UART event received, type: 0[0m
+[0;32mI (2172) UART: UART event received, type: 0[0m
+[0;32mI (2182) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2182) UART: UART event received, type: 0[0m
+[0;32mI (2192) UART: UART event received, type: 0[0m
+[0;32mI (2192) UART: UART event received, type: 0[0m
+[0;32mI (2202) UART: UART event received, type: 0[0m
+[0;32mI (2212) UART: UART event received, type: 0[0m
+[0;32mI (2222) UART: UART event received, type: 0[0m
+[0;32mI (2222) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2222) UART: UART event received, type: 0[0m
+[0;32mI (2222) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2232) UART: UART event received, type: 0[0m
+[0;32mI (2232) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2242) UART: UART event received, type: 0[0m
+[0;32mI (2252) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2252) UART: UART event received, type: 0[0m
+[0;32mI (2262) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2262) UART: UART event received, type: 0[0m
+[0;32mI (2292) UART: UART event received, type: 0[0m
+[0;32mI (2292) UART: UART event received, type: 0[0m
+[0;32mI (2302) UART: UART event received, type: 0[0m
+[0;32mI (2302) UART: UART event received, type: 0[0m
+[0;32mI (2312) UART: UART event received, type: 0[0m
+[0;32mI (2312) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2322) UART: UART event received, type: 0[0m
+[0;32mI (2332) UART: UART event received, type: 0[0m
+[0;32mI (2332) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2342) UART: UART event received, type: 0[0m
+RX: 200 packets
+[0;32mI (2382) UART: UART event received, type: 0[0m
+[0;32mI (2392) UART: UART event received, type: 0[0m
+[0;32mI (2392) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2402) UART: UART event received, type: 0[0m
+[0;32mI (2412) UART: UART event received, type: 0[0m
+[0;32mI (2422) UART: UART event received, type: 0[0m
+[0;32mI (2422) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2422) UART: UART event received, type: 0[0m
+[0;32mI (2432) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2442) ETH: Ethernet Link Up[0m
+[0;32mI (2442) ETH: Ethernet HW Addr 02:00:00:12:34:56[0m
+[0;32mI (2462) UART: UART event received, type: 0[0m
+[0;32mI (2472) UART: UART event received, type: 0[0m
+[0;32mI (2472) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2482) UART: UART event received, type: 0[0m
+[0;32mI (2482) UART: UART event received, type: 0[0m
+[0;32mI (2492) UART: UART event received, type: 0[0m
+[0;32mI (2502) UART: UART event received, type: 0[0m
+[0;32mI (2512) UART: UART event received, type: 0[0m
+[0;32mI (2512) UART: UART event received, type: 0[0m
+[0;32mI (2522) UART: UART event received, type: 0[0m
+[0;32mI (2522) UART: UART event received, type: 0[0m
+[0;32mI (2522) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2562) UART: UART event received, type: 0[0m
+[0;32mI (2572) UART: UART event received, type: 0[0m
+[0;32mI (2582) UART: UART event received, type: 0[0m
+[0;32mI (2622) UART: UART event received, type: 0[0m
+[0;32mI (2622) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2622) UART: UART event received, type: 0[0m
+[0;32mI (2622) UART: UART event received, type: 0[0m
+[0;32mI (2632) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2672) UART: UART event received, type: 0[0m
+[0;32mI (2672) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2702) UART: UART event received, type: 0[0m
+[0;32mI (2702) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2712) UART: UART event received, type: 0[0m
+[0;32mI (2722) UART: UART event received, type: 0[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4037d2c1  PS      : 0x00060c33  A0      : 0x8037cdda  A1      : 0x3fcad080  
+A2      : 0x0020307c  A3      : 0xffffffff  A4      : 0x00000000  A5      : 0x00060c23  
+A6      : 0x00000001  A7      : 0x0000cdcd  A8      : 0x00060c20  A9      : 0x3fcad080  
+A10     : 0x00060c23  A11     : 0x00000000  A12     : 0x00060c20  A13     : 0x3fcacf0c  
+A14     : 0x3fcacf20  A15     : 0x3fc9a46e  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x0020307c  LBEG    : 0x400556d5  LEND    : 0x400556e5  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x4037d2be:0x3fcad080 0x4037cdd7:0x3fcad0b0 0x4200a2cf:0x3fcad0f0 0x4037d0d1:0x3fcad120
+
+
+
+
+ELF file SHA256: d97731bd3
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40375acc
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Nov  4 2025 17:55:53[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=19e00h (105984) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=00029e28 vaddr=3fc96200 size=02bc0h ( 11200) load[0m
+[0;32mI (120) esp_image: segment 2: paddr=0002c9f0 vaddr=40374000 size=03628h ( 13864) load[0m
+[0;32mI (126) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=4ac24h (306212) map[0m
+[0;32mI (187) esp_image: segment 4: paddr=0007ac4c vaddr=40377628 size=0eae8h ( 60136) load[0m
+[0;32mI (208) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (208) boot: Disabling RNG early entropy source...[0m
+[0;32mI (219) cpu_start: Multicore app[0m
+[0;32mI (229) cpu_start: Pro cpu start user code[0m
+[0;32mI (229) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (229) cpu_start: Application information:[0m
+[0;32mI (232) cpu_start: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (238) cpu_start: App version:      159598a-dirty[0m
+[0;32mI (244) cpu_start: Compile time:     Nov  4 2025 17:54:03[0m
+[0;32mI (250) cpu_start: ELF file SHA256:  d97731bd3...[0m
+[0;32mI (255) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (260) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (265) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (270) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (274) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (282) heap_init: At 3FC9D4B8 len 0004C258 (304 KiB): RAM[0m
+[0;32mI (288) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (294) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (300) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (307) spi_flash: detected chip: gd[0m
+[0;32mI (310) spi_flash: flash io: dio[0m
+[0;33mW (314) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (328) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (334) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (342) main_task: Started on CPU0[0m
+[0;32mI (352) main_task: Calling app_main()[0m
+[0;32mI (362) uart: queue free spaces: 30[0m
+[0;32mI (372) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (372) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (372) UART: UART RX task started and waiting for data...[0m
+[0;32mI (382) UART: UART event received, type: 0[0m
+[0;32mI (382) UART: UART event received, type: 0[0m
+UART RX task created
+[0;32mI (392) UART: UART event received, type: 0[0m
+[0;32mI (392) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (402) UART: UART event received, type: 0[0m
+[0;32mI (412) UART: UART event received, type: 0[0m
+[0;32mI (412) UART: UART event received, type: 0[0m
+[0;32mI (422) UART: UART event received, type: 0[0m
+[0;32mI (422) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (432) UART: UART event received, type: 0[0m
+[0;32mI (432) UART: UART event received, type: 0[0m
+[0;32mI (442) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (442) UART: UART event received, type: 0[0m
+[0;32mI (452) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (452) UART: UART event received, type: 0[0m
+[0;32mI (462) UART: UART event received, type: 0[0m
+[0;32mI (472) ETH: Ethernet Started[0m
+[0;32mI (472) WEB: Registered /power/set handler[0m
+[0;32mI (472) WEB: Registered /power/get handler[0m
+[0;32mI (472) UART: UART event received, type: 0[0m
+[0;32mI (482) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (492) UART: UART event received, type: 0[0m
+[0;32mI (492) UART: UART event received, type: 0[0m
+[0;32mI (502) UART: UART event received, type: 0[0m
+[0;32mI (502) MAIN: Web server started[0m
+[0;32mI (502) main_task: Returned from app_main()[0m
+[0;32mI (522) UART: UART event received, type: 0[0m
+[0;32mI (522) UART: UART event received, type: 0[0m
+[0;32mI (522) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (532) UART: UART event received, type: 0[0m
+[0;32mI (542) UART: UART event received, type: 0[0m
+[0;32mI (552) UART: UART event received, type: 0[0m
+[0;32mI (552) UART: UART event received, type: 0[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4037d2c1  PS      : 0x00060c33  A0      : 0x8037cdda  A1      : 0x3fcad080  
+A2      : 0x0020377d  A3      : 0xffffffff  A4      : 0x00000000  A5      : 0x00060c23  
+A6      : 0x00000001  A7      : 0x0000cdcd  A8      : 0x00060c20  A9      : 0x3fcad080  
+A10     : 0x00060c23  A11     : 0x00000000  A12     : 0x00060c20  A13     : 0x3fcacf0c  
+A14     : 0x3fcacf20  A15     : 0x3fc9a46e  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x0020377d  LBEG    : 0x400556d5  LEND    : 0x400556e5  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x4037d2be:0x3fcad080 0x4037cdd7:0x3fcad0b0 0x4200a2cf:0x3fcad0f0 0x4037d0d1:0x3fcad120
+
+
+
+
+ELF file SHA256: d97731bd3
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40375acc
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Nov  4 2025 17:55:53[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=19e00h (105984) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=00029e28 vaddr=3fc96200 size=02bc0h ( 11200) load[0m
+[0;32mI (120) esp_image: segment 2: paddr=0002c9f0 vaddr=40374000 size=03628h ( 13864) load[0m
+[0;32mI (126) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=4ac24h (306212) map[0m
+[0;32mI (187) esp_image: segment 4: paddr=0007ac4c vaddr=40377628 size=0eae8h ( 60136) load[0m
+[0;32mI (208) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (208) boot: Disabling RNG early entropy source...[0m
+[0;32mI (219) cpu_start: Multicore app[0m
+[0;32mI (229) cpu_start: Pro cpu start user code[0m
+[0;32mI (229) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (229) cpu_start: Application information:[0m
+[0;32mI (232) cpu_start: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (238) cpu_start: App version:      159598a-dirty[0m
+[0;32mI (244) cpu_start: Compile time:     Nov  4 2025 17:54:03[0m
+[0;32mI (250) cpu_start: ELF file SHA256:  d97731bd3...[0m
+[0;32mI (255) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (260) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (265) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (270) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (274) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (282) heap_init: At 3FC9D4B8 len 0004C258 (304 KiB): RAM[0m
+[0;32mI (288) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (294) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (300) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (307) spi_flash: detected chip: gd[0m
+[0;32mI (310) spi_flash: flash io: dio[0m
+[0;33mW (314) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (328) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (334) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (342) main_task: Started on CPU0[0m
+[0;32mI (352) main_task: Calling app_main()[0m
+[0;32mI (362) uart: queue free spaces: 30[0m
+[0;32mI (372) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (372) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (372) UART: UART RX task started and waiting for data...[0m
+[0;32mI (382) UART: UART event received, type: 0[0m
+[0;32mI (382) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (392) UART: UART event received, type: 0[0m
+[0;32mI (392) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (402) UART: UART event received, type: 0[0m
+[0;32mI (412) UART: UART event received, type: 0[0m
+[0;32mI (412) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (422) UART: UART event received, type: 0[0m
+[0;32mI (422) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (432) UART: UART event received, type: 0[0m
+[0;32mI (432) UART: UART event received, type: 0[0m
+[0;32mI (442) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (442) UART: UART event received, type: 0[0m
+[0;32mI (452) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (452) UART: UART event received, type: 0[0m
+[0;32mI (462) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (472) UART: UART event received, type: 0[0m
+[0;32mI (472) UART: UART event received, type: 0[0m
+[0;32mI (472) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (482) UART: UART event received, type: 0[0m
+[0;32mI (492) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (492) UART: UART event received, type: 0[0m
+[0;32mI (502) UART: UART event received, type: 0[0m
+[0;32mI (502) UART: UART event received, type: 0[0m
+[0;32mI (512) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (512) UART: UART event received, type: 0[0m
+[0;32mI (522) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (522) UART: UART event received, type: 0[0m
+[0;32mI (532) UART: UART event received, type: 0[0m
+[0;32mI (532) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (542) UART: UART event received, type: 0[0m
+[0;32mI (552) UART: UART event received, type: 0[0m
+UART RX task created
+[0;32mI (572) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (572) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (572) UART: UART event received, type: 0[0m
+[0;32mI (582) ETH: Ethernet Started[0m
+[0;32mI (582) WEB: Registered /power/set handler[0m
+[0;32mI (582) WEB: Registered /power/get handler[0m
+[0;32mI (582) MAIN: Web server started[0m
+[0;32mI (592) UART: UART event received, type: 0[0m
+[0;32mI (592) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (602) UART: UART event received, type: 0[0m
+[0;32mI (602) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (612) UART: UART event received, type: 0[0m
+[0;32mI (622) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (622) UART: UART event received, type: 0[0m
+[0;32mI (632) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (632) UART: UART event received, type: 0[0m
+[0;32mI (642) UART: UART event received, type: 0[0m
+[0;32mI (642) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (652) UART: UART event received, type: 0[0m
+[0;32mI (652) UART: UART event received, type: 0[0m
+[0;32mI (662) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (672) UART: UART event received, type: 0[0m
+[0;32mI (672) UART: UART event received, type: 0[0m
+[0;32mI (672) UART: UART event received, type: 0[0m
+[0;32mI (682) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (692) UART: UART event received, type: 0[0m
+[0;32mI (692) UART: UART event received, type: 0[0m
+[0;32mI (702) UART: UART event received, type: 0[0m
+[0;32mI (702) main_task: Returned from app_main()[0m
+[0;32mI (702) UART: UART event received, type: 0[0m
+[0;32mI (712) UART: UART event received, type: 0[0m
+[0;32mI (712) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (722) UART: UART event received, type: 0[0m
+[0;32mI (732) UART: UART event received, type: 0[0m
+[0;32mI (742) UART: UART event received, type: 0[0m
+[0;32mI (752) UART: UART event received, type: 0[0m
+[0;32mI (752) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (762) UART: UART event received, type: 0[0m
+[0;32mI (762) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (782) UART: UART event received, type: 0[0m
+[0;32mI (792) UART: UART event received, type: 0[0m
+[0;32mI (792) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (802) UART: UART event received, type: 0[0m
+[0;32mI (802) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (812) UART: UART event received, type: 0[0m
+[0;32mI (822) UART: UART event received, type: 0[0m
+[0;32mI (822) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (832) UART: UART event received, type: 0[0m
+[0;32mI (842) UART: UART event received, type: 0[0m
+[0;32mI (842) UART: UART event received, type: 0[0m
+[0;32mI (842) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (852) UART: UART event received, type: 0[0m
+[0;32mI (862) UART: UART event received, type: 0[0m
+[0;32mI (862) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (872) UART: UART event received, type: 0[0m
+[0;32mI (882) UART: UART event received, type: 0[0m
+[0;32mI (882) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (892) UART: UART event received, type: 0[0m
+[0;32mI (892) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (902) UART: UART event received, type: 0[0m
+[0;32mI (912) UART: UART event received, type: 0[0m
+[0;32mI (912) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (912) UART: UART event received, type: 0[0m
+[0;32mI (922) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (922) UART: UART event received, type: 0[0m
+[0;32mI (932) UART: UART event received, type: 0[0m
+[0;32mI (942) UART: UART event received, type: 0[0m
+[0;32mI (982) UART: UART event received, type: 0[0m
+[0;32mI (982) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (982) UART: UART event received, type: 0[0m
+[0;32mI (1022) UART: UART event received, type: 0[0m
+[0;32mI (1042) UART: UART event received, type: 0[0m
+[0;32mI (1072) UART: UART event received, type: 0[0m
+[0;32mI (1072) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1082) UART: UART event received, type: 0[0m
+[0;32mI (1082) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1112) UART: UART event received, type: 0[0m
+[0;32mI (1132) UART: UART event received, type: 0[0m
+[0;32mI (1132) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1132) UART: UART event received, type: 0[0m
+[0;32mI (1132) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1142) UART: UART event received, type: 0[0m
+[0;32mI (1152) UART: UART event received, type: 0[0m
+[0;32mI (1152) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1152) UART: UART event received, type: 0[0m
+[0;32mI (1162) UART: UART event received, type: 0[0m
+[0;32mI (1162) UART: UART event received, type: 0[0m
+[0;32mI (1172) UART: UART event received, type: 0[0m
+[0;32mI (1172) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1182) UART: UART event received, type: 0[0m
+[0;32mI (1202) UART: UART event received, type: 0[0m
+[0;32mI (1252) UART: UART event received, type: 0[0m
+[0;32mI (1252) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1272) UART: UART event received, type: 0[0m
+[0;32mI (1272) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1322) UART: UART event received, type: 0[0m
+[0;32mI (1332) UART: UART event received, type: 0[0m
+[0;32mI (1332) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1332) UART: UART event received, type: 0[0m
+[0;32mI (1372) UART: UART event received, type: 0[0m
+[0;32mI (1382) UART: UART event received, type: 0[0m
+[0;32mI (1412) UART: UART event received, type: 0[0m
+[0;32mI (1412) UART: UART event received, type: 0[0m
+[0;32mI (1412) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1422) UART: UART event received, type: 0[0m
+[0;32mI (1432) UART: UART event received, type: 0[0m
+[0;32mI (1442) UART: UART event received, type: 0[0m
+[0;32mI (1452) UART: UART event received, type: 0[0m
+[0;32mI (1462) UART: UART event received, type: 0[0m
+[0;32mI (1482) UART: UART event received, type: 0[0m
+[0;32mI (1482) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1492) UART: UART event received, type: 0[0m
+[0;32mI (1532) UART: UART event received, type: 0[0m
+[0;32mI (1542) UART: UART event received, type: 0[0m
+[0;32mI (1552) UART: UART event received, type: 0[0m
+[0;32mI (1562) UART: UART event received, type: 0[0m
+[0;32mI (1572) UART: UART event received, type: 0[0m
+[0;32mI (1572) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1582) UART: UART event received, type: 0[0m
+RX: 100 packets
+[0;32mI (1592) UART: UART event received, type: 0[0m
+[0;32mI (1632) UART: UART event received, type: 0[0m
+[0;32mI (1632) UART: UART event received, type: 0[0m
+[0;32mI (1652) UART: UART event received, type: 0[0m
+[0;32mI (1662) UART: UART event received, type: 0[0m
+[0;32mI (1662) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1672) UART: UART event received, type: 0[0m
+[0;32mI (1682) UART: UART event received, type: 0[0m
+[0;32mI (1692) UART: UART event received, type: 0[0m
+[0;32mI (1692) UART: UART event received, type: 0[0m
+[0;32mI (1702) UART: UART event received, type: 0[0m
+[0;32mI (1712) UART: UART event received, type: 0[0m
+[0;32mI (1712) UART: UART event received, type: 0[0m
+[0;32mI (1722) UART: UART event received, type: 0[0m
+[0;32mI (1722) UART: UART event received, type: 0[0m
+[0;32mI (1732) UART: UART event received, type: 0[0m
+[0;32mI (1742) UART: UART event received, type: 0[0m
+[0;32mI (1752) UART: UART event received, type: 0[0m
+[0;32mI (1752) UART: UART event received, type: 0[0m
+[0;32mI (1762) UART: UART event received, type: 0[0m
+[0;32mI (1772) UART: UART event received, type: 0[0m
+[0;32mI (1782) UART: UART event received, type: 0[0m
+[0;32mI (1782) UART: UART event received, type: 0[0m
+[0;32mI (1792) UART: UART event received, type: 0[0m
+[0;32mI (1802) UART: UART event received, type: 0[0m
+[0;32mI (1802) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1802) UART: UART event received, type: 0[0m
+[0;32mI (1812) UART: UART event received, type: 0[0m
+[0;32mI (1812) UART: UART event received, type: 0[0m
+[0;32mI (1832) UART: UART event received, type: 0[0m
+[0;32mI (1842) UART: UART event received, type: 0[0m
+[0;32mI (1842) UART: UART event received, type: 0[0m
+[0;32mI (1852) UART: UART event received, type: 0[0m
+[0;32mI (1852) UART: UART event received, type: 0[0m
+[0;32mI (1862) UART: UART event received, type: 0[0m
+[0;32mI (1882) UART: UART event received, type: 0[0m
+[0;32mI (1892) UART: UART event received, type: 0[0m
+[0;32mI (1892) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1892) UART: UART event received, type: 0[0m
+[0;32mI (1902) UART: UART event received, type: 0[0m
+[0;32mI (1912) UART: UART event received, type: 0[0m
+[0;32mI (1922) UART: UART event received, type: 0[0m
+[0;32mI (1922) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1922) UART: UART event received, type: 0[0m
+[0;32mI (1932) UART: UART event received, type: 0[0m
+[0;32mI (1942) UART: UART event received, type: 0[0m
+[0;32mI (1942) UART: UART event received, type: 0[0m
+[0;32mI (1952) UART: UART event received, type: 0[0m
+[0;32mI (1952) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1972) UART: UART event received, type: 0[0m
+[0;32mI (1972) UART: UART event received, type: 0[0m
+[0;32mI (1982) UART: UART event received, type: 0[0m
+[0;32mI (1992) UART: UART event received, type: 0[0m
+[0;32mI (2002) UART: UART event received, type: 0[0m
+[0;32mI (2012) UART: UART event received, type: 0[0m
+[0;32mI (2012) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2012) UART: UART event received, type: 0[0m
+[0;32mI (2032) UART: UART event received, type: 0[0m
+[0;32mI (2042) UART: UART event received, type: 0[0m
+[0;32mI (2052) UART: UART event received, type: 0[0m
+[0;32mI (2062) UART: UART event received, type: 0[0m
+[0;32mI (2062) UART: UART event received, type: 0[0m
+[0;32mI (2072) UART: UART event received, type: 0[0m
+[0;32mI (2082) UART: UART event received, type: 0[0m
+[0;32mI (2092) UART: UART event received, type: 0[0m
+[0;32mI (2092) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2092) UART: UART event received, type: 0[0m
+[0;32mI (2102) UART: UART event received, type: 0[0m
+[0;32mI (2112) UART: UART event received, type: 0[0m
+[0;32mI (2112) UART: UART event received, type: 0[0m
+[0;32mI (2132) UART: UART event received, type: 0[0m
+[0;32mI (2132) UART: UART event received, type: 0[0m
+[0;32mI (2142) UART: UART event received, type: 0[0m
+[0;32mI (2152) UART: UART event received, type: 0[0m
+[0;32mI (2152) UART: UART event received, type: 0[0m
+[0;32mI (2152) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2162) UART: UART event received, type: 0[0m
+[0;32mI (2162) UART: UART event received, type: 0[0m
+[0;32mI (2162) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2172) UART: UART event received, type: 0[0m
+[0;32mI (2182) UART: UART event received, type: 0[0m
+[0;32mI (2182) UART: UART event received, type: 0[0m
+[0;32mI (2192) UART: UART event received, type: 0[0m
+[0;32mI (2232) UART: UART event received, type: 0[0m
+[0;32mI (2252) UART: UART event received, type: 0[0m
+[0;32mI (2252) UART: UART event received, type: 0[0m
+[0;32mI (2252) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2262) UART: UART event received, type: 0[0m
+[0;32mI (2272) UART: UART event received, type: 0[0m
+[0;32mI (2272) UART: UART event received, type: 0[0m
+[0;32mI (2282) UART: UART event received, type: 0[0m
+[0;32mI (2292) UART: UART event received, type: 0[0m
+[0;32mI (2292) UART: UART event received, type: 0[0m
+[0;32mI (2302) UART: UART event received, type: 0[0m
+[0;32mI (2312) UART: UART event received, type: 0[0m
+[0;32mI (2312) UART: UART event received, type: 0[0m
+[0;32mI (2322) UART: UART event received, type: 0[0m
+[0;32mI (2322) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2332) UART: UART event received, type: 0[0m
+[0;32mI (2352) UART: UART event received, type: 0[0m
+[0;32mI (2352) UART: UART event received, type: 0[0m
+[0;32mI (2362) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2362) UART: UART event received, type: 0[0m
+[0;32mI (2362) UART: UART event received, type: 0[0m
+[0;32mI (2362) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2372) UART: UART event received, type: 0[0m
+[0;32mI (2382) UART: UART event received, type: 0[0m
+[0;32mI (2382) UART: UART event received, type: 0[0m
+[0;32mI (2392) UART: UART event received, type: 0[0m
+[0;32mI (2392) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2402) UART: UART event received, type: 0[0m
+[0;32mI (2412) UART: UART event received, type: 0[0m
+[0;32mI (2412) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2422) UART: UART event received, type: 0[0m
+[0;32mI (2422) UART: UART event received, type: 0[0m
+RX: 200 packets
+[0;32mI (2432) UART: UART event received, type: 0[0m
+[0;32mI (2442) UART: UART event received, type: 0[0m
+[0;32mI (2442) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2452) UART: UART event received, type: 0[0m
+[0;32mI (2452) UART: UART event received, type: 0[0m
+[0;32mI (2462) UART: UART event received, type: 0[0m
+[0;32mI (2472) UART: UART event received, type: 0[0m
+[0;32mI (2482) UART: UART event received, type: 0[0m
+[0;32mI (2532) UART: UART event received, type: 0[0m
+[0;32mI (2542) UART: UART event received, type: 0[0m
+[0;32mI (2542) UART: UART event received, type: 0[0m
+[0;32mI (2562) UART: UART event received, type: 0[0m
+[0;32mI (2562) UART: UART event received, type: 0[0m
+[0;32mI (2572) UART: UART event received, type: 0[0m
+[0;32mI (2582) UART: UART event received, type: 0[0m
+[0;32mI (2582) ETH: Ethernet Link Up[0m
+[0;32mI (2582) ETH: Ethernet HW Addr 02:00:00:12:34:56[0m
+[0;32mI (2582) UART: UART event received, type: 0[0m
+[0;32mI (2582) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2592) UART: UART event received, type: 0[0m
+[0;32mI (2602) UART: UART event received, type: 0[0m
+[0;32mI (2602) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2612) UART: UART event received, type: 0[0m
+[0;32mI (2612) UART: UART event received, type: 0[0m
+[0;32mI (2622) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2622) UART: UART event received, type: 0[0m
+[0;32mI (2632) UART: UART event received, type: 0[0m
+[0;32mI (2662) UART: UART event received, type: 0[0m
+[0;32mI (2662) UART: UART event received, type: 0[0m
+[0;32mI (2672) UART: UART event received, type: 0[0m
+[0;32mI (2672) UART: UART event received, type: 0[0m
+[0;32mI (2682) UART: UART event received, type: 0[0m
+[0;32mI (2692) UART: UART event received, type: 0[0m
+[0;32mI (2702) UART: UART event received, type: 0[0m
+[0;32mI (2712) UART: UART event received, type: 0[0m
+[0;32mI (2712) UART: UART event received, type: 0[0m
+[0;32mI (2722) UART: UART event received, type: 0[0m
+[0;32mI (2722) UART: UART event received, type: 0[0m
+[0;32mI (2732) UART: UART event received, type: 0[0m
+[0;32mI (2752) UART: UART event received, type: 0[0m
+[0;32mI (2752) UART: UART event received, type: 0[0m
+[0;32mI (2772) UART: UART event received, type: 0[0m
+[0;32mI (2772) UART: UART event received, type: 0[0m
+[0;32mI (2782) UART: UART event received, type: 0[0m
+[0;32mI (2782) UART: UART event received, type: 0[0m
+[0;32mI (2792) UART: UART event received, type: 0[0m
+[0;32mI (2802) UART: UART event received, type: 0[0m
+[0;32mI (2812) UART: UART event received, type: 0[0m
+[0;32mI (2812) UART: UART event received, type: 0[0m
+[0;32mI (2822) UART: UART event received, type: 0[0m
+[0;32mI (2822) UART: UART event received, type: 0[0m
+[0;32mI (2832) UART: UART event received, type: 0[0m
+[0;32mI (2832) UART: UART event received, type: 0[0m
+[0;32mI (2842) UART: UART event received, type: 0[0m
+[0;32mI (2852) UART: UART event received, type: 0[0m
+[0;32mI (2862) UART: UART event received, type: 0[0m
+[0;32mI (2862) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2872) UART: UART event received, type: 0[0m
+[0;32mI (2882) UART: UART event received, type: 0[0m
+[0;32mI (2892) UART: UART event received, type: 0[0m
+[0;32mI (2892) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2902) UART: UART event received, type: 0[0m
+[0;32mI (2902) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2912) UART: UART event received, type: 0[0m
+[0;32mI (2932) UART: UART event received, type: 0[0m
+[0;32mI (2942) UART: UART event received, type: 0[0m
+[0;32mI (2942) UART: UART event received, type: 0[0m
+[0;32mI (2952) UART: UART event received, type: 0[0m
+[0;32mI (2962) UART: UART event received, type: 0[0m
+[0;32mI (2962) UART: UART event received, type: 0[0m
+[0;32mI (2972) UART: UART event received, type: 0[0m
+[0;32mI (2972) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (2982) UART: UART event received, type: 0[0m
+[0;32mI (2982) UART: UART event received, type: 0[0m
+[0;32mI (2992) UART: UART event received, type: 0[0m
+[0;32mI (3002) UART: UART event received, type: 0[0m
+[0;32mI (3002) UART: UART event received, type: 0[0m
+[0;32mI (3012) UART: UART event received, type: 0[0m
+[0;32mI (3022) UART: UART event received, type: 0[0m
+[0;32mI (3022) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (3032) UART: UART event received, type: 0[0m
+[0;32mI (3032) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (3042) UART: UART event received, type: 0[0m
+[0;32mI (3042) UART: UART event received, type: 0[0m
+[0;32mI (3052) UART: UART event received, type: 0[0m
+[0;32mI (3052) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (3062) UART: UART event received, type: 0[0m
+[0;32mI (3062) UART: UART event received, type: 0[0m
+[0;32mI (3072) UART: UART event received, type: 0[0m
+[0;32mI (3082) UART: UART event received, type: 0[0m
+[0;32mI (3092) UART: UART event received, type: 0[0m
+[0;32mI (3102) UART: UART event received, type: 0[0m
+[0;32mI (3102) UART: UART event received, type: 0[0m
+[0;32mI (3112) UART: UART event received, type: 0[0m
+[0;32mI (3122) UART: UART event received, type: 0[0m
+[0;32mI (3132) UART: UART event received, type: 0[0m
+[0;32mI (3142) UART: UART event received, type: 0[0m
+[0;32mI (3152) UART: UART event received, type: 0[0m
+[0;32mI (3172) UART: UART event received, type: 0[0m
+[0;32mI (3172) UART: UART event received, type: 0[0m
+[0;32mI (3182) UART: UART event received, type: 0[0m
+[0;32mI (3192) UART: UART event received, type: 0[0m
+[0;32mI (3202) UART: UART event received, type: 0[0m
+[0;32mI (3202) UART: UART event received, type: 0[0m
+[0;32mI (3212) UART: UART event received, type: 0[0m
+[0;32mI (3222) UART: UART event received, type: 0[0m
+[0;32mI (3232) UART: UART event received, type: 0[0m
+[0;32mI (3232) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (3242) UART: UART event received, type: 0[0m
+[0;32mI (3252) UART: UART event received, type: 0[0m
+[0;32mI (3252) UART: UART event received, type: 0[0m
+[0;32mI (3272) UART: UART event received, type: 0[0m
+[0;32mI (3272) UART: UART event received, type: 0[0m
+[0;32mI (3272) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (3282) UART: UART event received, type: 0[0m
+RX: 300 packets
+[0;32mI (3292) UART: UART event received, type: 0[0m
+[0;32mI (3292) UART: UART event received, type: 0[0m
+[0;32mI (3302) UART: UART event received, type: 0[0m
+[0;32mI (3312) UART: UART event received, type: 0[0m
+[0;32mI (3322) UART: UART event received, type: 0[0m
+[0;32mI (3332) UART: UART event received, type: 0[0m
+[0;32mI (3352) UART: UART event received, type: 0[0m
+[0;32mI (3362) UART: UART event received, type: 0[0m
+[0;32mI (3372) UART: UART event received, type: 0[0m
+[0;32mI (3382) UART: UART event received, type: 0[0m
+[0;32mI (3392) UART: UART event received, type: 0[0m
+[0;32mI (3392) UART: UART event received, type: 0[0m
+[0;32mI (3402) UART: UART event received, type: 0[0m
+[0;32mI (3402) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (3402) UART: UART event received, type: 0[0m
+[0;32mI (3412) UART: UART event received, type: 0[0m
+[0;32mI (3452) UART: UART event received, type: 0[0m
+[0;32mI (3472) UART: UART event received, type: 0[0m
+[0;32mI (3482) UART: UART event received, type: 0[0m
+[0;32mI (3482) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (3482) UART: UART event received, type: 0[0m
+[0;32mI (3492) UART: UART event received, type: 0[0m
+[0;32mI (3502) UART: UART event received, type: 0[0m
+[0;32mI (3502) UART: UART event received, type: 0[0m
+[0;32mI (3512) UART: UART event received, type: 0[0m
+[0;32mI (3512) UART: UART event received, type: 0[0m
+[0;32mI (3532) UART: UART event received, type: 0[0m
+[0;32mI (3532) UART: UART event received, type: 0[0m
+[0;32mI (3542) UART: UART event received, type: 0[0m
+[0;32mI (3542) UART: UART event received, type: 0[0m
+[0;32mI (3562) UART: UART event received, type: 0[0m
+[0;32mI (3562) UART: UART event received, type: 0[0m
+[0;32mI (3572) UART: UART event received, type: 0[0m
+[0;32mI (3572) UART: UART event received, type: 0[0m
+[0;32mI (3582) esp_netif_handlers: eth ip: 192.168.1.22, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (3582) ETH: Ethernet Got IP Address[0m
+[0;32mI (3582) UART: UART event received, type: 0[0m
+[0;32mI (3582) ETH: ~~~~~~~~~~~[0m
+[0;32mI (3592) UART: UART event received, type: 0[0m
+[0;32mI (3592) ETH: ETHIP: 192.168.1.22[0m
+[0;32mI (3602) UART: UART event received, type: 0[0m
+[0;32mI (3602) ETH: ETHMASK: 255.255.255.0[0m
+[0;32mI (3602) UART: UART event received, type: 0[0m
+[0;32mI (3612) ETH: ETHGW: 192.168.1.1[0m
+[0;32mI (3612) UART: UART event received, type: 0[0m
+[0;32mI (3622) ETH: ~~~~~~~~~~~[0m
+[0;32mI (3622) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (3632) UART: UART event received, type: 0[0m
+[0;32mI (3642) UART: UART event received, type: 0[0m
+[0;32mI (3642) UART: UART event received, type: 0[0m
+[0;32mI (3652) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (3652) UART: UART event received, type: 0[0m
+[0;32mI (3662) UART: UART event received, type: 0[0m
+[0;32mI (3662) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (3672) UART: UART event received, type: 0[0m
+[0;32mI (3672) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (3682) UART: UART event received, type: 0[0m
+[0;32mI (3682) UART: UART event received, type: 0[0m
+[0;32mI (3692) UART: UART event received, type: 0[0m
+[0;32mI (3692) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (3702) UART: UART event received, type: 0[0m
+[0;32mI (3712) UART: UART event received, type: 0[0m
+[0;32mI (3712) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (3722) UART: UART event received, type: 0[0m
+[0;32mI (3722) UART: UART event received, type: 0[0m
+[0;32mI (3732) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (3732) UART: UART event received, type: 0[0m
+[0;32mI (3742) UART: UART event received, type: 0[0m
+[0;32mI (3742) UART: UART event received, type: 0[0m
+[0;32mI (3762) UART: UART event received, type: 0[0m
+[0;32mI (3772) UART: UART event received, type: 0[0m
+[0;32mI (3772) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (3772) UART: UART event received, type: 0[0m
+[0;32mI (3782) UART: UART event received, type: 0[0m
+[0;32mI (3782) UART: UART event received, type: 0[0m
+[0;32mI (3792) UART: UART event received, type: 0[0m
+[0;32mI (3802) UART: UART event received, type: 0[0m
+[0;32mI (3802) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (3812) UART: UART event received, type: 0[0m
+[0;32mI (3822) UART: UART event received, type: 0[0m
+[0;32mI (3822) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (3822) UART: UART event received, type: 0[0m
+[0;32mI (3832) UART: UART event received, type: 0[0m
+[0;32mI (3832) UART: UART event received, type: 0[0m
+[0;32mI (3842) UART: UART event received, type: 0[0m
+[0;32mI (3852) UART: UART event received, type: 0[0m
+[0;32mI (3852) UART: UART event received, type: 0[0m
+[0;32mI (3872) UART: UART event received, type: 0[0m
+[0;32mI (3872) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (3882) UART: UART event received, type: 0[0m
+[0;32mI (3892) UART: UART event received, type: 0[0m
+[0;32mI (3892) UART: UART event received, type: 0[0m
+[0;32mI (3902) UART: UART event received, type: 0[0m
+[0;32mI (3912) UART: UART event received, type: 0[0m
+[0;32mI (3922) UART: UART event received, type: 0[0m
+[0;32mI (3922) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (3932) UART: UART event received, type: 0[0m
+[0;32mI (3932) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (3942) UART: UART event received, type: 0[0m
+[0;32mI (3952) UART: UART event received, type: 0[0m
+[0;32mI (3952) UART: UART event received, type: 0[0m
+[0;32mI (3962) UART: UART event received, type: 0[0m
+[0;32mI (3972) UART: UART event received, type: 0[0m
+[0;32mI (3982) UART: UART event received, type: 0[0m
+[0;32mI (3992) UART: UART event received, type: 0[0m
+[0;32mI (4002) UART: UART event received, type: 0[0m
+[0;32mI (4012) UART: UART event received, type: 0[0m
+[0;32mI (4032) UART: UART event received, type: 0[0m
+[0;32mI (4032) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (4042) UART: UART event received, type: 0[0m
+[0;32mI (4052) UART: UART event received, type: 0[0m
+[0;32mI (4052) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (4062) UART: UART event received, type: 0[0m
+[0;32mI (4072) UART: UART event received, type: 0[0m
+[0;32mI (4072) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (4072) UART: UART event received, type: 0[0m
+[0;32mI (4082) UART: UART event received, type: 0[0m
+[0;32mI (4082) UART: UART event received, type: 0[0m
+[0;32mI (4092) UART: UART event received, type: 0[0m
+[0;32mI (4092) UART: UART event received, type: 0[0m
+[0;32mI (4102) UART: UART event received, type: 0[0m
+[0;32mI (4102) UART: UART event received, type: 0[0m
+[0;32mI (4122) UART: UART event received, type: 0[0m
+[0;32mI (4132) UART: UART event received, type: 0[0m
+[0;32mI (4142) UART: UART event received, type: 0[0m
+RX: 400 packets
+[0;32mI (4152) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (4152) UART: UART event received, type: 0[0m
+[0;32mI (4152) UART: UART event received, type: 0[0m
+[0;32mI (4152) UART: UART event received, type: 0[0m
+[0;32mI (4172) UART: UART event received, type: 0[0m
+[0;32mI (4212) UART: UART event received, type: 0[0m
+[0;32mI (4212) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (4222) UART: UART event received, type: 0[0m
+[0;32mI (4272) UART: UART event received, type: 0[0m
+[0;32mI (4282) UART: UART event received, type: 0[0m
+[0;32mI (4282) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (4282) UART: UART event received, type: 0[0m
+[0;32mI (4342) UART: UART event received, type: 0[0m
+[0;32mI (4342) UART: UART event received, type: 0[0m
+[0;32mI (4342) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (4352) UART: UART event received, type: 0[0m
+[0;32mI (4352) UART: UART event received, type: 0[0m
+[0;32mI (4362) UART: UART event received, type: 0[0m
+[0;32mI (4362) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (4372) UART: UART event received, type: 0[0m
+[0;32mI (4372) UART: UART event received, type: 0[0m
+[0;32mI (4372) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (4412) UART: UART event received, type: 0[0m
+[0;32mI (4412) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (4422) UART: UART event received, type: 0[0m
+[0;32mI (4422) UART: UART event received, type: 0[0m
+[0;32mI (4422) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (4442) UART: UART event received, type: 0[0m
+[0;32mI (4452) UART: UART event received, type: 0[0m
+[0;32mI (4452) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (4462) UART: UART event received, type: 0[0m
+[0;32mI (4462) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (4462) UART: UART event received, type: 0[0m
+[0;32mI (4472) UART: UART event received, type: 0[0m
+[0;32mI (4472) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (4482) UART: UART event received, type: 0[0m
+[0;32mI (4492) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (4492) UART: UART event received, type: 0[0m
+[0;32mI (4502) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (4502) UART: UART event received, type: 0[0m
+[0;32mI (4512) UART: UART event received, type: 0[0m
+[0;32mI (4522) UART: UART event received, type: 0[0m
+[0;32mI (4522) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (4532) UART: UART event received, type: 0[0m
+[0;32mI (4532) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (4542) UART: UART event received, type: 0[0m
+[0;32mI (4542) UART: UART event received, type: 0[0m
+[0;32mI (4582) UART: UART event received, type: 0[0m
+[0;32mI (4592) UART: UART event received, type: 0[0m
+[0;32mI (4622) UART: UART event received, type: 0[0m
+[0;32mI (4632) UART: UART event received, type: 0[0m
+[0;32mI (4672) UART: UART event received, type: 0[0m
+[0;32mI (4682) UART: UART event received, type: 0[0m
+[0;32mI (4722) UART: UART event received, type: 0[0m
+[0;32mI (4732) UART: UART event received, type: 0[0m
+[0;32mI (4742) UART: UART event received, type: 0[0m
+[0;32mI (4742) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (4742) UART: UART event received, type: 0[0m
+[0;32mI (4742) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (4762) UART: UART event received, type: 0[0m
+[0;32mI (4762) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (4762) UART: UART event received, type: 0[0m
+[0;32mI (4772) UART: UART event received, type: 0[0m
+[0;32mI (4772) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (4782) UART: UART event received, type: 0[0m
+[0;32mI (4782) UART: UART event received, type: 0[0m
+[0;32mI (4782) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (4822) UART: UART event received, type: 0[0m
+[0;32mI (4822) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (4842) UART: UART event received, type: 0[0m
+[0;32mI (4882) UART: UART event received, type: 0[0m
+[0;32mI (4902) UART: UART event received, type: 0[0m
+[0;32mI (4932) UART: UART event received, type: 0[0m
+[0;32mI (4952) UART: UART event received, type: 0[0m
+[0;32mI (4962) UART: UART event received, type: 0[0m
+[0;32mI (4972) UART: UART event received, type: 0[0m
+[0;32mI (4972) UART: UART event received, type: 0[0m
+[0;32mI (4982) UART: UART event received, type: 0[0m
+[0;32mI (4982) UART: UART event received, type: 0[0m
+[0;32mI (4992) UART: UART event received, type: 0[0m
+[0;32mI (5002) UART: UART event received, type: 0[0m
+[0;32mI (5002) UART: UART event received, type: 0[0m
+[0;32mI (5002) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (5012) UART: UART event received, type: 0[0m
+[0;32mI (5022) UART: UART event received, type: 0[0m
+[0;32mI (5022) UART: UART event received, type: 0[0m
+[0;32mI (5022) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (5032) UART: UART event received, type: 0[0m
+[0;32mI (5042) UART: UART event received, type: 0[0m
+[0;32mI (5042) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (5042) UART: UART event received, type: 0[0m
+[0;32mI (5062) UART: UART event received, type: 0[0m
+[0;32mI (5082) UART: UART event received, type: 0[0m
+[0;32mI (5082) UART: UART event received, type: 0[0m
+[0;32mI (5092) UART: UART event received, type: 0[0m
+[0;32mI (5092) UART: UART event received, type: 0[0m
+[0;32mI (5092) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (5102) UART: UART event received, type: 0[0m
+[0;32mI (5102) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (5112) UART: UART event received, type: 0[0m
+[0;32mI (5122) UART: UART event received, type: 0[0m
+[0;32mI (5132) UART: UART event received, type: 0[0m
+[0;32mI (5142) UART: UART event received, type: 0[0m
+[0;32mI (5152) UART: UART event received, type: 0[0m
+[0;32mI (5182) UART: UART event received, type: 0[0m
+[0;32mI (5182) UART: UART event received, type: 0[0m
+[0;32mI (5192) UART: UART event received, type: 0[0m
+[0;32mI (5202) UART: UART event received, type: 0[0m
+[0;32mI (5202) UART: UART event received, type: 0[0m
+[0;32mI (5212) UART: UART event received, type: 0[0m
+[0;32mI (5212) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (5212) UART: UART event received, type: 0[0m
+[0;32mI (5222) UART: UART event received, type: 0[0m
+[0;32mI (5232) UART: UART event received, type: 0[0m
+[0;32mI (5242) UART: UART event received, type: 0[0m
+[0;32mI (5252) UART: UART event received, type: 0[0m
+[0;32mI (5262) UART: UART event received, type: 0[0m
+[0;32mI (5282) UART: UART event received, type: 0[0m
+[0;32mI (5282) UART: UART event received, type: 0[0m
+[0;32mI (5322) UART: UART event received, type: 0[0m
+[0;32mI (5322) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (5342) UART: UART event received, type: 0[0m
+[0;32mI (5342) UART: UART event received, type: 0[0m
+[0;32mI (5352) UART: UART event received, type: 0[0m
+[0;32mI (5352) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (5362) UART: UART event received, type: 0[0m
+[0;32mI (5362) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (5372) UART: UART event received, type: 0[0m
+[0;32mI (5372) UART: UART event received, type: 0[0m
+[0;32mI (5372) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (5392) UART: UART event received, type: 0[0m
+RX: 500 packets
+[0;32mI (5422) UART: UART event received, type: 0[0m
+[0;32mI (5422) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (5432) UART: UART event received, type: 0[0m
+[0;32mI (5432) UART: UART event received, type: 0[0m
+[0;32mI (5442) UART: UART event received, type: 0[0m
+[0;32mI (5462) UART: UART event received, type: 0[0m
+[0;32mI (5462) UART: UART event received, type: 0[0m
+[0;32mI (5472) UART: UART event received, type: 0[0m
+[0;32mI (5512) UART: UART event received, type: 0[0m
+[0;32mI (5512) UART: UART event received, type: 0[0m
+[0;32mI (5512) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (5522) UART: UART event received, type: 0[0m
+[0;32mI (5522) UART: UART event received, type: 0[0m
+[0;32mI (5532) UART: UART event received, type: 0[0m
+[0;32mI (5532) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (5552) UART: UART event received, type: 0[0m
+[0;32mI (5582) UART: UART event received, type: 0[0m
+[0;32mI (5592) UART: UART event received, type: 0[0m
+[0;32mI (5602) UART: UART event received, type: 0[0m
+[0;32mI (5612) UART: UART event received, type: 0[0m
+[0;32mI (5612) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (5662) UART: UART event received, type: 0[0m
+[0;32mI (5662) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (5672) UART: UART event received, type: 0[0m
+[0;32mI (5682) UART: UART event received, type: 0[0m
+[0;32mI (5712) UART: UART event received, type: 0[0m
+[0;32mI (5732) UART: UART event received, type: 0[0m
+[0;32mI (5762) UART: UART event received, type: 0[0m
+[0;32mI (5772) UART: UART event received, type: 0[0m
+[0;32mI (5772) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (5782) UART: UART event received, type: 0[0m
+[0;32mI (5782) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (5822) UART: UART event received, type: 0[0m
+[0;32mI (5832) UART: UART event received, type: 0[0m
+[0;32mI (5842) UART: UART event received, type: 0[0m
+[0;32mI (5842) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (5852) UART: UART event received, type: 0[0m
+[0;32mI (5862) UART: UART event received, type: 0[0m
+[0;32mI (5862) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (5862) UART: UART event received, type: 0[0m
+[0;32mI (5882) UART: UART event received, type: 0[0m
+[0;32mI (5882) UART: UART event received, type: 0[0m
+[0;32mI (5892) UART: UART event received, type: 0[0m
+[0;32mI (5932) UART: UART event received, type: 0[0m
+[0;32mI (5932) UART: UART event received, type: 0[0m
+[0;32mI (5932) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (5942) UART: UART event received, type: 0[0m
+[0;32mI (5942) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (5952) UART: UART event received, type: 0[0m
+[0;32mI (5952) UART: UART event received, type: 0[0m
+[0;32mI (5962) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (5962) UART: UART event received, type: 0[0m
+[0;32mI (5972) UART: UART event received, type: 0[0m
+[0;32mI (5972) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (5982) UART: UART event received, type: 0[0m
+[0;32mI (6002) UART: UART event received, type: 0[0m
+[0;32mI (6022) UART: UART event received, type: 0[0m
+[0;32mI (6022) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6032) UART: UART event received, type: 0[0m
+[0;32mI (6032) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6032) UART: UART event received, type: 0[0m
+[0;32mI (6032) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6052) UART: UART event received, type: 0[0m
+[0;32mI (6052) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6062) UART: UART event received, type: 0[0m
+[0;32mI (6082) UART: UART event received, type: 0[0m
+[0;32mI (6082) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6092) UART: UART event received, type: 0[0m
+[0;32mI (6102) UART: UART event received, type: 0[0m
+[0;32mI (6112) UART: UART event received, type: 0[0m
+[0;32mI (6112) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6122) UART: UART event received, type: 0[0m
+[0;32mI (6122) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6132) UART: UART event received, type: 0[0m
+[0;32mI (6142) UART: UART event received, type: 0[0m
+[0;32mI (6152) UART: UART event received, type: 0[0m
+[0;32mI (6152) UART: UART event received, type: 0[0m
+[0;32mI (6152) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6162) UART: UART event received, type: 0[0m
+[0;32mI (6182) UART: UART event received, type: 0[0m
+[0;32mI (6182) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6182) UART: UART event received, type: 0[0m
+[0;32mI (6182) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6192) UART: UART event received, type: 0[0m
+[0;32mI (6202) UART: UART event received, type: 0[0m
+[0;32mI (6202) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6212) UART: UART event received, type: 0[0m
+[0;32mI (6212) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6222) UART: UART event received, type: 0[0m
+[0;32mI (6222) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6232) UART: UART event received, type: 0[0m
+[0;32mI (6232) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6242) UART: UART event received, type: 0[0m
+[0;32mI (6242) UART: UART event received, type: 0[0m
+[0;32mI (6252) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6252) UART: UART event received, type: 0[0m
+[0;32mI (6262) UART: UART event received, type: 0[0m
+[0;32mI (6262) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6272) UART: UART event received, type: 0[0m
+[0;32mI (6272) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6282) UART: UART event received, type: 0[0m
+[0;32mI (6292) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6292) UART: UART event received, type: 0[0m
+[0;32mI (6302) UART: UART event received, type: 0[0m
+[0;32mI (6302) UART: UART event received, type: 0[0m
+[0;32mI (6312) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6312) UART: UART event received, type: 0[0m
+[0;32mI (6322) UART: UART event received, type: 0[0m
+[0;32mI (6322) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6332) UART: UART event received, type: 0[0m
+[0;32mI (6332) UART: UART event received, type: 0[0m
+[0;32mI (6342) UART: UART event received, type: 0[0m
+[0;32mI (6352) UART: UART event received, type: 0[0m
+[0;32mI (6352) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6362) UART: UART event received, type: 0[0m
+[0;32mI (6362) UART: UART event received, type: 0[0m
+[0;32mI (6362) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6372) UART: UART event received, type: 0[0m
+[0;32mI (6382) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6382) UART: UART event received, type: 0[0m
+[0;32mI (6392) UART: UART event received, type: 0[0m
+[0;32mI (6392) UART: UART event received, type: 0[0m
+[0;32mI (6402) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6402) UART: UART event received, type: 0[0m
+[0;32mI (6412) UART: UART event received, type: 0[0m
+[0;32mI (6412) UART: UART event received, type: 0[0m
+[0;32mI (6422) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6432) UART: UART event received, type: 0[0m
+[0;32mI (6432) UART: UART event received, type: 0[0m
+[0;32mI (6432) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6452) UART: UART event received, type: 0[0m
+[0;32mI (6452) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6462) UART: UART event received, type: 0[0m
+[0;32mI (6482) UART: UART event received, type: 0[0m
+[0;32mI (6482) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6482) UART: UART event received, type: 0[0m
+[0;32mI (6492) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6492) UART: UART event received, type: 0[0m
+[0;32mI (6502) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6502) UART: UART event received, type: 0[0m
+[0;32mI (6512) UART: UART event received, type: 0[0m
+[0;32mI (6512) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6522) UART: UART event received, type: 0[0m
+[0;32mI (6532) UART: UART event received, type: 0[0m
+RX: 600 packets
+[0;32mI (6542) UART: UART event received, type: 0[0m
+[0;32mI (6542) UART: UART event received, type: 0[0m
+[0;32mI (6542) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6552) UART: UART event received, type: 0[0m
+[0;32mI (6552) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6562) UART: UART event received, type: 0[0m
+[0;32mI (6572) UART: UART event received, type: 0[0m
+[0;32mI (6572) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6582) UART: UART event received, type: 0[0m
+[0;32mI (6582) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6592) UART: UART event received, type: 0[0m
+[0;32mI (6592) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6602) UART: UART event received, type: 0[0m
+[0;32mI (6602) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6612) UART: UART event received, type: 0[0m
+[0;32mI (6622) UART: UART event received, type: 0[0m
+[0;32mI (6652) UART: UART event received, type: 0[0m
+[0;32mI (6652) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6672) UART: UART event received, type: 0[0m
+[0;32mI (6682) UART: UART event received, type: 0[0m
+[0;32mI (6692) UART: UART event received, type: 0[0m
+[0;32mI (6702) UART: UART event received, type: 0[0m
+[0;32mI (6702) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6702) UART: UART event received, type: 0[0m
+[0;32mI (6712) UART: UART event received, type: 0[0m
+[0;32mI (6722) UART: UART event received, type: 0[0m
+[0;32mI (6722) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6732) UART: UART event received, type: 0[0m
+[0;32mI (6742) UART: UART event received, type: 0[0m
+[0;32mI (6742) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6752) UART: UART event received, type: 0[0m
+[0;32mI (6762) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6772) UART: UART event received, type: 0[0m
+[0;32mI (6772) UART: UART event received, type: 0[0m
+[0;32mI (6782) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6782) UART: UART event received, type: 0[0m
+[0;32mI (6782) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6792) UART: UART event received, type: 0[0m
+[0;32mI (6802) UART: UART event received, type: 0[0m
+[0;32mI (6802) UART: UART event received, type: 0[0m
+[0;32mI (6812) UART: UART event received, type: 0[0m
+[0;32mI (6832) UART: UART event received, type: 0[0m
+[0;32mI (6832) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6832) UART: UART event received, type: 0[0m
+[0;32mI (6862) UART: UART event received, type: 0[0m
+[0;32mI (6862) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6872) UART: UART event received, type: 0[0m
+[0;32mI (6872) UART: UART event received, type: 0[0m
+[0;32mI (6872) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6882) UART: UART event received, type: 0[0m
+[0;32mI (6892) UART: UART event received, type: 0[0m
+[0;32mI (6902) UART: UART event received, type: 0[0m
+[0;32mI (6902) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6912) UART: UART event received, type: 0[0m
+[0;32mI (6922) UART: UART event received, type: 0[0m
+[0;32mI (6932) UART: UART event received, type: 0[0m
+[0;32mI (6932) UART: UART event received, type: 0[0m
+[0;32mI (6932) UART: UART event received, type: 0[0m
+[0;32mI (6932) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6942) UART: UART event received, type: 0[0m
+[0;32mI (6952) UART: UART event received, type: 0[0m
+[0;32mI (6962) UART: UART event received, type: 0[0m
+[0;32mI (6972) UART: UART event received, type: 0[0m
+[0;32mI (6972) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (6982) UART: UART event received, type: 0[0m
+[0;32mI (7002) UART: UART event received, type: 0[0m
+[0;32mI (7002) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7012) UART: UART event received, type: 0[0m
+[0;32mI (7012) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7012) UART: UART event received, type: 0[0m
+[0;32mI (7012) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7022) UART: UART event received, type: 0[0m
+[0;32mI (7022) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7042) UART: UART event received, type: 0[0m
+[0;32mI (7042) UART: UART event received, type: 0[0m
+[0;32mI (7042) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7052) UART: UART event received, type: 0[0m
+[0;32mI (7062) UART: UART event received, type: 0[0m
+[0;32mI (7072) UART: UART event received, type: 0[0m
+[0;32mI (7072) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7072) UART: UART event received, type: 0[0m
+[0;32mI (7082) UART: UART event received, type: 0[0m
+[0;32mI (7082) UART: UART event received, type: 0[0m
+[0;32mI (7092) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7092) UART: UART event received, type: 0[0m
+[0;32mI (7092) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7102) UART: UART event received, type: 0[0m
+[0;32mI (7112) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7112) UART: UART event received, type: 0[0m
+[0;32mI (7122) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7122) UART: UART event received, type: 0[0m
+[0;32mI (7132) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7142) UART: UART event received, type: 0[0m
+[0;32mI (7142) UART: UART event received, type: 0[0m
+[0;32mI (7152) UART: UART event received, type: 0[0m
+[0;32mI (7162) UART: UART event received, type: 0[0m
+[0;32mI (7182) UART: UART event received, type: 0[0m
+[0;32mI (7182) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7192) UART: UART event received, type: 0[0m
+[0;32mI (7202) UART: UART event received, type: 0[0m
+[0;32mI (7212) UART: UART event received, type: 0[0m
+[0;32mI (7212) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7212) UART: UART event received, type: 0[0m
+[0;32mI (7222) UART: UART event received, type: 0[0m
+[0;32mI (7232) UART: UART event received, type: 0[0m
+[0;32mI (7242) UART: UART event received, type: 0[0m
+[0;32mI (7242) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7252) UART: UART event received, type: 0[0m
+[0;32mI (7252) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7262) UART: UART event received, type: 0[0m
+[0;32mI (7262) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7272) UART: UART event received, type: 0[0m
+[0;32mI (7282) UART: UART event received, type: 0[0m
+[0;32mI (7282) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7292) UART: UART event received, type: 0[0m
+[0;32mI (7292) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7302) UART: UART event received, type: 0[0m
+[0;32mI (7312) UART: UART event received, type: 0[0m
+[0;32mI (7312) UART: UART event received, type: 0[0m
+[0;32mI (7322) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7322) UART: UART event received, type: 0[0m
+[0;32mI (7332) UART: UART event received, type: 0[0m
+[0;32mI (7342) UART: UART event received, type: 0[0m
+[0;32mI (7352) UART: UART event received, type: 0[0m
+[0;32mI (7372) UART: UART event received, type: 0[0m
+[0;32mI (7382) UART: UART event received, type: 0[0m
+[0;32mI (7382) UART: UART event received, type: 0[0m
+[0;32mI (7392) UART: UART event received, type: 0[0m
+[0;32mI (7402) UART: UART event received, type: 0[0m
+[0;32mI (7402) UART: UART event received, type: 0[0m
+[0;32mI (7412) UART: UART event received, type: 0[0m
+[0;32mI (7412) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7412) UART: UART event received, type: 0[0m
+[0;32mI (7422) UART: UART event received, type: 0[0m
+[0;32mI (7422) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7432) UART: UART event received, type: 0[0m
+[0;32mI (7432) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7442) UART: UART event received, type: 0[0m
+[0;32mI (7442) UART: UART event received, type: 0[0m
+[0;32mI (7452) UART: UART event received, type: 0[0m
+[0;32mI (7452) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7462) UART: UART event received, type: 0[0m
+RX: 700 packets
+[0;32mI (7472) UART: UART event received, type: 0[0m
+[0;32mI (7492) UART: UART event received, type: 0[0m
+[0;32mI (7502) UART: UART event received, type: 0[0m
+[0;32mI (7512) UART: UART event received, type: 0[0m
+[0;32mI (7522) UART: UART event received, type: 0[0m
+[0;32mI (7522) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7532) UART: UART event received, type: 0[0m
+[0;32mI (7542) UART: UART event received, type: 0[0m
+[0;32mI (7542) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7552) UART: UART event received, type: 0[0m
+[0;32mI (7562) UART: UART event received, type: 0[0m
+[0;32mI (7562) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7562) UART: UART event received, type: 0[0m
+[0;32mI (7572) UART: UART event received, type: 0[0m
+[0;32mI (7572) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7582) UART: UART event received, type: 0[0m
+[0;32mI (7592) UART: UART event received, type: 0[0m
+[0;32mI (7602) UART: UART event received, type: 0[0m
+[0;32mI (7612) UART: UART event received, type: 0[0m
+[0;32mI (7612) UART: UART event received, type: 0[0m
+[0;32mI (7622) UART: UART event received, type: 0[0m
+[0;32mI (7622) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7622) UART: UART event received, type: 0[0m
+[0;32mI (7632) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7632) UART: UART event received, type: 0[0m
+[0;32mI (7642) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7642) UART: UART event received, type: 0[0m
+[0;32mI (7652) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7662) UART: UART event received, type: 0[0m
+[0;32mI (7662) UART: UART event received, type: 0[0m
+[0;32mI (7672) UART: UART event received, type: 0[0m
+[0;32mI (7672) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7682) UART: UART event received, type: 0[0m
+[0;32mI (7682) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7692) UART: UART event received, type: 0[0m
+[0;32mI (7692) UART: UART event received, type: 0[0m
+[0;32mI (7702) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7712) UART: UART event received, type: 0[0m
+[0;32mI (7712) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7722) UART: UART event received, type: 0[0m
+[0;32mI (7722) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7732) UART: UART event received, type: 0[0m
+[0;32mI (7752) UART: UART event received, type: 0[0m
+[0;32mI (7752) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7762) UART: UART event received, type: 0[0m
+[0;32mI (7762) UART: UART event received, type: 0[0m
+[0;32mI (7762) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7782) UART: UART event received, type: 0[0m
+[0;32mI (7802) UART: UART event received, type: 0[0m
+[0;32mI (7802) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7812) UART: UART event received, type: 0[0m
+[0;32mI (7812) UART: UART event received, type: 0[0m
+[0;32mI (7812) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7822) UART: UART event received, type: 0[0m
+[0;32mI (7832) UART: UART event received, type: 0[0m
+[0;32mI (7832) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7842) UART: UART event received, type: 0[0m
+[0;32mI (7842) UART: UART event received, type: 0[0m
+[0;32mI (7852) UART: UART event received, type: 0[0m
+[0;32mI (7852) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7862) UART: UART event received, type: 0[0m
+[0;32mI (7872) UART: UART event received, type: 0[0m
+[0;32mI (7872) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7872) UART: UART event received, type: 0[0m
+[0;32mI (7872) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7882) UART: UART event received, type: 0[0m
+[0;32mI (7892) UART: UART event received, type: 0[0m
+[0;32mI (7902) UART: UART event received, type: 0[0m
+[0;32mI (7902) UART: UART event received, type: 0[0m
+[0;32mI (7902) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7912) UART: UART event received, type: 0[0m
+[0;32mI (7912) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7932) UART: UART event received, type: 0[0m
+[0;32mI (7932) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7942) UART: UART event received, type: 0[0m
+[0;32mI (7942) UART: UART event received, type: 0[0m
+[0;32mI (7952) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7952) UART: UART event received, type: 0[0m
+[0;32mI (7962) UART: UART event received, type: 0[0m
+[0;32mI (7962) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7972) UART: UART event received, type: 0[0m
+[0;32mI (7992) UART: UART event received, type: 0[0m
+[0;32mI (7992) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (7992) UART: UART event received, type: 0[0m
+[0;32mI (7992) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8012) UART: UART event received, type: 0[0m
+[0;32mI (8022) UART: UART event received, type: 0[0m
+[0;32mI (8022) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8032) UART: UART event received, type: 0[0m
+[0;32mI (8032) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8042) UART: UART event received, type: 0[0m
+[0;32mI (8042) UART: UART event received, type: 0[0m
+[0;32mI (8052) UART: UART event received, type: 0[0m
+[0;32mI (8052) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8062) UART: UART event received, type: 0[0m
+[0;32mI (8062) UART: UART event received, type: 0[0m
+[0;32mI (8072) UART: UART event received, type: 0[0m
+[0;32mI (8072) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8082) UART: UART event received, type: 0[0m
+[0;32mI (8082) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8102) UART: UART event received, type: 0[0m
+[0;32mI (8102) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8112) UART: UART event received, type: 0[0m
+[0;32mI (8132) UART: UART event received, type: 0[0m
+[0;32mI (8132) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8132) UART: UART event received, type: 0[0m
+[0;32mI (8132) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8152) UART: UART event received, type: 0[0m
+[0;32mI (8152) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8162) UART: UART event received, type: 0[0m
+[0;32mI (8182) UART: UART event received, type: 0[0m
+[0;32mI (8182) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8182) UART: UART event received, type: 0[0m
+[0;32mI (8192) UART: UART event received, type: 0[0m
+[0;32mI (8202) UART: UART event received, type: 0[0m
+[0;32mI (8202) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8212) UART: UART event received, type: 0[0m
+[0;32mI (8222) UART: UART event received, type: 0[0m
+[0;32mI (8232) UART: UART event received, type: 0[0m
+[0;32mI (8232) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8242) UART: UART event received, type: 0[0m
+[0;32mI (8242) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8252) UART: UART event received, type: 0[0m
+[0;32mI (8262) UART: UART event received, type: 0[0m
+[0;32mI (8282) UART: UART event received, type: 0[0m
+[0;32mI (8282) UART: UART event received, type: 0[0m
+[0;32mI (8302) UART: UART event received, type: 0[0m
+[0;32mI (8302) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8312) UART: UART event received, type: 0[0m
+[0;32mI (8312) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8332) UART: UART event received, type: 0[0m
+[0;32mI (8342) UART: UART event received, type: 0[0m
+[0;32mI (8342) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8352) UART: UART event received, type: 0[0m
+[0;32mI (8362) UART: UART event received, type: 0[0m
+[0;32mI (8362) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8382) UART: UART event received, type: 0[0m
+[0;32mI (8382) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8382) UART: UART event received, type: 0[0m
+[0;32mI (8382) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8392) UART: UART event received, type: 0[0m
+[0;32mI (8392) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8402) UART: UART event received, type: 0[0m
+[0;32mI (8402) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8412) UART: UART event received, type: 0[0m
+[0;32mI (8422) UART: UART event received, type: 0[0m
+[0;32mI (8432) UART: UART event received, type: 0[0m
+[0;32mI (8432) UART: UART event received, type: 0[0m
+[0;32mI (8432) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8442) UART: UART event received, type: 0[0m
+RX: 800 packets
+[0;32mI (8462) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8462) UART: UART event received, type: 0[0m
+[0;32mI (8462) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8462) UART: UART event received, type: 0[0m
+[0;32mI (8472) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8472) UART: UART event received, type: 0[0m
+[0;32mI (8482) UART: UART event received, type: 0[0m
+[0;32mI (8492) UART: UART event received, type: 0[0m
+[0;32mI (8492) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8502) UART: UART event received, type: 0[0m
+[0;32mI (8502) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8512) UART: UART event received, type: 0[0m
+[0;32mI (8512) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8522) UART: UART event received, type: 0[0m
+[0;32mI (8522) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8532) UART: UART event received, type: 0[0m
+[0;32mI (8532) UART: UART event received, type: 0[0m
+[0;32mI (8542) UART: UART event received, type: 0[0m
+[0;32mI (8542) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8552) UART: UART event received, type: 0[0m
+[0;32mI (8562) UART: UART event received, type: 0[0m
+[0;32mI (8562) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8572) UART: UART event received, type: 0[0m
+[0;32mI (8572) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8582) UART: UART event received, type: 0[0m
+[0;32mI (8582) UART: UART event received, type: 0[0m
+[0;32mI (8592) UART: UART event received, type: 0[0m
+[0;32mI (8592) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8602) UART: UART event received, type: 0[0m
+[0;32mI (8602) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8612) UART: UART event received, type: 0[0m
+[0;32mI (8612) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8622) UART: UART event received, type: 0[0m
+[0;32mI (8632) UART: UART event received, type: 0[0m
+[0;32mI (8632) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8642) UART: UART event received, type: 0[0m
+[0;32mI (8642) UART: UART event received, type: 0[0m
+[0;32mI (8652) UART: UART event received, type: 0[0m
+[0;32mI (8662) UART: UART event received, type: 0[0m
+[0;32mI (8662) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8662) UART: UART event received, type: 0[0m
+[0;32mI (8672) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8672) UART: UART event received, type: 0[0m
+[0;32mI (8682) UART: UART event received, type: 0[0m
+[0;32mI (8682) UART: UART event received, type: 0[0m
+[0;32mI (8692) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8692) UART: UART event received, type: 0[0m
+[0;32mI (8702) UART: UART event received, type: 0[0m
+[0;32mI (8712) UART: UART event received, type: 0[0m
+[0;32mI (8732) UART: UART event received, type: 0[0m
+[0;32mI (8732) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8732) UART: UART event received, type: 0[0m
+[0;32mI (8732) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8742) UART: UART event received, type: 0[0m
+[0;32mI (8742) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8752) UART: UART event received, type: 0[0m
+[0;32mI (8762) UART: UART event received, type: 0[0m
+[0;32mI (8762) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8772) UART: UART event received, type: 0[0m
+[0;32mI (8782) UART: UART event received, type: 0[0m
+[0;32mI (8782) UART: UART event received, type: 0[0m
+[0;32mI (8792) UART: UART event received, type: 0[0m
+[0;32mI (8792) UART: UART event received, type: 0[0m
+[0;32mI (8802) UART: UART event received, type: 0[0m
+[0;32mI (8802) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8812) UART: UART event received, type: 0[0m
+[0;32mI (8812) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8812) UART: UART event received, type: 0[0m
+[0;32mI (8822) UART: UART event received, type: 0[0m
+[0;32mI (8822) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8832) UART: UART event received, type: 0[0m
+[0;32mI (8842) UART: UART event received, type: 0[0m
+[0;32mI (8862) UART: UART event received, type: 0[0m
+[0;32mI (8872) UART: UART event received, type: 0[0m
+[0;32mI (8872) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (8882) UART: UART event received, type: 0[0m
+[0;32mI (8902) UART: UART event received, type: 0[0m
+[0;32mI (8912) UART: UART event received, type: 0[0m
+[0;32mI (8912) UART: UART event received, type: 0[0m
+[0;32mI (8912) RFID: Inventory not running, skipping tag processing[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x8 (TG1WDT_SYS_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42003d53
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Nov  4 2025 17:55:53[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;33mW (47) boot.esp32s3: PRO CPU has been reset by WDT.[0m
+[0;33mW (53) boot.esp32s3: APP CPU has been reset by WDT.[0m
+[0;32mI (58) boot: Enabling RNG early entropy source...[0m
+[0;32mI (64) boot: Partition Table:[0m
+[0;32mI (67) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (75) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (82) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (97) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=19e00h (105984) map[0m
+[0;32mI (129) esp_image: segment 1: paddr=00029e28 vaddr=3fc96200 size=02bc0h ( 11200) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002c9f0 vaddr=40374000 size=03628h ( 13864) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=4ac24h (306212) map[0m
+[0;32mI (198) esp_image: segment 4: paddr=0007ac4c vaddr=40377628 size=0eae8h ( 60136) load[0m
+[0;32mI (219) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (219) boot: Disabling RNG early entropy source...[0m
+[0;32mI (230) cpu_start: Multicore app[0m
+[0;32mI (240) cpu_start: Pro cpu start user code[0m
+[0;32mI (240) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (240) cpu_start: Application information:[0m
+[0;32mI (243) cpu_start: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (249) cpu_start: App version:      159598a-dirty[0m
+[0;32mI (255) cpu_start: Compile time:     Nov  4 2025 17:54:03[0m
+[0;32mI (261) cpu_start: ELF file SHA256:  d97731bd3...[0m
+[0;32mI (266) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (271) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (276) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (281) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (286) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9D4B8 len 0004C258 (304 KiB): RAM[0m
+[0;32mI (299) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (305) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (311) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (318) spi_flash: detected chip: gd[0m
+[0;32mI (322) spi_flash: flash io: dio[0m
+[0;33mW (325) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (339) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (346) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (353) main_task: Started on CPU0[0m
+[0;32mI (363) main_task: Calling app_main()[0m
+[0;32mI (373) uart: queue free spaces: 30[0m
+[0;32mI (383) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (383) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (383) UART: UART RX task started and waiting for data...[0m
+[0;32mI (393) UART: UART event received, type: 0[0m
+[0;32mI (393) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (403) UART: UART event received, type: 0[0m
+[0;32mI (403) UART: UART event received, type: 0[0m
+[0;32mI (413) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (423) UART: UART event received, type: 0[0m
+UART RX task created
+[0;32mI (423) UART: UART event received, type: 0[0m
+[0;32mI (433) UART: UART event received, type: 0[0m
+[0;32mI (443) UART: UART event received, type: 0[0m
+[0;32mI (443) UART: UART event received, type: 0[0m
+[0;32mI (443) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (453) UART: UART event received, type: 0[0m
+[0;32mI (453) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (453) UART: UART event received, type: 0[0m
+[0;32mI (463) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (473) UART: UART event received, type: 0[0m
+[0;32mI (473) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (483) UART: UART event received, type: 0[0m
+[0;32mI (493) UART: UART event received, type: 0[0m
+[0;32mI (493) UART: UART event received, type: 0[0m
+[0;32mI (493) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (503) UART: UART event received, type: 0[0m
+[0;32mI (513) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (513) UART: UART event received, type: 0[0m
+[0;32mI (523) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (523) UART: UART event received, type: 0[0m
+[0;32mI (533) UART: UART event received, type: 0[0m
+[0;32mI (533) UART: UART event received, type: 0[0m
+[0;32mI (543) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (543) UART: UART event received, type: 0[0m
+[0;32mI (553) UART: UART event received, type: 0[0m
+[0;32mI (553) UART: UART event received, type: 0[0m
+[0;32mI (563) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (563) UART: UART event received, type: 0[0m
+[0;32mI (573) UART: UART event received, type: 0[0m
+[0;32mI (573) UART: UART event received, type: 0[0m
+[0;32mI (583) UART: UART event received, type: 0[0m
+[0;32mI (583) UART: UART event received, type: 0[0m
+[0;32mI (593) ETH: Ethernet Started[0m
+[0;32mI (593) UART: UART event received, type: 0[0m
+[0;32mI (593) WEB: Registered /power/set handler[0m
+[0;32mI (603) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (613) UART: UART event received, type: 0[0m
+[0;32mI (613) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (623) UART: UART event received, type: 0[0m
+[0;32mI (623) UART: UART event received, type: 0[0m
+[0;32mI (633) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (633) UART: UART event received, type: 0[0m
+[0;32mI (643) UART: UART event received, type: 0[0m
+[0;32mI (643) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (653) UART: UART event received, type: 0[0m
+[0;32mI (653) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (663) UART: UART event received, type: 0[0m
+[0;32mI (673) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (673) UART: UART event received, type: 0[0m
+[0;32mI (683) UART: UART event received, type: 0[0m
+[0;32mI (683) UART: UART event received, type: 0[0m
+[0;32mI (693) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (693) UART: UART event received, type: 0[0m
+[0;32mI (703) UART: UART event received, type: 0[0m
+[0;32mI (703) UART: UART event received, type: 0[0m
+[0;32mI (713) UART: UART event received, type: 0[0m
+[0;32mI (713) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (723) UART: UART event received, type: 0[0m
+[0;32mI (723) WEB: Registered /power/get handler[0m
+[0;32mI (733) MAIN: Web server started[0m
+[0;32mI (733) UART: UART event received, type: 0[0m
+[0;32mI (743) main_task: Returned from app_main()[0m
+[0;32mI (743) UART: UART event received, type: 0[0m
+[0;32mI (753) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (753) UART: UART event received, type: 0[0m
+[0;32mI (763) UART: UART event received, type: 0[0m
+[0;32mI (773) UART: UART event received, type: 0[0m
+[0;32mI (783) UART: UART event received, type: 0[0m
+[0;32mI (783) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (793) UART: UART event received, type: 0[0m
+[0;32mI (793) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (803) UART: UART event received, type: 0[0m
+[0;32mI (803) UART: UART event received, type: 0[0m
+[0;32mI (813) UART: UART event received, type: 0[0m
+[0;32mI (813) UART: UART event received, type: 0[0m
+[0;32mI (813) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (823) UART: UART event received, type: 0[0m
+[0;32mI (823) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (833) UART: UART event received, type: 0[0m
+[0;32mI (843) UART: UART event received, type: 0[0m
+[0;32mI (843) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (853) UART: UART event received, type: 0[0m
+[0;32mI (853) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (863) UART: UART event received, type: 0[0m
+[0;32mI (863) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (873) UART: UART event received, type: 0[0m
+[0;32mI (873) UART: UART event received, type: 0[0m
+[0;32mI (883) UART: UART event received, type: 0[0m
+[0;32mI (893) UART: UART event received, type: 0[0m
+[0;32mI (903) UART: UART event received, type: 0[0m
+[0;32mI (903) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (913) UART: UART event received, type: 0[0m
+[0;32mI (913) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (923) UART: UART event received, type: 0[0m
+[0;32mI (933) UART: UART event received, type: 0[0m
+[0;32mI (943) UART: UART event received, type: 0[0m
+[0;32mI (943) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (953) UART: UART event received, type: 0[0m
+[0;32mI (963) UART: UART event received, type: 0[0m
+[0;32mI (973) UART: UART event received, type: 0[0m
+[0;32mI (983) UART: UART event received, type: 0[0m
+[0;32mI (993) UART: UART event received, type: 0[0m
+[0;32mI (1003) UART: UART event received, type: 0[0m
+[0;32mI (1013) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1013) UART: UART event received, type: 0[0m
+[0;32mI (1013) UART: UART event received, type: 0[0m
+[0;32mI (1013) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1023) UART: UART event received, type: 0[0m
+[0;32mI (1033) UART: UART event received, type: 0[0m
+[0;32mI (1033) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1043) UART: UART event received, type: 0[0m
+[0;32mI (1043) UART: UART event received, type: 0[0m
+[0;32mI (1053) UART: UART event received, type: 0[0m
+[0;32mI (1053) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1063) UART: UART event received, type: 0[0m
+[0;32mI (1063) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1073) UART: UART event received, type: 0[0m
+[0;32mI (1073) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1083) UART: UART event received, type: 0[0m
+[0;32mI (1093) UART: UART event received, type: 0[0m
+[0;32mI (1093) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1103) UART: UART event received, type: 0[0m
+[0;32mI (1103) UART: UART event received, type: 0[0m
+[0;32mI (1113) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1113) UART: UART event received, type: 0[0m
+[0;32mI (1123) UART: UART event received, type: 0[0m
+[0;32mI (1123) UART: UART event received, type: 0[0m
+[0;32mI (1133) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1143) UART: UART event received, type: 0[0m
+[0;32mI (1143) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1153) UART: UART event received, type: 0[0m
+[0;32mI (1153) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1163) UART: UART event received, type: 0[0m
+[0;32mI (1163) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1173) UART: UART event received, type: 0[0m
+[0;32mI (1173) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1183) UART: UART event received, type: 0[0m
+[0;32mI (1183) UART: UART event received, type: 0[0m
+[0;32mI (1193) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1203) UART: UART event received, type: 0[0m
+[0;32mI (1203) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1213) UART: UART event received, type: 0[0m
+[0;32mI (1213) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1223) UART: UART event received, type: 0[0m
+[0;32mI (1233) UART: UART event received, type: 0[0m
+RX: 100 packets
+[0;32mI (1243) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1243) UART: UART event received, type: 0[0m
+[0;32mI (1253) UART: UART event received, type: 0[0m
+[0;32mI (1263) UART: UART event received, type: 0[0m
+[0;32mI (1273) UART: UART event received, type: 0[0m
+[0;32mI (1273) UART: UART event received, type: 0[0m
+[0;32mI (1283) UART: UART event received, type: 0[0m
+[0;32mI (1293) UART: UART event received, type: 0[0m
+[0;32mI (1293) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1303) UART: UART event received, type: 0[0m
+[0;32mI (1303) UART: UART event received, type: 0[0m
+[0;32mI (1313) UART: UART event received, type: 0[0m
+[0;32mI (1313) UART: UART event received, type: 0[0m
+[0;32mI (1313) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1323) UART: UART event received, type: 0[0m
+[0;32mI (1323) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1333) UART: UART event received, type: 0[0m
+[0;32mI (1333) UART: UART event received, type: 0[0m
+[0;32mI (1343) UART: UART event received, type: 0[0m
+[0;32mI (1353) UART: UART event received, type: 0[0m
+[0;32mI (1353) UART: UART event received, type: 0[0m
+[0;32mI (1363) UART: UART event received, type: 0[0m
+[0;32mI (1363) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1363) UART: UART event received, type: 0[0m
+[0;32mI (1373) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1383) UART: UART event received, type: 0[0m
+[0;32mI (1383) UART: UART event received, type: 0[0m
+[0;32mI (1393) UART: UART event received, type: 0[0m
+[0;32mI (1393) UART: UART event received, type: 0[0m
+[0;32mI (1403) UART: UART event received, type: 0[0m
+[0;32mI (1403) UART: UART event received, type: 0[0m
+[0;32mI (1413) UART: UART event received, type: 0[0m
+[0;32mI (1423) UART: UART event received, type: 0[0m
+[0;32mI (1423) UART: UART event received, type: 0[0m
+[0;32mI (1433) UART: UART event received, type: 0[0m
+[0;32mI (1433) UART: UART event received, type: 0[0m
+[0;32mI (1443) UART: UART event received, type: 0[0m
+[0;32mI (1453) UART: UART event received, type: 0[0m
+[0;32mI (1463) UART: UART event received, type: 0[0m
+[0;32mI (1463) UART: UART event received, type: 0[0m
+[0;32mI (1473) UART: UART event received, type: 0[0m
+[0;32mI (1483) UART: UART event received, type: 0[0m
+[0;32mI (1493) UART: UART event received, type: 0[0m
+[0;32mI (1503) UART: UART event received, type: 0[0m
+[0;32mI (1503) UART: UART event received, type: 0[0m
+[0;32mI (1513) UART: UART event received, type: 0[0m
+[0;32mI (1513) UART: UART event received, type: 0[0m
+[0;32mI (1523) UART: UART event received, type: 0[0m
+[0;32mI (1523) UART: UART event received, type: 0[0m
+[0;32mI (1533) UART: UART event received, type: 0[0m
+[0;32mI (1543) UART: UART event received, type: 0[0m
+[0;32mI (1543) UART: UART event received, type: 0[0m
+[0;32mI (1543) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1593) UART: UART event received, type: 0[0m
+[0;32mI (1603) UART: UART event received, type: 0[0m
+[0;32mI (1603) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1603) UART: UART event received, type: 0[0m
+[0;32mI (1613) UART: UART event received, type: 0[0m
+[0;32mI (1623) UART: UART event received, type: 0[0m
+[0;32mI (1633) UART: UART event received, type: 0[0m
+[0;32mI (1633) UART: UART event received, type: 0[0m
+[0;32mI (1633) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1643) UART: UART event received, type: 0[0m
+[0;32mI (1643) UART: UART event received, type: 0[0m
+[0;32mI (1663) UART: UART event received, type: 0[0m
+[0;32mI (1663) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1673) UART: UART event received, type: 0[0m
+[0;32mI (1673) UART: UART event received, type: 0[0m
+[0;32mI (1683) UART: UART event received, type: 0[0m
+[0;32mI (1683) UART: UART event received, type: 0[0m
+[0;32mI (1693) UART: UART event received, type: 0[0m
+[0;32mI (1713) UART: UART event received, type: 0[0m
+[0;32mI (1713) UART: UART event received, type: 0[0m
+[0;32mI (1713) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1733) UART: UART event received, type: 0[0m
+[0;32mI (1733) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1743) UART: UART event received, type: 0[0m
+[0;32mI (1743) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1753) UART: UART event received, type: 0[0m
+[0;32mI (1753) UART: UART event received, type: 0[0m
+[0;32mI (1753) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1763) UART: UART event received, type: 0[0m
+[0;32mI (1773) UART: UART event received, type: 0[0m
+[0;32mI (1773) UART: UART event received, type: 0[0m
+[0;32mI (1793) UART: UART event received, type: 0[0m
+[0;32mI (1793) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1803) UART: UART event received, type: 0[0m
+[0;32mI (1803) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1803) UART: UART event received, type: 0[0m
+[0;32mI (1813) RFID: Inventory not running, skipping tag processing[0m
+[0;32mI (1813) UART: UART event received, type: 0[0m
+[0;32mI (1823) UART: UART event received, type: 0[0m
+[0;32mI (1823) UART: UART event received, type: 0[0m
+[0;32mI (1843) UART: UART event received, type: 0[0m
+[0;32mI (1843) UART: UART event received, type: 0[0m
+[0;32mI (1853) UART: UART event received, type: 0[0m

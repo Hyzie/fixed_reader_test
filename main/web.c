@@ -86,10 +86,13 @@ static const char* HTML_CONTENT = R"rawliteral(
   <h3>Tags</h3>
   <pre id="tags">Loading tags...</pre>
 
-    <h3>UART Terminal</h3>
-    <pre id="terminal"></pre>
+    <h3>UART Terminal (Hex Data)</h3>
+    <div class="row">
+      <div class="col"><button onclick="clearTerminal()">Clear Terminal</button></div>
+    </div>
+    <pre id="terminal" style="font-family: monospace; font-size: 12px; background: #000; color: #0f0; padding: 10px; height: 300px; overflow-y: auto;"></pre>
     <form onsubmit="sendMessage(event)">
-      <input type="text" id="message" placeholder="Enter message to send via UART">
+      <input type="text" id="message" placeholder="Enter hex message (e.g. 5A 00 01 02 02 00 00 29 59)">
       <button type="submit">Send</button>
     </form>
   </div>
@@ -139,21 +142,40 @@ static const char* HTML_CONTENT = R"rawliteral(
         const t = await r.text();
         if (t.length>0){
           const term = document.getElementById('terminal');
-          term.textContent += '<RX> ' + t + '\n';
+          // Add timestamp for each data chunk
+          const now = new Date().toLocaleTimeString();
+          term.textContent += `[${now}] RX: ${t}\n`;
           term.scrollTop = term.scrollHeight;
         }
       }catch(e){ }
     }
     setInterval(pollTerminal, 500);
 
+    function clearTerminal(){
+      const term = document.getElementById('terminal');
+      term.textContent = '';
+    }
+
     async function sendMessage(e){
       e.preventDefault();
       const msg = document.getElementById('message').value;
       if (!msg) return;
+      
+      // Parse hex input (allow spaces and convert to bytes)
+      const hexBytes = msg.split(/\s+/).filter(h => h.length > 0);
+      let hexString = '';
+      for (let hex of hexBytes) {
+        if (hex.length === 2 && /^[0-9A-Fa-f]{2}$/.test(hex)) {
+          hexString += hex.toUpperCase() + ' ';
+        }
+      }
+      
       await fetch('/send', { method:'POST', headers:{'Content-Type':'text/plain'}, body: msg });
       const term = document.getElementById('terminal');
-      term.textContent += '<TX> ' + msg + '\n';
+      const now = new Date().toLocaleTimeString();
+      term.textContent += `[${now}] TX: ${hexString || msg}\n`;
       document.getElementById('message').value='';
+      term.scrollTop = term.scrollHeight;
     }
 
     async function saveWifi(e){
@@ -187,6 +209,9 @@ static const char* HTML_CONTENT = R"rawliteral(
           document.getElementById('pwr2').value = json.pwr2 || '30';
           document.getElementById('pwr3').value = json.pwr3 || '30';
           document.getElementById('pwr4').value = json.pwr4 || '30';
+          
+          // Show current power values to user
+          alert(`Current Power: Ant1=${json.pwr1}dBm, Ant2=${json.pwr2}dBm, Ant3=${json.pwr3}dBm, Ant4=${json.pwr4}dBm`);
         }
       }catch(e){ alert('Error getting power settings'); }
     }
@@ -386,6 +411,13 @@ static esp_err_t power_set_handler(httpd_req_t *req)
 
 static esp_err_t power_get_handler(httpd_req_t *req)
 {
+  // First trigger a fresh power query to get current values from reader
+  rfid_query_power();
+  
+  // Wait a moment for the reader to respond and update the stored values
+  vTaskDelay(pdMS_TO_TICKS(300));
+  
+  // Now get the updated power values
   int pwr1, pwr2, pwr3, pwr4;
   rfid_get_power(&pwr1, &pwr2, &pwr3, &pwr4);
   

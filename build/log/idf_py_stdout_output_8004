@@ -1,0 +1,2412 @@
+[0;32mI (118) esp_image: segment 1: paddr=00029e28 vaddr=3fc962ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40379f0e
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Nov  4 2025 17:55:53[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=19e00h (105984) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=00029e28 vaddr=3fc96200 size=02bc0h ( 11200) load[0m
+[0;32mI (121) esp_image: segment 2: paddr=0002c9f0 vaddr=40374000 size=03628h ( 13864) load[0m
+[0;32mI (127) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=4ac6ch (306284) map[0m
+[0;32mI (187) esp_image: segment 4: paddr=0007ac94 vaddr=40377628 size=0eae8h ( 60136) load[0m
+[0;32mI (208) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (208) boot: Disabling RNG early entropy source...[0m
+[0;32mI (220) cpu_start: Multicore app[0m
+[0;32mI (229) cpu_start: Pro cpu start user code[0m
+[0;32mI (229) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (229) cpu_start: Application information:[0m
+[0;32mI (232) cpu_start: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (239) cpu_start: App version:      159598a-dirty[0m
+[0;32mI (244) cpu_start: Compile time:     Nov  4 2025 17:54:03[0m
+[0;32mI (250) cpu_start: ELF file SHA256:  683751eeb...[0m
+[0;32mI (256) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (260) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (265) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (270) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (275) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (282) heap_init: At 3FC9D4B8 len 0004C258 (304 KiB): RAM[0m
+[0;32mI (288) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (294) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (300) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (308) spi_flash: detected chip: gd[0m
+[0;32mI (311) spi_flash: flash io: dio[0m
+[0;33mW (315) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (328) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (335) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (342) main_task: Started on CPU0[0m
+[0;32mI (352) main_task: Calling app_main()[0m
+[0;32mI (362) uart: queue free spaces: 30[0m
+[0;32mI (372) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (372) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (472) UART: UART RX task started and waiting for data...[0m
+[0;32mI (472) UART: UART event received, type: 0[0m
+[0;32mI (472) UART: UART event received, type: 0[0m
+[0;32mI (472) UART: UART event received, type: 0[0m
+[0;32mI (482) UART: UART event received, type: 0[0m
+[0;32mI (482) UART: UART event received, type: 0[0m
+[0;32mI (492) UART: UART event received, type: 0[0m
+[0;32mI (492) UART: UART event received, type: 0[0m
+[0;32mI (502) UART: UART event received, type: 0[0m
+[0;32mI (502) UART: UART event received, type: 0[0m
+[0;32mI (512) UART: UART event received, type: 0[0m
+[0;32mI (512) UART: UART event received, type: 0[0m
+[0;32mI (522) UART: UART event received, type: 0[0m
+[0;32mI (522) UART: UART event received, type: 0[0m
+[0;32mI (522) UART: UART event received, type: 0[0m
+[0;32mI (532) UART: UART event received, type: 0[0m
+[0;32mI (532) UART: UART event received, type: 0[0m
+[0;32mI (542) UART: UART event received, type: 0[0m
+[0;32mI (542) UART: UART event received, type: 0[0m
+[0;32mI (552) UART: UART event received, type: 0[0m
+[0;32mI (552) UART: UART event received, type: 0[0m
+[0;32mI (562) UART: UART event received, type: 0[0m
+[0;32mI (562) UART: UART event received, type: 0[0m
+[0;32mI (572) UART: UART event received, type: 0[0m
+[0;32mI (572) UART: UART event received, type: 0[0m
+[0;32mI (582) UART: UART event received, type: 0[0m
+[0;32mI (582) UART: UART event received, type: 0[0m
+[0;32mI (592) UART: UART event received, type: 0[0m
+[0;32mI (592) UART: UART event received, type: 0[0m
+[0;32mI (602) UART: UART event received, type: 0[0m
+[0;32mI (602) UART: UART event received, type: 0[0m
+[0;32mI (612) UART: UART event received, type: 0[0m
+[0;32mI (612) UART: UART event received, type: 0[0m
+[0;32mI (622) UART: UART event received, type: 0[0m
+[0;32mI (622) UART: UART event received, type: 0[0m
+[0;32mI (622) UART: UART event received, type: 0[0m
+UART RX task created
+[0;32mI (632) UART: UART event received, type: 0[0m
+[0;32mI (652) UART: UART event received, type: 0[0m
+[0;32mI (652) UART: UART event received, type: 0[0m
+[0;32mI (662) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (662) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (662) UART: UART event received, type: 0[0m
+[0;32mI (662) UART: UART event received, type: 0[0m
+[0;32mI (672) ETH: Ethernet Started[0m
+[0;32mI (672) UART: UART event received, type: 0[0m
+[0;32mI (672) WEB: Registered /power/set handler[0m
+[0;32mI (682) UART: UART event received, type: 0[0m
+[0;32mI (692) WEB: Registered /power/get handler[0m
+[0;32mI (692) MAIN: Web server started[0m
+[0;32mI (692) main_task: Returned from app_main()[0m
+[0;32mI (692) UART: UART event received, type: 0[0m
+[0;32mI (702) UART: UART event received, type: 0[0m
+[0;32mI (712) UART: UART event received, type: 0[0m
+[0;32mI (712) UART: UART event received, type: 0[0m
+[0;32mI (722) UART: UART event received, type: 0[0m
+[0;32mI (742) UART: UART event received, type: 0[0m
+[0;32mI (742) UART: UART event received, type: 0[0m
+[0;32mI (762) UART: UART event received, type: 0[0m
+[0;32mI (762) UART: UART event received, type: 0[0m
+[0;32mI (772) UART: UART event received, type: 0[0m
+[0;32mI (802) UART: UART event received, type: 0[0m
+[0;32mI (812) UART: UART event received, type: 0[0m
+[0;32mI (822) UART: UART event received, type: 0[0m
+[0;32mI (832) UART: UART event received, type: 0[0m
+[0;32mI (842) UART: UART event received, type: 0[0m
+[0;32mI (852) UART: UART event received, type: 0[0m
+[0;32mI (892) UART: UART event received, type: 0[0m
+[0;32mI (902) UART: UART event received, type: 0[0m
+[0;32mI (912) UART: UART event received, type: 0[0m
+[0;32mI (912) UART: UART event received, type: 0[0m
+[0;32mI (922) UART: UART event received, type: 0[0m
+[0;32mI (972) UART: UART event received, type: 0[0m
+[0;32mI (992) UART: UART event received, type: 0[0m
+[0;32mI (1022) UART: UART event received, type: 0[0m
+[0;32mI (1032) UART: UART event received, type: 0[0m
+[0;32mI (1042) UART: UART event received, type: 0[0m
+[0;32mI (1062) UART: UART event received, type: 0[0m
+[0;32mI (1102) UART: UART event received, type: 0[0m
+[0;32mI (1132) UART: UART event received, type: 0[0m
+[0;32mI (1172) UART: UART event received, type: 0[0m
+[0;32mI (1192) UART: UART event received, type: 0[0m
+[0;32mI (1202) UART: UART event received, type: 0[0m
+[0;32mI (1222) UART: UART event received, type: 0[0m
+[0;32mI (1222) UART: UART event received, type: 0[0m
+[0;32mI (1232) UART: UART event received, type: 0[0m
+[0;32mI (1242) UART: UART event received, type: 0[0m
+[0;32mI (1252) UART: UART event received, type: 0[0m
+[0;32mI (1282) UART: UART event received, type: 0[0m
+[0;32mI (1292) UART: UART event received, type: 0[0m
+[0;32mI (1302) UART: UART event received, type: 0[0m
+[0;32mI (1342) UART: UART event received, type: 0[0m
+[0;32mI (1342) UART: UART event received, type: 0[0m
+[0;32mI (1352) UART: UART event received, type: 0[0m
+[0;32mI (1362) UART: UART event received, type: 0[0m
+[0;32mI (1372) UART: UART event received, type: 0[0m
+[0;32mI (1372) UART: UART event received, type: 0[0m
+[0;32mI (1382) UART: UART event received, type: 0[0m
+[0;32mI (1392) UART: UART event received, type: 0[0m
+[0;32mI (1402) UART: UART event received, type: 0[0m
+[0;32mI (1402) UART: UART event received, type: 0[0m
+[0;32mI (1462) UART: UART event received, type: 0[0m
+[0;32mI (1462) UART: UART event received, type: 0[0m
+[0;32mI (1472) UART: UART event received, type: 0[0m
+[0;32mI (1482) UART: UART event received, type: 0[0m
+[0;32mI (1492) UART: UART event received, type: 0[0m
+[0;32mI (1492) UART: UART event received, type: 0[0m
+[0;32mI (1502) UART: UART event received, type: 0[0m
+[0;32mI (1512) UART: UART event received, type: 0[0m
+RX: 100 packets
+[0;32mI (1522) UART: UART event received, type: 0[0m
+[0;32mI (1532) UART: UART event received, type: 0[0m
+[0;32mI (1582) UART: UART event received, type: 0[0m
+[0;32mI (1592) UART: UART event received, type: 0[0m
+[0;32mI (1602) UART: UART event received, type: 0[0m
+[0;32mI (1612) UART: UART event received, type: 0[0m
+[0;32mI (1612) UART: UART event received, type: 0[0m
+[0;32mI (1632) UART: UART event received, type: 0[0m
+[0;32mI (1632) UART: UART event received, type: 0[0m
+[0;32mI (1642) UART: UART event received, type: 0[0m
+[0;32mI (1652) UART: UART event received, type: 0[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x8 (TG1WDT_SYS_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42003d57
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Nov  4 2025 17:55:53[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;33mW (47) boot.esp32s3: PRO CPU has been reset by WDT.[0m
+[0;33mW (53) boot.esp32s3: APP CPU has been reset by WDT.[0m
+[0;32mI (58) boot: Enabling RNG early entropy source...[0m
+[0;32mI (64) boot: Partition Table:[0m
+[0;32mI (67) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (75) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (82) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (97) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=19e00h (105984) map[0m
+[0;32mI (129) esp_image: segment 1: paddr=00029e28 vaddr=3fc96200 size=02bc0h ( 11200) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002c9f0 vaddr=40374000 size=03628h ( 13864) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=4ac6ch (306284) map[0m
+[0;32mI (198) esp_image: segment 4: paddr=0007ac94 vaddr=40377628 size=0eae8h ( 60136) load[0m
+[0;32mI (219) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (219) boot: Disabling RNG early entropy source...[0m
+[0;32mI (230) cpu_start: Multicore app[0m
+[0;32mI (240) cpu_start: Pro cpu start user code[0m
+[0;32mI (240) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (240) cpu_start: Application information:[0m
+[0;32mI (243) cpu_start: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (249) cpu_start: App version:      159598a-dirty[0m
+[0;32mI (255) cpu_start: Compile time:     Nov  4 2025 17:54:03[0m
+[0;32mI (261) cpu_start: ELF file SHA256:  683751eeb...[0m
+[0;32mI (266) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (271) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (276) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (281) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (285) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9D4B8 len 0004C258 (304 KiB): RAM[0m
+[0;32mI (299) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (305) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (311) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (318) spi_flash: detected chip: gd[0m
+[0;32mI (322) spi_flash: flash io: dio[0m
+[0;33mW (325) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (339) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (346) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (353) main_task: Started on CPU0[0m
+[0;32mI (363) main_task: Calling app_main()[0m
+[0;32mI (373) uart: queue free spaces: 30[0m
+[0;32mI (383) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (383) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (483) UART: UART RX task started and waiting for data...[0m
+[0;32mI (483) UART: UART event received, type: 0[0m
+[0;32mI (483) UART: UART event received, type: 0[0m
+[0;32mI (483) UART: UART event received, type: 0[0m
+[0;32mI (493) UART: UART event received, type: 0[0m
+[0;32mI (493) UART: UART event received, type: 0[0m
+[0;32mI (503) UART: UART event received, type: 0[0m
+[0;32mI (503) UART: UART event received, type: 0[0m
+[0;32mI (513) UART: UART event received, type: 0[0m
+[0;32mI (513) UART: UART event received, type: 0[0m
+[0;32mI (523) UART: UART event received, type: 0[0m
+[0;32mI (523) UART: UART event received, type: 0[0m
+[0;32mI (533) UART: UART event received, type: 0[0m
+[0;32mI (533) UART: UART event received, type: 0[0m
+[0;32mI (533) UART: UART event received, type: 0[0m
+[0;32mI (543) UART: UART event received, type: 0[0m
+UART RX task created
+[0;32mI (553) UART: UART event received, type: 0[0m
+[0;32mI (553) UART: UART event received, type: 0[0m
+[0;32mI (573) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (573) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (583) ETH: Ethernet Started[0m
+[0;32mI (583) WEB: Registered /power/set handler[0m
+[0;32mI (583) WEB: Registered /power/get handler[0m
+[0;32mI (583) MAIN: Web server started[0m
+[0;32mI (583) main_task: Returned from app_main()[0m
+[0;32mI (593) UART: UART event received, type: 0[0m
+[0;32mI (613) UART: UART event received, type: 0[0m
+[0;32mI (653) UART: UART event received, type: 0[0m
+[0;32mI (653) UART: UART event received, type: 0[0m
+[0;32mI (663) UART: UART event received, type: 0[0m
+[0;32mI (673) UART: UART event received, type: 0[0m
+[0;32mI (683) UART: UART event received, type: 0[0m
+[0;32mI (693) UART: UART event received, type: 0[0m
+[0;32mI (703) UART: UART event received, type: 0[0m
+[0;32mI (713) UART: UART event received, type: 0[0m
+[0;32mI (723) UART: UART event received, type: 0[0m
+[0;32mI (743) UART: UART event received, type: 0[0m
+[0;32mI (753) UART: UART event received, type: 0[0m
+[0;32mI (763) UART: UART event received, type: 0[0m
+[0;32mI (773) UART: UART event received, type: 0[0m
+[0;32mI (783) UART: UART event received, type: 0[0m
+[0;32mI (803) UART: UART event received, type: 0[0m
+[0;32mI (803) UART: UART event received, type: 0[0m
+[0;32mI (823) UART: UART event received, type: 0[0m
+[0;32mI (823) UART: UART event received, type: 0[0m
+[0;32mI (833) UART: UART event received, type: 0[0m
+[0;32mI (853) UART: UART event received, type: 0[0m
+[0;32mI (863) UART: UART event received, type: 0[0m
+[0;32mI (903) UART: UART event received, type: 0[0m
+[0;32mI (913) UART: UART event received, type: 0[0m
+[0;32mI (923) UART: UART event received, type: 0[0m
+[0;32mI (943) UART: UART event received, type: 0[0m
+[0;32mI (973) UART: UART event received, type: 0[0m
+[0;32mI (983) UART: UART event received, type: 0[0m
+[0;32mI (983) UART: UART event received, type: 0[0m
+[0;32mI (1023) UART: UART event received, type: 0[0m
+[0;32mI (1033) UART: UART event received, type: 0[0m
+[0;32mI (1043) UART: UART event received, type: 0[0m
+[0;32mI (1053) UART: UART event received, type: 0[0m
+[0;32mI (1063) UART: UART event received, type: 0[0m
+[0;32mI (1103) UART: UART event received, type: 0[0m
+[0;32mI (1113) UART: UART event received, type: 0[0m
+[0;32mI (1123) UART: UART event received, type: 0[0m
+[0;32mI (1143) UART: UART event received, type: 0[0m
+[0;32mI (1153) UART: UART event received, type: 0[0m
+[0;32mI (1153) UART: UART event received, type: 0[0m
+[0;32mI (1163) UART: UART event received, type: 0[0m
+[0;32mI (1173) UART: UART event received, type: 0[0m
+[0;32mI (1183) UART: UART event received, type: 0[0m
+[0;32mI (1193) UART: UART event received, type: 0[0m
+[0;32mI (1203) UART: UART event received, type: 0[0m
+[0;32mI (1203) UART: UART event received, type: 0[0m
+[0;32mI (1213) UART: UART event received, type: 0[0m
+[0;32mI (1223) UART: UART event received, type: 0[0m
+[0;32mI (1233) UART: UART event received, type: 0[0m
+[0;32mI (1243) UART: UART event received, type: 0[0m
+[0;32mI (1253) UART: UART event received, type: 0[0m
+[0;32mI (1253) UART: UART event received, type: 0[0m
+[0;32mI (1263) UART: UART event received, type: 0[0m
+[0;32mI (1273) UART: UART event received, type: 0[0m
+[0;32mI (1283) UART: UART event received, type: 0[0m
+[0;32mI (1293) UART: UART event received, type: 0[0m
+[0;32mI (1303) UART: UART event received, type: 0[0m
+[0;32mI (1323) UART: UART event received, type: 0[0m
+[0;32mI (1343) UART: UART event received, type: 0[0m
+[0;32mI (1353) UART: UART event received, type: 0[0m
+[0;32mI (1383) UART: UART event received, type: 0[0m
+[0;32mI (1393) UART: UART event received, type: 0[0m
+[0;32mI (1393) UART: UART event received, type: 0[0m
+[0;32mI (1403) UART: UART event received, type: 0[0m
+[0;32mI (1413) UART: UART event received, type: 0[0m
+[0;32mI (1423) UART: UART event received, type: 0[0m
+[0;32mI (1433) UART: UART event received, type: 0[0m
+[0;32mI (1443) UART: UART event received, type: 0[0m
+[0;32mI (1453) UART: UART event received, type: 0[0m
+[0;32mI (1463) UART: UART event received, type: 0[0m
+[0;32mI (1483) UART: UART event received, type: 0[0m
+[0;32mI (1483) UART: UART event received, type: 0[0m
+[0;32mI (1493) UART: UART event received, type: 0[0m
+[0;32mI (1513) UART: UART event received, type: 0[0m
+[0;32mI (1513) UART: UART event received, type: 0[0m
+[0;32mI (1533) UART: UART event received, type: 0[0m
+[0;32mI (1553) UART: UART event received, type: 0[0m
+[0;32mI (1563) UART: UART event received, type: 0[0m
+[0;32mI (1573) UART: UART event received, type: 0[0m
+[0;32mI (1583) UART: UART event received, type: 0[0m
+[0;32mI (1583) UART: UART event received, type: 0[0m
+[0;32mI (1593) UART: UART event received, type: 0[0m
+RX: 100 packets
+[0;32mI (1603) UART: UART event received, type: 0[0m
+[0;32mI (1603) UART: UART event received, type: 0[0m
+[0;32mI (1623) UART: UART event received, type: 0[0m
+[0;32mI (1633) UART: UART event received, type: 0[0m
+[0;32mI (1633) UART: UART event received, type: 0[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x8 (TG1WDT_SYS_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42003d57
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Nov  4 2025 17:55:53[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;33mW (47) boot.esp32s3: PRO CPU has been reset by WDT.[0m
+[0;33mW (53) boot.esp32s3: APP CPU has been reset by WDT.[0m
+[0;32mI (58) boot: Enabling RNG early entropy source...[0m
+[0;32mI (64) boot: Partition Table:[0m
+[0;32mI (67) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (75) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (82) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (97) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=19e00h (105984) map[0m
+[0;32mI (129) esp_image: segment 1: paddr=00029e28 vaddr=3fc96200 size=02bc0h ( 11200) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002c9f0 vaddr=40374000 size=03628h ( 13864) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=4ac6ch (306284) map[0m
+[0;32mI (198) esp_image: segment 4: paddr=0007ac94 vaddr=40377628 size=0eae8h ( 60136) load[0m
+[0;32mI (219) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (219) boot: Disabling RNG early entropy source...[0m
+[0;32mI (230) cpu_start: Multicore app[0m
+[0;32mI (240) cpu_start: Pro cpu start user code[0m
+[0;32mI (240) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (240) cpu_start: Application information:[0m
+[0;32mI (243) cpu_start: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (249) cpu_start: App version:      159598a-dirty[0m
+[0;32mI (255) cpu_start: Compile time:     Nov  4 2025 17:54:03[0m
+[0;32mI (261) cpu_start: ELF file SHA256:  683751eeb...[0m
+[0;32mI (266) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (271) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (276) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (281) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (285) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9D4B8 len 0004C258 (304 KiB): RAM[0m
+[0;32mI (299) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (305) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (311) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (318) spi_flash: detected chip: gd[0m
+[0;32mI (322) spi_flash: flash io: dio[0m
+[0;33mW (325) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (339) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (346) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (353) main_task: Started on CPU0[0m
+[0;32mI (363) main_task: Calling app_main()[0m
+[0;32mI (373) uart: queue free spaces: 30[0m
+[0;32mI (383) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (383) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (483) UART: UART RX task started and waiting for data...[0m
+[0;32mI (483) UART: UART event received, type: 0[0m
+[0;32mI (483) UART: UART event received, type: 0[0m
+[0;32mI (483) UART: UART event received, type: 0[0m
+[0;32mI (493) UART: UART event received, type: 0[0m
+[0;32mI (493) UART: UART event received, type: 0[0m
+[0;32mI (503) UART: UART event received, type: 0[0m
+[0;32mI (503) UART: UART event received, type: 0[0m
+[0;32mI (513) UART: UART event received, type: 0[0m
+[0;32mI (513) UART: UART event received, type: 0[0m
+[0;32mI (523) UART: UART event received, type: 0[0m
+[0;32mI (523) UART: UART event received, type: 0[0m
+[0;32mI (533) UART: UART event received, type: 0[0m
+[0;32mI (533) UART: UART event received, type: 0[0m
+[0;32mI (533) UART: UART event received, type: 0[0m
+[0;32mI (543) UART: UART event received, type: 0[0m
+[0;32mI (543) UART: UART event received, type: 0[0m
+[0;32mI (553) UART: UART event received, type: 0[0m
+[0;32mI (553) UART: UART event received, type: 0[0m
+[0;32mI (563) UART: UART event received, type: 0[0m
+[0;32mI (563) UART: UART event received, type: 0[0m
+[0;32mI (573) UART: UART event received, type: 0[0m
+[0;32mI (573) UART: UART event received, type: 0[0m
+[0;32mI (583) UART: UART event received, type: 0[0m
+UART RX task created
+[0;32mI (583) UART: UART event received, type: 0[0m
+[0;32mI (603) UART: UART event received, type: 0[0m
+[0;32mI (603) UART: UART event received, type: 0[0m
+[0;32mI (613) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (613) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (613) UART: UART event received, type: 0[0m
+[0;32mI (623) UART: UART event received, type: 0[0m
+[0;32mI (633) ETH: Ethernet Started[0m
+[0;32mI (633) WEB: Registered /power/set handler[0m
+[0;32mI (633) WEB: Registered /power/get handler[0m
+[0;32mI (633) UART: UART event received, type: 0[0m
+[0;32mI (643) UART: UART event received, type: 0[0m
+[0;32mI (643) MAIN: Web server started[0m
+[0;32mI (653) main_task: Returned from app_main()[0m
+[0;32mI (653) UART: UART event received, type: 0[0m
+[0;32mI (663) UART: UART event received, type: 0[0m
+[0;32mI (663) UART: UART event received, type: 0[0m
+[0;32mI (683) UART: UART event received, type: 0[0m
+[0;32mI (683) UART: UART event received, type: 0[0m
+[0;32mI (693) UART: UART event received, type: 0[0m
+[0;32mI (703) UART: UART event received, type: 0[0m
+[0;32mI (713) UART: UART event received, type: 0[0m
+[0;32mI (723) UART: UART event received, type: 0[0m
+[0;32mI (733) UART: UART event received, type: 0[0m
+[0;32mI (733) UART: UART event received, type: 0[0m
+[0;32mI (743) UART: UART event received, type: 0[0m
+[0;32mI (743) UART: UART event received, type: 0[0m
+[0;32mI (753) UART: UART event received, type: 0[0m
+[0;32mI (763) UART: UART event received, type: 0[0m
+[0;32mI (763) UART: UART event received, type: 0[0m
+Guru Meditation Error: Core  0 panic'ed (Interrupt wdt timeout on CPU0). 
+
+Core  0 register dump:
+PC      : 0x40379e21  PS      : 0x00060c34  A0      : 0x8037d32c  A1      : 0x3fcad060  
+A2      : 0x3620206c  A3      : 0xb33fffff  A4      : 0x00000000  A5      : 0x3fcacf0c  
+A6      : 0x3fcacf20  A7      : 0x3fc9a471  A8      : 0x00000000  A9      : 0x3c05527d  
+A10     : 0x3fc9a471  A11     : 0x3c05527c  A12     : 0x00000001  A13     : 0x00000000  
+A14     : 0x00000000  A15     : 0x40404040  SAR     : 0x00000004  EXCCAUSE: 0x00000005  
+EXCVADDR: 0x00000000  LBEG    : 0x400556d5  LEND    : 0x400556e5  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x40379e1e:0x3fcad060 0x4037d329:0x3fcad080 0x4037cdd7:0x3fcad0b0 0x4200a2db:0x3fcad0f0 0x4037d0d1:0x3fcad120
+
+
+Core  1 register dump:
+PC      : 0x40379f0e  PS      : 0x00060734  A0      : 0x82004315  A1      : 0x3fca1fb0  
+A2      : 0x00000000  A3      : 0x00000000  A4      : 0x3fc9ee80  A5      : 0x3fc9ee60  
+A6      : 0x40379080  A7      : 0x00000001  A8      : 0x8201274a  A9      : 0x3fca1f70  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x3fc9ee60  A13     : 0x3fc9ee30  
+A14     : 0x00000001  A15     : 0x3fca2178  SAR     : 0x00000000  EXCCAUSE: 0x00000005  
+EXCVADDR: 0x00000000  LBEG    : 0x00000000  LEND    : 0x00000000  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x40379f0b:0x3fca1fb0 0x42004312:0x3fca1fd0 0x4037e015:0x3fca1ff0 0x4037d0d1:0x3fca2010
+
+
+
+
+ELF file SHA256: 683751eeb
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40375acc
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Nov  4 2025 17:55:53[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=19e00h (105984) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=00029e28 vaddr=3fc96200 size=02bc0h ( 11200) load[0m
+[0;32mI (120) esp_image: segment 2: paddr=0002c9f0 vaddr=40374000 size=03628h ( 13864) load[0m
+[0;32mI (126) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=4ac6ch (306284) map[0m
+[0;32mI (187) esp_image: segment 4: paddr=0007ac94 vaddr=40377628 size=0eae8h ( 60136) load[0m
+[0;32mI (208) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (208) boot: Disabling RNG early entropy source...[0m
+[0;32mI (219) cpu_start: Multicore app[0m
+[0;32mI (229) cpu_start: Pro cpu start user code[0m
+[0;32mI (229) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (229) cpu_start: Application information:[0m
+[0;32mI (232) cpu_start: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (238) cpu_start: App version:      159598a-dirty[0m
+[0;32mI (244) cpu_start: Compile time:     Nov  4 2025 17:54:03[0m
+[0;32mI (250) cpu_start: ELF file SHA256:  683751eeb...[0m
+[0;32mI (255) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (260) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (265) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (270) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (274) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (282) heap_init: At 3FC9D4B8 len 0004C258 (304 KiB): RAM[0m
+[0;32mI (288) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (294) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (300) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (307) spi_flash: detected chip: gd[0m
+[0;32mI (310) spi_flash: flash io: dio[0m
+[0;33mW (314) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (328) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (334) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (342) main_task: Started on CPU0[0m
+[0;32mI (352) main_task: Calling app_main()[0m
+[0;32mI (362) uart: queue free spaces: 30[0m
+[0;32mI (372) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (372) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (472) UART: UART RX task started and waiting for data...[0m
+[0;32mI (472) UART: UART event received, type: 0[0m
+[0;32mI (472) UART: UART event received, type: 0[0m
+[0;32mI (472) UART: UART event received, type: 0[0m
+[0;32mI (482) UART: UART event received, type: 0[0m
+[0;32mI (482) UART: UART event received, type: 0[0m
+[0;32mI (492) UART: UART event received, type: 0[0m
+[0;32mI (492) UART: UART event received, type: 0[0m
+UART RX task created
+[0;32mI (502) UART: UART event received, type: 0[0m
+[0;32mI (512) UART: UART event received, type: 0[0m
+[0;32mI (522) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (522) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (522) UART: UART event received, type: 0[0m
+[0;32mI (532) ETH: Ethernet Started[0m
+[0;32mI (532) WEB: Registered /power/set handler[0m
+[0;32mI (532) WEB: Registered /power/get handler[0m
+[0;32mI (542) MAIN: Web server started[0m
+[0;32mI (542) main_task: Returned from app_main()[0m
+[0;32mI (562) UART: UART event received, type: 0[0m
+[0;32mI (562) UART: UART event received, type: 0[0m
+[0;32mI (572) UART: UART event received, type: 0[0m
+[0;32mI (582) UART: UART event received, type: 0[0m
+[0;32mI (582) UART: UART event received, type: 0[0m
+[0;32mI (592) UART: UART event received, type: 0[0m
+[0;32mI (602) UART: UART event received, type: 0[0m
+[0;32mI (612) UART: UART event received, type: 0[0m
+[0;32mI (622) UART: UART event received, type: 0[0m
+[0;32mI (642) UART: UART event received, type: 0[0m
+[0;32mI (642) UART: UART event received, type: 0[0m
+[0;32mI (642) UART: UART event received, type: 0[0m
+[0;32mI (652) UART: UART event received, type: 0[0m
+[0;32mI (672) UART: UART event received, type: 0[0m
+[0;32mI (682) UART: UART event received, type: 0[0m
+[0;32mI (722) UART: UART event received, type: 0[0m
+[0;32mI (732) UART: UART event received, type: 0[0m
+[0;32mI (772) UART: UART event received, type: 0[0m
+[0;32mI (782) UART: UART event received, type: 0[0m
+[0;32mI (792) UART: UART event received, type: 0[0m
+[0;32mI (812) UART: UART event received, type: 0[0m
+[0;32mI (832) UART: UART event received, type: 0[0m
+[0;32mI (852) UART: UART event received, type: 0[0m
+[0;32mI (882) UART: UART event received, type: 0[0m
+[0;32mI (902) UART: UART event received, type: 0[0m
+[0;32mI (902) UART: UART event received, type: 0[0m
+[0;32mI (942) UART: UART event received, type: 0[0m
+[0;32mI (952) UART: UART event received, type: 0[0m
+[0;32mI (952) UART: UART event received, type: 0[0m
+[0;32mI (962) UART: UART event received, type: 0[0m
+[0;32mI (972) UART: UART event received, type: 0[0m
+[0;32mI (972) UART: UART event received, type: 0[0m
+[0;32mI (982) UART: UART event received, type: 0[0m
+[0;32mI (992) UART: UART event received, type: 0[0m
+[0;32mI (1002) UART: UART event received, type: 0[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x8 (TG1WDT_SYS_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42003d57
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Nov  4 2025 17:55:53[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;33mW (47) boot.esp32s3: PRO CPU has been reset by WDT.[0m
+[0;33mW (53) boot.esp32s3: APP CPU has been reset by WDT.[0m
+[0;32mI (58) boot: Enabling RNG early entropy source...[0m
+[0;32mI (64) boot: Partition Table:[0m
+[0;32mI (67) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (75) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (82) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (97) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=19e00h (105984) map[0m
+[0;32mI (129) esp_image: segment 1: paddr=00029e28 vaddr=3fc96200 size=02bc0h ( 11200) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002c9f0 vaddr=40374000 size=03628h ( 13864) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=4ac6ch (306284) map[0m
+[0;32mI (198) esp_image: segment 4: paddr=0007ac94 vaddr=40377628 size=0eae8h ( 60136) load[0m
+[0;32mI (219) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (219) boot: Disabling RNG early entropy source...[0m
+[0;32mI (230) cpu_start: Multicore app[0m
+[0;32mI (240) cpu_start: Pro cpu start user code[0m
+[0;32mI (240) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (240) cpu_start: Application information:[0m
+[0;32mI (243) cpu_start: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (249) cpu_start: App version:      159598a-dirty[0m
+[0;32mI (255) cpu_start: Compile time:     Nov  4 2025 17:54:03[0m
+[0;32mI (261) cpu_start: ELF file SHA256:  683751eeb...[0m
+[0;32mI (266) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (271) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (276) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (281) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (285) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9D4B8 len 0004C258 (304 KiB): RAM[0m
+[0;32mI (299) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (305) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (311) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (318) spi_flash: detected chip: gd[0m
+[0;32mI (322) spi_flash: flash io: dio[0m
+[0;33mW (325) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (339) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (346) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (353) main_task: Started on CPU0[0m
+[0;32mI (363) main_task: Calling app_main()[0m
+[0;32mI (373) uart: queue free spaces: 30[0m
+[0;32mI (383) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (383) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (483) UART: UART RX task started and waiting for data...[0m
+[0;32mI (483) UART: UART event received, type: 0[0m
+[0;32mI (483) UART: UART event received, type: 0[0m
+[0;32mI (483) UART: UART event received, type: 0[0m
+[0;32mI (493) UART: UART event received, type: 0[0m
+UART RX task created
+[0;32mI (493) UART: UART event received, type: 0[0m
+[0;32mI (503) UART: UART event received, type: 0[0m
+[0;32mI (513) UART: UART event received, type: 0[0m
+[0;32mI (533) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (533) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (543) ETH: Ethernet Started[0m
+[0;32mI (543) WEB: Registered /power/set handler[0m
+[0;32mI (543) WEB: Registered /power/get handler[0m
+[0;32mI (543) MAIN: Web server started[0m
+[0;32mI (543) main_task: Returned from app_main()[0m
+[0;32mI (553) UART: UART event received, type: 0[0m
+[0;32mI (553) UART: UART event received, type: 0[0m
+[0;32mI (563) UART: UART event received, type: 0[0m
+[0;32mI (573) UART: UART event received, type: 0[0m
+[0;32mI (573) UART: UART event received, type: 0[0m
+[0;32mI (583) UART: UART event received, type: 0[0m
+[0;32mI (593) UART: UART event received, type: 0[0m
+[0;32mI (593) UART: UART event received, type: 0[0m
+[0;32mI (603) UART: UART event received, type: 0[0m
+[0;32mI (613) UART: UART event received, type: 0[0m
+[0;32mI (613) UART: UART event received, type: 0[0m
+[0;32mI (623) UART: UART event received, type: 0[0m
+[0;32mI (623) UART: UART event received, type: 0[0m
+[0;32mI (633) UART: UART event received, type: 0[0m
+[0;32mI (643) UART: UART event received, type: 0[0m
+[0;32mI (663) UART: UART event received, type: 0[0m
+[0;32mI (663) UART: UART event received, type: 0[0m
+[0;32mI (703) UART: UART event received, type: 0[0m
+[0;32mI (703) UART: UART event received, type: 0[0m
+[0;32mI (713) UART: UART event received, type: 0[0m
+[0;32mI (723) UART: UART event received, type: 0[0m
+[0;32mI (743) UART: UART event received, type: 0[0m
+[0;32mI (773) UART: UART event received, type: 0[0m
+[0;32mI (783) UART: UART event received, type: 0[0m
+[0;32mI (793) UART: UART event received, type: 0[0m
+[0;32mI (803) UART: UART event received, type: 0[0m
+[0;32mI (813) UART: UART event received, type: 0[0m
+[0;32mI (813) UART: UART event received, type: 0[0m
+[0;32mI (823) UART: UART event received, type: 0[0m
+[0;32mI (863) UART: UART event received, type: 0[0m
+[0;32mI (863) UART: UART event received, type: 0[0m
+[0;32mI (873) UART: UART event received, type: 0[0m
+[0;32mI (873) UART: UART event received, type: 0[0m
+[0;32mI (883) UART: UART event received, type: 0[0m
+[0;32mI (893) UART: UART event received, type: 0[0m
+[0;32mI (903) UART: UART event received, type: 0[0m
+[0;32mI (913) UART: UART event received, type: 0[0m
+[0;32mI (923) UART: UART event received, type: 0[0m
+[0;32mI (943) UART: UART event received, type: 0[0m
+[0;32mI (943) UART: UART event received, type: 0[0m
+[0;32mI (963) UART: UART event received, type: 0[0m
+[0;32mI (1003) UART: UART event received, type: 0[0m
+[0;32mI (1013) UART: UART event received, type: 0[0m
+[0;32mI (1023) UART: UART event received, type: 0[0m
+[0;32mI (1023) UART: UART event received, type: 0[0m
+[0;32mI (1033) UART: UART event received, type: 0[0m
+[0;32mI (1043) UART: UART event received, type: 0[0m
+[0;32mI (1083) UART: UART event received, type: 0[0m
+[0;32mI (1103) UART: UART event received, type: 0[0m
+[0;32mI (1133) UART: UART event received, type: 0[0m
+[0;32mI (1133) UART: UART event received, type: 0[0m
+[0;32mI (1143) UART: UART event received, type: 0[0m
+[0;32mI (1183) UART: UART event received, type: 0[0m
+[0;32mI (1183) UART: UART event received, type: 0[0m
+[0;32mI (1203) UART: UART event received, type: 0[0m
+[0;32mI (1223) UART: UART event received, type: 0[0m
+[0;32mI (1233) UART: UART event received, type: 0[0m
+[0;32mI (1233) UART: UART event received, type: 0[0m
+[0;32mI (1243) UART: UART event received, type: 0[0m
+[0;32mI (1253) UART: UART event received, type: 0[0m
+[0;32mI (1253) UART: UART event received, type: 0[0m
+[0;32mI (1303) UART: UART event received, type: 0[0m
+[0;32mI (1303) UART: UART event received, type: 0[0m
+[0;32mI (1313) UART: UART event received, type: 0[0m
+[0;32mI (1333) UART: UART event received, type: 0[0m
+[0;32mI (1373) UART: UART event received, type: 0[0m
+[0;32mI (1383) UART: UART event received, type: 0[0m
+[0;32mI (1423) UART: UART event received, type: 0[0m
+[0;32mI (1433) UART: UART event received, type: 0[0m
+[0;32mI (1463) UART: UART event received, type: 0[0m
+[0;32mI (1483) UART: UART event received, type: 0[0m
+[0;32mI (1503) UART: UART event received, type: 0[0m
+[0;32mI (1513) UART: UART event received, type: 0[0m
+[0;32mI (1563) UART: UART event received, type: 0[0m
+[0;32mI (1573) UART: UART event received, type: 0[0m
+[0;32mI (1583) UART: UART event received, type: 0[0m
+[0;32mI (1593) UART: UART event received, type: 0[0m
+[0;32mI (1593) UART: UART event received, type: 0[0m
+[0;32mI (1603) UART: UART event received, type: 0[0m
+[0;32mI (1603) UART: UART event received, type: 0[0m
+[0;32mI (1613) UART: UART event received, type: 0[0m
+[0;32mI (1623) UART: UART event received, type: 0[0m
+[0;32mI (1633) UART: UART event received, type: 0[0m
+[0;32mI (1643) UART: UART event received, type: 0[0m
+[0;32mI (1653) UART: UART event received, type: 0[0m
+[0;32mI (1663) UART: UART event received, type: 0[0m
+[0;32mI (1673) UART: UART event received, type: 0[0m
+[0;32mI (1683) UART: UART event received, type: 0[0m
+[0;32mI (1693) UART: UART event received, type: 0[0m
+[0;32mI (1703) UART: UART event received, type: 0[0m
+[0;32mI (1713) UART: UART event received, type: 0[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x8 (TG1WDT_SYS_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42003d57
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Nov  4 2025 17:55:53[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;33mW (47) boot.esp32s3: PRO CPU has been reset by WDT.[0m
+[0;33mW (53) boot.esp32s3: APP CPU has been reset by WDT.[0m
+[0;32mI (58) boot: Enabling RNG early entropy source...[0m
+[0;32mI (64) boot: Partition Table:[0m
+[0;32mI (67) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (75) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (82) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (97) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=19e00h (105984) map[0m
+[0;32mI (129) esp_image: segment 1: paddr=00029e28 vaddr=3fc96200 size=02bc0h ( 11200) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002c9f0 vaddr=40374000 size=03628h ( 13864) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=4ac6ch (306284) map[0m
+[0;32mI (198) esp_image: segment 4: paddr=0007ac94 vaddr=40377628 size=0eae8h ( 60136) load[0m
+[0;32mI (219) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (219) boot: Disabling RNG early entropy source...[0m
+[0;32mI (230) cpu_start: Multicore app[0m
+[0;32mI (240) cpu_start: Pro cpu start user code[0m
+[0;32mI (240) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (240) cpu_start: Application information:[0m
+[0;32mI (243) cpu_start: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (249) cpu_start: App version:      159598a-dirty[0m
+[0;32mI (255) cpu_start: Compile time:     Nov  4 2025 17:54:03[0m
+[0;32mI (261) cpu_start: ELF file SHA256:  683751eeb...[0m
+[0;32mI (266) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (271) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (276) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (281) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (285) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9D4B8 len 0004C258 (304 KiB): RAM[0m
+[0;32mI (299) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (305) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (311) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (318) spi_flash: detected chip: gd[0m
+[0;32mI (322) spi_flash: flash io: dio[0m
+[0;33mW (325) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (339) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (346) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (353) main_task: Started on CPU0[0m
+[0;32mI (363) main_task: Calling app_main()[0m
+[0;32mI (373) uart: queue free spaces: 30[0m
+[0;32mI (383) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (383) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (483) UART: UART RX task started and waiting for data...[0m
+[0;32mI (483) UART: UART event received, type: 0[0m
+[0;32mI (483) UART: UART event received, type: 0[0m
+[0;32mI (483) UART: UART event received, type: 0[0m
+[0;32mI (493) UART: UART event received, type: 0[0m
+[0;32mI (493) UART: UART event received, type: 0[0m
+[0;32mI (503) UART: UART event received, type: 0[0m
+[0;32mI (503) UART: UART event received, type: 0[0m
+[0;32mI (513) UART: UART event received, type: 0[0m
+[0;32mI (513) UART: UART event received, type: 0[0m
+UART RX task created
+[0;32mI (543) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (543) UART: UART event received, type: 0[0m
+[0;32mI (543) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (553) ETH: Ethernet Started[0m
+[0;32mI (553) WEB: Registered /power/set handler[0m
+[0;32mI (553) WEB: Registered /power/get handler[0m
+[0;32mI (553) UART: UART event received, type: 0[0m
+[0;32mI (563) MAIN: Web server started[0m
+[0;32mI (563) main_task: Returned from app_main()[0m
+[0;32mI (583) UART: UART event received, type: 0[0m
+[0;32mI (593) UART: UART event received, type: 0[0m
+[0;32mI (623) UART: UART event received, type: 0[0m
+[0;32mI (623) UART: UART event received, type: 0[0m
+[0;32mI (643) UART: UART event received, type: 0[0m
+[0;32mI (673) UART: UART event received, type: 0[0m
+[0;32mI (683) UART: UART event received, type: 0[0m
+[0;32mI (683) UART: UART event received, type: 0[0m
+[0;32mI (703) UART: UART event received, type: 0[0m
+[0;32mI (703) UART: UART event received, type: 0[0m
+[0;32mI (703) UART: UART event received, type: 0[0m
+[0;32mI (713) UART: UART event received, type: 0[0m
+[0;32mI (723) UART: UART event received, type: 0[0m
+[0;32mI (723) UART: UART event received, type: 0[0m
+[0;32mI (773) UART: UART event received, type: 0[0m
+[0;32mI (793) UART: UART event received, type: 0[0m
+[0;32mI (803) UART: UART event received, type: 0[0m
+[0;32mI (843) UART: UART event received, type: 0[0m
+[0;32mI (843) UART: UART event received, type: 0[0m
+[0;32mI (853) UART: UART event received, type: 0[0m
+[0;32mI (873) UART: UART event received, type: 0[0m
+[0;32mI (913) UART: UART event received, type: 0[0m
+[0;32mI (923) UART: UART event received, type: 0[0m
+[0;32mI (933) UART: UART event received, type: 0[0m
+[0;32mI (943) UART: UART event received, type: 0[0m
+[0;32mI (943) UART: UART event received, type: 0[0m
+[0;32mI (953) UART: UART event received, type: 0[0m
+[0;32mI (963) UART: UART event received, type: 0[0m
+[0;32mI (983) UART: UART event received, type: 0[0m
+[0;32mI (983) UART: UART event received, type: 0[0m
+[0;32mI (993) UART: UART event received, type: 0[0m
+[0;32mI (1003) UART: UART event received, type: 0[0m
+[0;32mI (1003) UART: UART event received, type: 0[0m
+[0;32mI (1023) UART: UART event received, type: 0[0m
+[0;32mI (1023) UART: UART event received, type: 0[0m
+[0;32mI (1033) UART: UART event received, type: 0[0m
+[0;32mI (1043) UART: UART event received, type: 0[0m
+[0;32mI (1043) UART: UART event received, type: 0[0m
+[0;32mI (1053) UART: UART event received, type: 0[0m
+[0;32mI (1063) UART: UART event received, type: 0[0m
+[0;32mI (1073) UART: UART event received, type: 0[0m
+[0;32mI (1083) UART: UART event received, type: 0[0m
+[0;32mI (1093) UART: UART event received, type: 0[0m
+[0;32mI (1103) UART: UART event received, type: 0[0m
+[0;32mI (1113) UART: UART event received, type: 0[0m
+[0;32mI (1123) UART: UART event received, type: 0[0m
+[0;32mI (1133) UART: UART event received, type: 0[0m
+[0;32mI (1143) UART: UART event received, type: 0[0m
+[0;32mI (1143) UART: UART event received, type: 0[0m
+[0;32mI (1153) UART: UART event received, type: 0[0m
+[0;32mI (1163) UART: UART event received, type: 0[0m
+[0;32mI (1173) UART: UART event received, type: 0[0m
+[0;32mI (1173) UART: UART event received, type: 0[0m
+[0;32mI (1183) UART: UART event received, type: 0[0m
+[0;32mI (1193) UART: UART event received, type: 0[0m
+[0;32mI (1203) UART: UART event received, type: 0[0m
+[0;32mI (1213) UART: UART event received, type: 0[0m
+[0;32mI (1223) UART: UART event received, type: 0[0m
+[0;32mI (1223) UART: UART event received, type: 0[0m
+[0;32mI (1243) UART: UART event received, type: 0[0m
+[0;32mI (1253) UART: UART event received, type: 0[0m
+[0;32mI (1263) UART: UART event received, type: 0[0m
+[0;32mI (1273) UART: UART event received, type: 0[0m
+[0;32mI (1283) UART: UART event received, type: 0[0m
+[0;32mI (1303) UART: UART event received, type: 0[0m
+[0;32mI (1303) UART: UART event received, type: 0[0m
+[0;32mI (1313) UART: UART event received, type: 0[0m
+[0;32mI (1323) UART: UART event received, type: 0[0m
+[0;32mI (1323) UART: UART event received, type: 0[0m
+[0;32mI (1333) UART: UART event received, type: 0[0m
+[0;32mI (1343) UART: UART event received, type: 0[0m
+[0;32mI (1343) UART: UART event received, type: 0[0m
+[0;32mI (1353) UART: UART event received, type: 0[0m
+[0;32mI (1353) UART: UART event received, type: 0[0m
+[0;32mI (1363) UART: UART event received, type: 0[0m
+[0;32mI (1373) UART: UART event received, type: 0[0m
+[0;32mI (1383) UART: UART event received, type: 0[0m
+[0;32mI (1383) UART: UART event received, type: 0[0m
+[0;32mI (1393) UART: UART event received, type: 0[0m
+[0;32mI (1393) UART: UART event received, type: 0[0m
+[0;32mI (1413) UART: UART event received, type: 0[0m
+[0;32mI (1413) UART: UART event received, type: 0[0m
+[0;32mI (1413) UART: UART event received, type: 0[0m
+[0;32mI (1423) UART: UART event received, type: 0[0m
+[0;32mI (1423) UART: UART event received, type: 0[0m
+[0;32mI (1433) UART: UART event received, type: 0[0m
+[0;32mI (1443) UART: UART event received, type: 0[0m
+[0;32mI (1453) UART: UART event received, type: 0[0m
+[0;32mI (1453) UART: UART event received, type: 0[0m
+RX: 100 packets
+[0;32mI (1463) UART: UART event received, type: 0[0m
+[0;32mI (1483) UART: UART event received, type: 0[0m
+[0;32mI (1493) UART: UART event received, type: 0[0m
+[0;32mI (1513) UART: UART event received, type: 0[0m
+[0;32mI (1513) UART: UART event received, type: 0[0m
+[0;32mI (1523) UART: UART event received, type: 0[0m
+[0;32mI (1533) UART: UART event received, type: 0[0m
+[0;32mI (1533) UART: UART event received, type: 0[0m
+[0;32mI (1543) UART: UART event received, type: 0[0m
+[0;32mI (1553) UART: UART event received, type: 0[0m
+[0;32mI (1553) UART: UART event received, type: 0[0m
+[0;32mI (1563) UART: UART event received, type: 0[0m
+[0;32mI (1563) UART: UART event received, type: 0[0m
+[0;32mI (1573) UART: UART event received, type: 0[0m
+[0;32mI (1573) UART: UART event received, type: 0[0m
+[0;32mI (1583) UART: UART event received, type: 0[0m
+[0;32mI (1593) UART: UART event received, type: 0[0m
+[0;32mI (1593) UART: UART event received, type: 0[0m
+[0;32mI (1603) UART: UART event received, type: 0[0m
+[0;32mI (1613) UART: UART event received, type: 0[0m
+[0;32mI (1613) UART: UART event received, type: 0[0m
+[0;32mI (1623) UART: UART event received, type: 0[0m
+[0;32mI (1633) UART: UART event received, type: 0[0m
+[0;32mI (1633) UART: UART event received, type: 0[0m
+[0;32mI (1643) UART: UART event received, type: 0[0m
+[0;32mI (1653) UART: UART event received, type: 0[0m
+[0;32mI (1653) UART: UART event received, type: 0[0m
+[0;32mI (1663) UART: UART event received, type: 0[0m
+[0;32mI (1663) UART: UART event received, type: 0[0m
+[0;32mI (1683) UART: UART event received, type: 0[0m
+[0;32mI (1693) UART: UART event received, type: 0[0m
+[0;32mI (1703) UART: UART event received, type: 0[0m
+[0;32mI (1703) UART: UART event received, type: 0[0m
+[0;32mI (1713) UART: UART event received, type: 0[0m
+[0;32mI (1713) UART: UART event received, type: 0[0m
+[0;32mI (1723) UART: UART event received, type: 0[0m
+[0;32mI (1733) UART: UART event received, type: 0[0m
+[0;32mI (1763) UART: UART event received, type: 0[0m
+[0;32mI (1763) UART: UART event received, type: 0[0m
+[0;32mI (1783) UART: UART event received, type: 0[0m
+[0;32mI (1793) UART: UART event received, type: 0[0m
+[0;32mI (1803) UART: UART event received, type: 0[0m
+[0;32mI (1813) UART: UART event received, type: 0[0m
+[0;32mI (1813) UART: UART event received, type: 0[0m
+[0;32mI (1823) UART: UART event received, type: 0[0m
+[0;32mI (1833) UART: UART event received, type: 0[0m
+[0;32mI (1833) UART: UART event received, type: 0[0m
+[0;32mI (1843) UART: UART event received, type: 0[0m
+[0;32mI (1843) UART: UART event received, type: 0[0m
+[0;32mI (1853) UART: UART event received, type: 0[0m
+[0;32mI (1853) UART: UART event received, type: 0[0m
+[0;32mI (1863) UART: UART event received, type: 0[0m
+[0;32mI (1863) UART: UART event received, type: 0[0m
+[0;32mI (1883) UART: UART event received, type: 0[0m
+[0;32mI (1893) UART: UART event received, type: 0[0m
+[0;32mI (1893) UART: UART event received, type: 0[0m
+[0;32mI (1903) UART: UART event received, type: 0[0m
+[0;32mI (1913) UART: UART event received, type: 0[0m
+[0;32mI (1923) UART: UART event received, type: 0[0m
+[0;32mI (1923) UART: UART event received, type: 0[0m
+[0;32mI (1933) UART: UART event received, type: 0[0m
+[0;32mI (1973) UART: UART event received, type: 0[0m
+[0;32mI (1983) UART: UART event received, type: 0[0m
+[0;32mI (1993) UART: UART event received, type: 0[0m
+[0;32mI (1993) UART: UART event received, type: 0[0m
+[0;32mI (2003) UART: UART event received, type: 0[0m
+[0;32mI (2013) UART: UART event received, type: 0[0m
+[0;32mI (2023) UART: UART event received, type: 0[0m
+[0;32mI (2033) UART: UART event received, type: 0[0m
+[0;32mI (2033) UART: UART event received, type: 0[0m
+[0;32mI (2043) UART: UART event received, type: 0[0m
+[0;32mI (2043) UART: UART event received, type: 0[0m
+[0;32mI (2053) UART: UART event received, type: 0[0m
+[0;32mI (2073) UART: UART event received, type: 0[0m
+[0;32mI (2093) UART: UART event received, type: 0[0m
+[0;32mI (2093) UART: UART event received, type: 0[0m
+[0;32mI (2103) UART: UART event received, type: 0[0m
+[0;32mI (2103) UART: UART event received, type: 0[0m
+[0;32mI (2113) UART: UART event received, type: 0[0m
+[0;32mI (2113) UART: UART event received, type: 0[0m
+[0;32mI (2123) UART: UART event received, type: 0[0m
+[0;32mI (2123) UART: UART event received, type: 0[0m
+[0;32mI (2133) UART: UART event received, type: 0[0m
+[0;32mI (2133) UART: UART event received, type: 0[0m
+[0;32mI (2153) UART: UART event received, type: 0[0m
+[0;32mI (2163) UART: UART event received, type: 0[0m
+[0;32mI (2163) UART: UART event received, type: 0[0m
+[0;32mI (2173) UART: UART event received, type: 0[0m
+[0;32mI (2173) UART: UART event received, type: 0[0m
+[0;32mI (2193) UART: UART event received, type: 0[0m
+[0;32mI (2213) UART: UART event received, type: 0[0m
+[0;32mI (2223) UART: UART event received, type: 0[0m
+[0;32mI (2233) UART: UART event received, type: 0[0m
+[0;32mI (2233) UART: UART event received, type: 0[0m
+[0;32mI (2233) UART: UART event received, type: 0[0m
+[0;32mI (2243) UART: UART event received, type: 0[0m
+[0;32mI (2253) UART: UART event received, type: 0[0m
+[0;32mI (2263) UART: UART event received, type: 0[0m
+[0;32mI (2283) UART: UART event received, type: 0[0m
+[0;32mI (2293) UART: UART event received, type: 0[0m
+RX: 200 packets
+[0;32mI (2313) UART: UART event received, type: 0[0m
+[0;32mI (2323) UART: UART event received, type: 0[0m
+[0;32mI (2323) UART: UART event received, type: 0[0m
+[0;32mI (2333) UART: UART event received, type: 0[0m
+[0;32mI (2343) UART: UART event received, type: 0[0m
+[0;32mI (2353) UART: UART event received, type: 0[0m
+[0;32mI (2353) UART: UART event received, type: 0[0m
+[0;32mI (2373) UART: UART event received, type: 0[0m
+[0;32mI (2393) UART: UART event received, type: 0[0m
+[0;32mI (2393) UART: UART event received, type: 0[0m
+[0;32mI (2403) UART: UART event received, type: 0[0m
+[0;32mI (2413) UART: UART event received, type: 0[0m
+[0;32mI (2423) UART: UART event received, type: 0[0m
+[0;32mI (2433) UART: UART event received, type: 0[0m
+[0;32mI (2443) UART: UART event received, type: 0[0m
+[0;32mI (2453) UART: UART event received, type: 0[0m
+[0;32mI (2453) UART: UART event received, type: 0[0m
+[0;32mI (2473) UART: UART event received, type: 0[0m
+[0;32mI (2483) UART: UART event received, type: 0[0m
+[0;32mI (2483) UART: UART event received, type: 0[0m
+[0;32mI (2503) UART: UART event received, type: 0[0m
+[0;32mI (2503) UART: UART event received, type: 0[0m
+[0;32mI (2523) UART: UART event received, type: 0[0m
+[0;32mI (2523) UART: UART event received, type: 0[0m
+[0;32mI (2533) UART: UART event received, type: 0[0m
+[0;32mI (2543) UART: UART event received, type: 0[0m
+[0;32mI (2543) UART: UART event received, type: 0[0m
+[0;32mI (2553) ETH: Ethernet Link Up[0m
+[0;32mI (2553) ETH: Ethernet HW Addr 02:00:00:12:34:56[0m
+[0;32mI (2553) UART: UART event received, type: 0[0m
+[0;32mI (2563) UART: UART event received, type: 0[0m
+[0;32mI (2573) UART: UART event received, type: 0[0m
+[0;32mI (2583) UART: UART event received, type: 0[0m
+[0;32mI (2593) UART: UART event received, type: 0[0m
+[0;32mI (2603) UART: UART event received, type: 0[0m
+[0;32mI (2613) UART: UART event received, type: 0[0m
+[0;32mI (2623) UART: UART event received, type: 0[0m
+[0;32mI (2623) UART: UART event received, type: 0[0m
+[0;32mI (2643) UART: UART event received, type: 0[0m
+[0;32mI (2653) UART: UART event received, type: 0[0m
+[0;32mI (2653) UART: UART event received, type: 0[0m
+[0;32mI (2663) UART: UART event received, type: 0[0m
+[0;32mI (2683) UART: UART event received, type: 0[0m
+[0;32mI (2693) UART: UART event received, type: 0[0m
+[0;32mI (2703) UART: UART event received, type: 0[0m
+[0;32mI (2703) UART: UART event received, type: 0[0m
+[0;32mI (2713) UART: UART event received, type: 0[0m
+[0;32mI (2713) UART: UART event received, type: 0[0m
+[0;32mI (2723) UART: UART event received, type: 0[0m
+[0;32mI (2723) UART: UART event received, type: 0[0m
+[0;32mI (2733) UART: UART event received, type: 0[0m
+[0;32mI (2743) UART: UART event received, type: 0[0m
+[0;32mI (2753) UART: UART event received, type: 0[0m
+[0;32mI (2763) UART: UART event received, type: 0[0m
+[0;32mI (2783) UART: UART event received, type: 0[0m
+[0;32mI (2793) UART: UART event received, type: 0[0m
+[0;32mI (2803) UART: UART event received, type: 0[0m
+[0;32mI (2803) UART: UART event received, type: 0[0m
+[0;32mI (2813) UART: UART event received, type: 0[0m
+[0;32mI (2823) UART: UART event received, type: 0[0m
+[0;32mI (2823) UART: UART event received, type: 0[0m
+[0;32mI (2833) UART: UART event received, type: 0[0m
+[0;32mI (2833) UART: UART event received, type: 0[0m
+[0;32mI (2843) UART: UART event received, type: 0[0m
+[0;32mI (2853) UART: UART event received, type: 0[0m
+[0;32mI (2853) UART: UART event received, type: 0[0m
+[0;32mI (2863) UART: UART event received, type: 0[0m
+[0;32mI (2873) UART: UART event received, type: 0[0m
+[0;32mI (2883) UART: UART event received, type: 0[0m
+[0;32mI (2903) UART: UART event received, type: 0[0m
+[0;32mI (2903) UART: UART event received, type: 0[0m
+[0;32mI (2913) UART: UART event received, type: 0[0m
+[0;32mI (2923) UART: UART event received, type: 0[0m
+[0;32mI (2923) UART: UART event received, type: 0[0m
+[0;32mI (2933) UART: UART event received, type: 0[0m
+[0;32mI (2943) UART: UART event received, type: 0[0m
+[0;32mI (2953) UART: UART event received, type: 0[0m
+[0;32mI (2963) UART: UART event received, type: 0[0m
+[0;32mI (2973) UART: UART event received, type: 0[0m
+[0;32mI (2983) UART: UART event received, type: 0[0m
+[0;32mI (3003) UART: UART event received, type: 0[0m
+[0;32mI (3023) UART: UART event received, type: 0[0m
+[0;32mI (3023) UART: UART event received, type: 0[0m
+[0;32mI (3033) UART: UART event received, type: 0[0m
+[0;32mI (3033) UART: UART event received, type: 0[0m
+[0;32mI (3043) UART: UART event received, type: 0[0m
+[0;32mI (3043) UART: UART event received, type: 0[0m
+[0;32mI (3053) UART: UART event received, type: 0[0m
+[0;32mI (3063) UART: UART event received, type: 0[0m
+[0;32mI (3073) UART: UART event received, type: 0[0m
+[0;32mI (3073) UART: UART event received, type: 0[0m
+[0;32mI (3083) UART: UART event received, type: 0[0m
+[0;32mI (3093) UART: UART event received, type: 0[0m
+[0;32mI (3093) UART: UART event received, type: 0[0m
+[0;32mI (3103) UART: UART event received, type: 0[0m
+[0;32mI (3113) UART: UART event received, type: 0[0m
+[0;32mI (3123) UART: UART event received, type: 0[0m
+[0;32mI (3133) UART: UART event received, type: 0[0m
+[0;32mI (3133) UART: UART event received, type: 0[0m
+[0;32mI (3143) UART: UART event received, type: 0[0m
+[0;32mI (3143) UART: UART event received, type: 0[0m
+[0;32mI (3153) UART: UART event received, type: 0[0m
+RX: 300 packets
+[0;32mI (3163) UART: UART event received, type: 0[0m
+[0;32mI (3163) UART: UART event received, type: 0[0m
+[0;32mI (3173) UART: UART event received, type: 0[0m
+[0;32mI (3183) UART: UART event received, type: 0[0m
+[0;32mI (3193) UART: UART event received, type: 0[0m
+[0;32mI (3203) UART: UART event received, type: 0[0m
+[0;32mI (3213) UART: UART event received, type: 0[0m
+[0;32mI (3213) UART: UART event received, type: 0[0m
+[0;32mI (3223) UART: UART event received, type: 0[0m
+[0;32mI (3233) UART: UART event received, type: 0[0m
+[0;32mI (3243) UART: UART event received, type: 0[0m
+[0;32mI (3243) UART: UART event received, type: 0[0m
+[0;32mI (3253) UART: UART event received, type: 0[0m
+[0;32mI (3263) UART: UART event received, type: 0[0m
+[0;32mI (3283) UART: UART event received, type: 0[0m
+[0;32mI (3293) UART: UART event received, type: 0[0m
+[0;32mI (3303) UART: UART event received, type: 0[0m
+[0;32mI (3313) UART: UART event received, type: 0[0m
+[0;32mI (3323) UART: UART event received, type: 0[0m
+[0;32mI (3333) UART: UART event received, type: 0[0m
+[0;32mI (3343) UART: UART event received, type: 0[0m
+[0;32mI (3353) UART: UART event received, type: 0[0m
+[0;32mI (3373) UART: UART event received, type: 0[0m
+[0;32mI (3383) UART: UART event received, type: 0[0m
+[0;32mI (3393) UART: UART event received, type: 0[0m
+[0;32mI (3403) UART: UART event received, type: 0[0m
+[0;32mI (3413) UART: UART event received, type: 0[0m
+[0;32mI (3413) UART: UART event received, type: 0[0m
+[0;32mI (3433) UART: UART event received, type: 0[0m
+[0;32mI (3443) UART: UART event received, type: 0[0m
+[0;32mI (3443) UART: UART event received, type: 0[0m
+[0;32mI (3453) UART: UART event received, type: 0[0m
+[0;32mI (3463) UART: UART event received, type: 0[0m
+[0;32mI (3473) UART: UART event received, type: 0[0m
+[0;32mI (3483) UART: UART event received, type: 0[0m
+[0;32mI (3483) UART: UART event received, type: 0[0m
+[0;32mI (3493) UART: UART event received, type: 0[0m
+[0;32mI (3513) UART: UART event received, type: 0[0m
+[0;32mI (3523) UART: UART event received, type: 0[0m
+[0;32mI (3523) UART: UART event received, type: 0[0m
+[0;32mI (3533) UART: UART event received, type: 0[0m
+[0;32mI (3533) UART: UART event received, type: 0[0m
+[0;32mI (3543) UART: UART event received, type: 0[0m
+[0;32mI (3553) UART: UART event received, type: 0[0m
+[0;32mI (3553) esp_netif_handlers: eth ip: 192.168.1.22, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (3553) ETH: Ethernet Got IP Address[0m
+[0;32mI (3553) UART: UART event received, type: 0[0m
+[0;32mI (3553) ETH: ~~~~~~~~~~~[0m
+[0;32mI (3563) ETH: ETHIP: 192.168.1.22[0m
+[0;32mI (3563) ETH: ETHMASK: 255.255.255.0[0m
+[0;32mI (3573) UART: UART event received, type: 0[0m
+[0;32mI (3573) ETH: ETHGW: 192.168.1.1[0m
+[0;32mI (3583) ETH: ~~~~~~~~~~~[0m
+[0;32mI (3583) UART: UART event received, type: 0[0m
+[0;32mI (3593) UART: UART event received, type: 0[0m
+[0;32mI (3593) UART: UART event received, type: 0[0m
+[0;32mI (3603) UART: UART event received, type: 0[0m
+[0;32mI (3613) UART: UART event received, type: 0[0m
+[0;32mI (3623) UART: UART event received, type: 0[0m
+[0;32mI (3623) UART: UART event received, type: 0[0m
+[0;32mI (3633) UART: UART event received, type: 0[0m
+[0;32mI (3643) UART: UART event received, type: 0[0m
+[0;32mI (3653) UART: UART event received, type: 0[0m
+[0;32mI (3653) UART: UART event received, type: 0[0m
+[0;32mI (3673) UART: UART event received, type: 0[0m
+[0;32mI (3683) UART: UART event received, type: 0[0m
+[0;32mI (3683) UART: UART event received, type: 0[0m
+[0;32mI (3703) UART: UART event received, type: 0[0m
+[0;32mI (3703) UART: UART event received, type: 0[0m
+[0;32mI (3713) UART: UART event received, type: 0[0m
+[0;32mI (3723) UART: UART event received, type: 0[0m
+[0;32mI (3723) UART: UART event received, type: 0[0m
+[0;32mI (3733) UART: UART event received, type: 0[0m
+[0;32mI (3733) UART: UART event received, type: 0[0m
+[0;32mI (3743) UART: UART event received, type: 0[0m
+[0;32mI (3753) UART: UART event received, type: 0[0m
+[0;32mI (3753) UART: UART event received, type: 0[0m
+[0;32mI (3773) UART: UART event received, type: 0[0m
+[0;32mI (3793) UART: UART event received, type: 0[0m
+[0;32mI (3803) UART: UART event received, type: 0[0m
+[0;32mI (3813) UART: UART event received, type: 0[0m
+[0;32mI (3823) UART: UART event received, type: 0[0m
+[0;32mI (3823) UART: UART event received, type: 0[0m
+[0;32mI (3843) UART: UART event received, type: 0[0m
+[0;32mI (3843) UART: UART event received, type: 0[0m
+[0;32mI (3853) UART: UART event received, type: 0[0m
+[0;32mI (3853) UART: UART event received, type: 0[0m
+[0;32mI (3863) UART: UART event received, type: 0[0m
+[0;32mI (3863) UART: UART event received, type: 0[0m
+[0;32mI (3883) UART: UART event received, type: 0[0m
+[0;32mI (3893) UART: UART event received, type: 0[0m
+[0;32mI (3913) UART: UART event received, type: 0[0m
+[0;32mI (3913) UART: UART event received, type: 0[0m
+[0;32mI (3923) UART: UART event received, type: 0[0m
+[0;32mI (3923) UART: UART event received, type: 0[0m
+[0;32mI (3933) UART: UART event received, type: 0[0m
+[0;32mI (3933) UART: UART event received, type: 0[0m
+[0;32mI (3943) UART: UART event received, type: 0[0m
+[0;32mI (3953) UART: UART event received, type: 0[0m
+[0;32mI (3963) UART: UART event received, type: 0[0m
+[0;32mI (3973) UART: UART event received, type: 0[0m
+[0;32mI (3983) UART: UART event received, type: 0[0m
+[0;32mI (3993) UART: UART event received, type: 0[0m
+[0;32mI (3993) UART: UART event received, type: 0[0m
+[0;32mI (4013) UART: UART event received, type: 0[0m
+[0;32mI (4023) UART: UART event received, type: 0[0m
+[0;32mI (4023) UART: UART event received, type: 0[0m
+RX: 400 packets
+[0;32mI (4033) UART: UART event received, type: 0[0m
+[0;32mI (4043) UART: UART event received, type: 0[0m
+[0;32mI (4043) UART: UART event received, type: 0[0m
+[0;32mI (4053) UART: UART event received, type: 0[0m
+[0;32mI (4063) UART: UART event received, type: 0[0m
+[0;32mI (4063) UART: UART event received, type: 0[0m
+[0;32mI (4083) UART: UART event received, type: 0[0m
+[0;32mI (4083) UART: UART event received, type: 0[0m
+[0;32mI (4093) UART: UART event received, type: 0[0m
+[0;32mI (4103) UART: UART event received, type: 0[0m
+[0;32mI (4103) UART: UART event received, type: 0[0m
+[0;32mI (4113) UART: UART event received, type: 0[0m
+[0;32mI (4113) UART: UART event received, type: 0[0m
+[0;32mI (4123) UART: UART event received, type: 0[0m
+[0;32mI (4133) UART: UART event received, type: 0[0m
+[0;32mI (4143) UART: UART event received, type: 0[0m
+[0;32mI (4153) UART: UART event received, type: 0[0m
+[0;32mI (4163) UART: UART event received, type: 0[0m
+[0;32mI (4173) UART: UART event received, type: 0[0m
+[0;32mI (4173) UART: UART event received, type: 0[0m
+[0;32mI (4193) UART: UART event received, type: 0[0m
+[0;32mI (4203) UART: UART event received, type: 0[0m
+[0;32mI (4213) UART: UART event received, type: 0[0m
+[0;32mI (4213) UART: UART event received, type: 0[0m
+[0;32mI (4223) UART: UART event received, type: 0[0m
+[0;32mI (4233) UART: UART event received, type: 0[0m
+[0;32mI (4243) UART: UART event received, type: 0[0m
+[0;32mI (4253) UART: UART event received, type: 0[0m
+[0;32mI (4253) UART: UART event received, type: 0[0m
+[0;32mI (4263) UART: UART event received, type: 0[0m
+[0;32mI (4283) UART: UART event received, type: 0[0m
+[0;32mI (4293) UART: UART event received, type: 0[0m
+[0;32mI (4293) UART: UART event received, type: 0[0m
+[0;32mI (4303) UART: UART event received, type: 0[0m
+[0;32mI (4323) UART: UART event received, type: 0[0m
+[0;32mI (4333) UART: UART event received, type: 0[0m
+[0;32mI (4333) UART: UART event received, type: 0[0m
+[0;32mI (4343) UART: UART event received, type: 0[0m
+[0;32mI (4353) UART: UART event received, type: 0[0m
+[0;32mI (4353) UART: UART event received, type: 0[0m
+[0;32mI (4363) UART: UART event received, type: 0[0m
+[0;32mI (4363) UART: UART event received, type: 0[0m
+[0;32mI (4383) UART: UART event received, type: 0[0m
+[0;32mI (4393) UART: UART event received, type: 0[0m
+[0;32mI (4403) UART: UART event received, type: 0[0m
+[0;32mI (4413) UART: UART event received, type: 0[0m
+[0;32mI (4413) UART: UART event received, type: 0[0m
+[0;32mI (4423) UART: UART event received, type: 0[0m
+[0;32mI (4423) UART: UART event received, type: 0[0m
+[0;32mI (4433) UART: UART event received, type: 0[0m
+[0;32mI (4433) UART: UART event received, type: 0[0m
+[0;32mI (4453) UART: UART event received, type: 0[0m
+[0;32mI (4463) UART: UART event received, type: 0[0m
+[0;32mI (4473) UART: UART event received, type: 0[0m
+[0;32mI (4493) UART: UART event received, type: 0[0m
+[0;32mI (4503) UART: UART event received, type: 0[0m
+[0;32mI (4513) UART: UART event received, type: 0[0m
+[0;32mI (4513) UART: UART event received, type: 0[0m
+[0;32mI (4523) UART: UART event received, type: 0[0m
+[0;32mI (4533) UART: UART event received, type: 0[0m
+[0;32mI (4543) UART: UART event received, type: 0[0m
+[0;32mI (4553) UART: UART event received, type: 0[0m
+[0;32mI (4563) UART: UART event received, type: 0[0m
+[0;32mI (4573) UART: UART event received, type: 0[0m
+[0;32mI (4583) UART: UART event received, type: 0[0m
+[0;32mI (4593) UART: UART event received, type: 0[0m
+[0;32mI (4613) UART: UART event received, type: 0[0m
+[0;32mI (4623) UART: UART event received, type: 0[0m
+[0;32mI (4623) UART: UART event received, type: 0[0m
+[0;32mI (4633) UART: UART event received, type: 0[0m
+[0;32mI (4633) UART: UART event received, type: 0[0m
+[0;32mI (4643) UART: UART event received, type: 0[0m
+[0;32mI (4653) UART: UART event received, type: 0[0m
+[0;32mI (4653) UART: UART event received, type: 0[0m
+[0;32mI (4663) UART: UART event received, type: 0[0m
+[0;32mI (4683) UART: UART event received, type: 0[0m
+[0;32mI (4693) UART: UART event received, type: 0[0m
+[0;32mI (4713) UART: UART event received, type: 0[0m
+[0;32mI (4713) UART: UART event received, type: 0[0m
+[0;32mI (4723) UART: UART event received, type: 0[0m
+[0;32mI (4723) UART: UART event received, type: 0[0m
+[0;32mI (4743) UART: UART event received, type: 0[0m
+[0;32mI (4743) UART: UART event received, type: 0[0m
+[0;32mI (4753) UART: UART event received, type: 0[0m
+[0;32mI (4753) UART: UART event received, type: 0[0m
+[0;32mI (4763) UART: UART event received, type: 0[0m
+[0;32mI (4773) UART: UART event received, type: 0[0m
+[0;32mI (4793) UART: UART event received, type: 0[0m
+[0;32mI (4793) UART: UART event received, type: 0[0m
+[0;32mI (4813) UART: UART event received, type: 0[0m
+[0;32mI (4813) UART: UART event received, type: 0[0m
+[0;32mI (4823) UART: UART event received, type: 0[0m
+[0;32mI (4833) UART: UART event received, type: 0[0m
+[0;32mI (4833) UART: UART event received, type: 0[0m
+[0;32mI (4843) UART: UART event received, type: 0[0m
+[0;32mI (4853) UART: UART event received, type: 0[0m
+[0;32mI (4863) UART: UART event received, type: 0[0m
+[0;32mI (4863) UART: UART event received, type: 0[0m
+[0;32mI (4873) UART: UART event received, type: 0[0m
+[0;32mI (4883) UART: UART event received, type: 0[0m
+RX: 500 packets
+[0;32mI (4893) UART: UART event received, type: 0[0m
+[0;32mI (4903) UART: UART event received, type: 0[0m
+[0;32mI (4903) UART: UART event received, type: 0[0m
+[0;32mI (4913) UART: UART event received, type: 0[0m
+[0;32mI (4923) UART: UART event received, type: 0[0m
+[0;32mI (4933) UART: UART event received, type: 0[0m
+[0;32mI (4943) UART: UART event received, type: 0[0m
+[0;32mI (4953) UART: UART event received, type: 0[0m
+[0;32mI (4963) UART: UART event received, type: 0[0m
+[0;32mI (4963) UART: UART event received, type: 0[0m
+[0;32mI (4983) UART: UART event received, type: 0[0m
+[0;32mI (4983) UART: UART event received, type: 0[0m
+[0;32mI (4993) UART: UART event received, type: 0[0m
+[0;32mI (4993) UART: UART event received, type: 0[0m
+[0;32mI (5013) UART: UART event received, type: 0[0m
+[0;32mI (5023) UART: UART event received, type: 0[0m
+[0;32mI (5023) UART: UART event received, type: 0[0m
+[0;32mI (5033) UART: UART event received, type: 0[0m
+[0;32mI (5033) UART: UART event received, type: 0[0m
+[0;32mI (5043) UART: UART event received, type: 0[0m
+[0;32mI (5043) UART: UART event received, type: 0[0m
+[0;32mI (5053) UART: UART event received, type: 0[0m
+[0;32mI (5063) UART: UART event received, type: 0[0m
+[0;32mI (5083) UART: UART event received, type: 0[0m
+[0;32mI (5083) UART: UART event received, type: 0[0m
+[0;32mI (5093) UART: UART event received, type: 0[0m
+[0;32mI (5093) UART: UART event received, type: 0[0m
+[0;32mI (5113) UART: UART event received, type: 0[0m
+[0;32mI (5123) UART: UART event received, type: 0[0m
+[0;32mI (5123) UART: UART event received, type: 0[0m
+[0;32mI (5133) UART: UART event received, type: 0[0m
+[0;32mI (5133) UART: UART event received, type: 0[0m
+[0;32mI (5143) UART: UART event received, type: 0[0m
+[0;32mI (5153) UART: UART event received, type: 0[0m
+[0;32mI (5173) UART: UART event received, type: 0[0m
+[0;32mI (5173) UART: UART event received, type: 0[0m
+[0;32mI (5193) UART: UART event received, type: 0[0m
+[0;32mI (5203) UART: UART event received, type: 0[0m
+[0;32mI (5213) UART: UART event received, type: 0[0m
+[0;32mI (5213) UART: UART event received, type: 0[0m
+[0;32mI (5223) UART: UART event received, type: 0[0m
+[0;32mI (5233) UART: UART event received, type: 0[0m
+[0;32mI (5233) UART: UART event received, type: 0[0m
+[0;32mI (5253) UART: UART event received, type: 0[0m
+[0;32mI (5253) UART: UART event received, type: 0[0m
+[0;32mI (5263) UART: UART event received, type: 0[0m
+[0;32mI (5263) UART: UART event received, type: 0[0m
+[0;32mI (5273) UART: UART event received, type: 0[0m
+[0;32mI (5283) UART: UART event received, type: 0[0m
+[0;32mI (5303) UART: UART event received, type: 0[0m
+[0;32mI (5303) UART: UART event received, type: 0[0m
+[0;32mI (5313) UART: UART event received, type: 0[0m
+[0;32mI (5323) UART: UART event received, type: 0[0m
+[0;32mI (5333) UART: UART event received, type: 0[0m
+[0;32mI (5343) UART: UART event received, type: 0[0m
+[0;32mI (5343) UART: UART event received, type: 0[0m
+[0;32mI (5353) UART: UART event received, type: 0[0m
+[0;32mI (5353) UART: UART event received, type: 0[0m
+[0;32mI (5373) UART: UART event received, type: 0[0m
+[0;32mI (5393) UART: UART event received, type: 0[0m
+[0;32mI (5403) UART: UART event received, type: 0[0m
+[0;32mI (5423) UART: UART event received, type: 0[0m
+[0;32mI (5433) UART: UART event received, type: 0[0m
+[0;32mI (5443) UART: UART event received, type: 0[0m
+[0;32mI (5453) UART: UART event received, type: 0[0m
+[0;32mI (5453) UART: UART event received, type: 0[0m
+[0;32mI (5463) UART: UART event received, type: 0[0m
+[0;32mI (5473) UART: UART event received, type: 0[0m
+[0;32mI (5483) UART: UART event received, type: 0[0m
+Guru Meditation Error: Core  0 panic'ed (LoadStoreAlignment). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x40379e1e  PS      : 0x00060a33  A0      : 0x8037d2f9  A1      : 0x3fcad060  
+A2      : 0x3f00207e  A3      : 0xb33fffff  A4      : 0x0000cdcd  A5      : 0x3fcacf0c  
+A6      : 0x3fcacf20  A7      : 0x3fc9a46d  A8      : 0x00000000  A9      : 0x3c05527d  
+A10     : 0x3fc9a46d  A11     : 0x3c05527c  A12     : 0x00000001  A13     : 0x00000000  
+A14     : 0x00000000  A15     : 0x40404040  SAR     : 0x00000004  EXCCAUSE: 0x00000009  
+EXCVADDR: 0x3f00207e  LBEG    : 0x400556d5  LEND    : 0x400556e5  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x40379e1b:0x3fcad060 0x4037d2f6:0x3fcad080 0x4037cdd7:0x3fcad0b0 0x4200a2db:0x3fcad0f0 0x4037d0d1:0x3fcad120
+
+
+
+
+ELF file SHA256: 683751eeb
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40375acc
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Nov  4 2025 17:55:53[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=19e00h (105984) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=00029e28 vaddr=3fc96200 size=02bc0h ( 11200) load[0m
+[0;32mI (120) esp_image: segment 2: paddr=0002c9f0 vaddr=40374000 size=03628h ( 13864) load[0m
+[0;32mI (126) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=4ac6ch (306284) map[0m
+[0;32mI (187) esp_image: segment 4: paddr=0007ac94 vaddr=40377628 size=0eae8h ( 60136) load[0m
+[0;32mI (208) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (208) boot: Disabling RNG early entropy source...[0m
+[0;32mI (219) cpu_start: Multicore app[0m
+[0;32mI (229) cpu_start: Pro cpu start user code[0m
+[0;32mI (229) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (229) cpu_start: Application information:[0m
+[0;32mI (232) cpu_start: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (238) cpu_start: App version:      159598a-dirty[0m
+[0;32mI (244) cpu_start: Compile time:     Nov  4 2025 17:54:03[0m
+[0;32mI (250) cpu_start: ELF file SHA256:  683751eeb...[0m
+[0;32mI (255) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (260) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (265) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (270) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (274) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (282) heap_init: At 3FC9D4B8 len 0004C258 (304 KiB): RAM[0m
+[0;32mI (288) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (294) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (300) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (307) spi_flash: detected chip: gd[0m
+[0;32mI (310) spi_flash: flash io: dio[0m
+[0;33mW (314) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (328) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (334) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (342) main_task: Started on CPU0[0m
+[0;32mI (352) main_task: Calling app_main()[0m
+[0;32mI (362) uart: queue free spaces: 30[0m
+[0;32mI (372) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (372) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (472) UART: UART RX task started and waiting for data...[0m
+[0;32mI (472) UART: UART event received, type: 0[0m
+[0;32mI (472) UART: UART event received, type: 0[0m
+[0;32mI (472) UART: UART event received, type: 0[0m
+[0;32mI (482) UART: UART event received, type: 0[0m
+[0;32mI (482) UART: UART event received, type: 0[0m
+[0;32mI (492) UART: UART event received, type: 0[0m
+[0;32mI (492) UART: UART event received, type: 0[0m
+[0;32mI (502) UART: UART event received, type: 0[0m
+[0;32mI (502) UART: UART event received, type: 0[0m
+[0;32mI (512) UART: UART event received, type: 0[0m
+[0;32mI (512) UART: UART event received, type: 0[0m
+[0;32mI (522) UART: UART event received, type: 0[0m
+[0;32mI (522) UART: UART event received, type: 0[0m
+[0;32mI (522) UART: UART event received, type: 0[0m
+[0;32mI (532) UART: UART event received, type: 0[0m
+[0;32mI (532) UART: UART event received, type: 0[0m
+UART RX task created
+[0;32mI (562) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (562) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (572) ETH: Ethernet Started[0m
+[0;32mI (572) WEB: Registered /power/set handler[0m
+[0;32mI (572) WEB: Registered /power/get handler[0m
+[0;32mI (572) UART: UART event received, type: 0[0m
+[0;32mI (582) MAIN: Web server started[0m
+[0;32mI (582) UART: UART event received, type: 0[0m
+[0;32mI (582) UART: UART event received, type: 0[0m
+[0;32mI (592) UART: UART event received, type: 0[0m
+[0;32mI (592) main_task: Returned from app_main()[0m
+[0;32mI (602) UART: UART event received, type: 0[0m
+[0;32mI (612) UART: UART event received, type: 0[0m
+[0;32mI (622) UART: UART event received, type: 0[0m
+[0;32mI (622) UART: UART event received, type: 0[0m
+[0;32mI (642) UART: UART event received, type: 0[0m
+[0;32mI (642) UART: UART event received, type: 0[0m
+[0;32mI (652) UART: UART event received, type: 0[0m
+[0;32mI (652) UART: UART event received, type: 0[0m
+[0;32mI (662) UART: UART event received, type: 0[0m
+[0;32mI (662) UART: UART event received, type: 0[0m
+[0;32mI (672) UART: UART event received, type: 0[0m
+[0;32mI (682) UART: UART event received, type: 0[0m
+[0;32mI (692) UART: UART event received, type: 0[0m
+[0;32mI (692) UART: UART event received, type: 0[0m
+[0;32mI (702) UART: UART event received, type: 0[0m
+[0;32mI (712) UART: UART event received, type: 0[0m
+[0;32mI (722) UART: UART event received, type: 0[0m
+[0;32mI (732) UART: UART event received, type: 0[0m
+[0;32mI (772) UART: UART event received, type: 0[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x8 (TG1WDT_SYS_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42003d57
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Nov  4 2025 17:55:53[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;33mW (47) boot.esp32s3: PRO CPU has been reset by WDT.[0m
+[0;33mW (53) boot.esp32s3: APP CPU has been reset by WDT.[0m
+[0;32mI (58) boot: Enabling RNG early entropy source...[0m
+[0;32mI (64) boot: Partition Table:[0m
+[0;32mI (67) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (75) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (82) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (97) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=19e00h (105984) map[0m
+[0;32mI (129) esp_image: segment 1: paddr=00029e28 vaddr=3fc96200 size=02bc0h ( 11200) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002c9f0 vaddr=40374000 size=03628h ( 13864) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=4ac6ch (306284) map[0m
+[0;32mI (198) esp_image: segment 4: paddr=0007ac94 vaddr=40377628 size=0eae8h ( 60136) load[0m
+[0;32mI (219) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (219) boot: Disabling RNG early entropy source...[0m
+[0;32mI (230) cpu_start: Multicore app[0m
+[0;32mI (240) cpu_start: Pro cpu start user code[0m
+[0;32mI (240) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (240) cpu_start: Application information:[0m
+[0;32mI (243) cpu_start: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (249) cpu_start: App version:      159598a-dirty[0m
+[0;32mI (255) cpu_start: Compile time:     Nov  4 2025 17:54:03[0m
+[0;32mI (261) cpu_start: ELF file SHA256:  683751eeb...[0m
+[0;32mI (266) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (271) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (276) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (281) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (285) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9D4B8 len 0004C258 (304 KiB): RAM[0m
+[0;32mI (299) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (305) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (311) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (318) spi_flash: detected chip: gd[0m
+[0;32mI (322) spi_flash: flash io: dio[0m
+[0;33mW (325) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (339) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (346) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (353) main_task: Started on CPU0[0m
+[0;32mI (363) main_task: Calling app_main()[0m
+[0;32mI (373) uart: queue free spaces: 30[0m
+[0;32mI (383) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (383) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (483) UART: UART RX task started and waiting for data...[0m
+[0;32mI (483) UART: UART event received, type: 0[0m
+[0;32mI (483) UART: UART event received, type: 0[0m
+[0;32mI (483) UART: UART event received, type: 0[0m
+[0;32mI (493) UART: UART event received, type: 0[0m
+[0;32mI (493) UART: UART event received, type: 0[0m
+[0;32mI (503) UART: UART event received, type: 0[0m
+[0;32mI (503) UART: UART event received, type: 0[0m
+[0;32mI (513) UART: UART event received, type: 0[0m
+[0;32mI (513) UART: UART event received, type: 0[0m
+[0;32mI (523) UART: UART event received, type: 0[0m
+[0;32mI (523) UART: UART event received, type: 0[0m
+UART RX task created
+[0;32mI (543) UART: UART event received, type: 0[0m
+[0;32mI (543) UART: UART event received, type: 0[0m
+[0;32mI (553) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (553) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (563) ETH: Ethernet Started[0m
+[0;32mI (563) UART: UART event received, type: 0[0m
+[0;32mI (563) WEB: Registered /power/set handler[0m
+[0;32mI (563) WEB: Registered /power/get handler[0m
+[0;32mI (573) MAIN: Web server started[0m
+[0;32mI (573) main_task: Returned from app_main()[0m
+[0;32mI (593) UART: UART event received, type: 0[0m
+[0;32mI (593) UART: UART event received, type: 0[0m
+[0;32mI (603) UART: UART event received, type: 0[0m
+[0;32mI (633) UART: UART event received, type: 0[0m
+[0;32mI (643) UART: UART event received, type: 0[0m
+[0;32mI (653) UART: UART event received, type: 0[0m
+[0;32mI (663) UART: UART event received, type: 0[0m
+[0;32mI (693) UART: UART event received, type: 0[0m
+[0;32mI (703) UART: UART event received, type: 0[0m
+[0;32mI (713) UART: UART event received, type: 0[0m
+[0;32mI (733) UART: UART event received, type: 0[0m
+[0;32mI (743) UART: UART event received, type: 0[0m
+[0;32mI (753) UART: UART event received, type: 0[0m
+[0;32mI (793) UART: UART event received, type: 0[0m
+[0;32mI (803) UART: UART event received, type: 0[0m
+[0;32mI (803) UART: UART event received, type: 0[0m
+[0;32mI (803) UART: UART event received, type: 0[0m
+[0;32mI (813) UART: UART event received, type: 0[0m
+[0;32mI (823) UART: UART event received, type: 0[0m
+[0;32mI (823) UART: UART event received, type: 0[0m
+[0;32mI (863) UART: UART event received, type: 0[0m
+[0;32mI (883) UART: UART event received, type: 0[0m
+[0;32mI (893) UART: UART event received, type: 0[0m
+[0;32mI (903) UART: UART event received, type: 0[0m
+[0;32mI (903) UART: UART event received, type: 0[0m
+[0;32mI (913) UART: UART event received, type: 0[0m
+[0;32mI (923) UART: UART event received, type: 0[0m
+[0;32mI (923) UART: UART event received, type: 0[0m
+[0;32mI (943) UART: UART event received, type: 0[0m
+[0;32mI (953) UART: UART event received, type: 0[0m
+[0;32mI (953) UART: UART event received, type: 0[0m
+[0;32mI (973) UART: UART event received, type: 0[0m
+[0;32mI (973) UART: UART event received, type: 0[0m
+[0;32mI (983) UART: UART event received, type: 0[0m
+[0;32mI (993) UART: UART event received, type: 0[0m
+[0;32mI (993) UART: UART event received, type: 0[0m
+[0;32mI (1003) UART: UART event received, type: 0[0m
+[0;32mI (1013) UART: UART event received, type: 0[0m
+[0;32mI (1023) UART: UART event received, type: 0[0m
+[0;32mI (1033) UART: UART event received, type: 0[0m
+[0;32mI (1043) UART: UART event received, type: 0[0m
+[0;32mI (1053) UART: UART event received, type: 0[0m
+[0;32mI (1063) UART: UART event received, type: 0[0m
+[0;32mI (1073) UART: UART event received, type: 0[0m
+[0;32mI (1073) UART: UART event received, type: 0[0m
+[0;32mI (1083) UART: UART event received, type: 0[0m
+[0;32mI (1093) UART: UART event received, type: 0[0m
+[0;32mI (1103) UART: UART event received, type: 0[0m
+[0;32mI (1113) UART: UART event received, type: 0[0m
+[0;32mI (1123) UART: UART event received, type: 0[0m
+[0;32mI (1123) UART: UART event received, type: 0[0m
+[0;32mI (1133) UART: UART event received, type: 0[0m
+[0;32mI (1143) UART: UART event received, type: 0[0m
+[0;32mI (1153) UART: UART event received, type: 0[0m
+[0;32mI (1163) UART: UART event received, type: 0[0m
+[0;32mI (1173) UART: UART event received, type: 0[0m
+[0;32mI (1183) UART: UART event received, type: 0[0m
+[0;32mI (1193) UART: UART event received, type: 0[0m
+[0;32mI (1203) UART: UART event received, type: 0[0m
+[0;32mI (1213) UART: UART event received, type: 0[0m
+[0;32mI (1223) UART: UART event received, type: 0[0m
+[0;32mI (1223) UART: UART event received, type: 0[0m
+[0;32mI (1243) UART: UART event received, type: 0[0m
+[0;32mI (1243) UART: UART event received, type: 0[0m
+[0;32mI (1253) UART: UART event received, type: 0[0m
+[0;32mI (1263) UART: UART event received, type: 0[0m
+[0;32mI (1273) UART: UART event received, type: 0[0m
+[0;32mI (1273) UART: UART event received, type: 0[0m
+[0;32mI (1293) UART: UART event received, type: 0[0m
+[0;32mI (1303) UART: UART event received, type: 0[0m
+[0;32mI (1303) UART: UART event received, type: 0[0m
+[0;32mI (1313) UART: UART event received, type: 0[0m
+[0;32mI (1323) UART: UART event received, type: 0[0m
+[0;32mI (1333) UART: UART event received, type: 0[0m
+[0;32mI (1343) UART: UART event received, type: 0[0m
+[0;32mI (1353) UART: UART event received, type: 0[0m
+[0;32mI (1363) UART: UART event received, type: 0[0m
+[0;32mI (1363) UART: UART event received, type: 0[0m
+[0;32mI (1373) UART: UART event received, type: 0[0m
+[0;32mI (1383) UART: UART event received, type: 0[0m
+[0;32mI (1393) UART: UART event received, type: 0[0m
+[0;32mI (1403) UART: UART event received, type: 0[0m
+[0;32mI (1413) UART: UART event received, type: 0[0m
+[0;32mI (1413) UART: UART event received, type: 0[0m
+[0;32mI (1423) UART: UART event received, type: 0[0m
+[0;32mI (1433) UART: UART event received, type: 0[0m
+RX: 100 packets
+[0;32mI (1443) UART: UART event received, type: 0[0m
+[0;32mI (1443) UART: UART event received, type: 0[0m
+[0;32mI (1453) UART: UART event received, type: 0[0m
+[0;32mI (1463) UART: UART event received, type: 0[0m
+[0;32mI (1463) UART: UART event received, type: 0[0m
+[0;32mI (1473) UART: UART event received, type: 0[0m
+[0;32mI (1483) UART: UART event received, type: 0[0m
+[0;32mI (1493) UART: UART event received, type: 0[0m
+[0;32mI (1503) UART: UART event received, type: 0[0m
+[0;32mI (1503) UART: UART event received, type: 0[0m
+[0;32mI (1513) UART: UART event received, type: 0[0m
+[0;32mI (1523) UART: UART event received, type: 0[0m
+[0;32mI (1533) UART: UART event received, type: 0[0m
+[0;32mI (1533) UART: UART event received, type: 0[0m
+[0;32mI (1543) UART: UART event received, type: 0[0m
+[0;32mI (1563) UART: UART event received, type: 0[0m
+[0;32mI (1563) UART: UART event received, type: 0[0m
+[0;32mI (1573) UART: UART event received, type: 0[0m
+[0;32mI (1583) UART: UART event received, type: 0[0m
+[0;32mI (1583) UART: UART event received, type: 0[0m
+[0;32mI (1593) UART: UART event received, type: 0[0m
+[0;32mI (1613) UART: UART event received, type: 0[0m
+[0;32mI (1623) UART: UART event received, type: 0[0m
+[0;32mI (1633) UART: UART event received, type: 0[0m
+[0;32mI (1643) UART: UART event received, type: 0[0m
+[0;32mI (1643) UART: UART event received, type: 0[0m
+[0;32mI (1663) UART: UART event received, type: 0[0m
+[0;32mI (1663) UART: UART event received, type: 0[0m
+[0;32mI (1683) UART: UART event received, type: 0[0m
+[0;32mI (1683) UART: UART event received, type: 0[0m
+[0;32mI (1703) UART: UART event received, type: 0[0m
+[0;32mI (1703) UART: UART event received, type: 0[0m
+[0;32mI (1713) UART: UART event received, type: 0[0m
+[0;32mI (1723) UART: UART event received, type: 0[0m
+[0;32mI (1733) UART: UART event received, type: 0[0m
+[0;32mI (1743) UART: UART event received, type: 0[0m
+[0;32mI (1753) UART: UART event received, type: 0[0m
+[0;32mI (1753) UART: UART event received, type: 0[0m
+[0;32mI (1753) UART: UART event received, type: 0[0m
+[0;32mI (1763) UART: UART event received, type: 0[0m
+[0;32mI (1773) UART: UART event received, type: 0[0m
+[0;32mI (1783) UART: UART event received, type: 0[0m
+[0;32mI (1793) UART: UART event received, type: 0[0m
+[0;32mI (1793) UART: UART event received, type: 0[0m
+[0;32mI (1803) UART: UART event received, type: 0[0m
+[0;32mI (1813) UART: UART event received, type: 0[0m
+[0;32mI (1823) UART: UART event received, type: 0[0m
+[0;32mI (1833) UART: UART event received, type: 0[0m
+[0;32mI (1843) UART: UART event received, type: 0[0m
+[0;32mI (1843) UART: UART event received, type: 0[0m
+[0;32mI (1853) UART: UART event received, type: 0[0m
+[0;32mI (1863) UART: UART event received, type: 0[0m
+[0;32mI (1873) UART: UART event received, type: 0[0m
+[0;32mI (1883) UART: UART event received, type: 0[0m
+[0;32mI (1893) UART: UART event received, type: 0[0m
+[0;32mI (1903) UART: UART event received, type: 0[0m
+[0;32mI (1913) UART: UART event received, type: 0[0m
+[0;32mI (1923) UART: UART event received, type: 0[0m
+[0;32mI (1923) UART: UART event received, type: 0[0m
+[0;32mI (1933) UART: UART event received, type: 0[0m
+[0;32mI (1943) UART: UART event received, type: 0[0m
+[0;32mI (1953) UART: UART event received, type: 0[0m
+[0;32mI (1963) UART: UART event received, type: 0[0m
+[0;32mI (1963) UART: UART event received, type: 0[0m
+[0;32mI (1983) UART: UART event received, type: 0[0m
+[0;32mI (1983) UART: UART event received, type: 0[0m
+[0;32mI (1993) UART: UART event received, type: 0[0m
+[0;32mI (2003) UART: UART event received, type: 0[0m
+[0;32mI (2003) UART: UART event received, type: 0[0m
+[0;32mI (2013) UART: UART event received, type: 0[0m
+[0;32mI (2023) UART: UART event received, type: 0[0m
+[0;32mI (2033) UART: UART event received, type: 0[0m
+[0;32mI (2043) UART: UART event received, type: 0[0m
+[0;32mI (2053) UART: UART event received, type: 0[0m
+[0;32mI (2063) UART: UART event received, type: 0[0m
+[0;32mI (2073) UART: UART event received, type: 0[0m
+[0;32mI (2083) UART: UART event received, type: 0[0m
+[0;32mI (2093) UART: UART event received, type: 0[0m
+[0;32mI (2103) UART: UART event received, type: 0[0m
+[0;32mI (2113) UART: UART event received, type: 0[0m
+[0;32mI (2123) UART: UART event received, type: 0[0m
+[0;32mI (2133) UART: UART event received, type: 0[0m
+[0;32mI (2143) UART: UART event received, type: 0[0m
+[0;32mI (2153) UART: UART event received, type: 0[0m
+[0;32mI (2153) UART: UART event received, type: 0[0m
+[0;32mI (2163) UART: UART event received, type: 0[0m
+[0;32mI (2173) UART: UART event received, type: 0[0m
+[0;32mI (2183) UART: UART event received, type: 0[0m
+[0;32mI (2193) UART: UART event received, type: 0[0m
+[0;32mI (2203) UART: UART event received, type: 0[0m
+[0;32mI (2213) UART: UART event received, type: 0[0m
+[0;32mI (2213) UART: UART event received, type: 0[0m
+[0;32mI (2243) UART: UART event received, type: 0[0m
+[0;32mI (2243) UART: UART event received, type: 0[0m
+[0;32mI (2263) UART: UART event received, type: 0[0m
+[0;32mI (2263) UART: UART event received, type: 0[0m
+[0;32mI (2263) UART: UART event received, type: 0[0m
+[0;32mI (2273) UART: UART event received, type: 0[0m
+[0;32mI (2283) UART: UART event received, type: 0[0m
+[0;32mI (2293) UART: UART event received, type: 0[0m
+RX: 200 packets
+[0;32mI (2303) UART: UART event received, type: 0[0m
+[0;32mI (2313) UART: UART event received, type: 0[0m
+[0;32mI (2313) UART: UART event received, type: 0[0m
+[0;32mI (2323) UART: UART event received, type: 0[0m
+[0;32mI (2333) UART: UART event received, type: 0[0m
+[0;32mI (2333) UART: UART event received, type: 0[0m
+[0;32mI (2353) UART: UART event received, type: 0[0m
+[0;32mI (2363) UART: UART event received, type: 0[0m
+[0;32mI (2363) UART: UART event received, type: 0[0m
+Guru Meditation Error: Core  0 panic'ed (LoadStoreAlignment). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x40379e1e  PS      : 0x00060c33  A0      : 0x8037d2f9  A1      : 0x3fcad060  
+A2      : 0x32312081  A3      : 0xb33fffff  A4      : 0x0000cdcd  A5      : 0x3fcacf0c  
+A6      : 0x3fcacf20  A7      : 0x3fc9a470  A8      : 0x00000000  A9      : 0x3c05527d  
+A10     : 0x3fc9a470  A11     : 0x3c05527c  A12     : 0x00000001  A13     : 0x00000000  
+A14     : 0x00000005  A15     : 0x0000cdcd  SAR     : 0x00000004  EXCCAUSE: 0x00000009  
+EXCVADDR: 0x32312081  LBEG    : 0x400556d5  LEND    : 0x400556e5  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x40379e1b:0x3fcad060 0x4037d2f6:0x3fcad080 0x4037cdd7:0x3fcad0b0 0x4200a2db:0x3fcad0f0 0x4037d0d1:0x3fcad120
+
+
+
+
+ELF file SHA256: 683751eeb
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40375acc
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Nov  4 2025 17:55:53[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=19e00h (105984) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=00029e28 vaddr=3fc96200 size=02bc0h ( 11200) load[0m
+[0;32mI (120) esp_image: segment 2: paddr=0002c9f0 vaddr=40374000 size=03628h ( 13864) load[0m
+[0;32mI (126) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=4ac6ch (306284) map[0m
+[0;32mI (187) esp_image: segment 4: paddr=0007ac94 vaddr=40377628 size=0eae8h ( 60136) load[0m
+[0;32mI (208) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (208) boot: Disabling RNG early entropy source...[0m
+[0;32mI (219) cpu_start: Multicore app[0m
+[0;32mI (229) cpu_start: Pro cpu start user code[0m
+[0;32mI (229) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (229) cpu_start: Application information:[0m
+[0;32mI (232) cpu_start: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (238) cpu_start: App version:      159598a-dirty[0m
+[0;32mI (244) cpu_start: Compile time:     Nov  4 2025 17:54:03[0m
+[0;32mI (250) cpu_start: ELF file SHA256:  683751eeb...[0m
+[0;32mI (255) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (260) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (265) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (270) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (274) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (282) heap_init: At 3FC9D4B8 len 0004C258 (304 KiB): RAM[0m
+[0;32mI (288) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (294) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (300) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (307) spi_flash: detected chip: gd[0m
+[0;32mI (310) spi_flash: flash io: dio[0m
+[0;33mW (314) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (328) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (334) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (342) main_task: Started on CPU0[0m
+[0;32mI (352) main_task: Calling app_main()[0m
+[0;32mI (362) uart: queue free spaces: 30[0m
+[0;32mI (372) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (372) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (472) UART: UART RX task started and waiting for data...[0m
+[0;32mI (472) UART: UART event received, type: 0[0m
+[0;32mI (472) UART: UART event received, type: 0[0m
+[0;32mI (472) UART: UART event received, type: 0[0m
+[0;32mI (482) UART: UART event received, type: 0[0m
+[0;32mI (482) UART: UART event received, type: 0[0m
+[0;32mI (492) UART: UART event received, type: 0[0m
+[0;32mI (492) UART: UART event received, type: 0[0m
+[0;32mI (502) UART: UART event received, type: 0[0m
+[0;32mI (502) UART: UART event received, type: 0[0m
+[0;32mI (512) UART: UART event received, type: 0[0m
+[0;32mI (512) UART: UART event received, type: 0[0m
+[0;32mI (522) UART: UART event received, type: 0[0m
+[0;32mI (522) UART: UART event received, type: 0[0m
+[0;32mI (522) UART: UART event received, type: 0[0m
+[0;32mI (532) UART: UART event received, type: 0[0m
+[0;32mI (532) UART: UART event received, type: 0[0m
+[0;32mI (542) UART: UART event received, type: 0[0m
+UART RX task created
+[0;32mI (552) UART: UART event received, type: 0[0m
+[0;32mI (552) UART: UART event received, type: 0[0m
+[0;32mI (562) UART: UART event received, type: 0[0m
+[0;32mI (562) UART: UART event received, type: 0[0m
+[0;32mI (572) UART: UART event received, type: 0[0m
+[0;32mI (582) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (582) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (582) UART: UART event received, type: 0[0m
+[0;32mI (592) UART: UART event received, type: 0[0m
+[0;32mI (602) ETH: Ethernet Started[0m
+[0;32mI (602) UART: UART event received, type: 0[0m
+[0;32mI (602) WEB: Registered /power/set handler[0m
+[0;32mI (602) WEB: Registered /power/get handler[0m
+[0;32mI (612) UART: UART event received, type: 0[0m
+[0;32mI (612) MAIN: Web server started[0m
+[0;32mI (622) main_task: Returned from app_main()[0m
+[0;32mI (632) UART: UART event received, type: 0[0m
+[0;32mI (642) UART: UART event received, type: 0[0m
+[0;32mI (652) UART: UART event received, type: 0[0m
+[0;32mI (652) UART: UART event received, type: 0[0m
+[0;32mI (662) UART: UART event received, type: 0[0m
+[0;32mI (672) UART: UART event received, type: 0[0m
+[0;32mI (682) UART: UART event received, type: 0[0m
+[0;32mI (692) UART: UART event received, type: 0[0m
+[0;32mI (702) UART: UART event received, type: 0[0m
+[0;32mI (712) UART: UART event received, type: 0[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x8 (TG1WDT_SYS_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42003d57
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Nov  4 2025 17:55:53[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;33mW (47) boot.esp32s3: PRO CPU has been reset by WDT.[0m
+[0;33mW (53) boot.esp32s3: APP CPU has been reset by WDT.[0m
+[0;32mI (58) boot: Enabling RNG early entropy source...[0m
+[0;32mI (64) boot: Partition Table:[0m
+[0;32mI (67) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (75) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (82) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (97) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=19e00h (105984) map[0m
+[0;32mI (129) esp_image: segment 1: paddr=00029e28 vaddr=3fc96200 size=02bc0h ( 11200) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002c9f0 vaddr=40374000 size=03628h ( 13864) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=4ac6ch (306284) map[0m
+[0;32mI (198) esp_image: segment 4: paddr=0007ac94 vaddr=40377628 size=0eae8h ( 60136) load[0m
+[0;32mI (219) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (219) boot: Disabling RNG early entropy source...[0m
+[0;32mI (230) cpu_start: Multicore app[0m
+[0;32mI (240) cpu_start: Pro cpu start user code[0m
+[0;32mI (240) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (240) cpu_start: Application information:[0m
+[0;32mI (243) cpu_start: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (249) cpu_start: App version:      159598a-dirty[0m
+[0;32mI (255) cpu_start: Compile time:     Nov  4 2025 17:54:03[0m
+[0;32mI (261) cpu_start: ELF file SHA256:  683751eeb...[0m
+[0;32mI (266) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (271) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (276) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (281) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (285) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9D4B8 len 0004C258 (304 KiB): RAM[0m
+[0;32mI (299) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (305) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (311) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (318) spi_flash: detected chip: gd[0m
+[0;32mI (322) spi_flash: flash io: dio[0m
+[0;33mW (325) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (339) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (346) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (353) main_task: Started on CPU0[0m
+[0;32mI (363) main_task: Calling app_main()[0m
+[0;32mI (373) uart: queue free spaces: 30[0m
+[0;32mI (383) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (383) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (483) UART: UART RX task started and waiting for data...[0m
+[0;32mI (483) UART: UART event received, type: 0[0m
+[0;32mI (483) UART: UART event received, type: 0[0m
+[0;32mI (483) UART: UART event received, type: 0[0m
+[0;32mI (493) UART: UART event received, type: 0[0m
+[0;32mI (493) UART: UART event received, type: 0[0m
+[0;32mI (503) UART: UART event received, type: 0[0m
+[0;32mI (503) UART: UART event received, type: 0[0m
+[0;32mI (513) UART: UART event received, type: 0[0m
+[0;32mI (513) UART: UART event received, type: 0[0m
+[0;32mI (523) UART: UART event received, type: 0[0m
+[0;32mI (523) UART: UART event received, type: 0[0m
+[0;32mI (533) UART: UART event received, type: 0[0m
+[0;32mI (533) UART: UART event received, type: 0[0m
+[0;32mI (533) UART: UART event received, type: 0[0m
+[0;32mI (543) UART: UART event received, type: 0[0m
+[0;32mI (543) UART: UART event received, type: 0[0m
+[0;32mI (553) UART: UART event received, type: 0[0m
+[0;32mI (553) UART: UART event received, type: 0[0m
+[0;32mI (563) UART: UART event received, type: 0[0m
+UART RX task created
+[0;32mI (563) UART: UART event received, type: 0[0m
+[0;32mI (573) UART: UART event received, type: 0[0m
+[0;32mI (593) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (593) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (603) ETH: Ethernet Started[0m
+[0;32mI (603) WEB: Registered /power/set handler[0m
+[0;32mI (603) WEB: Registered /power/get handler[0m
+[0;32mI (603) MAIN: Web server started[0m
+[0;32mI (603) main_task: Returned from app_main()[0m
+[0;32mI (613) UART: UART event received, type: 0[0m
+[0;32mI (613) UART: UART event received, type: 0[0m
+[0;32mI (623) UART: UART event received, type: 0[0m
+[0;32mI (623) UART: UART event received, type: 0[0m
+[0;32mI (633) UART: UART event received, type: 0[0m
+[0;32mI (643) UART: UART event received, type: 0[0m
+[0;32mI (653) UART: UART event received, type: 0[0m
+[0;32mI (663) UART: UART event received, type: 0[0m
+[0;32mI (673) UART: UART event received, type: 0[0m
+[0;32mI (673) UART: UART event received, type: 0[0m
+[0;32mI (693) UART: UART event received, type: 0[0m
+[0;32mI (703) UART: UART event received, type: 0[0m
+[0;32mI (713) UART: UART event received, type: 0[0m
+[0;32mI (713) UART: UART event received, type: 0[0m
+[0;32mI (723) UART: UART event received, type: 0[0m
+[0;32mI (733) UART: UART event received, type: 0[0m
+[0;32mI (743) UART: UART event received, type: 0[0m
+[0;32mI (773) UART: UART event received, type: 0[0m
+[0;32mI (783) UART: UART event received, type: 0[0m
+[0;32mI (793) UART: UART event received, type: 0[0m
+[0;32mI (793) UART: UART event received, type: 0[0m
+[0;32mI (803) UART: UART event received, type: 0[0m
+[0;32mI (813) UART: UART event received, type: 0[0m
+[0;32mI (813) UART: UART event received, type: 0[0m
+[0;32mI (823) UART: UART event received, type: 0[0m
+[0;32mI (833) UART: UART event received, type: 0[0m
+[0;32mI (833) UART: UART event received, type: 0[0m
+[0;32mI (843) UART: UART event received, type: 0[0m
+[0;32mI (853) UART: UART event received, type: 0[0m
+[0;32mI (863) UART: UART event received, type: 0[0m
+[0;32mI (873) UART: UART event received, type: 0[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x8 (TG1WDT_SYS_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42003d57
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Nov  4 2025 17:55:53[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;33mW (47) boot.esp32s3: PRO CPU has been reset by WDT.[0m
+[0;33mW (53) boot.esp32s3: APP CPU has been reset by WDT.[0m
+[0;32mI (58) boot: Enabling RNG early entropy source...[0m
+[0;32mI (64) boot: Partition Table:[0m
+[0;32mI (67) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (75) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (82) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (97) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=19e00h (105984) map[0m
+[0;32mI (129) esp_image: segment 1: paddr=00029e28 vaddr=3fc96200 size=02bc0h ( 11200) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002c9f0 vaddr=40374000 size=03628h ( 13864) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=4ac6ch (306284) map[0m
+[0;32mI (198) esp_image: segment 4: paddr=0007ac94 vaddr=40377628 size=0eae8h ( 60136) load[0m
+[0;32mI (219) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (219) boot: Disabling RNG early entropy source...[0m
+[0;32mI (230) cpu_start: Multicore app[0m
+[0;32mI (240) cpu_start: Pro cpu start user code[0m
+[0;32mI (240) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (240) cpu_start: Application information:[0m
+[0;32mI (243) cpu_start: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (249) cpu_start: App version:      159598a-dirty[0m
+[0;32mI (255) cpu_start: Compile time:     Nov  4 2025 17:54:03[0m
+[0;32mI (261) cpu_start: ELF file SHA256:  683751eeb...[0m
+[0;32mI (266) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (271) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (276) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (281) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (285) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9D4B8 len 0004C258 (304 KiB): RAM[0m
+[0;32mI (299) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (305) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (311) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (318) spi_flash: detected chip: gd[0m
+[0;32mI (322) spi_flash: flash io: dio[0m
+[0;33mW (325) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (339) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (346) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (353) main_task: Started on CPU0[0m
+[0;32mI (363) main_task: Calling app_main()[0m
+[0;32mI (373) uart: queue free spaces: 30[0m
+[0;32mI (383) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (383) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (483) UART: UART RX task started and waiting for data...[0m
+[0;32mI (483) UART: UART event received, type: 0[0m
+[0;32mI (483) UART: UART event received, type: 0[0m
+[0;32mI (483) UART: UART event received, type: 0[0m
+[0;32mI (493) UART: UART event received, type: 0[0m
+[0;32mI (493) UART: UART event received, type: 0[0m
+[0;32mI (503) UART: UART event received, type: 0[0m
+[0;32mI (503) UART: UART event received, type: 0[0m
+[0;32mI (513) UART: UART event received, type: 0[0m
+[0;32mI (513) UART: UART event received, type: 0[0m
+[0;32mI (523) UART: UART event received, type: 0[0m
+[0;32mI (523) UART: UART event received, type: 0[0m
+[0;32mI (533) UART: UART event received, type: 0[0m
+[0;32mI (533) UART: UART event received, type: 0[0m
+[0;32mI (533) UART: UART event received, type: 0[0m
+[0;32mI (543) UART: UART event received, type: 0[0m
+[0;32mI (543) UART: UART event received, type: 0[0m
+UART RX task created
+[0;32mI (563) UART: UART event received, type: 0[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x8 (TG1WDT_SYS_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42003d57
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Nov  4 2025 17:55:53[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;33mW (47) boot.esp32s3: PRO CPU has been reset by WDT.[0m
+[0;33mW (53) boot.esp32s3: APP CPU has been reset by WDT.[0m
+[0;32mI (58) boot: Enabling RNG early entropy source...[0m
+[0;32mI (64) boot: Partition Table:[0m
+[0;32mI (67) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (75) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (82) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (97) boot: End of partition table[0m
+[0;32mI (101) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=19e00h (105984) map[0m
+[0;32mI (129) esp_image: segment 1: paddr=00029e28 vaddr=3fc96200 size=02bc0h ( 11200) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002c9f0 vaddr=40374000 size=03628h ( 13864) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=4ac6ch (306284) map[0m
+[0;32mI (198) esp_image: segment 4: paddr=0007ac94 vaddr=40377628 size=0eae8h ( 60136) load[0m
+[0;32mI (219) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (219) boot: Disabling RNG early entropy source...[0m
+[0;32mI (230) cpu_start: Multicore app[0m
+[0;32mI (240) cpu_start: Pro cpu start user code[0m
+[0;32mI (240) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (240) cpu_start: Application information:[0m
+[0;32mI (243) cpu_start: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (249) cpu_start: App version:      159598a-dirty[0m
+[0;32mI (255) cpu_start: Compile time:     Nov  4 2025 17:54:03[0m
+[0;32mI (261) cpu_start: ELF file SHA256:  683751eeb...[0m
+[0;32mI (266) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (271) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (276) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (281) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (286) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9D4B8 len 0004C258 (304 KiB): RAM[0m
+[0;32mI (299) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (305) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (311) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (318) spi_flash: detected chip: gd[0m
+[0;32mI (322) spi_flash: flash io: dio[0m
+[0;33mW (326) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (339) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (346) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (353) main_task: Started on CPU0[0m
+[0;32mI (363) main_task: Calling app_main()[0m
+[0;32mI (373) uart: queue free spaces: 30[0m
+[0;32mI (383) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (383) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (483) UART: UART RX task started and waiting for data...[0m
+[0;32mI (483) UART: UART event received, type: 0[0m
+[0;32mI (483) UART: UART event received, type: 0[0m
+[0;32mI (483) UART: UART event received, type: 0[0m
+[0;32mI (493) UART: UART event received, type: 0[0m
+[0;32mI (493) UART: UART event received, type: 0[0m
+[0;32mI (503) UART: UART event received, type: 0[0m
+[0;32mI (503) UART: UART event received, type: 0[0m
+[0;32mI (513) UART: UART event received, type: 0[0m
+[0;32mI (513) UART: UART event received, type: 0[0m
+[0;32mI (523) UART: UART event received, type: 0[0m
+[0;32mI (523) UART: UART event received, type: 0[0m
+UART RX task created
+[0;32mI (533) UART: UART event received, type: 0[0m
+[0;32mI (553) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (553) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (563) ETH: Ethernet Started[0m
+[0;32mI (563) WEB: Registered /power/set handler[0m
+[0;32mI (563) WEB: Registered /power/get handler[0m
+[0;32mI (563) MAIN: Web server started[0m
+[0;32mI (563) main_task: Returned from app_main()[0m
+[0;32mI (583) UART: UART event received, type: 0[0m
+[0;32mI (583) UART: UART event received, type: 0[0m
+[0;32mI (593) UART: UART event received, type: 0[0m
+[0;32mI (593) UART: UART event received, type: 0[0m
+[0;32mI (603) UART: UART event received, type: 0[0m
+[0;32mI (643) UART: UART event received, type: 0[0m
+[0;32mI (643) UART: UART event received, type: 0[0m
+[0;32mI (653) UART: UART event received, type: 0[0m
+[0;32mI (663) UART: UART event received, type: 0[0m
+[0;32mI (683) UART: UART event received, type: 0[0m
+[0;32mI (723) UART: UART event received, type: 0[0m
+[0;32mI (733) UART: UART event received, type: 0[0m
+[0;32mI (733) UART: UART event received, type: 0[0m
+[0;32mI (743) UART: UART event received, type: 0[0m
+[0;32mI (753) UART: UART event received, type: 0[0m
+[0;32mI (763) UART: UART event received, type: 0[0m
+[0;32mI (773) UART: UART event received, type: 0[0m
+[0;32mI (783) UART: UART event received, type: 0[0m
+[0;32mI (783) UART: UART event received, type: 0[0m
+[0;32mI (793) UART: UART event received, type: 0[0m
+[0;32mI (803) UART: UART event received, type: 0[0m
+[0;32mI (813) UART: UART event received, type: 0[0m
+[0;32mI (813) UART: UART event received, type: 0[0m
+[0;32mI (823) UART: UART event received, type: 0[0m
+[0;32mI (833) UART: UART event received, type: 0[0m
+[0;32mI (833) UART: UART event received, type: 0[0m
+[0;32mI (843) UART: UART event received, type: 0[0m
+[0;32mI (843) UART: UART event received, type: 0[0m
+[0;32mI (853) UART: UART event received, type: 0[0m
+[0;32mI (863) UART: UART event received, type: 0[0m
+[0;32mI (863) UART: UART event received, type: 0[0m
+[0;32mI (873) UART: UART event received, type: 0[0m
+[0;32mI (883) UART: UART event received, type: 0[0m
+[0;32mI (883) UART: UART event received, type: 0[0m
+[0;32mI (893) UART: UART event received, type: 0[0m
+[0;32mI (903) UART: UART event received, type: 0[0m
+[0;32mI (913) UART: UART event received, type: 0[0m
+[0;32mI (923) UART: UART event received, type: 0[0m
+[0;32mI (923) UART: UART event received, type: 0[0m
+[0;32mI (933) UART: UART event received, type: 0[0m
+[0;32mI (943) UART: UART event received, type: 0[0m
+[0;32mI (953) UART: UART event received, type: 0[0m
+[0;32mI (963) UART: UART event received, type: 0[0m
+[0;32mI (963) UART: UART event received, type: 0[0m
+[0;32mI (973) UART: UART event received, type: 0[0m
+[0;32mI (983) UART: UART event received, type: 0[0m
+[0;32mI (983) UART: UART event received, type: 0[0m
+[0;32mI (1033) UART: UART event received, type: 0[0m
+[0;32mI (1033) UART: UART event received, type: 0[0m
+[0;32mI (1043) UART: UART event received, type: 0[0m
+[0;32mI (1053) UART: UART event received, type: 0[0m
+[0;32mI (1063) UART: UART event received, type: 0[0m
+[0;32mI (1063) UART: UART event received, type: 0[0m
+[0;32mI (1073) UART: UART event received, type: 0[0m
+[0;32mI (1073) UART: UART event received, type: 0[0m
+[0;32mI (1083) UART: UART event received, type: 0[0m
+[0;32mI (1093) UART: UART event received, type: 0[0m
+[0;32mI (1093) UART: UART event received, type: 0[0m
+[0;32mI (1103) UART: UART event received, type: 0[0m
+[0;32mI (1103) UART: UART event received, type: 0[0m
+[0;32mI (1113) UART: UART event received, type: 0[0m
+[0;32mI (1123) UART: UART event received, type: 0[0m
+[0;32mI (1123) UART: UART event received, type: 0[0m
+[0;32mI (1133) UART: UART event received, type: 0[0m
+[0;32mI (1143) UART: UART event received, type: 0[0m
+[0;32mI (1153) UART: UART event received, type: 0[0m
+[0;32mI (1153) UART: UART event received, type: 0[0m
+[0;32mI (1163) UART: UART event received, type: 0[0m
+[0;32mI (1163) UART: UART event received, type: 0[0m
+[0;32mI (1173) UART: UART event received, type: 0[0m
+[0;32mI (1173) UART: UART event received, type: 0[0m
+[0;32mI (1183) UART: UART event received, type: 0[0m
+[0;32mI (1193) UART: UART event received, type: 0[0m
+[0;32mI (1203) UART: UART event received, type: 0[0m
+[0;32mI (1203) UART: UART event received, type: 0[0m
+[0;32mI (1213) UART: UART event received, type: 0[0m
+[0;32mI (1223) UART: UART event received, type: 0[0m
+[0;32mI (1233) UART: UART event received, type: 0[0m
+[0;32mI (1233) UART: UART event received, type: 0[0m
+[0;32mI (1243) UART: UART event received, type: 0[0m
+[0;32mI (1253) UART: UART event received, type: 0[0m
+[0;32mI (1263) UART: UART event received, type: 0[0m
+[0;32mI (1273) UART: UART event received, type: 0[0m
+[0;32mI (1273) UART: UART event received, type: 0[0m
+[0;32mI (1283) UART: UART event received, type: 0[0m
+[0;32mI (1283) UART: UART event received, type: 0[0m
+[0;32mI (1293) UART: UART event received, type: 0[0m
+[0;32mI (1303) UART: UART event received, type: 0[0m
+RX: 100 packets
+[0;32mI (1303) UART: UART event received, type: 0[0m
+[0;32mI (1303) UART: UART event received, type: 0[0m
+[0;32mI (1313) UART: UART event received, type: 0[0m
+[0;32mI (1323) UART: UART event received, type: 0[0m
+[0;32mI (1323) UART: UART event received, type: 0[0m
+[0;32mI (1333) UART: UART event received, type: 0[0m
+[0;32mI (1343) UART: UART event received, type: 0[0m
+[0;32mI (1353) UART: UART event received, type: 0[0m
+[0;32mI (1353) UART: UART event received, type: 0[0m
+[0;32mI (1363) UART: UART event received, type: 0[0m
+[0;32mI (1373) UART: UART event received, type: 0[0m
+[0;32mI (1383) UART: UART event received, type: 0[0m
+[0;32mI (1383) UART: UART event received, type: 0[0m
+[0;32mI (1393) UART: UART event received, type: 0[0m
+[0;32mI (1393) UART: UART event received, type: 0[0m
+[0;32mI (1403) UART: UART event received, type: 0[0m
+[0;32mI (1413) UART: UART event received, type: 0[0m
+[0;32mI (1423) UART: UART event received, type: 0[0m
+[0;32mI (1423) UART: UART event received, type: 0[0m
+[0;32mI (1433) UART: UART event received, type: 0[0m
+[0;32mI (1443) UART: UART event received, type: 0[0m
+[0;32mI (1443) UART: UART event received, type: 0[0m
+[0;32mI (1453) UART: UART event received, type: 0[0m
+[0;32mI (1453) UART: UART event received, type: 0[0m
+[0;32mI (1463) UART: UART event received, type: 0[0m
+[0;32mI (1463) UART: UART event received, type: 0[0m
+[0;32mI (1473) UART: UART event received, type: 0[0m
+[0;32mI (1473) UART: UART event received, type: 0[0m
+[0;32mI (1483) UART: UART event received, type: 0[0m
+[0;32mI (1493) UART: UART event received, type: 0[0m
+[0;32mI (1503) UART: UART event received, type: 0[0m
+[0;32mI (1503) UART: UART event received, type: 0[0m
+[0;32mI (1513) UART: UART event received, type: 0[0m
+[0;32mI (1523) UART: UART event received, type: 0[0m
+[0;32mI (1533) UART: UART event received, type: 0[0m
+[0;32mI (1533) UART: UART event received, type: 0[0m
+[0;32mI (1543) UART: UART event received, type: 0[0m
+[0;32mI (1553) UART: UART event received, type: 0[0m
+[0;32mI (1553) UART: UART event received, type: 0[0m
+[0;32mI (1563) UART: UART event received, type: 0[0m
+[0;32mI (1563) UART: UART event received, type: 0[0m
+[0;32mI (1573) UART: UART event received, type: 0[0m
+[0;32mI (1583) UART: UART event received, type: 0[0m
+[0;32mI (1593) UART: UART event received, type: 0[0m
+[0;32mI (1603) UART: UART event received, type: 0[0m
+[0;32mI (1603) UART: UART event received, type: 0[0m
+[0;32mI (1613) UART: UART event received, type: 0[0m
+[0;32mI (1613) UART: UART event received, type: 0[0m
+[0;32mI (1623) UART: UART event received, type: 0[0m
+[0;32mI (1633) UART: UART event received, type: 0[0m
+[0;32mI (1643) UART: UART event received, type: 0[0m
+[0;32mI (1653) UART: UART event received, type: 0[0m
+[0;32mI (1653) UART: UART event received, type: 0[0m
+[0;32mI (1663) UART: UART event received, type: 0[0m
+[0;32mI (1673) UART: UART event received, type: 0[0m
+[0;32mI (1683) UART: UART event received, type: 0[0m
+[0;32mI (1683) UART: UART event received, type: 0[0m
+[0;32mI (1693) UART: UART event received, type: 0[0m
+[0;32mI (1693) UART: UART event received, type: 0[0m
+[0;32mI (1693) UART: UART event received, type: 0[0m

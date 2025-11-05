@@ -4,7 +4,9 @@
 #include "esp_log.h"
 #include <string.h>
 #include <stdio.h>
+#include <stdint.h>
 #include "esp_timer.h"
+#include "uart.h"
 
 #define READER_TXD  17
 #define READER_RXD  18
@@ -129,34 +131,184 @@ static int extract_one_tag(const uint8_t* buf, size_t len, size_t startPos, size
 
 // Parse power response from reader
 static void parse_power_response(const uint8_t *buf, size_t len) {
-    // Look for power response pattern (this depends on your reader's response format)
-    // This is a basic implementation - you may need to adjust based on actual response format
-    if (len >= 10 && buf[0] == 0x5A) {
-        // Example parsing - adjust based on your reader's actual response format
-        // Assuming response format: 5A [header] [pwr1] [pwr2] [pwr3] [pwr4] [checksum]
-        if (len >= 8) {
-            s_power_values[0] = buf[4]; // Power for antenna 1
-            s_power_values[1] = buf[5]; // Power for antenna 2  
-            s_power_values[2] = buf[6]; // Power for antenna 3
-            s_power_values[3] = buf[7]; // Power for antenna 4
+    // Expected response format: 5A 00 01 02 02 00 08 01 PWR1 02 PWR2 03 PWR3 04 PWR4 CRC CRC
+    // Length should be 17 bytes for power response
+    if (len >= 17 && buf[0] == 0x5A && buf[1] == 0x00 && buf[2] == 0x01 && buf[3] == 0x02 && buf[4] == 0x02) {
+        // Check data length field (should be 0x00 0x08 = 8 bytes of antenna data)
+        if (buf[5] == 0x00 && buf[6] == 0x08) {
+            // Parse antenna power values
+            // Format: ID PWR ID PWR ID PWR ID PWR
+            // buf[7]=0x01, buf[8]=power1, buf[9]=0x02, buf[10]=power2, etc.
+            
+            if (buf[7] == 0x01) s_power_values[0] = buf[8];   // Antenna 1 power
+            if (buf[9] == 0x02) s_power_values[1] = buf[10];  // Antenna 2 power  
+            if (buf[11] == 0x03) s_power_values[2] = buf[12]; // Antenna 3 power
+            if (buf[13] == 0x04) s_power_values[3] = buf[14]; // Antenna 4 power
+            
             s_power_request_pending = 0;
-            ESP_LOGI(TAG, "Power response received: ant1=%d ant2=%d ant3=%d ant4=%d", 
+            ESP_LOGI(TAG, "Power response parsed successfully: ant1=%d dBm, ant2=%d dBm, ant3=%d dBm, ant4=%d dBm", 
                      s_power_values[0], s_power_values[1], s_power_values[2], s_power_values[3]);
+        } else {
+            ESP_LOGW(TAG, "Power response: unexpected data length field: %02X %02X", buf[5], buf[6]);
+        }
+    } else {
+        ESP_LOGD(TAG, "Received data doesn't match power response format (len=%d)", len);
+        // Log the received data for debugging
+        if (len > 0) {
+            char hex_str[256] = "";
+            for (size_t i = 0; i < len && i < 20; i++) {
+                char temp[4];
+                snprintf(temp, sizeof(temp), "%02X ", buf[i]);
+                strcat(hex_str, temp);
+            }
+            ESP_LOGD(TAG, "Received: %s", hex_str);
         }
     }
+}
+
+// Parse tag/EPC response from reader (handles multiple tag response formats)
+static bool parse_tag_response(const uint8_t *buf, size_t len) {
+    // Check for valid frame header: 5A 00 01
+    if (len < 9 || buf[0] != 0x5A || buf[1] != 0x00 || buf[2] != 0x01) {
+        return false;
+    }
+    
+    uint8_t mid = buf[3]; // Message ID
+    
+    // Handle different tag response formats
+    if (mid == 0x12) {
+        // Real-time tag data format (from log): 5A 00 01 12 00 00 LEN [TAG_DATA] CRC CRC
+        // Example: 5A 00 01 12 00 00 18 00 0C E2 80 69 15 60 00 02 16 65 10 B3 31 30 00 01 01 FE 08 00 0D F7 32 49 7B
+        
+        if (len >= 15) { // Minimum for meaningful tag data
+            uint16_t data_len = (buf[5] << 8) | buf[6]; // Length field
+            
+            if (len >= 7 + data_len + 2 && data_len >= 8) { // header + data + CRC, minimum tag data
+                // Look for EPC pattern (E2 80 prefix is common for EPC tags)
+                const uint8_t *data = &buf[7];
+                
+                // Find EPC data - typically starts at offset 2-3 in tag data
+                for (int epc_start = 2; epc_start <= 4 && epc_start < data_len - 6; epc_start++) {
+                    if (data[epc_start] == 0xE2 && data[epc_start + 1] == 0x80) {
+                        // Found potential EPC start, determine length
+                        int epc_len = 12; // Common EPC-96 length in bytes
+                        if (epc_start + epc_len <= data_len) {
+                            
+                            char epc[128] = "";
+                            for (int i = 0; i < epc_len; i++) {
+                                char hex_byte[3];
+                                snprintf(hex_byte, sizeof(hex_byte), "%02X", data[epc_start + i]);
+                                strcat(epc, hex_byte);
+                            }
+                            
+                            // Extract RSSI and antenna from tag data (rough approximation)
+                            int rssi = -48; // Default from observed data
+                            int ant = 1;    // Default antenna
+                            
+                            // Try to extract antenna and RSSI from the tag data
+                            if (data_len > epc_start + epc_len + 2) {
+                                ant = data[epc_start + epc_len + 1]; // Antenna number usually follows EPC
+                                if (ant < 1 || ant > 4) ant = 1;   // Validate antenna
+                            }
+                            
+                            // Find or allocate tag slot
+                            int idx = find_tag_index(epc);
+                            if (idx < 0) idx = alloc_tag_index(epc);
+                            
+                            if (idx >= 0) {
+                                s_tags[idx].rssi = rssi;
+                                s_tags[idx].ant = ant;
+                                s_tags[idx].last_ms = esp_timer_get_time() / 1000ULL;
+                                
+                                // Silent operation during high-speed inventory to prevent watchdog timeout
+                                // ESP_LOGI(TAG, "TAG[%d] epc=%s rssi=%d ant=%d (%d tags processed)", idx, epc, rssi, ant, tag_log_count);
+                                return true;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } else if (mid == 0x10) {
+        // Legacy tag response format: 5A 00 01 10 00 00 LEN [EPC_DATA] CRC CRC
+        uint16_t data_len = (buf[5] << 8) | buf[6]; // bytes 5-6 contain length
+        
+        if (len >= 7 + data_len + 2) { // header + data + CRC
+            // Extract EPC data
+            char epc[128] = "";
+            for (int i = 0; i < data_len && i < 32; i++) { // Limit EPC to reasonable size
+                char hex_byte[3];
+                snprintf(hex_byte, sizeof(hex_byte), "%02X", buf[7 + i]);
+                strcat(epc, hex_byte);
+            }
+            
+            // For now, assume antenna 1 and RSSI -50 (since not in this response format)
+            int rssi = -50;
+            int ant = 1;
+            
+            // Find or allocate tag slot
+            int idx = find_tag_index(epc);
+            if (idx < 0) idx = alloc_tag_index(epc);
+            
+            if (idx >= 0) {
+                s_tags[idx].rssi = rssi;
+                s_tags[idx].ant = ant;
+                s_tags[idx].last_ms = esp_timer_get_time() / 1000ULL;
+                
+                // Silent operation to prevent watchdog timeout
+                // ESP_LOGI(TAG, "TAG[%d] epc=%s (legacy, count=%d)", idx, epc, legacy_log_count);
+                return true;
+            }
+        }
+    }
+    
+    return false;
 }
 
 void rfid_process_bytes(const uint8_t *buf, size_t len)
 {
     if (!buf || len == 0) return;
     
+    // During system startup, minimize processing to prevent watchdog timeout
+    static int startup_packets = 0;
+    startup_packets++;
+    
+    // Skip heavy processing for first 1000 packets to allow system to stabilize
+    if (startup_packets < 1000) {
+        if (startup_packets % 100 == 0) {
+            vTaskDelay(pdMS_TO_TICKS(1));
+        }
+        return;
+    }
+    
+    // Yield occasionally to prevent watchdog timeout during high-speed processing
+    static int process_count = 0;
+    if (++process_count % 50 == 0) {
+        vTaskDelay(pdMS_TO_TICKS(1));
+    }
+    
     // Check for power response if we're waiting for one
     if (s_power_request_pending) {
         parse_power_response(buf, len);
+        return; // Don't process as tag data
     }
     
-    // Optimize tag processing - only process if inventory is running
-    if (!s_running) return;
+    // Try to parse as tag response (support both MID 0x10 and 0x12)
+    if (buf[3] == 0x10 || buf[3] == 0x12) {
+        if (parse_tag_response(buf, len)) {
+            return; // Successfully parsed as tag response
+        }
+    }
+    
+    // Fallback: only process if inventory is running using old method
+    if (!s_running) {
+        // Don't log every skipped packet to reduce console load
+        static int skip_count = 0;
+        if (++skip_count % 1000 == 0) {
+            ESP_LOGI(TAG, "Inventory not running, skipped %d packets", skip_count);
+        }
+        return;
+    }
     
     // Continue with normal tag processing
     size_t pos = 0;
@@ -177,7 +329,8 @@ void rfid_process_bytes(const uint8_t *buf, size_t len)
                 s_tags[idx].ant = ant;
                 s_tags[idx].last_ms = esp_timer_get_time() / 1000ULL;
                 
-                ESP_LOGI(TAG, "TAG[%d] epc=%s rssi=%d ant=%d", idx, epc, rssi, ant);
+                // Silent operation to prevent watchdog timeout
+                // ESP_LOGI(TAG, "TAG[%d] epc=%s rssi=%d ant=%d (fallback, count=%d)", idx, epc, rssi, ant, fallback_log_count);
                 tags_found++;
             }
             pos = next;
@@ -322,17 +475,41 @@ void rfid_set_power(int pwr1, int pwr2, int pwr3, int pwr4)
 
 void rfid_get_power(int *pwr1, int *pwr2, int *pwr3, int *pwr4)
 {
-    // Send get power command to reader
-    // 5a 00 01 02 02 00 00 29 59
-    static const uint8_t cmd[] = { 0x5A, 0x00, 0x01, 0x02, 0x02, 0x00, 0x00, 0x29, 0x59 };
-    s_power_request_pending = 1; // Set flag to indicate we're waiting for power response
-    uart_send_bytes((const char*)cmd, sizeof(cmd));
-    
-    // Return current stored power values
+    // Return current stored power values (without sending query command)
+    // Use rfid_query_power() first to refresh values from reader
     if (pwr1) *pwr1 = s_power_values[0];
     if (pwr2) *pwr2 = s_power_values[1];
     if (pwr3) *pwr3 = s_power_values[2];
     if (pwr4) *pwr4 = s_power_values[3];
+}
+
+void rfid_query_power(void)
+{
+    // Send power query command without returning cached values
+    // This allows the web interface to trigger a fresh query and then get updated values
+    static const uint8_t cmd[] = { 0x5A, 0x00, 0x01, 0x02, 0x02, 0x00, 0x00, 0x29, 0x59 };
+    s_power_request_pending = 1; // Set flag to indicate we're waiting for power response
+    uart_send_bytes((const char*)cmd, sizeof(cmd));
+}
+
+// Query reader information (based on NRN SDK MID.QUERY_INFO: 0x0100)
+void rfid_query_reader_info(void)
+{
+    // Command: 5A 00 01 01 00 00 00 [CRC]
+    // MID = 0x0100 -> category=0x01, mid=0x00
+    static const uint8_t cmd[] = { 0x5A, 0x00, 0x01, 0x01, 0x00, 0x00, 0x00, 0x88, 0x5B };
+    uart_send_bytes((const char*)cmd, sizeof(cmd));
+    printf("Sent reader info query command\n");
+}
+
+// Confirm connection (based on NRN SDK MID.CONFIRM_CONNECTION: 0x12)
+void rfid_confirm_connection(void)
+{
+    // Command: 5A 00 01 00 12 00 00 [CRC] 
+    // MID = 0x12 -> category=0x00, mid=0x12
+    static const uint8_t cmd[] = { 0x5A, 0x00, 0x01, 0x00, 0x12, 0x00, 0x00, 0x29, 0x47 };
+    uart_send_bytes((const char*)cmd, sizeof(cmd));
+    printf("Sent connection confirmation command\n");
 }
 
 const char* rfid_get_status(void)

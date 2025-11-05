@@ -1,0 +1,152 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40379f0e
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Nov  4 2025 17:55:53[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=19ec0h (106176) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=00029ee8 vaddr=3fc96200 size=02bc0h ( 11200) load[0m
+[0;32mI (121) esp_image: segment 2: paddr=0002cab0 vaddr=40374000 size=03568h ( 13672) load[0m
+[0;32mI (127) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=4ad90h (306576) map[0m
+[0;32mI (187) esp_image: segment 4: paddr=0007adb8 vaddr=40377568 size=0eba8h ( 60328) load[0m
+[0;32mI (208) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (208) boot: Disabling RNG early entropy source...[0m
+[0;32mI (220) cpu_start: Multicore app[0m
+[0;32mI (229) cpu_start: Pro cpu start user code[0m
+[0;32mI (229) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (230) cpu_start: Application information:[0m
+[0;32mI (232) cpu_start: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (239) cpu_start: App version:      159598a-dirty[0m
+[0;32mI (244) cpu_start: Compile time:     Nov  4 2025 17:54:03[0m
+[0;32mI (250) cpu_start: ELF file SHA256:  808f3aa36...[0m
+[0;32mI (256) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (261) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (265) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (270) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (275) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (282) heap_init: At 3FC9C8B0 len 0004CE60 (307 KiB): RAM[0m
+[0;32mI (288) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (294) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (300) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (308) spi_flash: detected chip: gd[0m
+[0;32mI (311) spi_flash: flash io: dio[0m
+[0;33mW (315) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (328) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (335) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (342) main_task: Started on CPU0[0m
+[0;32mI (352) main_task: Calling app_main()[0m
+[0;32mI (362) uart: queue free spaces: 20[0m
+[0;32mI (372) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (372) RFID: RFID module initialized (stub)[0m
+[0;32mI (372) UART: Starting UART RX task...[0m
+[0;32mI (372) UART: UART RX task started and waiting for data...[0m
+[0;32mI (382) UART: UART RX task created[0m
+[0;32mI (412) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (412) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (422) ETH: Ethernet Started[0m
+[0;32mI (422) WEB: Registered /power/set handler[0m
+[0;32mI (422) WEB: Registered /power/get handler[0m
+[0;32mI (422) MAIN: Web server started[0m
+[0;32mI (422) main_task: Returned from app_main()[0m
+[0;32mI (2422) ETH: Ethernet Link Up[0m
+[0;32mI (2422) ETH: Ethernet HW Addr 02:00:00:12:34:56[0m
+[0;32mI (3422) esp_netif_handlers: eth ip: 192.168.1.22, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (3422) ETH: Ethernet Got IP Address[0m
+[0;32mI (3422) ETH: ~~~~~~~~~~~[0m
+[0;32mI (3422) ETH: ETHIP: 192.168.1.22[0m
+[0;32mI (3432) ETH: ETHMASK: 255.255.255.0[0m
+[0;32mI (3432) ETH: ETHGW: 192.168.1.1[0m
+[0;32mI (3432) ETH: ~~~~~~~~~~~[0m
+[0;32mI (6732) UART: UART sent 9 bytes: TX: 5A 00 01 02 02 00 00 29 59[0m
+[0;32mI (6752) UART: UART event received, type: 0[0m
+[0;32mI (6752) UART: === READER DATA ===[0m
+[0;32mI (6752) UART: Length: 17 bytes[0m
+[0;32mI (6752) UART: HEX DATA:[0m
+[0;32mI (6752) UART:   0000: 5A 00 01 02 02 00 08 01 0A 02 0C 03 0F 04 12 37 [0m
+[0;32mI (6762) UART:   0010: 69 [0m
+[0;32mI (6762) UART: Frame Analysis:[0m
+[0;32mI (6762) UART:   Header: 0x5A[0m
+[0;32mI (6772) UART:   Cmd: 00 01 02 02[0m
+[0;32mI (6772) UART:   DataLen: 8[0m
+[0;32mI (6782) UART: ==================[0m
+[0;32mI (6782) RFID: === RFID ANALYSIS ===[0m
+[0;32mI (6782) RFID: Length: 17 bytes[0m
+[0;32mI (6792) RFID:   5A 00 01 02 02 00 08 01 [0m
+[0;32mI (6792) RFID:   0A 02 0C 03 0F 04 12 37 [0m
+[0;32mI (6802) RFID:   69 [0m
+[0;32mI (6802) RFID: Header: 0x5A[0m
+[0;32mI (6802) RFID: Cmd: 00 01 02 02[0m
+[0;32mI (6812) RFID: >>> POWER RESPONSE <<<[0m
+[0;32mI (6812) RFID: Data Length: 8[0m
+[0;32mI (6822) RFID: CRC: 37 69[0m
+[0;32mI (6822) RFID: ====================[0m
+[0;32mI (6822) RFID: Processing potential power response[0m
+[0;32mI (6832) RFID: Power response parsed successfully: ant1=10 dBm, ant2=12 dBm, ant3=15 dBm, ant4=18 dBm[0m
+[0;32mI (12092) UART: UART sent 9 bytes: TX: 5A 00 01 02 02 00 00 29 59[0m
+[0;32mI (12092) UART: UART event received, type: 0[0m
+[0;32mI (12092) UART: === READER DATA ===[0m
+[0;32mI (12102) UART: Length: 17 bytes[0m
+[0;32mI (12102) UART: HEX DATA:[0m
+[0;32mI (12102) UART:   0000: 5A 00 01 02 02 00 08 01 0A 02 0C 03 0F 04 12 37 [0m
+[0;32mI (12112) UART:   0010: 69 [0m
+[0;32mI (12112) UART: Frame Analysis:[0m
+[0;32mI (12122) UART:   Header: 0x5A[0m
+[0;32mI (12122) UART:   Cmd: 00 01 02 02[0m
+[0;32mI (12122) UART:   DataLen: 8[0m
+[0;32mI (12132) UART: ==================[0m
+[0;32mI (12132) RFID: === RFID ANALYSIS ===[0m
+[0;32mI (12142) RFID: Length: 17 bytes[0m
+[0;32mI (12142) RFID:   5A 00 01 02 02 00 08 01 [0m
+[0;32mI (12142) RFID:   0A 02 0C 03 0F 04 12 37 [0m
+[0;32mI (12152) RFID:   69 [0m
+[0;32mI (12152) RFID: Header: 0x5A[0m
+[0;32mI (12162) RFID: Cmd: 00 01 02 02[0m
+[0;32mI (12162) RFID: >>> POWER RESPONSE <<<[0m
+[0;32mI (12162) RFID: Data Length: 8[0m
+[0;32mI (12172) RFID: CRC: 37 69[0m
+[0;32mI (12172) RFID: ====================[0m
+[0;32mI (12182) RFID: Processing potential power response[0m
+[0;32mI (12182) RFID: Power response parsed successfully: ant1=10 dBm, ant2=12 dBm, ant3=15 dBm, ant4=18 dBm[0m
+[0;32mI (13822) UART: UART sent 14 bytes: TX: 5A 00 01 02 10 00 05 00 00 00 01 01 F4 87[0m
+[0;32mI (13822) RFID: RFID inventory started[0m
+[0;32mI (13832) UART: UART event received, type: 0[0m
+[0;32mI (13832) UART: === READER DATA ===[0m
+[0;32mI (13842) UART: Length: 15 bytes[0m
+[0;32mI (13842) UART: HEX DATA:[0m
+[0;32mI (13842) UART:   0000: 5A 00 01 10 00 00 06 06 04 02 10 00 05 17 B3 [0m
+[0;32mI (13852) UART: Frame Analysis:[0m
+[0;32mI (13852) UART:   Header: 0x5A[0m
+[0;32mI (13862) UART:   Cmd: 00 01 10 00[0m
+[0;32mI (13862) UART:   DataLen: 6[0m
+[0;32mI (13862) UART: ==================[0m
+[0;32mI (13872) RFID: === RFID ANALYSIS ===[0m
+[0;32mI (13872) RFID: Length: 15 bytes[0m
+[0;32mI (13882) RFID:   5A 00 01 10 00 00 06 06 [0m
+[0;32mI (13882) RFID:   04 02 10 00 05 17 B3 [0m
+[0;32mI (13882) RFID: Header: 0x5A[0m
+[0;32mI (13892) RFID: Cmd: 00 01 10 00[0m
+[0;32mI (13892) RFID: >>> TAG/EPC RESPONSE <<<[0m
+[0;32mI (13902) RFID: Data Length: 6[0m
+[0;32mI (13902) RFID: CRC: 17 B3[0m
+[0;32mI (13902) RFID: ====================[0m
+[0;32mI (13912) RFID: Processing tag response[0m
+[0;32mI (13912) RFID: TAG[0] epc=060402100005 rssi=-50 ant=1 (parsed from tag response)[0m

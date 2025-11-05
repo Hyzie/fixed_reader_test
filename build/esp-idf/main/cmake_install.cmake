@@ -1,4 +1,4 @@
-# Install script for directory: D:/esp/esp32_w5500_idf/esp32_w5500_idf/main
+# Install script for directory: D:/esp/esp32_w5500_idf/fixed_reader_test/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

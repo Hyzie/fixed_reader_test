@@ -1,4 +1,4 @@
-/* * Data converted from D:/esp/esp32_w5500_idf/esp32_w5500_idf/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from D:/esp/esp32_w5500_idf/fixed_reader_test/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded

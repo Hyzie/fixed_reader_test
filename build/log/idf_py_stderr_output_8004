@@ -1,0 +1,60 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM8 instead...[0m
+[0;33m--- esp-idf-monitor 1.8.0 on \\.\COM8 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40379f0e: [0;33mesp_cpu_wait_for_intr[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/cpu.c[0m[0m:[1;31m145[0m
+[0m--- 0x42003d57: [0;33mpanic_handler[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c[0m[0m:[1;31m145[0m
+[0m--- 0x42003d57: [0;33mpanic_handler[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c[0m[0m:[1;31m145[0m
+[0m--- 0x40379e21: [0;33mxt_utils_compare_and_set[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/xtensa/include/xt_utils.h[0m[0m:[1;31m222[0m
+[0m--- (inlined by) [0;33mesp_cpu_compare_and_set[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/cpu.c[0m[0m:[1;31m491[0m
+[0m--- 0x400556d5: [0;33mstrlen[0m[0m in [0;32mROM[0m
+[0m--- 0x400556e5: [0;33mstrlen[0m[0m in [0;32mROM[0m
+[0m--- 0x40379e1e: [0;33mxt_utils_compare_and_set[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/xtensa/include/xt_utils.h[0m[0m:[1;31m215[0m
+[0m--- (inlined by) [0;33mesp_cpu_compare_and_set[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/cpu.c[0m[0m:[1;31m491[0m
+[0m--- 0x4037d329: [0;33mspinlock_acquire[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/include/spinlock.h[0m[0m:[1;31m130[0m
+[0m--- (inlined by) [0;33mxPortEnterCriticalTimeout[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m473[0m
+[0m--- 0x4037cdd7: [0;33mvPortEnterCritical[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h[0m[0m:[1;31m571[0m
+[0m--- (inlined by) [0;33mxQueueReceive[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c[0m[0m:[1;31m1549[0m
+[0m--- 0x4200a2db: [0;33muart_rx_task[0m[0m at [0;32mD:/esp/esp32_w5500_idf/fixed_reader_test/main/uart.c[0m[0m:[1;31m104[0m
+[0m--- 0x4037d0d1: [0;33mvPortTaskWrapper[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x40379f0e: [0;33mesp_cpu_wait_for_intr[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/cpu.c[0m[0m:[1;31m145[0m
+[0m--- 0x40379080: [0;33mipc_task[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/esp_ipc.c[0m[0m:[1;31m48[0m
+[0m--- 0x40379f0b: [0;33mxt_utils_wait_for_intr[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/xtensa/include/xt_utils.h[0m[0m:[1;31m81[0m
+[0m--- (inlined by) [0;33mesp_cpu_wait_for_intr[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/cpu.c[0m[0m:[1;31m132[0m
+[0m--- 0x42004312: [0;33mesp_vApplicationIdleHook[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/freertos_hooks.c[0m[0m:[1;31m59[0m
+[0m--- 0x4037e015: [0;33mprvIdleTask[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m4307[0m
+[0m--- 0x4037d0d1: [0;33mvPortTaskWrapper[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x40375acc: [0;33mesp_restart_noos[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/port/soc/esp32s3/system_internal.c[0m[0m:[1;31m159[0m
+[0m--- 0x42003d57: [0;33mpanic_handler[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c[0m[0m:[1;31m145[0m
+[0m--- 0x42003d57: [0;33mpanic_handler[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c[0m[0m:[1;31m145[0m
+[0m--- 0x40379e1e: [0;33mxt_utils_compare_and_set[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/xtensa/include/xt_utils.h[0m[0m:[1;31m215[0m
+[0m--- (inlined by) [0;33mesp_cpu_compare_and_set[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/cpu.c[0m[0m:[1;31m491[0m
+[0m--- 0x400556d5: [0;33mstrlen[0m[0m in [0;32mROM[0m
+[0m--- 0x400556e5: [0;33mstrlen[0m[0m in [0;32mROM[0m
+[0m--- 0x40379e1b: [0;33mxt_utils_compare_and_set[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/xtensa/include/xt_utils.h[0m[0m:[1;31m215[0m
+[0m--- (inlined by) [0;33mesp_cpu_compare_and_set[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/cpu.c[0m[0m:[1;31m491[0m
+[0m--- 0x4037d2f6: [0;33mspinlock_acquire[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/include/spinlock.h[0m[0m:[1;31m121[0m
+[0m--- (inlined by) [0;33mxPortEnterCriticalTimeout[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m473[0m
+[0m--- 0x4037cdd7: [0;33mvPortEnterCritical[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h[0m[0m:[1;31m571[0m
+[0m--- (inlined by) [0;33mxQueueReceive[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c[0m[0m:[1;31m1549[0m
+[0m--- 0x4200a2db: [0;33muart_rx_task[0m[0m at [0;32mD:/esp/esp32_w5500_idf/fixed_reader_test/main/uart.c[0m[0m:[1;31m104[0m
+[0m--- 0x4037d0d1: [0;33mvPortTaskWrapper[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x40375acc: [0;33mesp_restart_noos[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/port/soc/esp32s3/system_internal.c[0m[0m:[1;31m159[0m
+[0m--- 0x42003d57: [0;33mpanic_handler[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c[0m[0m:[1;31m145[0m
+[0m--- 0x40379e1e: [0;33mxt_utils_compare_and_set[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/xtensa/include/xt_utils.h[0m[0m:[1;31m215[0m
+[0m--- (inlined by) [0;33mesp_cpu_compare_and_set[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/cpu.c[0m[0m:[1;31m491[0m
+[0m--- 0x400556d5: [0;33mstrlen[0m[0m in [0;32mROM[0m
+[0m--- 0x400556e5: [0;33mstrlen[0m[0m in [0;32mROM[0m
+[0m--- 0x40379e1b: [0;33mxt_utils_compare_and_set[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/xtensa/include/xt_utils.h[0m[0m:[1;31m215[0m
+[0m--- (inlined by) [0;33mesp_cpu_compare_and_set[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/cpu.c[0m[0m:[1;31m491[0m
+[0m--- 0x4037d2f6: [0;33mspinlock_acquire[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/include/spinlock.h[0m[0m:[1;31m121[0m
+[0m--- (inlined by) [0;33mxPortEnterCriticalTimeout[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m473[0m
+[0m--- 0x4037cdd7: [0;33mvPortEnterCritical[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h[0m[0m:[1;31m571[0m
+[0m--- (inlined by) [0;33mxQueueReceive[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c[0m[0m:[1;31m1549[0m
+[0m--- 0x4200a2db: [0;33muart_rx_task[0m[0m at [0;32mD:/esp/esp32_w5500_idf/fixed_reader_test/main/uart.c[0m[0m:[1;31m104[0m
+[0m--- 0x4037d0d1: [0;33mvPortTaskWrapper[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x40375acc: [0;33mesp_restart_noos[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/port/soc/esp32s3/system_internal.c[0m[0m:[1;31m159[0m
+[0m--- 0x42003d57: [0;33mpanic_handler[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c[0m[0m:[1;31m145[0m
+[0m--- 0x42003d57: [0;33mpanic_handler[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c[0m[0m:[1;31m145[0m
+[0m--- 0x42003d57: [0;33mpanic_handler[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c[0m[0m:[1;31m145[0m
+[0m

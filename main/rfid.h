@@ -14,6 +14,11 @@ void rfid_set_last_command(const char* cmd_description);
 // Power control functions
 void rfid_set_power(int pwr1, int pwr2, int pwr3, int pwr4);
 void rfid_get_power(int *pwr1, int *pwr2, int *pwr3, int *pwr4);
+void rfid_query_power(void);  // Send power query command without returning values
+
+// Reader information and connection functions (based on NRN SDK)
+void rfid_query_reader_info(void);
+void rfid_confirm_connection(void);
 
 // Process raw bytes received from reader (call from UART rx task)
 void rfid_process_bytes(const uint8_t *buf, size_t len);
