@@ -1,0 +1,199 @@
+[1/34] Linking C static library esp-idf\esp_ringbuf\libesp_ringbuf.a
+[2/34] Linking C static library esp-idf\xtensa\libxtensa.a
+[3/34] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/eth.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/eth.c.obj 
+ccache C:\Users\maile\.espressif\tools\xtensa-esp-elf\esp-13.2.0_20230928\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe -DESP_PLATFORM -DIDF_VER=\"v5.2.2\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -ID:/esp/esp32_w5500_idf/fixed_reader_test/build/config -ID:/esp/esp32_w5500_idf/fixed_reader_test/main -ID:/esp/esp-idf/esp-idf-v5.2.2/components/newlib/platform_include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/config/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/config/include/freertos -ID:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/config/xtensa/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -ID:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/esp_additions/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/include/soc -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/include/soc/esp32s3 -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/port/esp32s3/. -ID:/esp/esp-idf/esp-idf-v5.2.2/components/heap/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/log/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/soc/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/soc/esp32s3 -ID:/esp/esp-idf/esp-idf-v5.2.2/components/soc/esp32s3/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/hal/platform_port/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/hal/esp32s3/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/hal/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_rom/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_rom/include/esp32s3 -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_rom/esp32s3 -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_common/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/port/soc -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/port/include/private -ID:/esp/esp-idf/esp-idf-v5.2.2/components/xtensa/esp32s3/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/xtensa/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/xtensa/deprecated_include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/include/apps -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/include/apps/sntp -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/lwip/src/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/port/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/port/freertos/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/port/esp32xx/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/port/esp32xx/include/arch -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/port/esp32xx/include/sys -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_eth/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_event/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/deprecated -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/analog_comparator/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/dac/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/gpio/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/gptimer/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/i2c/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/i2s/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/ledc/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/mcpwm/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/parlio/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/pcnt/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/rmt/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/sdio_slave/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/sdmmc/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/sigma_delta/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/spi/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/temperature_sensor/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/touch_sensor/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/twai/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/uart/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/usb_serial_jtag/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/touch_sensor/esp32s3/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_pm/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_ringbuf/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_netif/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_http_server/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/http_parser -ID:/esp/esp-idf/esp-idf-v5.2.2/components/nvs_flash/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/spi_flash/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_partition/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_timer/include -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=D:/esp/esp32_w5500_idf/fixed_reader_test=. -fmacro-prefix-map=D:/esp/esp-idf/esp-idf-v5.2.2=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/eth.c.obj -MF esp-idf\main\CMakeFiles\__idf_main.dir\eth.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/eth.c.obj -c D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c: In function 'connectivity_test_task':
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c:74:5: error: unknown type name 'esp_http_client_config_t'; did you mean 'esp_etm_channel_config_t'?
+   74 |     esp_http_client_config_t config = {
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+      |     esp_etm_channel_config_t
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c:75:9: error: field name not in record or union initializer
+   75 |         .url = url,
+      |         ^
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c:75:9: note: (near initialization for 'config')
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c:75:16: warning: initialization of 'int' from 'const char *' makes integer from pointer without a cast [-Wint-conversion]
+   75 |         .url = url,
+      |                ^~~
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c:75:16: note: (near initialization for 'config')
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c:76:9: error: field name not in record or union initializer
+   76 |         .method = HTTP_METHOD_GET,
+      |         ^
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c:76:9: note: (near initialization for 'config')
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c:76:19: error: 'HTTP_METHOD_GET' undeclared (first use in this function)
+   76 |         .method = HTTP_METHOD_GET,
+      |                   ^~~~~~~~~~~~~~~
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c:76:19: note: each undeclared identifier is reported only once for each function it appears in
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c:76:19: warning: excess elements in scalar initializer
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c:76:19: note: (near initialization for 'config')
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c:78:5: error: unknown type name 'esp_http_client_handle_t'; did you mean 'esp_etm_event_handle_t'?
+   78 |     esp_http_client_handle_t client = esp_http_client_init(&config);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+      |     esp_etm_event_handle_t
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c:78:39: error: implicit declaration of function 'esp_http_client_init' [-Werror=implicit-function-declaration]
+   78 |     esp_http_client_handle_t client = esp_http_client_init(&config);
+      |                                       ^~~~~~~~~~~~~~~~~~~~
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c:79:16: warning: comparison between pointer and integer
+   79 |     if (client == NULL) {
+      |                ^~
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c:84:21: error: implicit declaration of function 'esp_http_client_perform' [-Werror=implicit-function-declaration]
+   84 |     esp_err_t err = esp_http_client_perform(client);
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c:86:22: error: implicit declaration of function 'esp_http_client_get_status_code' [-Werror=implicit-function-declaration]
+   86 |         int status = esp_http_client_get_status_code(client);
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c:87:30: error: implicit declaration of function 'esp_http_client_get_content_length' [-Werror=implicit-function-declaration]
+   87 |         int content_length = esp_http_client_get_content_length(client);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c:92:5: error: implicit declaration of function 'esp_http_client_cleanup'; did you mean 'esp_reent_cleanup'? [-Werror=implicit-function-declaration]
+   92 |     esp_http_client_cleanup(client);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+      |     esp_reent_cleanup
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c: In function 'eth_init':
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c:112:5: error: implicit declaration of function 'IP4_ADDR' [-Werror=implicit-function-declaration]
+  112 |     IP4_ADDR(&ip_info.ip, STATIC_IP_OCTET1, STATIC_IP_OCTET2, STATIC_IP_OCTET3, STATIC_IP_OCTET4);        // Static IP from config
+      |     ^~~~~~~~
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c: At top level:
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c:71:13: warning: 'connectivity_test_task' defined but not used [-Wunused-function]
+   71 | static void connectivity_test_task(void *pvParameters)
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+cc1.exe: some warnings being treated as errors
+[4/34] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/web.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/web.c.obj 
+ccache C:\Users\maile\.espressif\tools\xtensa-esp-elf\esp-13.2.0_20230928\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe -DESP_PLATFORM -DIDF_VER=\"v5.2.2\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -ID:/esp/esp32_w5500_idf/fixed_reader_test/build/config -ID:/esp/esp32_w5500_idf/fixed_reader_test/main -ID:/esp/esp-idf/esp-idf-v5.2.2/components/newlib/platform_include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/config/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/config/include/freertos -ID:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/config/xtensa/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -ID:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/esp_additions/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/include/soc -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/include/soc/esp32s3 -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/port/esp32s3/. -ID:/esp/esp-idf/esp-idf-v5.2.2/components/heap/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/log/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/soc/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/soc/esp32s3 -ID:/esp/esp-idf/esp-idf-v5.2.2/components/soc/esp32s3/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/hal/platform_port/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/hal/esp32s3/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/hal/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_rom/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_rom/include/esp32s3 -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_rom/esp32s3 -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_common/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/port/soc -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/port/include/private -ID:/esp/esp-idf/esp-idf-v5.2.2/components/xtensa/esp32s3/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/xtensa/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/xtensa/deprecated_include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/include/apps -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/include/apps/sntp -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/lwip/src/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/port/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/port/freertos/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/port/esp32xx/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/port/esp32xx/include/arch -ID:/esp/esp-idf/esp-idf-v5.2.2/components/lwip/port/esp32xx/include/sys -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_eth/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_event/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/deprecated -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/analog_comparator/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/dac/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/gpio/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/gptimer/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/i2c/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/i2s/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/ledc/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/mcpwm/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/parlio/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/pcnt/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/rmt/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/sdio_slave/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/sdmmc/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/sigma_delta/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/spi/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/temperature_sensor/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/touch_sensor/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/twai/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/uart/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/usb_serial_jtag/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/driver/touch_sensor/esp32s3/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_pm/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_ringbuf/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_netif/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_http_server/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/http_parser -ID:/esp/esp-idf/esp-idf-v5.2.2/components/nvs_flash/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/spi_flash/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_partition/include -ID:/esp/esp-idf/esp-idf-v5.2.2/components/esp_timer/include -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=D:/esp/esp32_w5500_idf/fixed_reader_test=. -fmacro-prefix-map=D:/esp/esp-idf/esp-idf-v5.2.2=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/web.c.obj -MF esp-idf\main\CMakeFiles\__idf_main.dir\web.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/web.c.obj -c D:/esp/esp32_w5500_idf/fixed_reader_test/main/web.c
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/web.c: In function 'wifi_post_handler':
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/web.c:348:3: error: implicit declaration of function 'wifi_config_save' [-Werror=implicit-function-declaration]
+  348 |   wifi_config_save(ssid, pass);
+      |   ^~~~~~~~~~~~~~~~
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/web.c: In function 'status_get_handler':
+D:/esp/esp32_w5500_idf/fixed_reader_test/main/web.c:373:3: error: implicit declaration of function 'wifi_config_load' [-Werror=implicit-function-declaration]
+  373 |   wifi_config_load(ssid, sizeof(ssid), pass, sizeof(pass));
+      |   ^~~~~~~~~~~~~~~~
+cc1.exe: some warnings being treated as errors
+[5/34] Linking C static library esp-idf\esp_hid\libesp_hid.a
+[6/34] Linking C static library esp-idf\app_trace\libapp_trace.a
+[7/34] Linking C static library esp-idf\protobuf-c\libprotobuf-c.a
+[8/34] Linking C static library esp-idf\unity\libunity.a
+[9/34] Linking C static library esp-idf\console\libconsole.a
+[10/34] Linking C static library esp-idf\espcoredump\libespcoredump.a
+[11/34] Linking C static library esp-idf\esp_lcd\libesp_lcd.a
+[12/34] Performing build step for 'bootloader'
+[1/112] Generating project_elf_src_esp32s3.c
+[2/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/dport_access_common.c.obj
+[3/112] Building C object esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/eri.c.obj
+[4/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/gpio_periph.c.obj
+[5/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/lldesc.c.obj
+[6/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/adc_periph.c.obj
+[7/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/interrupts.c.obj
+[8/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/uart_periph.c.obj
+[9/112] Building C object esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/xt_trax.c.obj
+[10/112] Building C object CMakeFiles/bootloader.elf.dir/project_elf_src_esp32s3.c.obj
+[11/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/dedic_gpio_periph.c.obj
+[12/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/gdma_periph.c.obj
+[13/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/sdm_periph.c.obj
+[14/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/pcnt_periph.c.obj
+[15/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/rmt_periph.c.obj
+[16/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/ledc_periph.c.obj
+[17/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/spi_periph.c.obj
+[18/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/i2c_periph.c.obj
+[19/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/timer_periph.c.obj
+[20/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/temperature_sensor_periph.c.obj
+[21/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/i2s_periph.c.obj
+[22/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/mpi_periph.c.obj
+[23/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/mcpwm_periph.c.obj
+[24/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/lcd_periph.c.obj
+[25/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/twai_periph.c.obj
+[26/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/usb_periph.c.obj
+[27/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/usb_dwc_periph.c.obj
+[28/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/sdmmc_periph.c.obj
+[29/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/touch_sensor_periph.c.obj
+[30/112] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/rtc_io_periph.c.obj
+[31/112] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/hal_utils.c.obj
+[32/112] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/mpu_hal.c.obj
+[33/112] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/esp32s3/efuse_hal.c.obj
+[34/112] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/efuse_hal.c.obj
+[35/112] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/mmu_hal.c.obj
+[36/112] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/cache_hal.c.obj
+[37/112] Building C object esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/esp_bootloader_desc.c.obj
+[38/112] Building C object esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_wrap.c.obj
+[39/112] Building C object esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/uECC_verify_antifault.c.obj
+[40/112] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_init.c.obj
+[41/112] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common_loader.c.obj
+[42/112] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_efuse.c.obj
+[43/112] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.obj
+[44/112] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_mem.c.obj
+[45/112] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.obj
+[46/112] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random_esp32s3.c.obj
+[47/112] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.obj
+[48/112] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/secure_boot.c.obj
+[49/112] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash_config_esp32s3.c.obj
+[50/112] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/flash_qio_mode.c.obj
+[51/112] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.obj
+[52/112] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_init.c.obj
+[53/112] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash.c.obj
+[54/112] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_loader.c.obj
+[55/112] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.obj
+[56/112] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.obj
+[57/112] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console_loader.c.obj
+[58/112] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32s3/bootloader_sha.c.obj
+[59/112] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console.c.obj
+[60/112] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32s3/bootloader_soc.c.obj
+[61/112] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32s3/esp_efuse_table.c.obj
+[62/112] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32s3/esp_efuse_fields.c.obj
+[63/112] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_panic.c.obj
+[64/112] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32s3/esp_efuse_rtc_calib.c.obj
+[65/112] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32s3/bootloader_esp32s3.c.obj
+[66/112] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_fields.c.obj
+[67/112] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32s3/esp_efuse_utility.c.obj
+[68/112] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_api.c.obj
+[69/112] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/esp_err.c.obj
+[70/112] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_utility.c.obj
+[71/112] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_memory_utils.c.obj
+[72/112] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/efuse_controller/keys/with_key_purposes/esp_efuse_api_key.c.obj
+[73/112] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s3/cpu_region_protect.c.obj
+[74/112] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/cpu.c.obj
+[75/112] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.obj
+[76/112] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s3/rtc_sleep.c.obj
+[77/112] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s3/rtc_clk.c.obj
+[78/112] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.obj
+[79/112] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s3/rtc_clk_init.c.obj
+[80/112] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s3/chip_info.c.obj
+[81/112] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s3/rtc_time.c.obj
+[82/112] Building C object esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_err_to_name.c.obj
+[83/112] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s3/rtc_init.c.obj
+[84/112] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_uart.c.obj
+[85/112] Building ASM object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_longjmp.S.obj
+[86/112] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_efuse.c.obj
+[87/112] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_systimer.c.obj
+[88/112] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_wdt.c.obj
+[89/112] Building ASM object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_cache_writeback_esp32s3.S.obj
+[90/112] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_spiflash.c.obj
+[91/112] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_cache_esp32s2_esp32s3.c.obj
+[92/112] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/log.c.obj
+[93/112] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/log_buffers.c.obj
+[94/112] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/log_noos.c.obj
+[95/112] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/bootloader_start.c.obj
+[96/112] Linking C static library esp-idf\log\liblog.a
+[97/112] Linking C static library esp-idf\esp_rom\libesp_rom.a
+[98/112] Linking C static library esp-idf\esp_common\libesp_common.a
+[99/112] Linking C static library esp-idf\esp_hw_support\libesp_hw_support.a
+[100/112] Linking C static library esp-idf\esp_system\libesp_system.a
+[101/112] Linking C static library esp-idf\efuse\libefuse.a
+[102/112] Linking C static library esp-idf\bootloader_support\libbootloader_support.a
+[103/112] Linking C static library esp-idf\esp_bootloader_format\libesp_bootloader_format.a
+[104/112] Linking C static library esp-idf\spi_flash\libspi_flash.a
+[105/112] Linking C static library esp-idf\hal\libhal.a
+[106/112] Linking C static library esp-idf\micro-ecc\libmicro-ecc.a
+[107/112] Linking C static library esp-idf\soc\libsoc.a
+[108/112] Linking C static library esp-idf\xtensa\libxtensa.a
+[109/112] Linking C static library esp-idf\main\libmain.a
+[110/112] Linking C executable bootloader.elf
+[111/112] Generating binary image from built executable
+esptool.py v4.10.0
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated D:/esp/esp32_w5500_idf/fixed_reader_test/build/bootloader/bootloader.bin
+[112/112] cmd.exe /C "cd /D D:\esp\esp32_w5500_idf\fixed_reader_test\build\bootloader\esp-idf\esptool_py && C:\Users\maile\.espressif\python_env\idf5.2_py3.13_env\Scripts\python.exe D:/esp/esp-idf/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 D:/esp/esp32_w5500_idf/fixed_reader_test/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5250 bytes. 0x2db0 bytes (36%) free.
+ninja: build stopped: subcommand failed.

@@ -1,3 +1,4 @@
+#include "sdkconfig.h"
 #include "eth.h"
 #include "network_config.h"
 #include <stdio.h>
@@ -9,7 +10,10 @@
 #include "driver/gpio.h"
 #include "driver/spi_master.h"
 #include "freertos/task.h"
-#include "esp_http_client.h"
+#include "lwip/ip_addr.h"
+#include "esp_eth_mac.h"
+#include "esp_eth_phy.h"
+#include "esp_eth_netif_glue.h"
 
 static const char *TAG = "ETH";
 
@@ -20,8 +24,6 @@ static const char *TAG = "ETH";
 #define PIN_CS    9
 #define PIN_INT   14
 #define PIN_RST   7
-
-static void connectivity_test_task(void *pvParameters);
 
 /** Event handler for Ethernet events */
 static void eth_event_handler(void *arg, esp_event_base_t event_base,
@@ -67,31 +69,6 @@ static void got_ip_event_handler(void *arg, esp_event_base_t event_base,
 
     // Spawn a connectivity test task to verify Internet access (non-blocking)
     // xTaskCreate(connectivity_test_task, "eth_connect_test", 4096, NULL, 5, NULL);
-}
-
-static void connectivity_test_task(void *pvParameters)
-{
-    const char *url = "http://google.com";
-    esp_http_client_config_t config = {
-        .url = url,
-        .method = HTTP_METHOD_GET,
-    };
-    esp_http_client_handle_t client = esp_http_client_init(&config);
-    if (client == NULL) {
-        ESP_LOGE(TAG, "Failed to initialize HTTP client");
-        vTaskDelete(NULL);
-        return;
-    }
-    esp_err_t err = esp_http_client_perform(client);
-    if (err == ESP_OK) {
-        int status = esp_http_client_get_status_code(client);
-        int content_length = esp_http_client_get_content_length(client);
-        ESP_LOGI(TAG, "Connectivity test HTTP GET %s -> status=%d, content_length=%d", url, status, content_length);
-    } else {
-        ESP_LOGE(TAG, "Connectivity test failed: %s", esp_err_to_name(err));
-    }
-    esp_http_client_cleanup(client);
-    vTaskDelete(NULL);
 }
 
 void eth_init(void)

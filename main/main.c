@@ -29,13 +29,17 @@ void app_main(void)
     vTaskDelay(pdMS_TO_TICKS(100));
     
     uart_start_rx_task();
+    
+    // Initialize Ethernet for web configuration interface
     eth_init();
 
-    // Start web server
+    // Start web server on Ethernet
     httpd_handle_t server = start_webserver();
     if (server == NULL) {
         ESP_LOGE(TAG, "Failed to start web server");
         return;
     }
-    ESP_LOGI(TAG, "Web server started");
+    ESP_LOGI(TAG, "Web server started on Ethernet");
+    
+    ESP_LOGI(TAG, "System initialized successfully - Ethernet only mode");
 }

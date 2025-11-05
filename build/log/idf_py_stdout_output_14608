@@ -1,0 +1,262 @@
+[0;32mI (118) esp_image: segment 1: paddr=0002a338 vaddr=3fc962ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42009345
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Nov  5 2025 16:10:43[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c050020 size=1a310h (107280) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=0002a338 vaddr=3fc96200 size=02b40h ( 11072) load[0m
+[0;32mI (121) esp_image: segment 2: paddr=0002ce80 vaddr=40374000 size=03198h ( 12696) load[0m
+[0;32mI (127) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=4abfch (306172) map[0m
+[0;32mI (188) esp_image: segment 4: paddr=0007ac24 vaddr=40377198 size=0ef78h ( 61304) load[0m
+[0;32mI (208) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (209) boot: Disabling RNG early entropy source...[0m
+[0;32mI (220) cpu_start: Multicore app[0m
+[0;32mI (230) cpu_start: Pro cpu start user code[0m
+[0;32mI (230) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (230) cpu_start: Application information:[0m
+[0;32mI (233) cpu_start: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (239) cpu_start: App version:      9c6eff1-dirty[0m
+[0;32mI (245) cpu_start: Compile time:     Nov  5 2025 16:03:59[0m
+[0;32mI (251) cpu_start: ELF file SHA256:  71870ddd8...[0m
+[0;32mI (256) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (261) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (266) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (270) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (275) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (282) heap_init: At 3FC9BB50 len 0004DBC0 (310 KiB): RAM[0m
+[0;32mI (289) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (295) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (301) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (308) spi_flash: detected chip: gd[0m
+[0;32mI (311) spi_flash: flash io: dio[0m
+[0;33mW (315) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (329) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (335) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (343) main_task: Started on CPU0[0m
+[0;32mI (353) main_task: Calling app_main()[0m
+[0;32mI (393) uart: queue free spaces: 30[0m
+[0;32mI (393) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (393) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (493) UART: UART RX task started and waiting for data...[0m
+UART RX task created
+[0;32mI (493) ETH: Static IP configured: 192.168.1.100[0m
+[0;32mI (493) ETH: Gateway: 192.168.1.1[0m
+[0;32mI (493) ETH: Netmask: 255.255.255.0[0m
+[0;32mI (503) ETH: DNS servers configured from network_config.h[0m
+[0;32mI (533) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (533) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (543) ETH: Ethernet Started[0m
+[0;32mI (543) WEB: Registered /power/set handler[0m
+[0;32mI (543) WEB: Registered /power/get handler[0m
+[0;32mI (543) MAIN: Web server started on Ethernet[0m
+[0;32mI (543) MAIN: System initialized successfully - Ethernet only mode[0m
+[0;32mI (553) main_task: Returned from app_main()[0m
+[0;32mI (2543) ETH: Ethernet Link Up[0m
+[0;32mI (2543) ETH: Ethernet HW Addr 02:00:00:12:34:56[0m
+[0;32mI (2543) esp_netif_handlers: eth ip: 192.168.1.100, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2543) ETH: Ethernet Got IP Address[0m
+[0;32mI (2553) ETH: ~~~~~~~~~~~[0m
+[0;32mI (2553) ETH: ETHIP: 192.168.1.100[0m
+[0;32mI (2563) ETH: ETHMASK: 255.255.255.0[0m
+[0;32mI (2563) ETH: ETHGW: 192.168.1.1[0m
+[0;32mI (2563) ETH: ~~~~~~~~~~~[0m
+[0;32mI (6943) UART: UART sent 9 bytes: TX: 5A 00 01 02 02 00 00 29 59[0m
+[0;32mI (10153) UART: UART sent 14 bytes: TX: 5A 00 01 02 10 00 05 00 00 00 01 01 F4 87[0m
+RFID inventory started - counters reset
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=14 total=127 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=65 total=240 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=88 total=349 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=98 total=388 (MID 0x12)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=30 total=454 (fallback)
+TAG[3] epc=E28069150000501B289049AC rssi=-48 ant=1 count=87 total=554 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=43 total=657 (fallback)
+[0;32mI (13933) UART: UART sent 9 bytes: TX: 5A 00 01 02 11 00 00 2A B3[0m
+RFID stop command sent: 5A 00 01 02 11 00 00 2A B3 
+[0;32mI (13933) UART: UART sent 9 bytes: TX: 5A 00 01 02 FF 00 00 88 5A[0m
+RFID fallback stop command sent
+[0;32mI (23733) UART: UART sent 14 bytes: TX: 5A 00 01 02 10 00 05 00 00 00 01 01 F4 87[0m
+RFID inventory started - counters reset
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=7 total=30 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=30 total=143 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=44 total=248 (fallback)
+[0;32mI (25103) UART: UART event received, type: 0 (count: 500)[0m
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=78 total=353 (MID 0x12)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=83 total=362 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=92 total=470 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=136 total=587 (fallback)
+[0;32mI (27313) UART: UART sent 9 bytes: TX: 5A 00 01 02 11 00 00 2A B3[0m
+RFID stop command sent: 5A 00 01 02 11 00 00 2A B3 
+[0;32mI (27313) UART: UART sent 9 bytes: TX: 5A 00 01 02 FF 00 00 88 5A[0m
+RFID fallback stop command sent
+[0;32mI (146433) UART: UART sent 19 bytes: TX: 5A 00 01 02 01 00 0A 01 0F 02 0F 03 0A 04 0A FF 01 7B 9E[0m
+[0;32mI (146433) RFID: RFID power set to ant1=15 ant2=15 ant3=10 ant4=10[0m
+[0;32mI (149443) UART: UART sent 9 bytes: TX: 5A 00 01 02 02 00 00 29 59[0m
+[0;32mI (160593) UART: UART sent 19 bytes: TX: 5A 00 01 02 01 00 0A 01 14 02 14 03 0A 04 0A FF 01 50 8F[0m
+[0;32mI (160593) RFID: RFID power set to ant1=20 ant2=20 ant3=10 ant4=10[0m
+[0;32mI (167013) UART: UART sent 9 bytes: TX: 5A 00 01 02 02 00 00 29 59[0m
+[0;32mI (173643) UART: UART sent 14 bytes: TX: 5A 00 01 02 10 00 05 00 00 00 01 01 F4 87[0m
+RFID inventory started - counters reset
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=6 total=29 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=28 total=132 (fallback)
+TAG[3] epc=E28069150000501B289049AC rssi=-48 ant=1 count=46 total=237 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=80 total=345 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=82 total=412 (MID 0x12)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=85 total=450 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=110 total=551 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=135 total=653 (fallback)
+[0;32mI (176603) UART: UART event received, type: 0 (count: 1000)[0m
+RX: 1k packets
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=153 total=755 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=164 total=860 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=197 total=965 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=203 total=1067 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=249 total=1167 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=253 total=1269 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=260 total=1371 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=278 total=1474 (fallback)
+TAG[3] epc=E28069150000501B289049AC rssi=-48 ant=1 count=309 total=1576 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=0 ant=0 count=332 total=1681 (fallback)
+TAG[3] epc=E28069150000501B289049AC rssi=-48 ant=1 count=357 total=1784 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=403 total=1896 (fallback)
+[0;32mI (181783) UART: UART event received, type: 0 (count: 1500)[0m
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=385 total=1941 (MID 0x12)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=423 total=2006 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=411 total=2108 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=426 total=2213 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=478 total=2317 (fallback)
+TAG[3] epc=E28069150000501B289049AC rssi=-48 ant=1 count=463 total=2422 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=531 total=2504 (MID 0x12)
+TAG[3] epc=E28069150000501B289049AC rssi=-48 ant=1 count=493 total=2566 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=542 total=2687 (fallback)
+TAG[3] epc=E28069150000501B289049AC rssi=-48 ant=1 count=532 total=2796 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=594 total=2821 (MID 0x12)
+[0;32mI (187213) UART: UART event received, type: 0 (count: 2000)[0m
+RX: 2k packets
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=590 total=2914 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=647 total=3035 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=669 total=3138 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=614 total=3244 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=704 total=3334 (MID 0x12)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=680 total=3349 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=706 total=3457 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=734 total=3562 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=769 total=3665 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=778 total=3770 (fallback)
+[0;32mI (192503) UART: UART event received, type: 0 (count: 2500)[0m
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=810 total=3890 (fallback)
+TAG[3] epc=E28069150000501B289049AC rssi=-48 ant=1 count=754 total=3997 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=741 total=4012 (MID 0x12)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=861 total=4104 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=877 total=4206 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=897 total=4308 (fallback)
+TAG[3] epc=E28069150000501B289049AC rssi=-48 ant=1 count=830 total=4408 (fallback)
+TAG[3] epc=E28069150000501B289049AC rssi=-48 ant=1 count=850 total=4510 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=958 total=4613 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=987 total=4720 (fallback)
+TAG[3] epc=E28069150000501B289049AC rssi=-48 ant=1 count=915 total=4823 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1025 total=4924 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=1044 total=5028 (fallback)
+[0;32mI (197693) UART: UART event received, type: 0 (count: 3000)[0m
+RX: 3k packets
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=1073 total=5130 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=1101 total=5236 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=1124 total=5338 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=1153 total=5441 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=1174 total=5542 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1192 total=5646 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=1221 total=5748 (fallback)
+TAG[3] epc=E28069150000501B289049AC rssi=-48 ant=1 count=994 total=5764 (MID 0x12)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=1246 total=5851 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1269 total=5954 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=1296 total=6061 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1319 total=6162 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=1224 total=6265 (fallback)
+[0;32mI (202933) UART: UART event received, type: 0 (count: 3500)[0m
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1370 total=6369 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=1398 total=6472 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1414 total=6572 (fallback)
+TAG[3] epc=E28069150000501B289049AC rssi=-48 ant=1 count=1063 total=6672 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=1468 total=6775 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=1308 total=6878 (fallback)
+TAG[3] epc=E28069150000501B289049AC rssi=-48 ant=1 count=1128 total=6979 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=1346 total=7079 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=1557 total=7180 (fallback)
+TAG[3] epc=E28069150000501B289049AC rssi=-48 ant=1 count=1185 total=7283 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=1593 total=7384 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=1618 total=7489 (fallback)
+[0;32mI (208113) UART: UART event received, type: 0 (count: 4000)[0m
+RX: 4k packets
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=1650 total=7591 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=1674 total=7697 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1658 total=7748 (MID 0x12)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=1489 total=7801 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1695 total=7906 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=1742 total=8009 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=1755 total=8112 (fallback)
+TAG[3] epc=E28069150000501B289049AC rssi=-48 ant=1 count=1323 total=8215 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=1803 total=8315 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=1601 total=8419 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1842 total=8522 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1862 total=8624 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=1886 total=8727 (fallback)
+[0;32mI (213343) UART: UART event received, type: 0 (count: 4500)[0m
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1910 total=8831 (fallback)
+TAG[3] epc=E28069150000501B289049AC rssi=-48 ant=1 count=1420 total=8934 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=0 ant=0 count=1714 total=9035 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=1728 total=9136 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1991 total=9240 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=2024 total=9344 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=0 count=2061 total=9446 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2055 total=9541 (MID 0x12)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=2062 total=9549 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=2126 total=9668 (fallback)
+TAG[3] epc=E28069150000501B289049AC rssi=-48 ant=1 count=1580 total=9787 (fallback)
+TAG[3] epc=E28069150000501B289049AC rssi=-48 ant=1 count=1602 total=9892 (fallback)
+[0;32mI (218543) UART: UART event received, type: 0 (count: 5000)[0m
+RX: 5k packets
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=2182 total=9905 (MID 0x12)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=2214 total=10007 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=2215 total=10119 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=2250 total=10226 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=2323 total=10337 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=2305 total=10440 (fallback)
+TAG[3] epc=E28069150000501B289049AC rssi=-48 ant=1 count=1658 total=10544 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2343 total=10647 (fallback)
+TAG[3] epc=E28069150000501B289049AC rssi=-48 ant=1 count=1701 total=10748 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=1913 total=10837 (MID 0x12)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=2448 total=10849 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=1936 total=10951 (fallback)
+[0;32mI (223773) UART: UART event received, type: 0 (count: 5500)[0m
+TAG[3] epc=E28069150000501B289049AC rssi=-48 ant=1 count=1752 total=11051 (fallback)
+TAG[1] epc=E2801191A504006DC3E890AB rssi=-48 ant=1 count=2518 total=11152 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=2466 total=11254 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=2484 total=11359 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2519 total=11462 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2539 total=11566 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2562 total=11672 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=2569 total=11775 (fallback)
+[0;32mI (226973) UART: UART sent 9 bytes: TX: 5A 00 01 02 11 00 00 2A B3[0m
+RFID stop command sent: 5A 00 01 02 11 00 00 2A B3 
+[0;32mI (226973) UART: UART sent 9 bytes: TX: 5A 00 01 02 FF 00 00 88 5A[0m
+RFID fallback stop command sent

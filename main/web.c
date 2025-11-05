@@ -3,7 +3,6 @@
 #include "esp_log.h"
 #include "esp_http_server.h"
 #include "uart.h"
-#include "wifi_config.h"
 #include "rfid.h"
 #include <stdlib.h>
 
@@ -322,36 +321,6 @@ static void urldecode(char *dst, const char *src)
   *dst = '\0';
 }
 
-// HTTP POST handler - save Wi-Fi config (form urlencoded: ssid=..&pass=..)
-static esp_err_t wifi_post_handler(httpd_req_t *req)
-{
-  char buf[256];
-  int ret = httpd_req_recv(req, buf, sizeof(buf)-1);
-  if (ret <= 0) {
-    if (ret == HTTPD_SOCK_ERR_TIMEOUT) httpd_resp_send_408(req);
-    return ESP_FAIL;
-  }
-  buf[ret] = '\0';
-  char *pair = strtok(buf, "&");
-  char ssid[64] = {0}, pass[64] = {0};
-  while (pair) {
-    char *eq = strchr(pair, '=');
-    if (eq) {
-      *eq = '\0';
-      char *k = pair; char *v = eq + 1;
-      char dec[128];
-      urldecode(dec, v);
-      if (strcmp(k, "ssid") == 0) strncpy(ssid, dec, sizeof(ssid)-1);
-      else if (strcmp(k, "pass") == 0) strncpy(pass, dec, sizeof(pass)-1);
-    }
-    pair = strtok(NULL, "&");
-  }
-  wifi_config_save(ssid, pass);
-  httpd_resp_set_status(req, "200 OK");
-  httpd_resp_send(req, "OK", 2);
-  return ESP_OK;
-}
-
 // Inventory control handlers
 static esp_err_t inventory_start_handler(httpd_req_t *req)
 {
@@ -362,25 +331,20 @@ static esp_err_t inventory_start_handler(httpd_req_t *req)
 
 static esp_err_t inventory_stop_handler(httpd_req_t *req)
 {
-  printf("DEBUG: Stop inventory handler called\n");
   rfid_stop_inventory();
-  printf("DEBUG: Stop inventory function completed\n");
   httpd_resp_send(req, "OK", 2);
   return ESP_OK;
 }
 
-// Status handler returns JSON with wifi and inventory status
+// Status handler returns JSON with inventory status only
 static esp_err_t status_get_handler(httpd_req_t *req)
 {
-  char ssid[64]; char pass[64];
-  wifi_config_load(ssid, sizeof(ssid), pass, sizeof(pass));
   const char *inv = rfid_get_status();
   const char *last_cmd = rfid_get_last_command();
-  char resp[1024];
-  int configured = (ssid[0] != '\0');
+  char resp[512];
   int len = snprintf(resp, sizeof(resp), 
-    "{\"inventory\":\"%s\",\"last_command\":\"%s\",\"wifi\":{\"configured\":%d,\"ssid\":\"%s\",\"pass\":\"%s\"}}", 
-    inv, last_cmd, configured, ssid, pass);
+    "{\"inventory\":\"%s\",\"last_command\":\"%s\"}", 
+    inv, last_cmd);
   httpd_resp_set_type(req, "application/json");
   return httpd_resp_send(req, resp, len);
 }
@@ -484,7 +448,7 @@ httpd_handle_t start_webserver(void)
    config.stack_size = 8192;
    config.lru_purge_enable = true;
    /* Increase max URI handlers from default (8) to accommodate all endpoints */
-   config.max_uri_handlers = 13;  // Increased to 13 for favicon handler
+   config.max_uri_handlers = 12;  // Total endpoints
    httpd_handle_t server = NULL;
 
     if (httpd_start(&server, &config) == ESP_OK) {
@@ -523,15 +487,6 @@ httpd_handle_t start_webserver(void)
             .user_ctx  = NULL
         };
         httpd_register_uri_handler(server, &send);
-
-    // Wi-Fi config endpoint
-    const httpd_uri_t wifi_cfg = {
-      .uri       = "/wifi-config",
-      .method    = HTTP_POST,
-      .handler   = wifi_post_handler,
-      .user_ctx  = NULL
-    };
-    httpd_register_uri_handler(server, &wifi_cfg);
 
     // Inventory control endpoints
     const httpd_uri_t inv_start = {

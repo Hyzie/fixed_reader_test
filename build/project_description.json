@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "esp32-w5500-uart-control",
-    "project_version":    "70e2517-dirty",
+    "project_version":    "9c6eff1-dirty",
     "project_path":       "D:/esp/esp32_w5500_idf/fixed_reader_test",
     "idf_path":           "D:/esp/esp-idf/esp-idf-v5.2.2",
     "build_dir":          "D:/esp/esp32_w5500_idf/fixed_reader_test/build",
@@ -800,12 +800,12 @@
             "dir": "D:/esp/esp32_w5500_idf/fixed_reader_test/main",
             "type": "LIBRARY",
             "lib": "__idf_main",
-            "reqs": [ "esp_eth", "esp_event", "esp_netif", "driver", "esp_http_server", "esp_http_client", "nvs_flash" ],
+            "reqs": [ "esp_eth", "esp_event", "esp_netif", "driver", "esp_http_server", "nvs_flash" ],
             "priv_reqs": [ "esp_timer" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "D:/esp/esp32_w5500_idf/fixed_reader_test/build/esp-idf/main/libmain.a",
-            "sources": [ "D:/esp/esp32_w5500_idf/fixed_reader_test/main/main.c", "D:/esp/esp32_w5500_idf/fixed_reader_test/main/uart.c", "D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c", "D:/esp/esp32_w5500_idf/fixed_reader_test/main/web.c", "D:/esp/esp32_w5500_idf/fixed_reader_test/main/rfid.c", "D:/esp/esp32_w5500_idf/fixed_reader_test/main/wifi_config.c" ],
+            "sources": [ "D:/esp/esp32_w5500_idf/fixed_reader_test/main/main.c", "D:/esp/esp32_w5500_idf/fixed_reader_test/main/uart.c", "D:/esp/esp32_w5500_idf/fixed_reader_test/main/eth.c", "D:/esp/esp32_w5500_idf/fixed_reader_test/main/web.c", "D:/esp/esp32_w5500_idf/fixed_reader_test/main/rfid.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {
@@ -2127,7 +2127,7 @@
             "prefix": "idf",
             "dir": "D:/esp/esp32_w5500_idf/fixed_reader_test/main",
             "lib": "__idf_main",
-            "reqs": [ "esp_eth", "esp_event", "esp_netif", "driver", "esp_http_server", "esp_http_client", "nvs_flash" ],
+            "reqs": [ "esp_eth", "esp_event", "esp_netif", "driver", "esp_http_server", "nvs_flash" ],
             "priv_reqs": [ "esp_timer" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],

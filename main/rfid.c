@@ -13,7 +13,7 @@
 
 static const char *TAG = "RFID";
 static volatile int s_running = 0;
-static char s_last_command[256] = "No command sent yet";
+static char s_last_command[128] = "No command sent yet";  // Reduced from 256
 
 // Store actual power values received from reader
 static int s_power_values[4] = {30, 30, 30, 30}; // Default values
@@ -21,11 +21,11 @@ static volatile int s_power_request_pending = 0;
 
 // Tag cleanup configuration
 #define TAG_TIMEOUT_MS (30000)  // 30 seconds timeout for inactive tags
-#define MAX_TAGS 64
+#define MAX_TAGS 32
 
 // Tag storage
 typedef struct {
-    char epc[128];
+    char epc[64];  // Reduced from 128 to 64
     int rssi;
     int ant;
     uint64_t last_ms;
@@ -135,18 +135,11 @@ static int extract_one_tag(const uint8_t* buf, size_t len, size_t startPos, size
 
 // Parse power response from reader
 static void parse_power_response(const uint8_t *buf, size_t len) {
-    // Debug: Always log when we're checking for power response
-    printf("POWER_DEBUG: Checking potential power response, len=%d, pending=%d\n", len, s_power_request_pending);
-    
     // Expected response format: 5A 00 01 02 02 00 08 01 PWR1 02 PWR2 03 PWR3 04 PWR4 CRC CRC
     // Length should be 17 bytes for power response
     if (len >= 17 && buf[0] == 0x5A && buf[1] == 0x00 && buf[2] == 0x01 && buf[3] == 0x02 && buf[4] == 0x02) {
-        printf("POWER_DEBUG: Header matches, checking data length field\n");
-        
         // Check data length field (should be 0x00 0x08 = 8 bytes of antenna data)
         if (buf[5] == 0x00 && buf[6] == 0x08) {
-            printf("POWER_DEBUG: Data length correct, parsing antenna powers\n");
-            
             // Parse antenna power values
             // Format: ID PWR ID PWR ID PWR ID PWR
             // buf[7]=0x01, buf[8]=power1, buf[9]=0x02, buf[10]=power2, etc.
@@ -157,19 +150,6 @@ static void parse_power_response(const uint8_t *buf, size_t len) {
             if (buf[13] == 0x04) s_power_values[3] = buf[14]; // Antenna 4 power
             
             s_power_request_pending = 0;
-            printf("POWER_RESPONSE: SUCCESS! ant1=%d dBm, ant2=%d dBm, ant3=%d dBm, ant4=%d dBm\n", 
-                     s_power_values[0], s_power_values[1], s_power_values[2], s_power_values[3]);
-        } else {
-            printf("POWER_DEBUG: Wrong data length field: %02X %02X (expected 00 08)\n", buf[5], buf[6]);
-        }
-    } else {
-        // Show first few bytes to help debug
-        if (len > 0) {
-            printf("POWER_DEBUG: Header mismatch, first 8 bytes: ");
-            for (size_t i = 0; i < len && i < 8; i++) {
-                printf("%02X ", buf[i]);
-            }
-            printf("\n");
         }
     }
 }
