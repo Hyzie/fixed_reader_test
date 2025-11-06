@@ -1,0 +1,231 @@
+[0;32mI (147) esp_image: segment 1: paddr=00051240 vaddr=3fc9bcESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037baca
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Nov  6 2025 11:17:54[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00180000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c0b0020 size=41218h (266776) map[0m
+[0;32mI (147) esp_image: segment 1: paddr=00051240 vaddr=3fc9bc00 size=0479ch ( 18332) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=000559e4 vaddr=40374000 size=0a634h ( 42548) load[0m
+[0;32mI (162) esp_image: segment 3: paddr=00060020 vaddr=42000020 size=ae0e8h (712936) map[0m
+[0;32mI (290) esp_image: segment 4: paddr=0010e110 vaddr=4037e634 size=0d558h ( 54616) load[0m
+[0;32mI (312) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (313) boot: Disabling RNG early entropy source...[0m
+[0;32mI (324) cpu_start: Multicore app[0m
+[0;32mI (334) cpu_start: Pro cpu start user code[0m
+[0;32mI (334) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (334) cpu_start: Application information:[0m
+[0;32mI (337) cpu_start: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (343) cpu_start: App version:      523f2e4-dirty[0m
+[0;32mI (349) cpu_start: Compile time:     Nov  6 2025 11:17:03[0m
+[0;32mI (355) cpu_start: ELF file SHA256:  e555cb4f2...[0m
+[0;32mI (360) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (365) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (370) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (374) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (379) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (386) heap_init: At 3FCA6390 len 00043380 (268 KiB): RAM[0m
+[0;32mI (392) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (399) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (405) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (412) spi_flash: detected chip: gd[0m
+[0;32mI (415) spi_flash: flash io: dio[0m
+[0;33mW (419) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (433) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (439) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (447) main_task: Started on CPU0[0m
+[0;32mI (457) main_task: Calling app_main()[0m
+[0;32mI (487) uart: queue free spaces: 30[0m
+[0;32mI (487) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (487) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (597) UART: UART RX task started and waiting for data...[0m
+UART RX task created
+[0;32mI (597) ETH: Static IP configured: 192.168.1.100[0m
+[0;32mI (597) ETH: Gateway: 192.168.1.1[0m
+[0;32mI (597) ETH: Netmask: 255.255.255.0[0m
+[0;32mI (607) ETH: DNS servers configured from network_config.h[0m
+[0;32mI (637) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (637) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (647) ETH: Ethernet Started[0m
+[0;32mI (647) pp: pp rom version: e7ae62f[0m
+[0;32mI (647) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (657) wifi:wifi driver task: 3fcbdc68, prio:23, stack:6656, core=0[0m
+[0;32mI (667) wifi:wifi firmware version: 3e0076f[0m
+[0;32mI (667) wifi:wifi certification version: v7.0[0m
+[0;32mI (667) wifi:config NVS flash: enabled[0m
+[0;32mI (667) wifi:config nano formating: disabled[0m
+[0;32mI (677) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (677) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (677) wifi:Init management short buffer num: 32[0m
+[0;32mI (687) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (687) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (697) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (697) wifi:Init static rx buffer num: 10[0m
+[0;32mI (697) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (707) wifi_init: rx ba win: 6[0m
+[0;32mI (707) wifi_init: tcpip mbox: 32[0m
+[0;32mI (717) wifi_init: udp mbox: 6[0m
+[0;32mI (717) wifi_init: tcp mbox: 6[0m
+[0;32mI (717) wifi_init: tcp tx win: 5760[0m
+[0;32mI (727) wifi_init: tcp rx win: 5760[0m
+[0;32mI (727) wifi_init: tcp mss: 1440[0m
+[0;32mI (737) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (737) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (747) phy_init: phy_version 670,b7bc9b9,Apr 30 2024,10:54:13[0m
+[0;32mI (787) wifi:mode : sta (98:3d:ae:9f:b7:80)[0m
+[0;32mI (787) wifi:enable tsf[0m
+[0;32mI (797) WIFI: WiFi module initialized (STA mode)[0m
+[0;32mI (797) WIFI: WiFi started[0m
+[0;32mI (797) WIFI: Found saved WiFi credentials, attempting connection...[0m
+[0;32mI (797) WIFI: Connecting to WiFi SSID: Z[0m
+[0;33mW (807) MQTT: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND, using defaults[0m
+[0;32mI (817) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1[0m
+[0;32mI (817) wifi:state: init -> auth (b0)[0m
+[0;32mI (827) MQTT: MQTT module initialized with broker: mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883[0m
+[0;32mI (837) WEB: Registered /power/set handler[0m
+[0;32mI (837) WEB: Registered /power/get handler[0m
+[0;32mI (847) MAIN: Web server started on Ethernet[0m
+[0;32mI (847) MAIN: System initialized successfully - Ethernet + WiFi + MQTT mode[0m
+[0;32mI (857) main_task: Returned from app_main()[0m
+[0;32mI (887) wifi:state: auth -> assoc (0)[0m
+[0;32mI (1887) wifi:state: assoc -> init (2700)[0m
+[0;32mI (1887) wifi:new:<10,0>, old:<10,0>, ap:<255,255>, sta:<10,0>, prof:1[0m
+[0;32mI (1887) WIFI: Retry connecting to WiFi (1/5)[0m
+[0;32mI (2647) ETH: Ethernet Link Up[0m
+[0;32mI (2647) ETH: Ethernet HW Addr 02:00:00:12:34:56[0m
+[0;32mI (2647) esp_netif_handlers: eth ip: 192.168.1.100, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2647) ETH: Ethernet Got IP Address[0m
+[0;32mI (2657) ETH: ~~~~~~~~~~~[0m
+[0;32mI (2657) ETH: ETHIP: 192.168.1.100[0m
+[0;32mI (2667) ETH: ETHMASK: 255.255.255.0[0m
+[0;32mI (2667) ETH: ETHGW: 192.168.1.1[0m
+[0;32mI (2667) ETH: ~~~~~~~~~~~[0m
+[0;32mI (4297) WIFI: Retry connecting to WiFi (2/5)[0m
+[0;32mI (4307) wifi:new:<10,0>, old:<10,0>, ap:<255,255>, sta:<10,0>, prof:1[0m
+[0;32mI (4307) wifi:state: init -> auth (b0)[0m
+[0;32mI (4307) wifi:state: auth -> assoc (0)[0m
+[0;32mI (4317) wifi:state: assoc -> run (10)[0m
+[0;32mI (4337) wifi:connected with Z, aid = 1, channel 10, BW20, bssid = f6:67:28:64:6a:a5[0m
+[0;32mI (4337) wifi:security: WPA2-PSK, phy: bgn, rssi: -69[0m
+[0;32mI (4347) wifi:pm start, type: 1[0m
+
+[0;32mI (4347) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (4347) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (4417) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (4417) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (5357) esp_netif_handlers: sta ip: 192.168.43.11, mask: 255.255.255.0, gw: 192.168.43.1[0m
+[0;32mI (5357) WIFI: WiFi connected! Got IP: 192.168.43.11[0m
+[0;32mI (5847) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (5847) MQTT: MQTT client started[0m
+[0;32mI (5847) MQTT: Other MQTT event id:7[0m
+[0;32mI (6747) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (6847) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (8307) MQTT: MQTT Connected[0m
+[0;32mI (8317) MQTT: Subscribed to rfid/commands, msg_id=53708[0m
+[0;32mI (8597) MQTT: MQTT client started[0m
+[0;32mI (8597) MQTT: Other MQTT event id:7[0m
+[0;32mI (8957) wifi:<ba-add>idx:0 (ifx:0, f6:67:28:64:6a:a5), tid:1, ssn:16, winSize:64[0m
+[0;32mI (9447) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (10967) MQTT: MQTT Connected[0m
+[0;32mI (10977) MQTT: Subscribed to rfid/commands, msg_id=10717[0m
+[0;32mI (10977) MQTT: Published tag data, msg_id=63420[0m
+[0;32mI (10977) MAIN: Published tag data to MQTT[0m
+[0;32mI (11387) MQTT: MQTT Subscribed, msg_id=10717[0m
+[0;33mW (11457) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;32mI (11507) UART: UART sent 9 bytes: TX: 5A 00 01 02 02 00 00 29 59[0m
+[0;32mI (11787) MQTT: MQTT Published, msg_id=276[0m
+[0;32mI (11797) MQTT: MQTT Published, msg_id=63420[0m
+[0;32mI (13817) WEB: Testing WiFi connection to SSID: Z[0m
+[0;32mI (13817) WIFI: Testing WiFi connection to: Z[0m
+[0;32mI (13817) wifi:state: run -> init (0)[0m
+[0;32mI (13817) wifi:pm stop, total sleep time: 7535304 us / 9474449 us[0m
+
+[0;32mI (13827) wifi:<ba-del>idx:0, tid:1[0m
+[0;32mI (13827) wifi:new:<10,0>, old:<10,0>, ap:<255,255>, sta:<10,0>, prof:1[0m
+[0;32mI (13837) WIFI: Retry connecting to WiFi (1/5)[0m
+[0;31mE (13837) transport_base: poll_read select error 113, errno = Software caused connection abort, fd = 59[0m
+[0;31mE (13847) mqtt_client: Poll read error: 119, aborting connection[0m
+[0;32mI (13857) MQTT: MQTT Disconnected[0m
+[0;32mI (13867) wifi:flush txq[0m
+[0;32mI (13867) wifi:stop sw txq[0m
+[0;32mI (13867) wifi:lmac stop hw txq[0m
+[0;32mI (13977) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (14367) wifi:mode : sta (98:3d:ae:9f:b7:80)[0m
+[0;32mI (14367) wifi:enable tsf[0m
+[0;32mI (14367) WIFI: WiFi started[0m
+[0;32mI (14867) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1[0m
+[0;32mI (14867) wifi:state: init -> auth (b0)[0m
+[0;32mI (14877) wifi:state: auth -> assoc (0)[0m
+[0;32mI (14887) wifi:state: assoc -> run (10)[0m
+[0;32mI (14907) wifi:connected with Z, aid = 1, channel 10, BW20, bssid = f6:67:28:64:6a:a5[0m
+[0;32mI (14907) wifi:security: WPA2-PSK, phy: bgn, rssi: -72[0m
+[0;32mI (14917) wifi:pm start, type: 1[0m
+
+[0;32mI (14917) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (14917) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (14957) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (14957) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (15927) esp_netif_handlers: sta ip: 192.168.43.11, mask: 255.255.255.0, gw: 192.168.43.1[0m
+[0;32mI (15927) WIFI: WiFi connected! Got IP: 192.168.43.11[0m
+[0;32mI (15927) WIFI: Test connection successful to: Z[0m
+[0;32mI (15937) wifi:state: run -> init (0)[0m
+[0;32mI (15937) wifi:pm stop, total sleep time: 693465 us / 1022080 us[0m
+
+[0;32mI (15947) wifi:new:<10,0>, old:<10,0>, ap:<255,255>, sta:<10,0>, prof:1[0m
+[0;32mI (15947) WIFI: Retry connecting to WiFi (1/5)[0m
+[0;32mI (15957) wifi:new:<10,0>, old:<10,0>, ap:<255,255>, sta:<10,0>, prof:1[0m
+[0;32mI (15957) wifi:state: init -> auth (b0)[0m
+[0;32mI (15967) wifi:state: auth -> assoc (0)[0m
+[0;32mI (15977) wifi:state: assoc -> run (10)[0m
+[0;32mI (16017) wifi:connected with Z, aid = 1, channel 10, BW20, bssid = f6:67:28:64:6a:a5[0m
+[0;32mI (16017) wifi:security: WPA2-PSK, phy: bgn, rssi: -71[0m
+[0;32mI (16027) wifi:pm start, type: 1[0m
+
+[0;32mI (16027) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (16037) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (16087) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (16087) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (16947) WIFI: Restoring connection to saved WiFi: Z[0m
+[0;32mI (16947) WIFI: Connecting to WiFi SSID: Z[0m
+[0;32mI (16947) WIFI: WiFi test completed. Result: SUCCESS[0m
+[0;32mI (16947) WEB: WiFi test result: SUCCESS[0m
+[0;32mI (16957) WEB: Sending response: {"status":"success","message":"Connected to Z successfully"}[0m
+[0;32mI (17047) esp_netif_handlers: sta ip: 192.168.43.11, mask: 255.255.255.0, gw: 192.168.43.1[0m
+[0;32mI (17047) WIFI: WiFi connected! Got IP: 192.168.43.11[0m
+[0;32mI (18857) MQTT: MQTT client started[0m
+[0;32mI (18857) MQTT: Other MQTT event id:7[0m
+[0;32mI (19857) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (20527) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (21847) MQTT: MQTT Connected[0m
+[0;32mI (21847) MQTT: Subscribed to rfid/commands, msg_id=34126[0m
+[0;32mI (22137) MQTT: MQTT client started[0m
+[0;32mI (22137) MQTT: Other MQTT event id:7[0m
+[0;32mI (22747) wifi:<ba-add>idx:0 (ifx:0, f6:67:28:64:6a:a5), tid:1, ssn:17, winSize:64[0m
+[0;32mI (22867) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (24177) MQTT: MQTT Connected[0m
+[0;32mI (24187) MQTT: Subscribed to rfid/commands, msg_id=21450[0m
+[0;32mI (24187) MQTT: Published tag data, msg_id=315[0m
+[0;32mI (24187) MAIN: Published tag data to MQTT[0m
+[0;32mI (24487) MQTT: MQTT Subscribed, msg_id=21450[0m
+[0;32mI (24797) MQTT: MQTT Published, msg_id=35661[0m
+[0;32mI (24797) MQTT: MQTT Published, msg_id=315[0m

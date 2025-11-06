@@ -7,12 +7,16 @@
 #include <stdint.h>
 #include "esp_timer.h"
 #include "uart.h"
+#include "mqtt_config.h"
 
 #define READER_TXD  17
 #define READER_RXD  18
 
 static const char *TAG = "RFID";
-static volatile int s_running = 0;
+static volatile int s_running = 0;         // Global running state (for hardware)
+static volatile int s_local_running = 0;   // Local/web server running state
+static volatile int s_mqtt_running = 0;    // MQTT running state
+static volatile int s_mqtt_mode = 0;       // Track if inventory was started via MQTT
 static char s_last_command[128] = "No command sent yet";  // Reduced from 256
 
 // Store actual power values received from reader
@@ -30,6 +34,7 @@ typedef struct {
     int ant;
     uint64_t last_ms;
     uint32_t count;  // How many times this specific tag has been detected
+    int collected_by; // 0=local, 1=mqtt - tracks which mode collected this tag
 } tag_item_t;
 
 static tag_item_t s_tags[MAX_TAGS];
@@ -65,6 +70,7 @@ static int alloc_tag_index(const char* epc) {
         if (s_tags[i].epc[0] == '\0') { 
             strncpy(s_tags[i].epc, epc, sizeof(s_tags[i].epc)-1);
             s_tags[i].count = 0;  // Initialize count for new tag
+            s_tags[i].collected_by = 0;  // Initialize collection mode
             return i; 
         }
     }
@@ -75,6 +81,7 @@ static int alloc_tag_index(const char* epc) {
         if (s_tags[i].epc[0] == '\0') { 
             strncpy(s_tags[i].epc, epc, sizeof(s_tags[i].epc)-1);
             s_tags[i].count = 0;  // Initialize count for new tag
+            s_tags[i].collected_by = 0;  // Initialize collection mode
             return i; 
         }
     }
@@ -333,6 +340,16 @@ void rfid_process_bytes(const uint8_t *buf, size_t len)
                 s_tags[idx].count++;        // Increment individual tag count
                 s_total_tag_count++;        // Increment total count
                 
+                // Mark which mode collected this tag
+                if (s_mqtt_running) {
+                    s_tags[idx].collected_by = 1; // MQTT mode
+                } else if (s_local_running) {
+                    s_tags[idx].collected_by = 0; // Local mode
+                }
+                
+                // Note: MQTT publishing is now handled by periodic batch task
+                // Individual tag detections are no longer published immediately
+                
                 // Enable periodic logging to show activity (reduced frequency)
                 static int fallback_log_count = 0;
                 if (++fallback_log_count % 100 == 0) {
@@ -358,9 +375,9 @@ int rfid_get_tags_json(char *out, int out_len)
     // Start with object containing count, total, and tags array
     used += snprintf(out + used, out_len - used, "{\"active_tags\":");
     
-    // Count active tags first
+    // Count active tags first (only local tags for web server)
     for (int i = 0; i < MAX_TAGS; ++i) {
-        if (s_tags[i].epc[0] != '\0') count++;
+        if (s_tags[i].epc[0] != '\0' && s_tags[i].collected_by == 0) count++;
     }
     
     // Add active count and total count to JSON
@@ -371,6 +388,7 @@ int rfid_get_tags_json(char *out, int out_len)
     
     for (int i = 0; i < MAX_TAGS && used < out_len - 100; ++i) {
         if (s_tags[i].epc[0] == '\0') continue;
+        if (s_tags[i].collected_by != 0) continue; // Skip MQTT tags, only show local tags
         
         if (!first) {
             used += snprintf(out + used, out_len - used, ",");
@@ -400,13 +418,24 @@ void rfid_init(void)
 
 void rfid_start_inventory(void)
 {
-    if (!s_running) {
-        s_running = 1;
+    rfid_start_inventory_local();
+}
+
+// Local version for web server (no MQTT publishing)
+void rfid_start_inventory_local(void)
+{
+    if (!s_local_running) {
+        s_local_running = 1;
+        s_running = 1;  // Set global hardware state
+        s_mqtt_mode = 0;  // Set to local mode
         
-        // Reset counters for fresh start
+        // Clear only local tags for fresh start
         s_total_tag_count = 0;
         for (int i = 0; i < MAX_TAGS; i++) {
-            s_tags[i].count = 0;
+            if (s_tags[i].collected_by == 0) {  // Clear only local tags
+                s_tags[i].epc[0] = '\0';
+                s_tags[i].count = 0;
+            }
         }
         
         // Reset startup packet counter to ensure immediate tag processing
@@ -417,8 +446,42 @@ void rfid_start_inventory(void)
                                              0x00, 0x00, 0x01, 0x01, 0xF4, 0x87 };
         
         uart_send_bytes((const char*)cmd_start, sizeof(cmd_start));
-        printf("RFID inventory started - counters reset\n");
-        // If you have real inventory logic, start a task here
+        printf("RFID inventory started locally - counters reset\n");
+    }
+}
+
+// MQTT version for remote commands (with MQTT publishing)
+void rfid_start_inventory_mqtt(void)
+{
+    if (!s_mqtt_running) {
+        s_mqtt_running = 1;
+        s_running = 1;  // Set global hardware state
+        s_mqtt_mode = 1;  // Set to MQTT mode
+        
+        // Clear only MQTT tags for fresh start
+        s_total_tag_count = 0;
+        for (int i = 0; i < MAX_TAGS; i++) {
+            if (s_tags[i].collected_by == 1) {  // Clear only MQTT tags
+                s_tags[i].epc[0] = '\0';
+                s_tags[i].count = 0;
+            }
+        }
+        
+        // Reset startup packet counter to ensure immediate tag processing
+        extern void rfid_reset_startup_delay(void);
+        rfid_reset_startup_delay();
+        
+        static const uint8_t cmd_start[] = { 0x5A, 0x00, 0x01, 0x02, 0x10, 0x00, 0x05, 0x00,
+                                             0x00, 0x00, 0x01, 0x01, 0xF4, 0x87 };
+        
+        uart_send_bytes((const char*)cmd_start, sizeof(cmd_start));
+        printf("RFID inventory started via MQTT - counters reset\n");
+        
+        // Send response via MQTT
+        mqtt_publish_response("{\"command\":\"rfid\",\"action\":\"start\",\"status\":\"success\",\"message\":\"Inventory started\"}");
+    } else {
+        // Already running
+        mqtt_publish_response("{\"command\":\"rfid\",\"action\":\"start\",\"status\":\"info\",\"message\":\"Inventory already running\"}");
     }
 }
 
@@ -434,8 +497,16 @@ static uint16_t crc16_xmodem(const uint8_t *data, size_t len) {
 
 void rfid_stop_inventory(void)
 {
-    if (s_running) {
-        s_running = 0;
+    rfid_stop_inventory_local();
+}
+
+// Local version for web server (no MQTT publishing)
+void rfid_stop_inventory_local(void)
+{
+    if (s_local_running) {
+        s_local_running = 0;
+        s_running = 0;  // Clear global hardware state
+        s_mqtt_mode = 0;  // Clear MQTT mode
         
         // Build proper stop command using NRN protocol format
         // Category 0x02, MID 0x11 (stop inventory)
@@ -456,7 +527,7 @@ void rfid_stop_inventory(void)
         frame[k++] = (uint8_t)(crc & 0xFF); // CRC low
         
         uart_send_bytes((const char*)frame, k);
-        printf("RFID stop command sent: ");
+        printf("RFID stop command sent locally: ");
         for (int i = 0; i < k; i++) {
             printf("%02X ", frame[i]);
         }
@@ -465,7 +536,53 @@ void rfid_stop_inventory(void)
         // Also try the original stop command as fallback
         static const uint8_t fallback_cmd[] = { 0x5A, 0x00, 0x01, 0x02, 0xFF, 0x00, 0x00, 0x88, 0x5A };
         uart_send_bytes((const char*)fallback_cmd, sizeof(fallback_cmd));
-        printf("RFID fallback stop command sent\n");
+        printf("RFID fallback stop command sent locally\n");
+    }
+}
+
+// MQTT version for remote commands (with MQTT publishing)
+void rfid_stop_inventory_mqtt(void)
+{
+    if (s_mqtt_running) {
+        s_mqtt_running = 0;
+        s_running = 0;  // Clear global hardware state
+        s_mqtt_mode = 0;  // Clear MQTT mode
+        
+        // Build proper stop command using NRN protocol format
+        // Category 0x02, MID 0x11 (stop inventory)
+        uint8_t frame[32];
+        int k = 0;
+        
+        frame[k++] = 0x5A; // Header
+        frame[k++] = 0x00; // PCW byte 1
+        frame[k++] = 0x01; // PCW byte 2  
+        frame[k++] = 0x02; // Category (inventory)
+        frame[k++] = 0x11; // MID (stop inventory, 0x11 instead of 0x10)
+        frame[k++] = 0x00; // Length high
+        frame[k++] = 0x00; // Length low (no payload)
+        
+        // Calculate CRC for header + payload (no payload in this case)
+        uint16_t crc = crc16_xmodem(frame, k);
+        frame[k++] = (uint8_t)(crc >> 8);   // CRC high
+        frame[k++] = (uint8_t)(crc & 0xFF); // CRC low
+        
+        uart_send_bytes((const char*)frame, k);
+        printf("RFID stop command sent via MQTT: ");
+        for (int i = 0; i < k; i++) {
+            printf("%02X ", frame[i]);
+        }
+        printf("\n");
+        
+        // Also try the original stop command as fallback
+        static const uint8_t fallback_cmd[] = { 0x5A, 0x00, 0x01, 0x02, 0xFF, 0x00, 0x00, 0x88, 0x5A };
+        uart_send_bytes((const char*)fallback_cmd, sizeof(fallback_cmd));
+        printf("RFID fallback stop command sent via MQTT\n");
+        
+        // Send response via MQTT
+        mqtt_publish_response("{\"command\":\"rfid\",\"action\":\"stop\",\"status\":\"success\",\"message\":\"Inventory stopped\"}");
+    } else {
+        // Already stopped
+        mqtt_publish_response("{\"command\":\"rfid\",\"action\":\"stop\",\"status\":\"info\",\"message\":\"Inventory already stopped\"}");
     }
 }
 
@@ -525,6 +642,13 @@ void rfid_set_power(int pwr1, int pwr2, int pwr3, int pwr4)
 
     uart_send_bytes((const char*)frame, (int)k);
     ESP_LOGI(TAG, "RFID power set to ant1=%d ant2=%d ant3=%d ant4=%d", pwr1, pwr2, pwr3, pwr4);
+    
+    // Send response via MQTT
+    char power_json[256];
+    snprintf(power_json, sizeof(power_json), 
+        "{\"command\":\"power\",\"action\":\"set\",\"status\":\"success\",\"power\":{\"ant1\":%d,\"ant2\":%d,\"ant3\":%d,\"ant4\":%d}}", 
+        pwr1, pwr2, pwr3, pwr4);
+    mqtt_publish_response(power_json);
 }
 
 
@@ -545,6 +669,13 @@ void rfid_query_power(void)
     static const uint8_t cmd[] = { 0x5A, 0x00, 0x01, 0x02, 0x02, 0x00, 0x00, 0x29, 0x59 };
     s_power_request_pending = 1; // Set flag to indicate we're waiting for power response
     uart_send_bytes((const char*)cmd, sizeof(cmd));
+    
+    // Send current power values via MQTT immediately
+    char power_json[256];
+    snprintf(power_json, sizeof(power_json), 
+        "{\"command\":\"power\",\"action\":\"query\",\"status\":\"success\",\"power\":{\"ant1\":%d,\"ant2\":%d,\"ant3\":%d,\"ant4\":%d}}", 
+        s_power_values[0], s_power_values[1], s_power_values[2], s_power_values[3]);
+    mqtt_publish_response(power_json);
 }
 
 // Query reader information (based on NRN SDK MID.QUERY_INFO: 0x0100)
@@ -569,7 +700,73 @@ void rfid_confirm_connection(void)
 
 const char* rfid_get_status(void)
 {
-    return s_running ? "running" : "stopped";
+    if (s_local_running) return "local_running";
+    if (s_mqtt_running) return "mqtt_running";
+    return "stopped";
+}
+
+// Get specific status for web server (local only)
+const char* rfid_get_local_status(void)
+{
+    return s_local_running ? "running" : "stopped";
+}
+
+// Get specific status for MQTT (remote only)  
+const char* rfid_get_mqtt_status(void)
+{
+    return s_mqtt_running ? "running" : "stopped";
+}
+
+// Get MQTT status as boolean
+bool rfid_get_mqtt_status_bool(void)
+{
+    return s_mqtt_running;
+}
+
+// Get MQTT tags as JSON (only tags collected via MQTT)
+int rfid_get_mqtt_tags_json(char *out, int out_len)
+{
+    if (!out || out_len <= 10) return 0;
+    
+    int used = 0;
+    int count = 0;
+    
+    // Start with object containing count, total, and tags array
+    used += snprintf(out + used, out_len - used, "{\"active_tags\":");
+    
+    // Count active MQTT tags first
+    for (int i = 0; i < MAX_TAGS; ++i) {
+        if (s_tags[i].epc[0] != '\0' && s_tags[i].collected_by == 1) count++;
+    }
+    
+    // Add active count and total count to JSON
+    used += snprintf(out + used, out_len - used, "%d,\"total_detections\":%lu,\"tags\":[", count, (unsigned long)s_total_tag_count);
+    
+    int first = 1;
+    int tags_output = 0;
+    
+    for (int i = 0; i < MAX_TAGS && used < out_len - 100; ++i) {
+        if (s_tags[i].epc[0] == '\0') continue;
+        if (s_tags[i].collected_by != 1) continue; // Only MQTT tags
+        
+        if (!first) {
+            used += snprintf(out + used, out_len - used, ",");
+        }
+        first = 0;
+        
+        uint64_t ts = s_tags[i].last_ms;
+        used += snprintf(out + used, out_len - used, 
+            "{\"epc\":\"%s\",\"rssi\":%d,\"ant\":%d,\"ts\":%llu,\"count\":%lu}",
+            s_tags[i].epc, s_tags[i].rssi, s_tags[i].ant, 
+            (unsigned long long)ts, (unsigned long)s_tags[i].count);
+        
+        tags_output++;
+        if (tags_output >= 15) break; // Reduced batch size to prevent large payloads
+    }
+    
+    used += snprintf(out + used, out_len - used, "]}");
+    
+    return used;
 }
 
 const char* rfid_get_last_command(void)
@@ -582,5 +779,62 @@ void rfid_set_last_command(const char* cmd_description)
     if (cmd_description) {
         strncpy(s_last_command, cmd_description, sizeof(s_last_command) - 1);
         s_last_command[sizeof(s_last_command) - 1] = '\0';
+    }
+}
+
+// New function to handle inventory commands from MQTT
+void rfid_handle_inventory_command(const char* action)
+{
+    if (!action) {
+        mqtt_publish_response("{\"command\":\"rfid\",\"action\":\"unknown\",\"status\":\"error\",\"message\":\"Invalid action\"}");
+        return;
+    }
+    
+    if (strcmp(action, "start") == 0) {
+        rfid_start_inventory_mqtt();
+    } else if (strcmp(action, "stop") == 0) {
+        rfid_stop_inventory_mqtt();
+    } else if (strcmp(action, "status") == 0) {
+        const char* status = rfid_get_mqtt_status();  // Use MQTT-specific status
+        char status_json[256];
+        snprintf(status_json, sizeof(status_json), 
+            "{\"command\":\"rfid\",\"action\":\"status\",\"status\":\"success\",\"inventory_status\":\"%s\",\"total_tags\":%lu}", 
+            status, (unsigned long)s_total_tag_count);
+        mqtt_publish_response(status_json);
+    } else if (strcmp(action, "get") == 0) {
+        // Get current RFID data and status
+        const char* status = rfid_get_mqtt_status();
+        char response_json[512];
+        snprintf(response_json, sizeof(response_json), 
+            "{\"command\":\"rfid\",\"action\":\"get\",\"status\":\"success\",\"inventory_status\":\"%s\",\"total_tags\":%lu,\"mode\":\"mqtt\"}", 
+            status, (unsigned long)s_total_tag_count);
+        mqtt_publish_response(response_json);
+    } else {
+        char error_json[256];
+        snprintf(error_json, sizeof(error_json), 
+            "{\"command\":\"rfid\",\"action\":\"%s\",\"status\":\"error\",\"message\":\"Unknown action\"}", 
+            action);
+        mqtt_publish_response(error_json);
+    }
+}
+
+// New function to handle power commands from MQTT
+void rfid_handle_power_command(const char* action, int ant1, int ant2, int ant3, int ant4)
+{
+    if (!action) {
+        mqtt_publish_response("{\"command\":\"power\",\"action\":\"unknown\",\"status\":\"error\",\"message\":\"Invalid action\"}");
+        return;
+    }
+    
+    if (strcmp(action, "set") == 0) {
+        rfid_set_power(ant1, ant2, ant3, ant4);
+    } else if (strcmp(action, "query") == 0 || strcmp(action, "get") == 0) {
+        rfid_query_power();
+    } else {
+        char error_json[256];
+        snprintf(error_json, sizeof(error_json), 
+            "{\"command\":\"power\",\"action\":\"%s\",\"status\":\"error\",\"message\":\"Unknown action\"}", 
+            action);
+        mqtt_publish_response(error_json);
     }
 }

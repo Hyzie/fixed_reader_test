@@ -6,8 +6,11 @@
 #include "esp_wifi.h"
 #include "esp_event.h"
 #include "esp_log.h"
+#include "esp_err.h"
 #include "freertos/task.h"
 #include "freertos/event_groups.h"
+#include "nvs_flash.h"
+#include "nvs.h"
 
 static const char *TAG = "WIFI";
 
@@ -83,10 +86,14 @@ void wifi_init(void)
                                                         &instance_got_ip));
 
     ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
+    
+    // Optimize power management for stable connection
+    ESP_ERROR_CHECK(esp_wifi_set_ps(WIFI_PS_NONE)); // Disable power saving for stability
+    
     ESP_ERROR_CHECK(esp_wifi_start());
 
     s_wifi_initialized = true;
-    ESP_LOGI(TAG, "WiFi module initialized (STA mode)");
+    ESP_LOGI(TAG, "WiFi module initialized (STA mode, power save disabled)");
 
     // Try to connect with saved credentials
     char ssid[64] = "";
@@ -126,8 +133,31 @@ void wifi_connect_with_credentials(const char* ssid, const char* password)
     wifi_config.sta.pmf_cfg.capable = true;
     wifi_config.sta.pmf_cfg.required = false;
 
-    ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_config));
-    ESP_ERROR_CHECK(esp_wifi_connect());
+    esp_err_t ret = esp_wifi_set_config(WIFI_IF_STA, &wifi_config);
+    if (ret == ESP_ERR_NVS_NOT_ENOUGH_SPACE) {
+        ESP_LOGE(TAG, "NVS not enough space for WiFi config. Please erase flash and reflash.");
+        return;
+    } else if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to set WiFi config: %s", esp_err_to_name(ret));
+        return;
+    }
+    
+    // Check WiFi state before attempting to connect
+    wifi_ap_record_t ap_info;
+    esp_err_t connection_status = esp_wifi_sta_get_ap_info(&ap_info);
+    bool already_connected = (connection_status == ESP_OK);
+    
+    if (already_connected) {
+        ESP_LOGI(TAG, "Already connected to WiFi, disconnecting first...");
+        esp_wifi_disconnect();
+        vTaskDelay(pdMS_TO_TICKS(1000)); // Wait for disconnect
+    }
+    
+    ret = esp_wifi_connect();
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to start WiFi connection: %s", esp_err_to_name(ret));
+        return;
+    }
 
     // Store the SSID we're trying to connect to
     strncpy(s_connected_ssid, ssid, sizeof(s_connected_ssid) - 1);
@@ -140,7 +170,10 @@ void wifi_disconnect(void)
     }
 
     ESP_LOGI(TAG, "Disconnecting from WiFi");
-    esp_wifi_disconnect();
+    esp_err_t ret = esp_wifi_disconnect();
+    if (ret != ESP_OK && ret != ESP_ERR_WIFI_NOT_CONNECT) {
+        ESP_LOGW(TAG, "WiFi disconnect failed: %s", esp_err_to_name(ret));
+    }
     
     // Clear connection info
     s_connected_ssid[0] = '\0';
@@ -175,4 +208,88 @@ const char* wifi_get_connected_ssid(void)
 const char* wifi_get_ip_address(void)
 {
     return s_ip_address;
+}
+
+bool wifi_test_connection(const char* ssid, const char* password)
+{
+    if (!ssid || !password) {
+        ESP_LOGE(TAG, "Invalid SSID or password for test");
+        return false;
+    }
+
+    ESP_LOGI(TAG, "Testing WiFi connection to: %s", ssid);
+    
+    // Simple test: create a temporary WiFi config and test it
+    wifi_config_t test_config = {
+        .sta = {
+            .threshold.authmode = WIFI_AUTH_WPA2_PSK,
+            .pmf_cfg = {
+                .capable = true,
+                .required = false
+            },
+        },
+    };
+    
+    strncpy((char*)test_config.sta.ssid, ssid, sizeof(test_config.sta.ssid) - 1);
+    strncpy((char*)test_config.sta.password, password, sizeof(test_config.sta.password) - 1);
+
+    // Stop current WiFi if running
+    esp_wifi_stop();
+    vTaskDelay(pdMS_TO_TICKS(500));
+
+    // Set test config
+    esp_err_t ret = esp_wifi_set_config(WIFI_IF_STA, &test_config);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to set test WiFi config: %s", esp_err_to_name(ret));
+        esp_wifi_start(); // Restart WiFi
+        return false;
+    }
+
+    // Start WiFi and try to connect
+    esp_wifi_start();
+    vTaskDelay(pdMS_TO_TICKS(500));
+    
+    // Clear event bits
+    xEventGroupClearBits(s_wifi_event_group, WIFI_CONNECTED_BIT | WIFI_FAIL_BIT);
+    
+    ret = esp_wifi_connect();
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to start test WiFi connection: %s", esp_err_to_name(ret));
+        return false;
+    }
+
+    // Wait for connection result (max 15 seconds)
+    EventBits_t bits = xEventGroupWaitBits(s_wifi_event_group,
+                                           WIFI_CONNECTED_BIT | WIFI_FAIL_BIT,
+                                           pdFALSE,
+                                           pdFALSE,
+                                           pdMS_TO_TICKS(15000));
+
+    bool test_success = false;
+    if (bits & WIFI_CONNECTED_BIT) {
+        ESP_LOGI(TAG, "Test connection successful to: %s", ssid);
+        test_success = true;
+    } else if (bits & WIFI_FAIL_BIT) {
+        ESP_LOGW(TAG, "Test connection failed to: %s", ssid);
+        test_success = false;
+    } else {
+        ESP_LOGW(TAG, "Test connection timeout to: %s", ssid);
+        test_success = false;
+    }
+
+    // Always disconnect after test
+    esp_wifi_disconnect();
+    vTaskDelay(pdMS_TO_TICKS(2000)); // Increased delay for proper disconnect
+
+    // Try to restore previous WiFi settings
+    char saved_ssid[64], saved_pass[64];
+    wifi_config_load(saved_ssid, sizeof(saved_ssid), saved_pass, sizeof(saved_pass));
+    if (strlen(saved_ssid) > 0) {
+        ESP_LOGI(TAG, "Restoring connection to saved WiFi: %s", saved_ssid);
+        vTaskDelay(pdMS_TO_TICKS(1000)); // Additional delay before reconnecting
+        wifi_connect_with_credentials(saved_ssid, saved_pass);
+    }
+
+    ESP_LOGI(TAG, "WiFi test completed. Result: %s", test_success ? "SUCCESS" : "FAILED");
+    return test_success;
 }

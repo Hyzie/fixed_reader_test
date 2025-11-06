@@ -1,0 +1,491 @@
+[0;32mI (147) esp_image: segment 1: paddr=00051c94 vaddr=3fc9bcStarting UART RX task...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42009b47
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Nov  6 2025 11:17:54[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00180000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=41c6ch (269420) map[0m
+[0;32mI (147) esp_image: segment 1: paddr=00051c94 vaddr=3fc9bc00 size=047ach ( 18348) load[0m
+[0;32mI (152) esp_image: segment 2: paddr=00056448 vaddr=40374000 size=09bd0h ( 39888) load[0m
+[0;32mI (162) esp_image: segment 3: paddr=00060020 vaddr=42000020 size=b0b38h (723768) map[0m
+[0;32mI (292) esp_image: segment 4: paddr=00110b60 vaddr=4037dbd0 size=0dfbch ( 57276) load[0m
+[0;32mI (315) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (315) boot: Disabling RNG early entropy source...[0m
+[0;32mI (326) cpu_start: Multicore app[0m
+[0;32mI (336) cpu_start: Pro cpu start user code[0m
+[0;32mI (336) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (336) cpu_start: Application information:[0m
+[0;32mI (339) cpu_start: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (345) cpu_start: App version:      523f2e4-dirty[0m
+[0;32mI (351) cpu_start: Compile time:     Nov  6 2025 11:17:03[0m
+[0;32mI (357) cpu_start: ELF file SHA256:  a5f19386c...[0m
+[0;32mI (362) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (367) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (372) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (377) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (382) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (389) heap_init: At 3FCA63B0 len 00043360 (268 KiB): RAM[0m
+[0;32mI (395) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (401) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (407) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (414) spi_flash: detected chip: gd[0m
+[0;32mI (418) spi_flash: flash io: dio[0m
+[0;33mW (422) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (435) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (442) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (449) main_task: Started on CPU0[0m
+[0;32mI (459) main_task: Calling app_main()[0m
+[0;32mI (489) uart: queue free spaces: 30[0m
+[0;32mI (489) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (489) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (599) UART: UART RX task started and waiting for data...[0m
+UART RX task created
+[0;32mI (599) ETH: Static IP configured: 192.168.1.100[0m
+[0;32mI (599) ETH: Gateway: 192.168.1.1[0m
+[0;32mI (599) ETH: Netmask: 255.255.255.0[0m
+[0;32mI (609) ETH: DNS servers configured from network_config.h[0m
+[0;32mI (639) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (639) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (649) ETH: Ethernet Started[0m
+[0;32mI (649) pp: pp rom version: e7ae62f[0m
+[0;32mI (649) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (659) wifi:wifi driver task: 3fcbdc88, prio:23, stack:6656, core=0[0m
+[0;32mI (669) wifi:wifi firmware version: 3e0076f[0m
+[0;32mI (669) wifi:wifi certification version: v7.0[0m
+[0;32mI (669) wifi:config NVS flash: enabled[0m
+[0;32mI (669) wifi:config nano formating: disabled[0m
+[0;32mI (679) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (679) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (679) wifi:Init management short buffer num: 32[0m
+[0;32mI (689) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (689) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (699) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (699) wifi:Init static rx buffer num: 10[0m
+[0;32mI (699) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (709) wifi_init: rx ba win: 6[0m
+[0;32mI (709) wifi_init: tcpip mbox: 32[0m
+[0;32mI (719) wifi_init: udp mbox: 6[0m
+[0;32mI (719) wifi_init: tcp mbox: 6[0m
+[0;32mI (719) wifi_init: tcp tx win: 5760[0m
+[0;32mI (729) wifi_init: tcp rx win: 5760[0m
+[0;32mI (729) wifi_init: tcp mss: 1440[0m
+[0;32mI (739) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (739) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (749) phy_init: phy_version 670,b7bc9b9,Apr 30 2024,10:54:13[0m
+[0;32mI (799) wifi:mode : sta (98:3d:ae:9f:b7:80)[0m
+[0;32mI (799) wifi:enable tsf[0m
+[0;32mI (799) WIFI: WiFi module initialized (STA mode)[0m
+[0;32mI (799) WIFI: WiFi started[0m
+[0;32mI (799) WIFI: Found saved WiFi credentials, attempting connection...[0m
+[0;32mI (809) WIFI: Connecting to WiFi SSID: Hydro[0m
+[0;33mW (819) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (819) MQTT: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND, using defaults[0m
+[0;32mI (829) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (829) wifi:state: init -> auth (b0)[0m
+[0;32mI (839) MQTT: MQTT module initialized with broker: mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883[0m
+[0;32mI (839) wifi:state: auth -> assoc (0)[0m
+[0;32mI (849) WEB: Registered /power/set handler[0m
+[0;32mI (849) WEB: Registered /power/get handler[0m
+[0;32mI (859) wifi:state: assoc -> run (10)[0m
+[0;32mI (859) MAIN: Web server started on Ethernet[0m
+[0;32mI (869) MAIN: System initialized successfully - Ethernet + WiFi + MQTT mode[0m
+[0;32mI (879) main_task: Returned from app_main()[0m
+[0;32mI (879) wifi:connected with Hydro, aid = 3, channel 6, BW20, bssid = 6e:94:66:e1:b7:a2[0m
+[0;32mI (889) wifi:security: WPA2-PSK, phy: bgn, rssi: -63[0m
+[0;32mI (899) wifi:pm start, type: 1[0m
+
+[0;32mI (899) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (899) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (929) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (1909) esp_netif_handlers: sta ip: 192.168.137.217, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (1909) WIFI: WiFi connected! Got IP: 192.168.137.217[0m
+[0;32mI (2649) ETH: Ethernet Link Up[0m
+[0;32mI (2649) ETH: Ethernet HW Addr 02:00:00:12:34:56[0m
+[0;32mI (2649) esp_netif_handlers: eth ip: 192.168.1.100, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2649) ETH: Ethernet Got IP Address[0m
+[0;32mI (2659) ETH: ~~~~~~~~~~~[0m
+[0;32mI (2659) ETH: ETHIP: 192.168.1.100[0m
+[0;32mI (2669) ETH: ETHMASK: 255.255.255.0[0m
+[0;32mI (2669) ETH: ETHGW: 192.168.1.1[0m
+[0;32mI (2669) ETH: ~~~~~~~~~~~[0m
+[0;32mI (5869) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (5869) MQTT: MQTT client started[0m
+[0;32mI (5869) MQTT: Other MQTT event id:7[0m
+[0;32mI (6659) wifi:<ba-add>idx:0 (ifx:0, 6e:94:66:e1:b7:a2), tid:0, ssn:6, winSize:64[0m
+[0;33mW (6869) wifi:[ADDBA]rx delba, code:37, delete tid:0[0m
+[0;32mI (6869) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (6989) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (8739) MQTT: MQTT Connected[0m
+[0;32mI (8749) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (8749) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (8749) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (8759) MQTT: Subscribed to legacy topic rfid/commands, msg_id=37091[0m
+[0;32mI (9019) MQTT: MQTT Subscribed, msg_id=210[0m
+[0;32mI (9639) MQTT: MQTT Subscribed, msg_id=34581[0m
+[0;32mI (9639) MQTT: MQTT Subscribed, msg_id=64898[0m
+[0;32mI (9639) MQTT: MQTT Subscribed, msg_id=37091[0m
+[0;32mI (9649) MQTT: MQTT Published, msg_id=37182[0m
+[0;32mI (12709) wifi:<ba-add>idx:0 (ifx:0, 6e:94:66:e1:b7:a2), tid:1, ssn:17, winSize:64[0m
+[0;32mI (24999) MQTT: MQTT Data received[0m
+[0;32mI (24999) MQTT: Topic: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (24999) MQTT: Data: {"action": "power"}[0m
+[0;32mI (24999) MQTT: Processing command - Topic: reader/esp32_rfid_reader/cmd/rfid, Data: {"action": "power"}[0m
+[0;32mI (25009) MQTT: Executing RFID command: power[0m
+[0;32mI (25019) MQTT: Published response: {"command":"rfid","action":"power","status":"error","message":"Unknown action"}[0m
+[0;32mI (29069) MQTT: MQTT Disconnected[0m
+[0;32mI (29069) MQTT: Other MQTT event id:7[0m
+[0;32mI (30869) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (31879) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (33299) MQTT: MQTT Connected[0m
+[0;32mI (33299) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (33309) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (33309) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (33319) MQTT: Subscribed to legacy topic rfid/commands, msg_id=28472[0m
+[0;32mI (33599) wifi:<ba-add>idx:1 (ifx:0, 6e:94:66:e1:b7:a2), tid:0, ssn:7, winSize:64[0m
+[0;32mI (33599) MQTT: MQTT client started[0m
+[0;32mI (33599) MQTT: Other MQTT event id:7[0m
+[0;32mI (34329) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (36059) MQTT: MQTT Connected[0m
+[0;32mI (36059) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (36059) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (36069) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (36079) MQTT: Subscribed to legacy topic rfid/commands, msg_id=36268[0m
+[0;32mI (36359) MQTT: MQTT Subscribed, msg_id=13040[0m
+[0;32mI (36669) MQTT: MQTT Subscribed, msg_id=10654[0m
+[0;32mI (36679) MQTT: MQTT Subscribed, msg_id=15386[0m
+[0;32mI (36679) MQTT: MQTT Subscribed, msg_id=36268[0m
+[0;32mI (36679) MQTT: MQTT Published, msg_id=20127[0m
+[0;32mI (56379) MQTT: MQTT Disconnected[0m
+[0;32mI (56379) MQTT: Other MQTT event id:7[0m
+[0;32mI (58289) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (58599) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (59719) MQTT: MQTT Connected[0m
+[0;32mI (59719) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (59729) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (59729) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (59739) MQTT: Subscribed to legacy topic rfid/commands, msg_id=10016[0m
+[0;32mI (60029) MQTT: MQTT client started[0m
+[0;32mI (60029) MQTT: Other MQTT event id:7[0m
+[0;32mI (60739) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (62169) MQTT: MQTT Connected[0m
+[0;32mI (62169) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (62169) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (62179) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (62189) MQTT: Subscribed to legacy topic rfid/commands, msg_id=49467[0m
+[0;32mI (62479) MQTT: MQTT Subscribed, msg_id=57613[0m
+[0;32mI (62779) MQTT: MQTT Subscribed, msg_id=24796[0m
+[0;32mI (62789) MQTT: MQTT Subscribed, msg_id=39538[0m
+[0;32mI (62789) MQTT: MQTT Subscribed, msg_id=49467[0m
+[0;32mI (62799) MQTT: MQTT Published, msg_id=61468[0m
+[0;32mI (82499) MQTT: MQTT Disconnected[0m
+[0;32mI (82499) MQTT: Other MQTT event id:7[0m
+[0;32mI (84399) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (85029) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (86139) MQTT: MQTT Connected[0m
+[0;32mI (86139) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (86149) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (86149) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (86159) MQTT: Subscribed to legacy topic rfid/commands, msg_id=16275[0m
+[0;32mI (86439) MQTT: MQTT client started[0m
+[0;32mI (86439) MQTT: Other MQTT event id:7[0m
+[0;32mI (87169) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (88589) MQTT: MQTT Connected[0m
+[0;32mI (88599) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (88599) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (88609) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (88609) MQTT: Subscribed to legacy topic rfid/commands, msg_id=4071[0m
+[0;32mI (88899) MQTT: MQTT Subscribed, msg_id=25673[0m
+[0;32mI (89199) MQTT: MQTT Subscribed, msg_id=64686[0m
+[0;32mI (89209) MQTT: MQTT Subscribed, msg_id=43971[0m
+[0;32mI (89209) MQTT: MQTT Subscribed, msg_id=4071[0m
+[0;32mI (89209) MQTT: MQTT Published, msg_id=17965[0m
+[0;32mI (108909) MQTT: MQTT Disconnected[0m
+[0;32mI (108909) MQTT: Other MQTT event id:7[0m
+[0;32mI (110829) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (111439) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (112239) MQTT: MQTT Connected[0m
+[0;32mI (112249) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (112249) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (112249) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (112259) MQTT: Subscribed to legacy topic rfid/commands, msg_id=44795[0m
+[0;32mI (112549) MQTT: MQTT client started[0m
+[0;32mI (112549) MQTT: Other MQTT event id:7[0m
+[0;32mI (115129) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (116539) MQTT: MQTT Connected[0m
+[0;32mI (116539) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (116549) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (116549) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (116559) MQTT: Subscribed to legacy topic rfid/commands, msg_id=29356[0m
+[0;32mI (116859) MQTT: MQTT Subscribed, msg_id=35894[0m
+[0;32mI (117159) MQTT: MQTT Subscribed, msg_id=54739[0m
+[0;32mI (117159) MQTT: MQTT Subscribed, msg_id=61684[0m
+[0;32mI (117169) MQTT: MQTT Subscribed, msg_id=29356[0m
+[0;32mI (117169) MQTT: MQTT Published, msg_id=45313[0m
+[0;32mI (136869) MQTT: MQTT Disconnected[0m
+[0;32mI (136869) MQTT: Other MQTT event id:7[0m
+[0;32mI (137549) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (138779) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (140199) MQTT: MQTT Connected[0m
+[0;32mI (140199) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (140199) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (140209) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (140219) MQTT: Subscribed to legacy topic rfid/commands, msg_id=37222[0m
+[0;32mI (140509) MQTT: MQTT client started[0m
+[0;32mI (140509) MQTT: Other MQTT event id:7[0m
+[0;32mI (141239) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (142669) MQTT: MQTT Connected[0m
+[0;32mI (142669) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (142669) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (142679) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (142689) MQTT: Subscribed to legacy topic rfid/commands, msg_id=5882[0m
+[0;32mI (142959) MQTT: MQTT Subscribed, msg_id=50134[0m
+[0;32mI (143269) MQTT: MQTT Subscribed, msg_id=25583[0m
+[0;32mI (143269) MQTT: MQTT Subscribed, msg_id=59187[0m
+[0;32mI (143279) MQTT: MQTT Subscribed, msg_id=5882[0m
+[0;32mI (143519) MQTT: MQTT Published, msg_id=25107[0m
+[0;32mI (162999) MQTT: MQTT Disconnected[0m
+[0;32mI (162999) MQTT: Other MQTT event id:7[0m
+[0;32mI (165509) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (166109) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (167539) MQTT: MQTT Connected[0m
+[0;32mI (167549) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (167549) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (167559) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (167569) MQTT: Subscribed to legacy topic rfid/commands, msg_id=23527[0m
+[0;32mI (167859) MQTT: MQTT client started[0m
+[0;32mI (167859) MQTT: Other MQTT event id:7[0m
+[0;32mI (168589) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (170299) MQTT: MQTT Connected[0m
+[0;32mI (170309) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (170309) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (170309) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (170319) MQTT: Subscribed to legacy topic rfid/commands, msg_id=9272[0m
+[0;32mI (170609) MQTT: MQTT Subscribed, msg_id=29105[0m
+[0;32mI (170919) MQTT: MQTT Subscribed, msg_id=57252[0m
+[0;32mI (170919) MQTT: MQTT Subscribed, msg_id=15668[0m
+[0;32mI (170929) MQTT: MQTT Subscribed, msg_id=9272[0m
+[0;32mI (171019) MQTT: MQTT Published, msg_id=54040[0m
+[0;32mI (190619) MQTT: MQTT Disconnected[0m
+[0;32mI (190619) MQTT: Other MQTT event id:7[0m
+[0;32mI (191639) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (192859) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;33mW (196929) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (196929) transport_base: Failed to open a new connection[0m
+[0;31mE (196929) mqtt_client: Error transport connect[0m
+[0;32mI (196929) MQTT: MQTT Error[0m
+[0;32mI (196939) MQTT: Last error code reported from esp-tls: 0x8006[0m
+[0;32mI (196939) MQTT: Last tls stack error number: 0x0[0m
+[0;32mI (196949) MQTT: Last captured errno : 0 (Success)[0m
+[0;32mI (196949) MQTT: MQTT Disconnected[0m
+[0;32mI (201959) MQTT: MQTT client started[0m
+[0;32mI (201959) MQTT: Other MQTT event id:7[0m
+[0;32mI (202689) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (204399) MQTT: MQTT Connected[0m
+[0;32mI (204399) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (204409) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (204409) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (204419) MQTT: Subscribed to legacy topic rfid/commands, msg_id=24807[0m
+[0;32mI (204709) MQTT: MQTT Subscribed, msg_id=42928[0m
+[0;32mI (205019) MQTT: MQTT Subscribed, msg_id=40724[0m
+[0;32mI (205019) MQTT: MQTT Subscribed, msg_id=39673[0m
+[0;32mI (205029) MQTT: MQTT Subscribed, msg_id=24807[0m
+[0;32mI (205029) MQTT: MQTT Published, msg_id=38741[0m
+[0;32mI (224719) MQTT: MQTT Disconnected[0m
+[0;32mI (224719) MQTT: Other MQTT event id:7[0m
+[0;32mI (225709) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (226959) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (230519) MQTT: MQTT Connected[0m
+[0;32mI (230519) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (230519) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (230529) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (230539) MQTT: Subscribed to legacy topic rfid/commands, msg_id=41463[0m
+[0;32mI (230819) MQTT: MQTT client started[0m
+[0;32mI (230819) MQTT: Other MQTT event id:7[0m
+[0;32mI (231549) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (233299) MQTT: MQTT Connected[0m
+[0;32mI (233299) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (233299) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (233309) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (233319) MQTT: Subscribed to legacy topic rfid/commands, msg_id=24039[0m
+[0;32mI (233589) MQTT: MQTT Subscribed, msg_id=30014[0m
+[0;32mI (233899) MQTT: MQTT Subscribed, msg_id=3838[0m
+[0;32mI (233899) MQTT: MQTT Subscribed, msg_id=6024[0m
+[0;32mI (233899) MQTT: MQTT Subscribed, msg_id=24039[0m
+[0;32mI (233909) MQTT: MQTT Published, msg_id=58393[0m
+[0;32mI (253599) MQTT: MQTT Disconnected[0m
+[0;32mI (253599) MQTT: Other MQTT event id:7[0m
+[0;32mI (254589) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (255829) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (256009) MQTT: MQTT Connected[0m
+[0;32mI (256019) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (256019) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (256019) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (256029) MQTT: Subscribed to legacy topic rfid/commands, msg_id=62743[0m
+[0;32mI (256329) MQTT: MQTT client started[0m
+[0;32mI (256329) MQTT: Other MQTT event id:7[0m
+[0;32mI (257049) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (258779) MQTT: MQTT Connected[0m
+[0;32mI (258779) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (258779) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (258789) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (258799) MQTT: Subscribed to legacy topic rfid/commands, msg_id=14428[0m
+[0;32mI (259399) MQTT: MQTT Subscribed, msg_id=5146[0m
+[0;32mI (260009) MQTT: MQTT Subscribed, msg_id=17230[0m
+[0;32mI (260009) MQTT: MQTT Subscribed, msg_id=44037[0m
+[0;32mI (260019) MQTT: MQTT Subscribed, msg_id=14428[0m
+[0;32mI (260019) MQTT: MQTT Published, msg_id=33762[0m
+[0;32mI (279489) MQTT: MQTT Disconnected[0m
+[0;32mI (279489) MQTT: Other MQTT event id:7[0m
+[0;32mI (280399) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (281329) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (282119) MQTT: MQTT Connected[0m
+[0;32mI (282129) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (282129) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (282139) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (282139) MQTT: Subscribed to legacy topic rfid/commands, msg_id=49523[0m
+[0;32mI (282429) MQTT: MQTT client started[0m
+[0;32mI (282429) MQTT: Other MQTT event id:7[0m
+[0;32mI (284399) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (286129) MQTT: MQTT Connected[0m
+[0;32mI (286129) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (286129) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (286139) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (286149) MQTT: Subscribed to legacy topic rfid/commands, msg_id=26321[0m
+[0;32mI (286429) MQTT: MQTT Subscribed, msg_id=1659[0m
+[0;32mI (286729) MQTT: MQTT Subscribed, msg_id=41993[0m
+[0;32mI (286739) MQTT: MQTT Subscribed, msg_id=30409[0m
+[0;32mI (286739) MQTT: MQTT Subscribed, msg_id=26321[0m
+[0;32mI (286739) MQTT: MQTT Published, msg_id=62058[0m
+[0;32mI (306459) MQTT: MQTT Disconnected[0m
+[0;32mI (306459) MQTT: Other MQTT event id:7[0m
+[0;32mI (307429) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (308349) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (310399) MQTT: MQTT Connected[0m
+[0;32mI (310399) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (310399) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (310409) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (310419) MQTT: Subscribed to legacy topic rfid/commands, msg_id=1628[0m
+[0;32mI (310709) MQTT: MQTT client started[0m
+[0;32mI (310709) MQTT: Other MQTT event id:7[0m
+[0;32mI (311429) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (313169) MQTT: MQTT Connected[0m
+[0;32mI (313169) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (313179) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (313179) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (313189) MQTT: Subscribed to legacy topic rfid/commands, msg_id=8481[0m
+[0;32mI (313769) MQTT: MQTT Subscribed, msg_id=8589[0m
+[0;32mI (314079) MQTT: MQTT Subscribed, msg_id=33327[0m
+[0;32mI (314089) MQTT: MQTT Subscribed, msg_id=35943[0m
+[0;32mI (314379) MQTT: MQTT Subscribed, msg_id=8481[0m
+[0;32mI (314389) MQTT: MQTT Published, msg_id=54122[0m
+[0;32mI (333869) MQTT: MQTT Disconnected[0m
+[0;32mI (333869) MQTT: Other MQTT event id:7[0m
+[0;32mI (335689) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (335709) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (337419) MQTT: MQTT Connected[0m
+[0;32mI (337429) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (337429) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (337439) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (337439) MQTT: Subscribed to legacy topic rfid/commands, msg_id=7278[0m
+[0;32mI (338049) MQTT: MQTT client started[0m
+[0;32mI (338049) MQTT: Other MQTT event id:7[0m
+[0;32mI (338759) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (340499) MQTT: MQTT Connected[0m
+[0;32mI (340509) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (340509) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (340509) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (340519) MQTT: Subscribed to legacy topic rfid/commands, msg_id=10728[0m
+[0;32mI (340809) MQTT: MQTT Subscribed, msg_id=56605[0m
+[0;32mI (341119) MQTT: MQTT Subscribed, msg_id=36355[0m
+[0;32mI (341119) MQTT: MQTT Subscribed, msg_id=59050[0m
+[0;32mI (341119) MQTT: MQTT Subscribed, msg_id=10728[0m
+[0;32mI (341129) MQTT: MQTT Published, msg_id=39062[0m
+[0;32mI (360839) MQTT: MQTT Disconnected[0m
+[0;32mI (360839) MQTT: Other MQTT event id:7[0m
+[0;32mI (362729) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (363049) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (364149) MQTT: MQTT Connected[0m
+[0;32mI (364149) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (364149) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (364159) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (364169) MQTT: Subscribed to legacy topic rfid/commands, msg_id=16013[0m
+[0;32mI (364459) MQTT: MQTT client started[0m
+[0;32mI (364459) MQTT: Other MQTT event id:7[0m
+[0;32mI (365179) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (366929) MQTT: MQTT Connected[0m
+[0;32mI (366929) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (366929) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (366939) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (366949) MQTT: Subscribed to legacy topic rfid/commands, msg_id=38798[0m
+[0;32mI (367219) MQTT: MQTT Subscribed, msg_id=45412[0m
+[0;32mI (367539) MQTT: MQTT Subscribed, msg_id=61080[0m
+[0;32mI (367539) MQTT: MQTT Subscribed, msg_id=65213[0m
+[0;32mI (367549) MQTT: MQTT Subscribed, msg_id=38798[0m
+[0;32mI (367549) MQTT: MQTT Published, msg_id=28807[0m
+[0;32mI (387239) MQTT: MQTT Disconnected[0m
+[0;32mI (387239) MQTT: Other MQTT event id:7[0m
+[0;32mI (389149) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (389459) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (390569) MQTT: MQTT Connected[0m
+[0;32mI (390579) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (390579) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (390579) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (390589) MQTT: Subscribed to legacy topic rfid/commands, msg_id=47406[0m
+[0;32mI (390879) MQTT: MQTT client started[0m
+[0;32mI (390879) MQTT: Other MQTT event id:7[0m
+[0;32mI (392829) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (394249) MQTT: MQTT Connected[0m
+[0;32mI (394259) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (394259) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (394259) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (394269) MQTT: Subscribed to legacy topic rfid/commands, msg_id=37861[0m
+[0;32mI (394569) MQTT: MQTT Subscribed, msg_id=60681[0m
+[0;32mI (394869) MQTT: MQTT Subscribed, msg_id=9129[0m
+[0;32mI (394879) MQTT: MQTT Subscribed, msg_id=37186[0m
+[0;32mI (394879) MQTT: MQTT Subscribed, msg_id=37861[0m
+[0;32mI (394889) MQTT: MQTT Published, msg_id=38990[0m
+[0;32mI (414579) MQTT: MQTT Disconnected[0m
+[0;32mI (414579) MQTT: Other MQTT event id:7[0m
+[0;32mI (415879) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (416489) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (418209) MQTT: MQTT Connected[0m
+[0;32mI (418219) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (418219) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (418229) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (418229) MQTT: Subscribed to legacy topic rfid/commands, msg_id=5908[0m
+[0;32mI (418839) MQTT: MQTT client started[0m
+[0;32mI (418839) MQTT: Other MQTT event id:7[0m
+[0;32mI (419559) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (420979) MQTT: MQTT Connected[0m
+[0;32mI (420979) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (420989) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (420989) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (420999) MQTT: Subscribed to legacy topic rfid/commands, msg_id=57552[0m
+[0;32mI (421299) MQTT: MQTT Subscribed, msg_id=65298[0m
+[0;32mI (421599) MQTT: MQTT Subscribed, msg_id=56015[0m
+[0;32mI (421599) MQTT: MQTT Subscribed, msg_id=60675[0m
+[0;32mI (421599) MQTT: MQTT Subscribed, msg_id=57552[0m
+[0;32mI (421609) MQTT: MQTT Published, msg_id=29174[0m
+[0;32mI (441309) MQTT: MQTT Disconnected[0m
+[0;32mI (441309) MQTT: Other MQTT event id:7[0m

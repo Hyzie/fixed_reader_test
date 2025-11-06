@@ -1,0 +1,25 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM8 instead...[0m
+[0;33m--- esp-idf-monitor 1.8.0 on \\.\COM8 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x4037baca: [0;33mesp_cpu_wait_for_intr[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/cpu.c[0m[0m:[1;31m145[0m
+[0m--- 0x4200ca6c: [0;33mwifi_connect_with_credentials[0m[0m at [0;32mD:/esp/esp32_w5500_idf/fixed_reader_test/main/wifi.c[0m[0m:[1;31m141[0m
+[0m--- 0x4037e22b: [0;33m_esp_error_check_failed[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/esp_err.c[0m[0m:[1;31m50[0m
+[0m--- 0x40375c36: [0;33mpanic_abort[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/panic.c[0m[0m:[1;31m466[0m
+[0m--- 0x4037e235: [0;33mesp_system_abort[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c[0m[0m:[1;31m93[0m
+[0m--- 0x40387189: [0;33mabort[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/newlib/abort.c[0m[0m:[1;31m38[0m
+[0m--- 0x4037e22b: [0;33m_esp_error_check_failed[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_system/esp_err.c[0m[0m:[1;31m50[0m
+[0m--- 0x4200ca6c: [0;33mwifi_connect_with_credentials[0m[0m at [0;32mD:/esp/esp32_w5500_idf/fixed_reader_test/main/wifi.c[0m[0m:[1;31m141[0m
+[0m--- 0x4200cec1: [0;33mwifi_test_connection[0m[0m at [0;32mD:/esp/esp32_w5500_idf/fixed_reader_test/main/wifi.c[0m[0m:[1;31m272[0m
+[0m--- 0x4200b76e: [0;33mwifi_test_handler[0m[0m at [0;32mD:/esp/esp32_w5500_idf/fixed_reader_test/main/web.c[0m[0m:[1;31m425[0m
+[0m--- 0x4202b4a7: [0;33mhttpd_uri[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_http_server/src/httpd_uri.c[0m[0m:[1;31m329[0m
+[0m--- 0x4202bd05: [0;33mhttpd_parse_req[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_http_server/src/httpd_parse.c[0m[0m:[1;31m667[0m
+[0m--- 0x4202bda4: [0;33mhttpd_req_new[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_http_server/src/httpd_parse.c[0m[0m:[1;31m795[0m
+[0m--- 0x4202abcc: [0;33mhttpd_sess_process[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_http_server/src/httpd_sess.c[0m[0m:[1;31m426[0m
+[0m--- 0x42029e00: [0;33mhttpd_process_session[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_http_server/src/httpd_main.c[0m[0m:[1;31m255[0m
+[0m--- 0x420a5a23: [0;33mhttpd_sess_enum[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_http_server/src/httpd_sess.c[0m[0m:[1;31m50[0m
+[0m--- 0x4202a5ca: [0;33mhttpd_server[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_http_server/src/httpd_main.c[0m[0m:[1;31m305[0m
+[0m--- 0x4202a637: [0;33mhttpd_thread[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_http_server/src/httpd_main.c[0m[0m:[1;31m327[0m
+[0m--- 0x4037edfd: [0;33mvPortTaskWrapper[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x4037baca: [0;33mesp_cpu_wait_for_intr[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/esp_hw_support/cpu.c[0m[0m:[1;31m145[0m
+[0m

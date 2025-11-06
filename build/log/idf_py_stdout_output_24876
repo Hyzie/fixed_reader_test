@@ -1,0 +1,1359 @@
+[0;32mI (147) esp_image: segment 1: paddr=00051d84 vaddr=3fc9bcESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037baca
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Nov  6 2025 11:17:54[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00180000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=41d5ch (269660) map[0m
+[0;32mI (147) esp_image: segment 1: paddr=00051d84 vaddr=3fc9bc00 size=047ach ( 18348) load[0m
+[0;32mI (152) esp_image: segment 2: paddr=00056538 vaddr=40374000 size=09ae0h ( 39648) load[0m
+[0;32mI (162) esp_image: segment 3: paddr=00060020 vaddr=42000020 size=b0c70h (724080) map[0m
+[0;32mI (292) esp_image: segment 4: paddr=00110c98 vaddr=4037dae0 size=0e0ach ( 57516) load[0m
+[0;32mI (315) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (315) boot: Disabling RNG early entropy source...[0m
+[0;32mI (326) cpu_start: Multicore app[0m
+[0;32mI (336) cpu_start: Pro cpu start user code[0m
+[0;32mI (336) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (336) cpu_start: Application information:[0m
+[0;32mI (339) cpu_start: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (346) cpu_start: App version:      523f2e4-dirty[0m
+[0;32mI (351) cpu_start: Compile time:     Nov  6 2025 11:17:03[0m
+[0;32mI (357) cpu_start: ELF file SHA256:  2089a7be3...[0m
+[0;32mI (363) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (367) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (372) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (377) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (382) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (389) heap_init: At 3FCA63B8 len 00043358 (268 KiB): RAM[0m
+[0;32mI (395) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (401) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (407) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (415) spi_flash: detected chip: gd[0m
+[0;32mI (418) spi_flash: flash io: dio[0m
+[0;33mW (422) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (435) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (442) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (449) main_task: Started on CPU0[0m
+[0;32mI (459) main_task: Calling app_main()[0m
+[0;32mI (489) uart: queue free spaces: 30[0m
+[0;32mI (489) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (489) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (599) UART: UART RX task started and waiting for data...[0m
+UART RX task created
+[0;32mI (599) ETH: Static IP configured: 192.168.1.100[0m
+[0;32mI (599) ETH: Gateway: 192.168.1.1[0m
+[0;32mI (599) ETH: Netmask: 255.255.255.0[0m
+[0;32mI (609) ETH: DNS servers configured from network_config.h[0m
+[0;32mI (639) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (639) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (649) ETH: Ethernet Started[0m
+[0;32mI (649) pp: pp rom version: e7ae62f[0m
+[0;32mI (649) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (659) wifi:wifi driver task: 3fcbdc90, prio:23, stack:6656, core=0[0m
+[0;32mI (669) wifi:wifi firmware version: 3e0076f[0m
+[0;32mI (669) wifi:wifi certification version: v7.0[0m
+[0;32mI (669) wifi:config NVS flash: enabled[0m
+[0;32mI (669) wifi:config nano formating: disabled[0m
+[0;32mI (679) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (679) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (679) wifi:Init management short buffer num: 32[0m
+[0;32mI (689) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (689) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (699) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (699) wifi:Init static rx buffer num: 10[0m
+[0;32mI (699) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (709) wifi_init: rx ba win: 6[0m
+[0;32mI (709) wifi_init: tcpip mbox: 32[0m
+[0;32mI (719) wifi_init: udp mbox: 6[0m
+[0;32mI (719) wifi_init: tcp mbox: 6[0m
+[0;32mI (719) wifi_init: tcp tx win: 5760[0m
+[0;32mI (729) wifi_init: tcp rx win: 5760[0m
+[0;32mI (729) wifi_init: tcp mss: 1440[0m
+[0;32mI (739) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (739) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (749) phy_init: phy_version 670,b7bc9b9,Apr 30 2024,10:54:13[0m
+[0;32mI (789) wifi:mode : sta (98:3d:ae:9f:b7:80)[0m
+[0;32mI (789) wifi:enable tsf[0m
+[0;32mI (799) WIFI: WiFi module initialized (STA mode)[0m
+[0;32mI (799) WIFI: WiFi started[0m
+[0;32mI (799) WIFI: Found saved WiFi credentials, attempting connection...[0m
+[0;32mI (809) WIFI: Connecting to WiFi SSID: Hydro[0m
+[0;33mW (809) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (819) MQTT: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND, using defaults[0m
+[0;32mI (819) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (829) wifi:state: init -> auth (b0)[0m
+[0;32mI (829) MQTT: MQTT module initialized with broker: mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883[0m
+[0;32mI (849) WEB: Registered /power/set handler[0m
+[0;32mI (849) WEB: Registered /power/get handler[0m
+[0;32mI (849) MAIN: Web server started on Ethernet[0m
+[0;32mI (859) MAIN: System initialized successfully - Ethernet + WiFi + MQTT mode[0m
+[0;32mI (869) main_task: Returned from app_main()[0m
+[0;32mI (1829) wifi:state: auth -> init (200)[0m
+[0;32mI (1829) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (1839) WIFI: Retry connecting to WiFi (1/5)[0m
+[0;32mI (2649) ETH: Ethernet Link Up[0m
+[0;32mI (2649) ETH: Ethernet HW Addr 02:00:00:12:34:56[0m
+[0;32mI (2649) esp_netif_handlers: eth ip: 192.168.1.100, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2649) ETH: Ethernet Got IP Address[0m
+[0;32mI (2659) ETH: ~~~~~~~~~~~[0m
+[0;32mI (2659) ETH: ETHIP: 192.168.1.100[0m
+[0;32mI (2669) ETH: ETHMASK: 255.255.255.0[0m
+[0;32mI (2669) ETH: ETHGW: 192.168.1.1[0m
+[0;32mI (2669) ETH: ~~~~~~~~~~~[0m
+[0;32mI (4249) WIFI: Retry connecting to WiFi (2/5)[0m
+[0;32mI (4259) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (4259) wifi:state: init -> auth (b0)[0m
+[0;32mI (4269) wifi:state: auth -> assoc (0)[0m
+[0;32mI (4269) wifi:state: assoc -> run (10)[0m
+[0;32mI (9369) wifi:state: run -> init (c0)[0m
+[0;32mI (9369) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (9379) WIFI: Retry connecting to WiFi (3/5)[0m
+[0;32mI (11789) WIFI: Retry connecting to WiFi (4/5)[0m
+[0;32mI (11829) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (11829) wifi:state: init -> auth (b0)[0m
+[0;32mI (11839) wifi:state: auth -> assoc (0)[0m
+[0;32mI (11849) wifi:state: assoc -> run (10)[0m
+[0;32mI (11869) wifi:connected with Hydro, aid = 5, channel 6, BW20, bssid = 6e:94:66:e1:b7:a2[0m
+[0;32mI (11869) wifi:security: WPA2-PSK, phy: bgn, rssi: -60[0m
+[0;32mI (11869) wifi:pm start, type: 1[0m
+
+[0;32mI (11869) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (11879) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (11949) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (12889) esp_netif_handlers: sta ip: 192.168.137.217, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (12889) WIFI: WiFi connected! Got IP: 192.168.137.217[0m
+[0;32mI (20859) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (20859) MQTT: MQTT client started[0m
+[0;32mI (20859) MQTT: Other MQTT event id:7[0m
+[0;32mI (26169) wifi:<ba-add>idx:0 (ifx:0, 6e:94:66:e1:b7:a2), tid:1, ssn:7, winSize:64[0m
+[0;32mI (26199) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (27919) MQTT: MQTT Connected[0m
+[0;32mI (27919) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (27929) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (27929) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (27939) MQTT: Subscribed to legacy topic rfid/commands, msg_id=51413[0m
+[0;32mI (28229) MQTT: MQTT Subscribed, msg_id=50417[0m
+[0;32mI (28539) MQTT: MQTT Subscribed, msg_id=11565[0m
+[0;32mI (28669) MQTT: MQTT Subscribed, msg_id=26981[0m
+[0;32mI (28669) MQTT: MQTT Subscribed, msg_id=51413[0m
+[0;32mI (28669) MQTT: MQTT Published, msg_id=39511[0m
+[0;33mW (57969) MQTT: MQTT Disconnected[0m
+[0;32mI (57969) MQTT: Other MQTT event id:7[0m
+[0;32mI (59579) wifi:<ba-add>idx:1 (ifx:0, 6e:94:66:e1:b7:a2), tid:0, ssn:7, winSize:64[0m
+[0;32mI (59679) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (60859) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (60859) MQTT: Stopping existing MQTT client[0m
+[0;32mI (61099) MQTT: MQTT Connected[0m
+[0;32mI (61109) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (61109) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (61109) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (61119) MQTT: Subscribed to legacy topic rfid/commands, msg_id=39314[0m
+[0;32mI (62409) MQTT: MQTT client started[0m
+[0;32mI (62409) MQTT: Other MQTT event id:7[0m
+[0;32mI (65209) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (66639) MQTT: MQTT Connected[0m
+[0;32mI (66639) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (66649) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (66649) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (66659) MQTT: Subscribed to legacy topic rfid/commands, msg_id=18649[0m
+[0;32mI (66939) MQTT: MQTT Subscribed, msg_id=43695[0m
+[0;32mI (67249) MQTT: MQTT Subscribed, msg_id=45515[0m
+[0;32mI (67249) MQTT: MQTT Subscribed, msg_id=24374[0m
+[0;32mI (67259) MQTT: MQTT Subscribed, msg_id=18649[0m
+[0;32mI (67259) MQTT: MQTT Published, msg_id=13759[0m
+[0;32mI (95199) MQTT: MQTT Data received[0m
+[0;32mI (95199) MQTT: Topic: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (95199) MQTT: Data: {"action": "status"}[0m
+[0;32mI (95199) MQTT: Processing command - Topic: reader/esp32_rfid_reader/cmd/rfid, Data: {"action": "status"}[0m
+[0;32mI (95209) MQTT: Executing RFID command: status[0m
+[0;32mI (95219) MQTT: Published response: {"command":"rfid","action":"status","status":"success","inventory_status":"stopped","total_tags":0}[0m
+[0;33mW (97249) MQTT: MQTT Disconnected[0m
+[0;32mI (97249) MQTT: Other MQTT event id:7[0m
+[0;32mI (102409) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (102409) MQTT: Stopping existing MQTT client[0m
+[0;31mE (104249) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (104249) esp-tls: Failed to open new connection[0m
+[0;31mE (104249) transport_base: Failed to open a new connection[0m
+[0;31mE (104259) mqtt_client: Error transport connect[0m
+[0;31mE (104259) MQTT: MQTT Error[0m
+[0;31mE (104269) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (104269) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (104279) MQTT: Last captured errno : 119 (Connection already in progress)[0m
+[0;33mW (104289) MQTT: MQTT Disconnected[0m
+[0;32mI (105289) MQTT: MQTT client started[0m
+[0;32mI (105289) MQTT: Other MQTT event id:7[0m
+[0;32mI (107309) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (109019) MQTT: MQTT Connected[0m
+[0;32mI (109019) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (109029) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (109029) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (109039) MQTT: Subscribed to legacy topic rfid/commands, msg_id=37551[0m
+[0;32mI (109329) MQTT: MQTT Subscribed, msg_id=50378[0m
+[0;32mI (109659) MQTT: MQTT Subscribed, msg_id=44671[0m
+[0;32mI (109659) MQTT: MQTT Subscribed, msg_id=53908[0m
+[0;32mI (109949) MQTT: MQTT Subscribed, msg_id=37551[0m
+[0;32mI (109959) MQTT: MQTT Published, msg_id=50885[0m
+[0;32mI (124689) MQTT: MQTT Data received[0m
+[0;32mI (124689) MQTT: Topic: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (124689) MQTT: Data: {"action": "start"}[0m
+[0;32mI (124699) MQTT: Processing command - Topic: reader/esp32_rfid_reader/cmd/rfid, Data: {"action": "start"}[0m
+[0;32mI (124709) MQTT: Executing RFID command: start[0m
+[0;32mI (124709) UART: UART sent 14 bytes: TX: 5A 00 01 02 10 00 05 00 00 00 01 01 F4 87[0m
+RFID inventory started via MQTT - counters reset
+[0;32mI (124729) MQTT: Published response: {"command":"rfid","action":"start","status":"success","message":"Inventory started"}[0m
+[0;32mI (124809) MQTT: Published RFID data (count: 10)[0m
+[0;32mI (127169) MQTT: Published RFID data (count: 20)[0m
+[0;32mI (127489) MQTT: Published RFID data (count: 30)[0m
+[0;32mI (130549) MQTT: Published RFID data (count: 40)[0m
+[0;32mI (138829) MQTT: Published RFID data (count: 50)[0m
+[0;32mI (139149) MQTT: Published RFID data (count: 60)[0m
+[0;33mW (141589) MQTT: MQTT Disconnected[0m
+[0;33mW (141589) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (141589) MQTT: Published RFID data (count: 70)[0m
+[0;32mI (141589) MQTT: Other MQTT event id:7[0m
+[0;32mI (142639) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (144349) MQTT: MQTT Connected[0m
+[0;32mI (144359) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (144359) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (144369) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (144379) MQTT: Subscribed to legacy topic rfid/commands, msg_id=15738[0m
+[0;32mI (144409) MQTT: Published RFID data (count: 80)[0m
+[0;32mI (144659) MQTT: MQTT Subscribed, msg_id=30315[0m
+[0;32mI (144749) MQTT: MQTT Subscribed, msg_id=31900[0m
+[0;32mI (144759) MQTT: MQTT Subscribed, msg_id=18036[0m
+[0;33mW (144769) UART: UART ring buffer full - clearing buffer[0m
+[0;32mI (145279) MQTT: Published RFID data (count: 90)[0m
+[0;32mI (145289) MQTT: MQTT Subscribed, msg_id=15738[0m
+[0;32mI (145289) MQTT: MQTT Published, msg_id=43260[0m
+[0;32mI (145319) MQTT: Published RFID data (count: 100)[0m
+TAG[0] epc=E28069150000501B289049AC rssi=-48 ant=1 count=25 total=105 (fallback)
+[0;32mI (147129) MQTT: Published RFID data (count: 110)[0m
+[0;32mI (147439) MQTT: Published RFID data (count: 120)[0m
+[0;32mI (147749) MQTT: Published RFID data (count: 130)[0m
+[0;32mI (148049) MQTT: Published RFID data (count: 140)[0m
+[0;32mI (148359) MQTT: Published RFID data (count: 150)[0m
+[0;32mI (148659) MQTT: Published RFID data (count: 160)[0m
+[0;32mI (148979) MQTT: Published RFID data (count: 170)[0m
+[0;33mW (148989) UART: UART ring buffer full - clearing buffer[0m
+[0;32mI (149279) MQTT: Published RFID data (count: 180)[0m
+[0;32mI (149589) MQTT: Published RFID data (count: 190)[0m
+[0;32mI (149899) MQTT: Published RFID data (count: 200)[0m
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=59 total=206 (fallback)
+[0;32mI (150519) MQTT: Published RFID data (count: 210)[0m
+[0;32mI (152669) MQTT: Published RFID data (count: 220)[0m
+[0;32mI (152969) MQTT: Published RFID data (count: 230)[0m
+[0;32mI (153289) MQTT: Published RFID data (count: 240)[0m
+[0;32mI (153589) MQTT: Published RFID data (count: 250)[0m
+[0;32mI (153899) MQTT: Published RFID data (count: 260)[0m
+[0;32mI (154209) MQTT: Published RFID data (count: 270)[0m
+[0;32mI (154509) MQTT: Published RFID data (count: 280)[0m
+[0;33mW (154519) UART: UART ring buffer full - clearing buffer[0m
+[0;32mI (154809) MQTT: Published RFID data (count: 290)[0m
+[0;32mI (155129) MQTT: Published RFID data (count: 300)[0m
+TAG[0] epc=E28069150000501B289049AC rssi=-48 ant=1 count=69 total=307 (fallback)
+[0;32mI (155429) MQTT: Published RFID data (count: 310)[0m
+[0;32mI (155749) MQTT: Published RFID data (count: 320)[0m
+[0;32mI (156049) MQTT: Published RFID data (count: 330)[0m
+[0;32mI (156359) MQTT: Published RFID data (count: 340)[0m
+[0;32mI (156659) MQTT: Published RFID data (count: 350)[0m
+[0;32mI (156969) MQTT: Published RFID data (count: 360)[0m
+[0;32mI (157269) MQTT: Published RFID data (count: 370)[0m
+[0;32mI (157589) MQTT: Published RFID data (count: 380)[0m
+[0;32mI (160649) MQTT: Published RFID data (count: 390)[0m
+[0;32mI (160949) MQTT: Published RFID data (count: 400)[0m
+TAG[1] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=105 total=412 (fallback)
+[0;33mW (160959) UART: UART ring buffer full - clearing buffer[0m
+[0;32mI (161259) MQTT: Published RFID data (count: 410)[0m
+[0;32mI (164039) MQTT: Published RFID data (count: 420)[0m
+[0;32mI (164339) MQTT: Published RFID data (count: 430)[0m
+[0;32mI (164649) MQTT: Published RFID data (count: 440)[0m
+[0;32mI (164959) MQTT: Published RFID data (count: 450)[0m
+[0;32mI (165259) MQTT: Published RFID data (count: 460)[0m
+[0;32mI (165569) MQTT: Published RFID data (count: 470)[0m
+[0;33mW (165889) UART: UART ring buffer full - clearing buffer[0m
+[0;32mI (165899) MQTT: Published RFID data (count: 480)[0m
+[0;32mI (166179) MQTT: Published RFID data (count: 490)[0m
+[0;32mI (166499) MQTT: Published RFID data (count: 500)[0m
+TAG[0] epc=E28069150000501B289049AC rssi=-48 ant=1 count=93 total=516 (fallback)
+[0;32mI (167099) MQTT: Published RFID data (count: 510)[0m
+[0;32mI (169549) MQTT: Published RFID data (count: 520)[0m
+[0;32mI (169579) MQTT: Published RFID data (count: 530)[0m
+[0;32mI (170469) MQTT: Published RFID data (count: 540)[0m
+[0;32mI (170499) MQTT: Published RFID data (count: 550)[0m
+[0;32mI (171079) MQTT: Published RFID data (count: 560)[0m
+[0;32mI (171109) MQTT: Published RFID data (count: 570)[0m
+[0;32mI (171699) MQTT: Published RFID data (count: 580)[0m
+[0;32mI (171719) MQTT: Published RFID data (count: 590)[0m
+[0;33mW (172019) UART: UART ring buffer full - clearing buffer[0m
+[0;32mI (172309) MQTT: Published RFID data (count: 600)[0m
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=168 total=617 (fallback)
+[0;32mI (172629) MQTT: Published RFID data (count: 610)[0m
+[0;32mI (172929) MQTT: Published RFID data (count: 620)[0m
+[0;32mI (173239) MQTT: Published RFID data (count: 630)[0m
+[0;32mI (173539) MQTT: Published RFID data (count: 640)[0m
+[0;32mI (173859) MQTT: Published RFID data (count: 650)[0m
+[0;32mI (176609) MQTT: Published RFID data (count: 660)[0m
+[0;33mW (176619) MQTT: MQTT Disconnected[0m
+[0;33mW (176619) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (176619) MQTT: Other MQTT event id:7[0m
+[0;32mI (178759) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (180609) MQTT: MQTT Connected[0m
+[0;32mI (180609) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (180609) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (180619) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (180629) MQTT: Subscribed to legacy topic rfid/commands, msg_id=23186[0m
+[0;32mI (180659) MQTT: Published RFID data (count: 670)[0m
+[0;32mI (181239) MQTT: MQTT Subscribed, msg_id=42157[0m
+[0;32mI (181239) MQTT: MQTT Subscribed, msg_id=28387[0m
+[0;32mI (181249) MQTT: MQTT Subscribed, msg_id=14091[0m
+[0;32mI (181259) MQTT: MQTT Subscribed, msg_id=23186[0m
+[0;32mI (181259) MQTT: MQTT Published, msg_id=24405[0m
+[0;32mI (181269) MQTT: Published RFID data (count: 680)[0m
+[0;32mI (181839) MQTT: Published RFID data (count: 690)[0m
+[0;32mI (181869) MQTT: Published RFID data (count: 700)[0m
+TAG[1] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=188 total=723 (fallback)
+[0;32mI (182449) MQTT: Published RFID data (count: 710)[0m
+[0;32mI (182479) MQTT: Published RFID data (count: 720)[0m
+[0;33mW (183059) UART: UART ring buffer full - clearing buffer[0m
+[0;32mI (183079) MQTT: Published RFID data (count: 730)[0m
+[0;32mI (183159) MQTT: Published RFID data (count: 740)[0m
+[0;32mI (186169) MQTT: Published RFID data (count: 750)[0m
+[0;32mI (186459) MQTT: Published RFID data (count: 760)[0m
+[0;32mI (186769) MQTT: Published RFID data (count: 770)[0m
+[0;32mI (187069) MQTT: Published RFID data (count: 780)[0m
+[0;32mI (190439) MQTT: Published RFID data (count: 790)[0m
+[0;32mI (190469) MQTT: Published RFID data (count: 800)[0m
+TAG[1] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=209 total=823 (fallback)
+[0;33mW (190759) UART: UART ring buffer full - clearing buffer[0m
+[0;32mI (191049) MQTT: Published RFID data (count: 810)[0m
+[0;32mI (191079) MQTT: Published RFID data (count: 820)[0m
+[0;32mI (194449) MQTT: Published RFID data (count: 830)[0m
+[0;32mI (194749) MQTT: Published RFID data (count: 840)[0m
+[0;32mI (195109) MQTT: Published RFID data (count: 850)[0m
+[0;32mI (197819) MQTT: MQTT Data received[0m
+[0;32mI (197819) MQTT: Topic: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (197819) MQTT: Data: {"action": "stop"}[0m
+[0;32mI (197829) MQTT: Processing command - Topic: reader/esp32_rfid_reader/cmd/rfid, Data: {"action": "stop"}[0m
+[0;32mI (197839) MQTT: Executing RFID command: stop[0m
+[0;32mI (197839) UART: UART sent 9 bytes: TX: 5A 00 01 02 11 00 00 2A B3[0m
+RFID stop command sent via MQTT: 5A 00 01 02 11 00 00 2A B3 
+[0;32mI (197849) UART: UART sent 9 bytes: TX: 5A 00 01 02 FF 00 00 88 5A[0m
+RFID fallback stop command sent via MQTT
+[0;32mI (198109) MQTT: Published response: {"command":"rfid","action":"stop","status":"success","message":"Inventory stopped"}[0m
+[0;33mW (198119) UART: UART ring buffer full - clearing buffer[0m
+[0;33mW (211249) MQTT: MQTT Disconnected[0m
+[0;32mI (211249) MQTT: Other MQTT event id:7[0m
+[0;32mI (212079) UART: UART sent 9 bytes: TX: 5A 00 01 02 02 00 00 29 59[0m
+[0;32mI (212369) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (214089) MQTT: MQTT Connected[0m
+[0;32mI (214089) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (214089) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (214099) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (214109) MQTT: Subscribed to legacy topic rfid/commands, msg_id=2537[0m
+[0;32mI (214119) MQTT: Published response: {"command":"power","action":"query","status":"success","power":{"ant1":30,"ant2":30,"ant3":30,"ant4":30}}[0m
+[0;32mI (214389) MQTT: MQTT Subscribed, msg_id=15379[0m
+[0;32mI (214699) MQTT: MQTT Subscribed, msg_id=51376[0m
+[0;32mI (214699) MQTT: MQTT Subscribed, msg_id=28340[0m
+[0;32mI (214709) MQTT: MQTT Subscribed, msg_id=2537[0m
+[0;32mI (214709) MQTT: MQTT Published, msg_id=60093[0m
+[0;33mW (245009) MQTT: MQTT Disconnected[0m
+[0;32mI (245009) MQTT: Other MQTT event id:7[0m
+[0;32mI (245289) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (245289) MQTT: Stopping existing MQTT client[0m
+[0;32mI (246149) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (247879) MQTT: MQTT Connected[0m
+[0;32mI (247889) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (247889) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (247889) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (247899) MQTT: Subscribed to legacy topic rfid/commands, msg_id=16078[0m
+[0;32mI (249489) MQTT: MQTT client started[0m
+[0;32mI (249489) MQTT: Other MQTT event id:7[0m
+[0;32mI (252599) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (254329) MQTT: MQTT Connected[0m
+[0;32mI (254339) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (254339) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (254349) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (254349) MQTT: Subscribed to legacy topic rfid/commands, msg_id=15579[0m
+[0;32mI (254649) MQTT: MQTT Subscribed, msg_id=7712[0m
+[0;32mI (254939) MQTT: MQTT Subscribed, msg_id=21262[0m
+[0;32mI (254949) MQTT: MQTT Subscribed, msg_id=20149[0m
+[0;32mI (255249) MQTT: MQTT Subscribed, msg_id=15579[0m
+[0;32mI (255259) MQTT: MQTT Published, msg_id=9694[0m
+[0;32mI (258629) MQTT: MQTT Data received[0m
+[0;32mI (258629) MQTT: Topic: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (258629) MQTT: Data: {"action": "start"}[0m
+[0;32mI (258639) MQTT: Processing command - Topic: reader/esp32_rfid_reader/cmd/rfid, Data: {"action": "start"}[0m
+[0;32mI (258649) MQTT: Executing RFID command: start[0m
+[0;32mI (258649) UART: UART sent 14 bytes: TX: 5A 00 01 02 10 00 05 00 00 00 01 01 F4 87[0m
+RFID inventory started via MQTT - counters reset
+[0;32mI (258669) MQTT: Published response: {"command":"rfid","action":"start","status":"success","message":"Inventory started"}[0m
+[0;32mI (258729) MQTT: Published RFID data (count: 860)[0m
+[0;32mI (259249) MQTT: Published RFID data (count: 870)[0m
+[0;32mI (261429) MQTT: Published RFID data (count: 880)[0m
+[0;33mW (272029) transport_base: Poll timeout or error, errno=Success, fd=60, timeout_ms=10000[0m
+[0;31mE (272029) mqtt_client: Writing didn't complete in specified timeout: errno=0[0m
+[0;33mW (272029) MQTT: MQTT Disconnected[0m
+[0;33mW (272039) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272039) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272049) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272059) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272069) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272069) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (272079) MQTT: Published RFID data (count: 890)[0m
+[0;33mW (272089) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272089) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272099) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272109) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272119) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272119) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272129) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272139) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272149) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272159) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (272159) MQTT: Published RFID data (count: 900)[0m
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=18 total=47 (fallback)
+[0;33mW (272179) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272179) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272189) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272199) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272209) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272209) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272219) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272229) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272239) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272239) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (272249) MQTT: Published RFID data (count: 910)[0m
+[0;33mW (272259) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272259) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272269) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272279) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272289) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272299) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272299) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272309) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272319) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272339) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (272339) MQTT: Published RFID data (count: 920)[0m
+[0;33mW (272339) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272349) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272349) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272359) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272369) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272379) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272389) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272389) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272399) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272409) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (272419) MQTT: Published RFID data (count: 930)[0m
+[0;33mW (272419) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272429) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272439) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272439) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272449) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272459) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272469) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272469) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272479) UART: UART ring buffer full - clearing buffer[0m
+[0;33mW (272499) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272499) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (272499) MQTT: Published RFID data (count: 940)[0m
+[0;33mW (272509) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272519) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272519) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272529) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272539) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272549) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272549) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272559) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272569) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272579) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (272579) MQTT: Published RFID data (count: 950)[0m
+[0;33mW (272589) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272599) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272609) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272609) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272619) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272629) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272639) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272639) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272649) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272659) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (272669) MQTT: Published RFID data (count: 960)[0m
+[0;33mW (272669) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272679) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272689) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272689) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272699) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272709) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272719) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272729) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272729) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272739) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (272749) MQTT: Published RFID data (count: 970)[0m
+[0;33mW (272749) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272759) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272769) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272779) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272779) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272789) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272799) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272809) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272819) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272819) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (272829) MQTT: Published RFID data (count: 980)[0m
+[0;33mW (272839) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272839) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272849) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272859) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272869) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272869) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272879) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272889) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272899) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272899) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (272909) MQTT: Published RFID data (count: 990)[0m
+[0;33mW (272919) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272929) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272929) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272939) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272949) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272959) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272959) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272969) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272979) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (272989) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (272989) MQTT: Published RFID data (count: 1000)[0m
+TAG[1] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=39 total=148 (fallback)
+[0;33mW (273009) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273009) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273019) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273029) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273039) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273039) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273049) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273059) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273069) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273079) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (273079) MQTT: Published RFID data (count: 1010)[0m
+[0;33mW (273089) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273099) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273099) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273109) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273119) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273129) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273129) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273139) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273149) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273159) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (273159) MQTT: Published RFID data (count: 1020)[0m
+[0;33mW (273169) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273179) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273189) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273189) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273199) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273209) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273219) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273219) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273229) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273239) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (273249) MQTT: Published RFID data (count: 1030)[0m
+[0;33mW (273249) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273259) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273269) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273269) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273279) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273289) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273299) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273309) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273309) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273319) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (273329) MQTT: Published RFID data (count: 1040)[0m
+[0;33mW (273329) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273339) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273349) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273359) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273359) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (273369) UART: UART event received, type: 0 (count: 500)[0m
+[0;33mW (273379) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273389) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273389) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273399) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273409) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (273419) MQTT: Published RFID data (count: 1050)[0m
+[0;33mW (273419) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273429) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273439) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273449) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273449) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273459) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273469) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273479) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273479) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273489) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (273499) MQTT: Published RFID data (count: 1060)[0m
+[0;33mW (273499) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273509) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273519) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273529) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273529) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273539) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273549) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273559) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273559) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273569) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (273579) MQTT: Published RFID data (count: 1070)[0m
+[0;33mW (273589) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273589) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273599) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273609) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273619) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273619) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273629) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273639) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273649) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273649) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (273659) MQTT: Published RFID data (count: 1080)[0m
+[0;33mW (273669) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273679) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273679) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273689) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273699) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273709) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273709) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273719) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273729) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273739) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (273739) MQTT: Published RFID data (count: 1090)[0m
+[0;33mW (273749) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273759) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273759) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273769) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273779) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273789) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273799) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273799) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273809) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273819) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (273829) MQTT: Published RFID data (count: 1100)[0m
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=76 total=249 (fallback)
+[0;33mW (273839) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273849) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273849) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273859) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273869) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273879) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273879) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273889) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273899) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273909) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (273909) MQTT: Published RFID data (count: 1110)[0m
+[0;33mW (273919) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273929) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273939) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273939) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273949) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273959) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273969) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273969) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273979) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (273989) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (273999) MQTT: Published RFID data (count: 1120)[0m
+[0;33mW (273999) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274009) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274019) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274029) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274029) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274039) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274049) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274059) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274059) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274069) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (274079) MQTT: Published RFID data (count: 1130)[0m
+[0;33mW (274079) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274089) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274099) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274109) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274109) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274119) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274129) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274139) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274139) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274149) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (274159) MQTT: Published RFID data (count: 1140)[0m
+[0;33mW (274169) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274169) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274179) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274189) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274199) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274199) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274209) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274219) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274229) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274229) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (274239) MQTT: Published RFID data (count: 1150)[0m
+[0;33mW (274249) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274259) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274259) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274269) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274279) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274289) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274289) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274299) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274309) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274319) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (274319) MQTT: Published RFID data (count: 1160)[0m
+[0;33mW (274329) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274339) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274339) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274349) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274359) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274369) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274379) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274379) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274389) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274399) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (274409) MQTT: Published RFID data (count: 1170)[0m
+[0;33mW (274409) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274419) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274429) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274429) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274439) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274449) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274459) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274459) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274469) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274479) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (274489) MQTT: Published RFID data (count: 1180)[0m
+[0;33mW (274489) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274499) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274509) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274519) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274519) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274529) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274539) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274549) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274549) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274559) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (274569) MQTT: Published RFID data (count: 1190)[0m
+[0;33mW (274569) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274579) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274589) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274599) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274609) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274609) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274619) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274629) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274639) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274639) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (274649) MQTT: Published RFID data (count: 1200)[0m
+TAG[1] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=105 total=351 (fallback)
+[0;33mW (274659) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274669) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274679) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274689) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274689) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274699) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274709) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274719) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274729) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274729) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (274739) MQTT: Published RFID data (count: 1210)[0m
+[0;33mW (274749) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274749) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274759) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274769) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274779) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274779) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274789) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274799) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274809) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274809) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (274819) MQTT: Published RFID data (count: 1220)[0m
+[0;33mW (274829) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274839) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274839) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274849) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274859) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274869) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274869) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274879) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274889) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274899) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (274899) MQTT: Published RFID data (count: 1230)[0m
+[0;33mW (274909) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274919) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274919) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274929) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274939) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274949) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274959) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274959) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274969) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274979) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (274989) MQTT: Published RFID data (count: 1240)[0m
+[0;33mW (274989) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (274999) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275009) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275009) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275019) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275029) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275039) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275049) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275049) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275059) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (275069) MQTT: Published RFID data (count: 1250)[0m
+[0;33mW (275069) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275079) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275089) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275099) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275099) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275109) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275119) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275129) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275129) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275139) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (275149) MQTT: Published RFID data (count: 1260)[0m
+[0;33mW (275149) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275159) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275169) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275179) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275189) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275189) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275199) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275209) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275219) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275219) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (275229) MQTT: Published RFID data (count: 1270)[0m
+[0;33mW (275239) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275239) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275249) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275259) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275269) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275269) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275279) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275289) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275299) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275309) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (275309) MQTT: Published RFID data (count: 1280)[0m
+[0;33mW (275319) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275329) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275329) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275339) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275349) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275359) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275359) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275369) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275379) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275389) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (275389) MQTT: Published RFID data (count: 1290)[0m
+[0;33mW (275399) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275409) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275419) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275419) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275429) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275439) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275449) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275449) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275459) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275469) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (275479) MQTT: Published RFID data (count: 1300)[0m
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=153 total=455 (fallback)
+[0;33mW (275489) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275499) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275499) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275509) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275519) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275529) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275539) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275539) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275549) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275559) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (275569) MQTT: Published RFID data (count: 1310)[0m
+[0;33mW (275569) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275579) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275589) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275589) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275599) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275609) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275619) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275629) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275629) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275639) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (275649) MQTT: Published RFID data (count: 1320)[0m
+[0;33mW (275649) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275659) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275669) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275679) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275679) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275689) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275699) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275709) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275709) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275719) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (275729) MQTT: Published RFID data (count: 1330)[0m
+[0;33mW (275739) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275739) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275749) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275759) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275769) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275769) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275779) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275789) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275799) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275799) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (275809) MQTT: Published RFID data (count: 1340)[0m
+[0;33mW (275819) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275829) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275829) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275839) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275849) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275859) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275859) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275869) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275879) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275889) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (275889) MQTT: Published RFID data (count: 1350)[0m
+[0;33mW (275899) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275909) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275909) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275919) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275929) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275939) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275939) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275949) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275959) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275969) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (275969) MQTT: Published RFID data (count: 1360)[0m
+[0;33mW (275979) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275989) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275999) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (275999) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276009) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276019) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276029) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276029) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276039) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276049) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (276059) MQTT: Published RFID data (count: 1370)[0m
+[0;33mW (276059) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276069) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276079) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276089) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276089) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276099) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276109) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276119) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276119) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276129) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (276139) MQTT: Published RFID data (count: 1380)[0m
+[0;33mW (276139) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276149) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276159) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276169) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276179) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276179) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276189) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276199) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276209) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276209) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (276219) MQTT: Published RFID data (count: 1390)[0m
+[0;33mW (276229) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276229) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276239) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276249) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276259) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276259) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276269) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276279) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276289) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276299) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (276299) MQTT: Published RFID data (count: 1400)[0m
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=174 total=555 (fallback)
+[0;33mW (276319) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276319) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276329) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276339) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276349) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276349) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276359) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276369) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276379) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276379) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (276389) MQTT: Published RFID data (count: 1410)[0m
+[0;33mW (276399) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276409) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276409) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276419) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276429) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276439) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276439) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276449) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276459) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276469) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (276469) MQTT: Published RFID data (count: 1420)[0m
+[0;33mW (276479) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276489) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276489) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276499) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276509) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276519) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276519) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276529) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276539) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276549) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (276559) MQTT: Published RFID data (count: 1430)[0m
+[0;33mW (276559) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276569) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276579) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276579) UART: UART ring buffer full - clearing buffer[0m
+[0;33mW (276599) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276599) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276609) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276609) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276619) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276629) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276639) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (276639) MQTT: Published RFID data (count: 1440)[0m
+[0;33mW (276649) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276659) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276659) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276669) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276679) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276689) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276689) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276699) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276709) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276719) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (276719) MQTT: Published RFID data (count: 1450)[0m
+[0;33mW (276729) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276739) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276749) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276749) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276759) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276769) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276779) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276779) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276789) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276799) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (276809) MQTT: Published RFID data (count: 1460)[0m
+[0;33mW (276809) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276819) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276829) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276839) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276839) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276849) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276859) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276869) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276869) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276879) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (276889) MQTT: Published RFID data (count: 1470)[0m
+[0;33mW (276889) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276899) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276909) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276919) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276919) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276929) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276939) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276949) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276959) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276959) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (276969) MQTT: Published RFID data (count: 1480)[0m
+[0;33mW (276979) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276979) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276989) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (276999) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277009) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277009) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277019) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277029) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277039) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277039) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (277049) MQTT: Published RFID data (count: 1490)[0m
+[0;33mW (277059) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277069) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277069) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277079) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277089) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277099) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277099) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277109) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277119) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277129) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (277129) MQTT: Published RFID data (count: 1500)[0m
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=220 total=658 (fallback)
+[0;33mW (277149) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277159) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277159) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277169) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277179) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277189) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277189) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277199) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277209) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277219) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (277219) MQTT: Published RFID data (count: 1510)[0m
+[0;33mW (277229) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277239) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277239) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277249) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277259) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277269) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277279) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277279) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277289) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277299) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (277309) MQTT: Published RFID data (count: 1520)[0m
+[0;33mW (277309) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277319) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277329) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277329) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277339) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277349) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277359) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277359) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277369) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277379) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (277389) MQTT: Published RFID data (count: 1530)[0m
+[0;33mW (277389) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277399) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277409) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277419) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277419) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277429) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277439) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277449) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277449) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277459) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (277469) MQTT: Published RFID data (count: 1540)[0m
+[0;33mW (277469) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277479) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277489) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277499) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277509) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277509) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277519) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277529) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277539) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277539) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (277549) MQTT: Published RFID data (count: 1550)[0m
+[0;33mW (277559) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277559) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277569) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277579) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277589) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277589) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277599) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277609) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277619) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277629) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (277629) MQTT: Published RFID data (count: 1560)[0m
+[0;33mW (277639) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277649) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277649) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277659) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277669) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277679) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277679) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277689) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277699) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277709) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (277709) MQTT: Published RFID data (count: 1570)[0m
+[0;33mW (277719) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277729) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277739) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277739) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277749) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277759) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277769) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277769) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277779) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277789) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (277799) MQTT: Published RFID data (count: 1580)[0m
+[0;33mW (277799) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277809) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277819) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277819) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277829) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277839) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277849) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277859) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277859) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277869) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (277879) MQTT: Published RFID data (count: 1590)[0m
+[0;33mW (277879) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277889) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277899) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277909) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277909) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277919) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277929) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277939) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277949) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277949) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (277959) MQTT: Published RFID data (count: 1600)[0m
+TAG[0] epc=E28069150000501B289049AC rssi=-48 ant=1 count=63 total=763 (fallback)
+[0;33mW (277969) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277979) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277989) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277999) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (277999) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278009) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278019) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278029) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278029) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278039) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (278049) MQTT: Published RFID data (count: 1610)[0m
+[0;33mW (278049) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278059) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278069) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278079) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278089) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278089) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278099) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278109) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278119) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278119) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (278129) MQTT: Published RFID data (count: 1620)[0m
+[0;33mW (278139) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278139) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278149) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278159) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278169) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278179) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278179) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278189) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278199) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278209) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (278209) MQTT: Published RFID data (count: 1630)[0m
+[0;33mW (278219) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278229) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278229) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278239) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278249) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278259) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278259) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278269) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278279) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278289) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (278289) MQTT: Published RFID data (count: 1640)[0m
+[0;33mW (278299) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278309) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278319) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278319) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278329) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278339) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278349) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278349) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278359) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278369) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (278379) MQTT: Published RFID data (count: 1650)[0m
+[0;33mW (278379) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278389) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278399) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278409) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278409) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278419) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278429) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278439) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278439) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278449) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (278459) MQTT: Published RFID data (count: 1660)[0m
+[0;33mW (278459) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278469) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278479) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278489) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278489) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278499) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278509) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278519) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278529) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278529) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (278539) MQTT: Published RFID data (count: 1670)[0m
+[0;33mW (278549) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278549) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278559) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278569) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278579) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278579) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278589) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278599) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278609) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278609) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (278619) MQTT: Published RFID data (count: 1680)[0m
+[0;33mW (278629) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278639) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278639) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278649) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278659) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278669) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278669) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278679) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278689) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278699) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (278699) MQTT: Published RFID data (count: 1690)[0m
+[0;33mW (278709) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278719) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278719) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278729) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278739) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278749) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278759) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278759) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278769) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278779) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (278789) MQTT: Published RFID data (count: 1700)[0m
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=270 total=866 (fallback)
+[0;33mW (278799) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278809) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278809) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278819) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278829) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278839) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278839) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278849) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278859) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278869) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (278869) MQTT: Published RFID data (count: 1710)[0m
+[0;33mW (278879) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278889) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278899) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278899) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278909) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278919) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278929) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278929) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278939) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278949) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (278959) MQTT: Published RFID data (count: 1720)[0m
+[0;33mW (278959) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278969) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278979) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278989) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278989) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (278999) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (279009) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (279019) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (279019) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;33mW (279029) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (279039) MQTT: Published RFID data (count: 1730)[0m
+[0;33mW (279039) mqtt_client: Publish: Losing qos0 data when client not connected[0m

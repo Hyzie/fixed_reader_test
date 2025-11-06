@@ -1,0 +1,143 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037408c
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Nov  6 2025 11:17:54[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000d000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00180000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c0b0020 size=405a8h (263592) map[0m
+[0;32mI (146) esp_image: segment 1: paddr=000505d0 vaddr=3fc9bc00 size=0479ch ( 18332) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=00054d74 vaddr=40374000 size=0b2a4h ( 45732) load[0m
+[0;32mI (162) esp_image: segment 3: paddr=00060020 vaddr=42000020 size=adc6ch (711788) map[0m
+[0;32mI (290) esp_image: segment 4: paddr=0010dc94 vaddr=4037f2a4 size=0c8e8h ( 51432) load[0m
+[0;32mI (312) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (312) boot: Disabling RNG early entropy source...[0m
+[0;32mI (323) cpu_start: Multicore app[0m
+[0;32mI (333) cpu_start: Pro cpu start user code[0m
+[0;32mI (333) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (333) cpu_start: Application information:[0m
+[0;32mI (336) cpu_start: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (342) cpu_start: App version:      523f2e4-dirty[0m
+[0;32mI (348) cpu_start: Compile time:     Nov  6 2025 11:17:03[0m
+[0;32mI (354) cpu_start: ELF file SHA256:  cf1ba1fe6...[0m
+[0;32mI (359) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (364) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (369) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (374) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (378) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (386) heap_init: At 3FCA6390 len 00043380 (268 KiB): RAM[0m
+[0;32mI (392) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (398) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (404) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (411) spi_flash: detected chip: gd[0m
+[0;32mI (414) spi_flash: flash io: dio[0m
+[0;33mW (418) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (432) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (438) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (446) main_task: Started on CPU0[0m
+[0;32mI (456) main_task: Calling app_main()[0m
+[0;32mI (466) uart: queue free spaces: 30[0m
+[0;32mI (466) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (466) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (566) UART: UART RX task started and waiting for data...[0m
+UART RX task created
+[0;32mI (566) ETH: Static IP configured: 192.168.1.100[0m
+[0;32mI (566) ETH: Gateway: 192.168.1.1[0m
+[0;32mI (566) ETH: Netmask: 255.255.255.0[0m
+[0;32mI (576) ETH: DNS servers configured from network_config.h[0m
+[0;32mI (606) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (606) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (616) ETH: Ethernet Started[0m
+[0;32mI (616) pp: pp rom version: e7ae62f[0m
+[0;32mI (616) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (626) wifi:wifi driver task: 3fcbda58, prio:23, stack:6656, core=0[0m
+[0;32mI (626) wifi:wifi firmware version: 3e0076f[0m
+[0;32mI (626) wifi:wifi certification version: v7.0[0m
+[0;32mI (626) wifi:config NVS flash: enabled[0m
+[0;32mI (636) wifi:config nano formating: disabled[0m
+[0;32mI (636) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (646) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (646) wifi:Init management short buffer num: 32[0m
+[0;32mI (646) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (656) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (656) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (666) wifi:Init static rx buffer num: 10[0m
+[0;32mI (666) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (676) wifi_init: rx ba win: 6[0m
+[0;32mI (676) wifi_init: tcpip mbox: 32[0m
+[0;32mI (676) wifi_init: udp mbox: 6[0m
+[0;32mI (686) wifi_init: tcp mbox: 6[0m
+[0;32mI (686) wifi_init: tcp tx win: 5760[0m
+[0;32mI (686) wifi_init: tcp rx win: 5760[0m
+[0;32mI (696) wifi_init: tcp mss: 1440[0m
+[0;32mI (696) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (706) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (706) phy_init: phy_version 670,b7bc9b9,Apr 30 2024,10:54:13[0m
+[0;33mW (716) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;32mI (766) wifi:mode : sta (98:3d:ae:9f:b7:80)[0m
+[0;32mI (766) wifi:enable tsf[0m
+[0;32mI (766) WIFI: WiFi module initialized (STA mode)[0m
+[0;32mI (766) WIFI: WiFi started[0m
+[0;33mW (776) WIFI_CFG: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND[0m
+[0;32mI (776) WIFI: No saved WiFi credentials found. Configure via web interface.[0m
+[0;33mW (786) MQTT: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND, using defaults[0m
+[0;32mI (796) MQTT: MQTT module initialized with broker: mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883[0m
+[0;32mI (806) WEB: Registered /power/set handler[0m
+[0;32mI (806) WEB: Registered /power/get handler[0m
+[0;32mI (816) MAIN: Web server started on Ethernet[0m
+[0;32mI (816) MAIN: System initialized successfully - Ethernet + WiFi + MQTT mode[0m
+[0;32mI (826) main_task: Returned from app_main()[0m
+[0;32mI (2616) ETH: Ethernet Link Up[0m
+[0;32mI (2616) ETH: Ethernet HW Addr 02:00:00:12:34:56[0m
+[0;32mI (2616) esp_netif_handlers: eth ip: 192.168.1.100, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2616) ETH: Ethernet Got IP Address[0m
+[0;32mI (2626) ETH: ~~~~~~~~~~~[0m
+[0;32mI (2626) ETH: ETHIP: 192.168.1.100[0m
+[0;32mI (2636) ETH: ETHMASK: 255.255.255.0[0m
+[0;32mI (2636) ETH: ETHGW: 192.168.1.1[0m
+[0;32mI (2636) ETH: ~~~~~~~~~~~[0m
+[0;33mW (4616) WIFI_CFG: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33mW (4726) WIFI_CFG: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33mW (4736) WIFI_CFG: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND[0m
+[0;32mI (4746) UART: UART sent 9 bytes: TX: 5A 00 01 02 02 00 00 29 59[0m
+[0;33mW (6486) WIFI_CFG: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33mW (6716) WIFI_CFG: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33mW (7726) WIFI_CFG: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33mW (8726) WIFI_CFG: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33mW (9726) WIFI_CFG: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33mW (10736) WIFI_CFG: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33mW (11726) WIFI_CFG: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33mW (12726) WIFI_CFG: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33mW (13726) WIFI_CFG: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33mW (14726) WIFI_CFG: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33mW (15726) WIFI_CFG: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33mW (16746) WIFI_CFG: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33mW (17736) WIFI_CFG: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33mW (18726) WIFI_CFG: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33mW (19726) WIFI_CFG: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33mW (20716) WIFI_CFG: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33mW (21746) WIFI_CFG: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33mW (22726) WIFI_CFG: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33mW (23756) WIFI_CFG: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33mW (24726) WIFI_CFG: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND[0m
+[0;32mI (25076) WIFI_CFG: Wi-Fi config saved (ssid='Z')[0m
+[0;32mI (28626) UART: UART sent 9 bytes: TX: 5A 00 01 02 02 00 00 29 59[0m

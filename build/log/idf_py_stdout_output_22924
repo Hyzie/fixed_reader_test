@@ -1,0 +1,857 @@
+[0;32mI (148) esp_image: segment 1: paddr=000522d4 vaddr=3fc9bcESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037baca
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (26) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Nov  6 2025 11:17:54[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00180000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=422ach (271020) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=000522d4 vaddr=3fc9bc00 size=047ach ( 18348) load[0m
+[0;32mI (152) esp_image: segment 2: paddr=00056a88 vaddr=40374000 size=09590h ( 38288) load[0m
+[0;32mI (162) esp_image: segment 3: paddr=00060020 vaddr=42000020 size=b5cd4h (744660) map[0m
+[0;32mI (296) esp_image: segment 4: paddr=00115cfc vaddr=4037d590 size=0e5fch ( 58876) load[0m
+[0;32mI (319) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (319) boot: Disabling RNG early entropy source...[0m
+[0;32mI (330) cpu_start: Multicore app[0m
+[0;32mI (340) cpu_start: Pro cpu start user code[0m
+[0;32mI (340) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (340) cpu_start: Application information:[0m
+[0;32mI (343) cpu_start: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (350) cpu_start: App version:      523f2e4-dirty[0m
+[0;32mI (355) cpu_start: Compile time:     Nov  6 2025 11:17:03[0m
+[0;32mI (361) cpu_start: ELF file SHA256:  0cfa57039...[0m
+[0;32mI (366) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (371) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (376) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (381) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (386) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (393) heap_init: At 3FCA69C0 len 00042D50 (267 KiB): RAM[0m
+[0;32mI (399) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (405) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (411) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (418) spi_flash: detected chip: gd[0m
+[0;32mI (422) spi_flash: flash io: dio[0m
+[0;33mW (426) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (439) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (446) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (453) main_task: Started on CPU0[0m
+[0;32mI (463) main_task: Calling app_main()[0m
+[0;32mI (493) uart: queue free spaces: 30[0m
+[0;32mI (493) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (493) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (603) UART: UART RX task started and waiting for data...[0m
+UART RX task created
+[0;32mI (603) ETH: Static IP configured: 192.168.1.100[0m
+[0;32mI (603) ETH: Gateway: 192.168.1.1[0m
+[0;32mI (603) ETH: Netmask: 255.255.255.0[0m
+[0;32mI (613) ETH: DNS servers configured from network_config.h[0m
+[0;32mI (643) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (643) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (653) ETH: Ethernet Started[0m
+[0;32mI (653) pp: pp rom version: e7ae62f[0m
+[0;32mI (653) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (663) wifi:wifi driver task: 3fcbe298, prio:23, stack:6656, core=0[0m
+[0;32mI (673) wifi:wifi firmware version: 3e0076f[0m
+[0;32mI (673) wifi:wifi certification version: v7.0[0m
+[0;32mI (673) wifi:config NVS flash: enabled[0m
+[0;32mI (673) wifi:config nano formating: disabled[0m
+[0;32mI (683) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (683) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (683) wifi:Init management short buffer num: 32[0m
+[0;32mI (693) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (693) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (703) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (703) wifi:Init static rx buffer num: 10[0m
+[0;32mI (703) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (713) wifi_init: rx ba win: 6[0m
+[0;32mI (713) wifi_init: tcpip mbox: 32[0m
+[0;32mI (723) wifi_init: udp mbox: 6[0m
+[0;32mI (723) wifi_init: tcp mbox: 6[0m
+[0;32mI (723) wifi_init: tcp tx win: 5760[0m
+[0;32mI (733) wifi_init: tcp rx win: 5760[0m
+[0;32mI (733) wifi_init: tcp mss: 1440[0m
+[0;32mI (743) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (743) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (753) phy_init: phy_version 670,b7bc9b9,Apr 30 2024,10:54:13[0m
+[0;32mI (793) wifi:mode : sta (98:3d:ae:9f:b7:80)[0m
+[0;32mI (793) wifi:enable tsf[0m
+[0;32mI (803) WIFI: WiFi module initialized (STA mode)[0m
+[0;32mI (803) WIFI: WiFi started[0m
+[0;32mI (803) WIFI: Found saved WiFi credentials, attempting connection...[0m
+[0;32mI (813) WIFI: Connecting to WiFi SSID: Hydro[0m
+[0;33mW (813) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (823) MQTT: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND, using defaults[0m
+[0;32mI (823) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (833) wifi:state: init -> auth (b0)[0m
+[0;32mI (833) MQTT: MQTT module initialized with broker: mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883[0m
+[0;32mI (843) wifi:state: auth -> assoc (0)[0m
+[0;32mI (853) wifi:state: assoc -> run (10)[0m
+[0;32mI (853) WEB: Registered /power/set handler[0m
+[0;32mI (853) WEB: Registered /power/get handler[0m
+[0;32mI (863) MAIN: Web server started on Ethernet[0m
+[0;32mI (863) MAIN: System initialized successfully - Ethernet + WiFi + MQTT mode[0m
+[0;32mI (873) wifi:connected with Hydro, aid = 9, channel 6, BW20, bssid = 6e:94:66:e1:b7:a2[0m
+[0;32mI (883) wifi:security: WPA2-PSK, phy: bgn, rssi: -63[0m
+[0;32mI (893) main_task: Returned from app_main()[0m
+[0;32mI (893) wifi:pm start, type: 1[0m
+
+[0;32mI (893) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (903) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (933) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (1913) esp_netif_handlers: sta ip: 192.168.137.217, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (1913) WIFI: WiFi connected! Got IP: 192.168.137.217[0m
+[0;32mI (2653) ETH: Ethernet Link Up[0m
+[0;32mI (2653) ETH: Ethernet HW Addr 02:00:00:12:34:56[0m
+[0;32mI (2653) esp_netif_handlers: eth ip: 192.168.1.100, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2653) ETH: Ethernet Got IP Address[0m
+[0;32mI (2663) ETH: ~~~~~~~~~~~[0m
+[0;32mI (2663) ETH: ETHIP: 192.168.1.100[0m
+[0;32mI (2673) ETH: ETHMASK: 255.255.255.0[0m
+[0;32mI (2673) ETH: ETHGW: 192.168.1.1[0m
+[0;32mI (2673) ETH: ~~~~~~~~~~~[0m
+[0;32mI (5723) UART: UART event received, type: 0 (count: 500)[0m
+[0;32mI (10863) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (10863) MQTT: MQTT client started[0m
+[0;32mI (10863) MQTT: Other MQTT event id:7[0m
+[0;32mI (10993) UART: UART event received, type: 0 (count: 1000)[0m
+RX: 1k packets
+[0;32mI (11803) esp-x509-crt-bundle: Certificate validated[0m
+Inventory not running, skipped 1000 packets
+[0;32mI (13223) MQTT: MQTT Connected[0m
+[0;32mI (13223) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (13223) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (13233) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (13243) MQTT: Subscribed to legacy topic rfid/commands, msg_id=65244[0m
+[0;32mI (13523) MQTT: MQTT Subscribed, msg_id=41513[0m
+[0;32mI (13833) MQTT: MQTT Subscribed, msg_id=848[0m
+[0;32mI (13833) MQTT: MQTT Subscribed, msg_id=21862[0m
+[0;32mI (13843) MQTT: MQTT Subscribed, msg_id=65244[0m
+[0;32mI (13843) MQTT: MQTT Published, msg_id=62698[0m
+[0;32mI (14443) wifi:<ba-add>idx:0 (ifx:0, 6e:94:66:e1:b7:a2), tid:1, ssn:15, winSize:64[0m
+[0;32mI (16313) UART: UART event received, type: 0 (count: 1500)[0m
+[0;32mI (21203) MQTT: MQTT Data received[0m
+[0;32mI (21203) MQTT: Topic: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (21203) MQTT: Data: {"action": "start"}[0m
+[0;32mI (21213) MQTT: Processing command - Topic: reader/esp32_rfid_reader/cmd/rfid, Data: {"action": "start"}[0m
+[0;32mI (21223) MQTT: Executing RFID command: start[0m
+[0;32mI (21223) UART: UART sent 14 bytes: TX: 5A 00 01 02 10 00 05 00 00 00 01 01 F4 87[0m
+RFID inventory started via MQTT - counters reset
+[0;32mI (21243) MQTT: Published response: {"command":"rfid","action":"start","status":"success","message":"Inventory started"}[0m
+[0;32mI (21493) UART: UART event received, type: 0 (count: 2000)[0m
+RX: 2k packets
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=28 total=102 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=55 total=204 (fallback)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=75 total=307 (fallback)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=101 total=408 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=124 total=508 (fallback)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=155 total=609 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=160 total=711 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=224 total=812 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=209 total=915 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=249 total=1018 (fallback)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=285 total=1122 (fallback)
+[0;32mI (26793) UART: UART event received, type: 0 (count: 2500)[0m
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=285 total=1226 (fallback)
+MQTT: Published tag batch (358 bytes, 4 tags)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=338 total=1328 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=341 total=1430 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=365 total=1534 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=393 total=1637 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=470 total=1742 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=447 total=1844 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=537 total=1946 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=573 total=2049 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=528 total=2084 (MID 0x12)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=551 total=2153 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=585 total=2258 (fallback)
+[0;32mI (32073) UART: UART event received, type: 0 (count: 3000)[0m
+RX: 3k packets
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=681 total=2359 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=626 total=2459 (fallback)
+MQTT: Published tag batch (358 bytes, 4 tags)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=679 total=2560 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=769 total=2666 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=800 total=2766 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=0 ant=0 count=832 total=2871 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=867 total=2975 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=904 total=3079 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=857 total=3184 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=913 total=3287 (fallback)
+[0;32mI (37393) UART: UART event received, type: 0 (count: 3500)[0m
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=946 total=3390 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1035 total=3493 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=1003 total=3598 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1075 total=3619 (MID 0x12)
+MQTT: Published tag batch (361 bytes, 4 tags)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=1030 total=3705 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1132 total=3807 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1169 total=3912 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=1139 total=4018 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1238 total=4121 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1271 total=4224 (fallback)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=543 total=4326 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1328 total=4428 (fallback)
+[0;32mI (42693) UART: UART event received, type: 0 (count: 4000)[0m
+RX: 4k packets
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=1287 total=4531 (fallback)
+[0;33mW (43473) MQTT: MQTT Disconnected[0m
+[0;32mI (43473) MQTT: Other MQTT event id:7[0m
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=1318 total=4633 (fallback)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=582 total=4738 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=1375 total=4844 (fallback)
+[0;32mI (44863) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (44863) MQTT: Stopping existing MQTT client[0m
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=1404 total=4949 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=1410 total=4972 (MID 0x12)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=1431 total=5052 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=1463 total=5152 (fallback)
+[0;32mI (46393) wifi:<ba-add>idx:1 (ifx:0, 6e:94:66:e1:b7:a2), tid:0, ssn:7, winSize:64[0m
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1612 total=5253 (fallback)
+[0;32mI (46513) esp-x509-crt-bundle: Certificate validated[0m
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1659 total=5353 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1683 total=5455 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1711 total=5556 (fallback)
+[0;32mI (47903) UART: UART event received, type: 0 (count: 4500)[0m
+[0;32mI (47933) MQTT: MQTT Connected[0m
+[0;32mI (47933) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (47943) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (47943) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (47953) MQTT: Subscribed to legacy topic rfid/commands, msg_id=8935[0m
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=1576 total=5658 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1767 total=5761 (fallback)
+[0;32mI (49243) MQTT: MQTT client started[0m
+[0;33mW (49243) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+MQTT: Published tag batch (361 bytes, 4 tags)
+[0;32mI (49243) MQTT: Other MQTT event id:7[0m
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=1631 total=5868 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1823 total=5972 (fallback)
+[0;32mI (50203) esp-x509-crt-bundle: Certificate validated[0m
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=1683 total=6076 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1877 total=6181 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=1740 total=6285 (fallback)
+[0;32mI (51613) MQTT: MQTT Connected[0m
+[0;32mI (51623) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (51623) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (51633) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (51633) MQTT: Subscribed to legacy topic rfid/commands, msg_id=21319[0m
+MQTT: Published tag batch (361 bytes, 4 tags)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=1766 total=6386 (fallback)
+[0;32mI (51923) MQTT: MQTT Subscribed, msg_id=5675[0m
+[0;32mI (52233) MQTT: MQTT Subscribed, msg_id=62451[0m
+[0;32mI (52233) MQTT: MQTT Subscribed, msg_id=14001[0m
+[0;32mI (52243) MQTT: MQTT Subscribed, msg_id=21319[0m
+[0;32mI (52243) MQTT: MQTT Published, msg_id=23772[0m
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=1790 total=6487 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1980 total=6589 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=1841 total=6692 (fallback)
+[0;32mI (53253) UART: UART event received, type: 0 (count: 5000)[0m
+RX: 5k packets
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2034 total=6796 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=1881 total=6870 (MID 0x12)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=1889 total=6901 (fallback)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=1085 total=7005 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2114 total=7111 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2138 total=7213 (fallback)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=1162 total=7315 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2191 total=7418 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=2047 total=7520 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2250 total=7621 (fallback)
+MQTT: Published tag batch (362 bytes, 4 tags)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2279 total=7725 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=2127 total=7829 (fallback)
+[0;32mI (58613) UART: UART event received, type: 0 (count: 5500)[0m
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2331 total=7931 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=2170 total=8035 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=2207 total=8142 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2414 total=8246 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=2240 total=8326 (MID 0x12)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=2262 total=8351 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2474 total=8455 (fallback)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=1450 total=8559 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=2330 total=8664 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2565 total=8765 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=2391 total=8868 (fallback)
+MQTT: Published tag batch (362 bytes, 4 tags)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=2427 total=8973 (fallback)
+[0;32mI (63883) UART: UART event received, type: 0 (count: 6000)[0m
+RX: 6k packets
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2661 total=9075 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2696 total=9178 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2730 total=9280 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=2568 total=9384 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=2604 total=9488 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=2641 total=9591 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=2668 total=9693 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2904 total=9796 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2931 total=9865 (MID 0x12)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=2731 total=9900 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2977 total=10003 (fallback)
+[0;32mI (69213) UART: UART event received, type: 0 (count: 6500)[0m
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=2793 total=10107 (fallback)
+MQTT: Published tag batch (363 bytes, 4 tags)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=3047 total=10211 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=3083 total=10312 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=3119 total=10416 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=2928 total=10519 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=3187 total=10620 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=3215 total=10723 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=3239 total=10824 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=3026 total=10926 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=3294 total=11027 (fallback)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=1633 total=11128 (fallback)
+[0;32mI (74503) UART: UART event received, type: 0 (count: 7000)[0m
+RX: 7k packets
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=3391 total=11232 (MID 0x12)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=3420 total=11276 (fallback)
+MQTT: Published tag batch (363 bytes, 4 tags)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=1690 total=11393 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=3138 total=11414 (MID 0x12)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=3162 total=11515 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=3536 total=11619 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=3227 total=11720 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=3602 total=11821 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=3296 total=11921 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=3327 total=12021 (fallback)
+[0;32mI (79513) UART: UART event received, type: 0 (count: 7500)[0m
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=3309 total=12124 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=3740 total=12226 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=3774 total=12327 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=3459 total=12429 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=3444 total=12530 (fallback)
+MQTT: Published tag batch (363 bytes, 4 tags)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=3525 total=12634 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=3552 total=12737 (fallback)
+[0;33mW (82543) MQTT: MQTT Disconnected[0m
+[0;32mI (82543) MQTT: Other MQTT event id:7[0m
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=3934 total=12842 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=3560 total=12948 (fallback)
+[0;32mI (83383) esp-x509-crt-bundle: Certificate validated[0m
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=3619 total=12998 (MID 0x12)
+[0;32mI (83643) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (83643) MQTT: Stopping existing MQTT client[0m
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=3635 total=13051 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=3662 total=13156 (fallback)
+[0;32mI (84793) MQTT: MQTT Connected[0m
+[0;32mI (84793) UART: UART event received, type: 0 (count: 8000)[0m
+RX: 8k packets
+[0;32mI (84803) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (84803) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (84813) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=3689 total=13260 (fallback)
+[0;32mI (84823) MQTT: Subscribed to legacy topic rfid/commands, msg_id=38550[0m
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=1907 total=13364 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=4109 total=13471 (fallback)
+[0;32mI (86103) MQTT: MQTT client started[0m
+[0;32mI (86103) MQTT: Other MQTT event id:7[0m
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=4143 total=13575 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=4177 total=13679 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=3770 total=13782 (fallback)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=1995 total=13887 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=4259 total=13990 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=4288 total=14090 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=4314 total=14191 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=3966 total=14293 (fallback)
+[0;32mI (90093) UART: UART event received, type: 0 (count: 8500)[0m
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=2117 total=14394 (fallback)
+[0;32mI (90233) esp-x509-crt-bundle: Certificate validated[0m
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=3936 total=14495 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=4427 total=14592 (MID 0x12)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=3962 total=14600 (fallback)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=2194 total=14704 (fallback)
+[0;32mI (91553) MQTT: MQTT Connected[0m
+[0;32mI (91553) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (91563) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (91563) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (91573) MQTT: Subscribed to legacy topic rfid/commands, msg_id=46724[0m
+MQTT: Published tag batch (363 bytes, 4 tags)
+[0;32mI (91863) MQTT: MQTT Subscribed, msg_id=58653[0m
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=4010 total=14807 (fallback)
+[0;32mI (92173) MQTT: MQTT Subscribed, msg_id=26861[0m
+[0;32mI (92173) MQTT: MQTT Subscribed, msg_id=5691[0m
+[0;32mI (92183) MQTT: MQTT Subscribed, msg_id=46724[0m
+[0;32mI (92183) MQTT: MQTT Published, msg_id=11014[0m
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=4506 total=14908 (fallback)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=2265 total=15011 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=4097 total=15114 (fallback)
+MQTT: Published tag batch (363 bytes, 4 tags)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=4130 total=15221 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=4250 total=15324 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=4680 total=15429 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=4234 total=15533 (fallback)
+[0;32mI (95353) UART: UART event received, type: 0 (count: 9000)[0m
+RX: 9k packets
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=4268 total=15636 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=4789 total=15738 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=4338 total=15843 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=4852 total=15932 (MID 0x12)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=4858 total=15950 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=4400 total=16055 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=4427 total=16158 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=4952 total=16261 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=4582 total=16365 (fallback)
+MQTT: Published tag batch (361 bytes, 4 tags)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=4525 total=16468 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=5068 total=16573 (fallback)
+[0;32mI (100613) UART: UART event received, type: 0 (count: 9500)[0m
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=5098 total=16678 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=4674 total=16780 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=4613 total=16882 (fallback)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=2442 total=16986 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=4661 total=17091 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=4777 total=17194 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=4802 total=17298 (fallback)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=2529 total=17349 (MID 0x12)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=2543 total=17402 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=5324 total=17505 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=4890 total=17610 (fallback)
+MQTT: Published tag batch (367 bytes, 4 tags)
+[0;32mI (105883) UART: UART event received, type: 0 (count: 10000)[0m
+RX: 10k packets
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=4923 total=17715 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=5431 total=17817 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=4986 total=17918 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=5022 total=18020 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=5055 total=18121 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=4983 total=18221 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=5600 total=18324 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=5638 total=18430 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=5194 total=18532 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=5223 total=18637 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=5734 total=18740 (fallback)
+[0;32mI (111093) UART: UART event received, type: 0 (count: 10500)[0m
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=5175 total=18846 (fallback)
+MQTT: Published tag batch (367 bytes, 4 tags)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=5309 total=18917 (MID 0x12)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=5320 total=18951 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=5355 total=19055 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=5387 total=19161 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=5420 total=19263 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=5352 total=19369 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=5976 total=19475 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=5428 total=19577 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=5452 total=19680 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=5477 total=19786 (fallback)
+[0;32mI (116383) UART: UART event received, type: 0 (count: 11000)[0m
+RX: 11k packets
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=5503 total=19889 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=6120 total=19996 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=5551 total=20078 (MID 0x12)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=6148 total=20100 (fallback)
+MQTT: Published tag batch (367 bytes, 4 tags)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=5578 total=20201 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=5606 total=20307 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=6228 total=20411 (fallback)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=2860 total=20515 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=6278 total=20618 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=5805 total=20721 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=5827 total=20823 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=6361 total=20925 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=5882 total=21029 (fallback)
+[0;32mI (121643) UART: UART event received, type: 0 (count: 11500)[0m
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=5811 total=21134 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=5838 total=21240 (fallback)
+[0;33mW (122483) MQTT: MQTT Disconnected[0m
+[0;32mI (122483) MQTT: Other MQTT event id:7[0m
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=6466 total=21345 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=5883 total=21428 (MID 0x12)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=5887 total=21450 (fallback)
+[0;32mI (123583) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (123583) MQTT: Stopping existing MQTT client[0m
+[0;32mI (123623) esp-x509-crt-bundle: Certificate validated[0m
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=5913 total=21556 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=5939 total=21659 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=5973 total=21761 (fallback)
+[0;32mI (125043) MQTT: MQTT Connected[0m
+[0;32mI (125043) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (125043) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (125053) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (125063) MQTT: Subscribed to legacy topic rfid/commands, msg_id=399[0m
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=3126 total=21865 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=6137 total=21967 (fallback)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=3139 total=22070 (fallback)
+[0;32mI (126353) MQTT: MQTT client started[0m
+[0;33mW (126353) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+MQTT: Published tag batch (367 bytes, 4 tags)
+[0;32mI (126353) MQTT: Other MQTT event id:7[0m
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=6085 total=22172 (fallback)
+[0;32mI (126903) UART: UART event received, type: 0 (count: 12000)[0m
+RX: 12k packets
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=6117 total=22276 (fallback)
+[0;32mI (127303) esp-x509-crt-bundle: Certificate validated[0m
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=3220 total=22376 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=6143 total=22485 (fallback)
+[0;32mI (128723) MQTT: MQTT Connected[0m
+[0;32mI (128733) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (128733) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (128733) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (128743) MQTT: Subscribed to legacy topic rfid/commands, msg_id=23442[0m
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=6277 total=22587 (fallback)
+[0;32mI (129343) MQTT: MQTT Subscribed, msg_id=57714[0m
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=6883 total=22689 (fallback)
+[0;32mI (129653) MQTT: MQTT Subscribed, msg_id=57455[0m
+[0;32mI (129653) MQTT: MQTT Subscribed, msg_id=37798[0m
+[0;32mI (129653) MQTT: MQTT Subscribed, msg_id=23442[0m
+[0;32mI (129663) MQTT: MQTT Published, msg_id=26328[0m
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=3332 total=22791 (fallback)
+MQTT: Published tag batch (367 bytes, 4 tags)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=6243 total=22893 (fallback)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=3380 total=22996 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=6295 total=23099 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=6425 total=23149 (MID 0x12)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=6321 total=23201 (fallback)
+[0;32mI (132153) UART: UART event received, type: 0 (count: 12500)[0m
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=7039 total=23304 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=6494 total=23405 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=7088 total=23510 (fallback)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=3532 total=23613 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=6448 total=23716 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=7162 total=23820 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=6627 total=23925 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=7216 total=24026 (fallback)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=3659 total=24129 (fallback)
+MQTT: Published tag batch (367 bytes, 4 tags)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=7272 total=24231 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=6733 total=24331 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=7336 total=24431 (fallback)
+[0;32mI (137433) UART: UART event received, type: 0 (count: 13000)[0m
+RX: 13k packets
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=3763 total=24531 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=7399 total=24633 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=7427 total=24735 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=7457 total=24840 (fallback)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=3865 total=24942 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=7511 total=25046 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=6918 total=25102 (MID 0x12)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=3912 total=25151 (fallback)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=3938 total=25254 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=6822 total=25358 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=7013 total=25462 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=7643 total=25567 (fallback)
+MQTT: Published tag batch (367 bytes, 4 tags)
+[0;32mI (142703) UART: UART event received, type: 0 (count: 13500)[0m
+TAG[3] epc=E2806915600002166510B331 rssi=0 ant=0 count=7669 total=25672 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=7696 total=25773 (fallback)
+TAG[3] epc=E2806915600002166510B331 rssi=-48 ant=1 count=7724 total=25879 (fallback)
+TAG[0] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=6973 total=25983 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=7182 total=26083 (fallback)
+TAG[2] epc=E280116060000216651115E1 rssi=-48 ant=1 count=7210 total=26186 (fallback)
+[0;32mI (145323) MQTT: MQTT Data received[0m
+[0;32mI (145323) MQTT: Topic: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (145323) MQTT: Data: {"action": "stop"}[0m
+[0;32mI (145323) MQTT: Processing command - Topic: reader/esp32_rfid_reader/cmd/rfid, Data: {"action": "stop"}[0m
+[0;32mI (145333) MQTT: Executing RFID command: stop[0m
+[0;32mI (145343) UART: UART sent 9 bytes: TX: 5A 00 01 02 11 00 00 2A B3[0m
+RFID stop command sent via MQTT: 5A 00 01 02 11 00 00 2A B3 
+[0;32mI (145353) UART: UART sent 9 bytes: TX: 5A 00 01 02 FF 00 00 88 5A[0m
+RFID fallback stop command sent via MQTT
+[0;32mI (145363) MQTT: Published response: {"command":"rfid","action":"stop","status":"success","message":"Inventory stopped"}[0m
+[0;33mW (159513) MQTT: MQTT Disconnected[0m
+[0;32mI (159513) MQTT: Other MQTT event id:7[0m
+[0;32mI (160353) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (160353) MQTT: Stopping existing MQTT client[0m
+[0;32mI (162963) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (164363) MQTT: MQTT Connected[0m
+[0;32mI (164363) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (164373) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (164373) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (164383) MQTT: Subscribed to legacy topic rfid/commands, msg_id=51956[0m
+[0;32mI (165673) MQTT: MQTT client started[0m
+[0;32mI (165673) MQTT: Other MQTT event id:7[0m
+[0;32mI (166633) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (168043) MQTT: MQTT Connected[0m
+[0;32mI (168053) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (168053) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (168063) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (168063) MQTT: Subscribed to legacy topic rfid/commands, msg_id=28164[0m
+[0;32mI (168373) MQTT: MQTT Subscribed, msg_id=10208[0m
+[0;32mI (168663) MQTT: MQTT Subscribed, msg_id=38094[0m
+[0;32mI (168663) MQTT: MQTT Subscribed, msg_id=57169[0m
+[0;32mI (168673) MQTT: MQTT Subscribed, msg_id=28164[0m
+[0;32mI (168673) MQTT: MQTT Published, msg_id=57019[0m
+[0;33mW (198973) MQTT: MQTT Disconnected[0m
+[0;32mI (198973) MQTT: Other MQTT event id:7[0m
+[0;32mI (199673) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (199673) MQTT: Stopping existing MQTT client[0m
+[0;32mI (199803) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (201223) MQTT: MQTT Connected[0m
+[0;32mI (201223) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (201233) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (201233) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (201243) MQTT: Subscribed to legacy topic rfid/commands, msg_id=38796[0m
+[0;32mI (202533) MQTT: MQTT client started[0m
+[0;32mI (202533) MQTT: Other MQTT event id:7[0m
+[0;32mI (206563) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (207993) MQTT: MQTT Connected[0m
+[0;32mI (207993) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (207993) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (208003) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (208013) MQTT: Subscribed to legacy topic rfid/commands, msg_id=41690[0m
+[0;32mI (208293) MQTT: MQTT Subscribed, msg_id=29457[0m
+[0;32mI (208603) MQTT: MQTT Subscribed, msg_id=58803[0m
+[0;32mI (208603) MQTT: MQTT Subscribed, msg_id=34884[0m
+[0;32mI (208603) MQTT: MQTT Subscribed, msg_id=41690[0m
+[0;32mI (208613) MQTT: MQTT Published, msg_id=22674[0m
+[0;33mW (238913) MQTT: MQTT Disconnected[0m
+[0;32mI (238913) MQTT: Other MQTT event id:7[0m
+[0;32mI (240043) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (240533) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (240533) MQTT: Stopping existing MQTT client[0m
+[0;32mI (241773) MQTT: MQTT Connected[0m
+[0;32mI (241783) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (241783) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (241783) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (241793) MQTT: Subscribed to legacy topic rfid/commands, msg_id=30444[0m
+[0;32mI (243083) MQTT: MQTT client started[0m
+[0;32mI (243083) MQTT: Other MQTT event id:7[0m
+[0;31mE (250083) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (250083) esp-tls: Failed to open new connection[0m
+[0;31mE (250083) transport_base: Failed to open a new connection[0m
+[0;31mE (250093) mqtt_client: Error transport connect[0m
+[0;31mE (250093) MQTT: MQTT Error[0m
+[0;31mE (250103) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (250103) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (250113) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (250123) MQTT: MQTT Disconnected[0m
+[0;32mI (251083) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (251083) MQTT: Stopping existing MQTT client[0m
+[0;32mI (256123) MQTT: MQTT client started[0m
+[0;32mI (256123) MQTT: Other MQTT event id:7[0m
+[0;32mI (257253) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (258983) MQTT: MQTT Connected[0m
+[0;32mI (258983) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (258983) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (258993) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (259003) MQTT: Subscribed to legacy topic rfid/commands, msg_id=32673[0m
+[0;32mI (259283) MQTT: MQTT Subscribed, msg_id=64928[0m
+[0;32mI (259633) MQTT: MQTT Subscribed, msg_id=53212[0m
+[0;32mI (259633) MQTT: MQTT Subscribed, msg_id=41414[0m
+[0;32mI (259633) MQTT: MQTT Subscribed, msg_id=32673[0m
+[0;32mI (259643) MQTT: MQTT Published, msg_id=28157[0m
+[0;33mW (289943) MQTT: MQTT Disconnected[0m
+[0;32mI (289943) MQTT: Other MQTT event id:7[0m
+[0;32mI (290123) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (290123) MQTT: Stopping existing MQTT client[0m
+[0;32mI (291963) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (293383) MQTT: MQTT Connected[0m
+[0;32mI (293393) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (293393) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (293393) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (293403) MQTT: Subscribed to legacy topic rfid/commands, msg_id=23884[0m
+[0;32mI (294693) MQTT: MQTT client started[0m
+[0;32mI (294693) MQTT: Other MQTT event id:7[0m
+[0;32mI (299333) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (300763) MQTT: MQTT Connected[0m
+[0;32mI (300763) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (300763) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (300773) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (300783) MQTT: Subscribed to legacy topic rfid/commands, msg_id=23801[0m
+[0;32mI (301073) MQTT: MQTT Subscribed, msg_id=63937[0m
+[0;32mI (301373) MQTT: MQTT Subscribed, msg_id=42036[0m
+[0;32mI (301383) MQTT: MQTT Subscribed, msg_id=15174[0m
+[0;32mI (301383) MQTT: MQTT Subscribed, msg_id=23801[0m
+[0;32mI (301383) MQTT: MQTT Published, msg_id=2123[0m
+[0;33mW (331683) MQTT: MQTT Disconnected[0m
+[0;32mI (331683) MQTT: Other MQTT event id:7[0m
+[0;32mI (332513) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (332693) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (332693) MQTT: Stopping existing MQTT client[0m
+[0;32mI (333933) MQTT: MQTT Connected[0m
+[0;32mI (333943) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (333943) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (333943) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (333953) MQTT: Subscribed to legacy topic rfid/commands, msg_id=42444[0m
+[0;32mI (335243) MQTT: MQTT client started[0m
+[0;32mI (335243) MQTT: Other MQTT event id:7[0m
+[0;31mE (342243) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (342243) esp-tls: Failed to open new connection[0m
+[0;31mE (342243) transport_base: Failed to open a new connection[0m
+[0;31mE (342253) mqtt_client: Error transport connect[0m
+[0;31mE (342253) MQTT: MQTT Error[0m
+[0;31mE (342263) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (342263) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (342273) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (342283) MQTT: MQTT Disconnected[0m
+[0;32mI (343243) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (343243) MQTT: Stopping existing MQTT client[0m
+[0;32mI (343633) UART: UART sent 9 bytes: TX: 5A 00 01 02 02 00 00 29 59[0m
+[0;33mW (343633) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (343633) MQTT: Published response: {"command":"power","action":"query","status":"success","power":{"ant1":30,"ant2":30,"ant3":30,"ant4":30}}[0m
+[0;32mI (348283) MQTT: MQTT client started[0m
+[0;32mI (348283) MQTT: Other MQTT event id:7[0m
+[0;32mI (349103) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (350523) MQTT: MQTT Connected[0m
+[0;32mI (350533) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (350533) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (350533) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (350543) MQTT: Subscribed to legacy topic rfid/commands, msg_id=7362[0m
+[0;32mI (350833) MQTT: MQTT Subscribed, msg_id=48903[0m
+[0;32mI (351153) MQTT: MQTT Subscribed, msg_id=35381[0m
+[0;32mI (351153) MQTT: MQTT Subscribed, msg_id=1297[0m
+[0;32mI (351163) MQTT: MQTT Subscribed, msg_id=7362[0m
+[0;32mI (351163) MQTT: MQTT Published, msg_id=28847[0m
+[0;32mI (361103) WEB: Testing WiFi connection to SSID: Hydro[0m
+[0;32mI (361103) WIFI: Testing WiFi connection to: Hydro[0m
+[0;32mI (361103) wifi:state: run -> init (0)[0m
+[0;32mI (361113) wifi:pm stop, total sleep time: 328756952 us / 360214305 us[0m
+
+[0;32mI (361113) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (361123) wifi:<ba-del>idx:0, tid:1[0m
+[0;32mI (361123) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;31mE (361133) transport_base: poll_read select error 113, errno = Software caused connection abort, fd = 57[0m
+[0;32mI (361133) WIFI: Retry connecting to WiFi (1/5)[0m
+[0;31mE (361143) mqtt_client: Poll read error: 119, aborting connection[0m
+[0;32mI (361153) wifi:flush txq[0m
+[0;33mW (361153) MQTT: MQTT Disconnected[0m
+[0;32mI (361153) wifi:stop sw txq[0m
+[0;32mI (361163) wifi:lmac stop hw txq[0m
+[0;32mI (361663) wifi:mode : sta (98:3d:ae:9f:b7:80)[0m
+[0;32mI (361663) wifi:enable tsf[0m
+[0;32mI (361663) WIFI: WiFi started[0m
+[0;32mI (362193) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (362203) wifi:state: init -> auth (b0)[0m
+[0;32mI (362203) wifi:state: auth -> assoc (0)[0m
+[0;32mI (362213) wifi:state: assoc -> run (10)[0m
+[0;32mI (362243) wifi:connected with Hydro, aid = 10, channel 6, BW20, bssid = 6e:94:66:e1:b7:a2[0m
+[0;32mI (362243) wifi:security: WPA2-PSK, phy: bgn, rssi: -63[0m
+[0;32mI (362243) wifi:pm start, type: 1[0m
+
+[0;32mI (362243) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (362303) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (363253) esp_netif_handlers: sta ip: 192.168.137.217, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (363253) WIFI: WiFi connected! Got IP: 192.168.137.217[0m
+[0;32mI (363253) WIFI: Test connection successful to: Hydro[0m
+[0;32mI (363263) wifi:state: run -> init (0)[0m
+[0;32mI (363263) wifi:pm stop, total sleep time: 683117 us / 1015929 us[0m
+
+[0;32mI (363273) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (363283) WIFI: Retry connecting to WiFi (1/5)[0m
+[0;32mI (363323) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (363323) wifi:state: init -> auth (b0)[0m
+[0;32mI (364283) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (364283) MQTT: Stopping existing MQTT client[0m
+[0;32mI (364323) wifi:state: auth -> init (200)[0m
+[0;32mI (364323) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (364323) WIFI: Retry connecting to WiFi (2/5)[0m
+[0;32mI (365273) WIFI: Restoring connection to saved WiFi: Hydro[0m
+[0;32mI (366273) WIFI: Connecting to WiFi SSID: Hydro[0m
+[0;33mW (366273) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (366273) wifi:sta is connecting, return error[0m
+[0;31mE (366273) WIFI: Failed to start WiFi connection: ESP_ERR_WIFI_CONN[0m
+[0;32mI (366283) WIFI: WiFi test completed. Result: SUCCESS[0m
+[0;32mI (366283) WEB: WiFi test result: SUCCESS[0m
+[0;32mI (366293) WEB: Sending response: {"status":"success","message":"Connected to Hydro successfully"}[0m
+[0;32mI (366743) WIFI: Retry connecting to WiFi (1/5)[0m
+[0;32mI (366803) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (366803) wifi:state: init -> auth (b0)[0m
+[0;32mI (366813) wifi:state: auth -> assoc (0)[0m
+[0;32mI (366823) wifi:state: assoc -> run (10)[0m
+[0;32mI (366913) wifi:connected with Hydro, aid = 1, channel 6, BW20, bssid = 6e:94:66:e1:b7:a2[0m
+[0;32mI (366913) wifi:security: WPA2-PSK, phy: bgn, rssi: -63[0m
+[0;32mI (366923) wifi:pm start, type: 1[0m
+
+[0;32mI (366923) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (367003) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (367153) MQTT: MQTT client started[0m
+[0;32mI (367153) MQTT: Other MQTT event id:7[0m
+[0;32mI (367933) esp_netif_handlers: sta ip: 192.168.137.217, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (367933) WIFI: WiFi connected! Got IP: 192.168.137.217[0m
+[0;32mI (369383) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (369883) wifi:<ba-add>idx:0 (ifx:0, 6e:94:66:e1:b7:a2), tid:1, ssn:5, winSize:64[0m
+[0;32mI (370833) MQTT: MQTT Connected[0m
+[0;32mI (370833) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (370833) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (370843) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (370853) MQTT: Subscribed to legacy topic rfid/commands, msg_id=41765[0m
+[0;32mI (371413) MQTT: MQTT Subscribed, msg_id=64860[0m
+[0;32mI (371823) MQTT: MQTT Subscribed, msg_id=64453[0m
+[0;32mI (371833) MQTT: MQTT Subscribed, msg_id=37986[0m
+[0;32mI (371833) MQTT: MQTT Subscribed, msg_id=41765[0m
+[0;32mI (371833) MQTT: MQTT Published, msg_id=42563[0m
+[0;33mW (401133) MQTT: MQTT Disconnected[0m
+[0;32mI (401133) MQTT: Other MQTT event id:7[0m
+[0;32mI (401153) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (401153) MQTT: Stopping existing MQTT client[0m
+[0;32mI (401943) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (403393) wifi:<ba-add>idx:1 (ifx:0, 6e:94:66:e1:b7:a2), tid:0, ssn:7, winSize:64[0m
+[0;32mI (403403) MQTT: MQTT Connected[0m
+[0;32mI (403413) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (403413) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (403423) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (403433) MQTT: Subscribed to legacy topic rfid/commands, msg_id=12288[0m
+[0;33mW (403583) wifi:[ADDBA]rx delba, code:37, delete tid:0[0m
+[0;32mI (403583) wifi:<ba-del>idx:1, tid:0[0m
+[0;33mW (403583) wifi:[ADDBA]rx delba, code:37, delete tid:1[0m
+[0;32mI (403583) wifi:<ba-del>idx:0, tid:1[0m
+[0;32mI (405083) MQTT: MQTT client started[0m
+[0;32mI (405083) MQTT: Other MQTT event id:7[0m
+[0;32mI (406433) wifi:<ba-add>idx:0 (ifx:0, 6e:94:66:e1:b7:a2), tid:1, ssn:33, winSize:64[0m
+[0;32mI (410243) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (411663) MQTT: MQTT Connected[0m
+[0;32mI (411663) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (411663) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (411673) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (411683) MQTT: Subscribed to legacy topic rfid/commands, msg_id=63918[0m
+[0;32mI (411963) MQTT: MQTT Subscribed, msg_id=8312[0m
+[0;32mI (412273) MQTT: MQTT Subscribed, msg_id=58945[0m
+[0;32mI (412283) MQTT: MQTT Subscribed, msg_id=22225[0m
+[0;32mI (412283) MQTT: MQTT Subscribed, msg_id=63918[0m
+[0;32mI (412283) MQTT: MQTT Published, msg_id=13119[0m
+[0;33mW (442583) MQTT: MQTT Disconnected[0m
+[0;32mI (442583) MQTT: Other MQTT event id:7[0m
+[0;32mI (443083) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (443083) MQTT: Stopping existing MQTT client[0m
+[0;32mI (443303) wifi:<ba-add>idx:1 (ifx:0, 6e:94:66:e1:b7:a2), tid:0, ssn:9, winSize:64[0m
+[0;32mI (443413) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (444833) MQTT: MQTT Connected[0m
+[0;32mI (444843) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (444843) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (444843) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (444853) MQTT: Subscribed to legacy topic rfid/commands, msg_id=8506[0m
+[0;32mI (446143) MQTT: MQTT client started[0m
+[0;32mI (446143) MQTT: Other MQTT event id:7[0m
+[0;31mE (453143) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (453143) esp-tls: Failed to open new connection[0m
+[0;31mE (453143) transport_base: Failed to open a new connection[0m
+[0;31mE (453153) mqtt_client: Error transport connect[0m
+[0;31mE (453153) MQTT: MQTT Error[0m
+[0;31mE (453163) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (453163) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (453173) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (453183) MQTT: MQTT Disconnected[0m
+[0;32mI (454143) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (454143) MQTT: Stopping existing MQTT client[0m
+[0;32mI (459183) MQTT: MQTT client started[0m
+[0;32mI (459183) MQTT: Other MQTT event id:7[0m
+[0;32mI (465843) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (476143) esp-tls: Failed to open new connection in specified timeout[0m
+[0;31mE (476143) transport_base: Failed to open a new connection[0m
+[0;31mE (476143) mqtt_client: Error transport connect[0m
+[0;31mE (476143) MQTT: MQTT Error[0m
+[0;31mE (476153) MQTT: Last error code reported from esp-tls: 0x8006[0m
+[0;31mE (476153) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (476163) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (476163) MQTT: MQTT Disconnected[0m
+[0;32mI (477183) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (477183) MQTT: Stopping existing MQTT client[0m
+[0;32mI (482173) MQTT: MQTT client started[0m
+[0;32mI (482173) MQTT: Other MQTT event id:7[0m
+[0;32mI (485193) esp-x509-crt-bundle: Certificate validated[0m

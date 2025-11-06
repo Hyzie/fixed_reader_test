@@ -3,6 +3,9 @@
 #include "esp_log.h"
 #include "esp_http_server.h"
 #include "uart.h"
+#include "wifi_config.h"
+#include "wifi.h"
+#include "mqtt_client.h"
 #include "rfid.h"
 #include <stdlib.h>
 
@@ -40,8 +43,12 @@ static const char* HTML_CONTENT = R"rawliteral(
       <label>Password
         <input type="password" id="pass" placeholder="WiFi Password">
       </label>
-      <button type="submit">Save WiFi</button>
+      <div class="row">
+        <button type="button" onclick="testWifi()" style="background:#ff9800">Test Connection</button>
+        <button type="submit">Save WiFi</button>
+      </div>
     </form>
+    <div id="wifiTestResult" style="margin-top:10px; padding:10px; border-radius:4px; display:none;"></div>
 
     <h3>RFID Controls</h3>
     <div class="row">
@@ -190,6 +197,61 @@ static const char* HTML_CONTENT = R"rawliteral(
       fetchStatus();
     }
 
+    async function testWifi(){
+      const ssid = document.getElementById('ssid').value;
+      const pass = document.getElementById('pass').value;
+      const resultDiv = document.getElementById('wifiTestResult');
+      
+      console.log('Testing WiFi with SSID:', ssid);
+      
+      if (!ssid || !pass) {
+        resultDiv.textContent = 'Please enter both SSID and password';
+        resultDiv.style.display = 'block';
+        resultDiv.style.background = '#e53935';
+        return;
+      }
+      
+      // Show testing message
+      resultDiv.textContent = 'Testing connection... Please wait (up to 10 seconds)';
+      resultDiv.style.display = 'block';
+      resultDiv.style.background = '#ff9800';
+      
+      try {
+        const body = `ssid=${encodeURIComponent(ssid)}&pass=${encodeURIComponent(pass)}`;
+        console.log('Sending test request with body:', body);
+        
+        const response = await fetch('/wifi-test', { 
+          method:'POST', 
+          headers:{'Content-Type':'application/x-www-form-urlencoded'}, 
+          body 
+        });
+        
+        console.log('Response status:', response.status);
+        
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+        
+        const responseText = await response.text();
+        console.log('Raw response:', responseText);
+        
+        const result = JSON.parse(responseText);
+        console.log('Parsed result:', result);
+        
+        resultDiv.textContent = result.message;
+        if (result.status === 'success') {
+          resultDiv.style.background = '#4caf50';
+          console.log('Test successful - button should be green');
+        } else {
+          resultDiv.style.background = '#e53935';
+          console.log('Test failed - button should be red');
+        }
+      } catch (error) {
+        resultDiv.textContent = 'Error testing connection: ' + error.message;
+        resultDiv.style.background = '#e53935';
+      }
+    }
+
     async function startInv(){ 
       await fetch('/inventory/start', { method:'POST' }); 
       fetchStatus(); 
@@ -321,30 +383,106 @@ static void urldecode(char *dst, const char *src)
   *dst = '\0';
 }
 
+// HTTP POST handler - save Wi-Fi config (form urlencoded: ssid=..&pass=..)
+static esp_err_t wifi_post_handler(httpd_req_t *req)
+{
+  char buf[256];
+  int ret = httpd_req_recv(req, buf, sizeof(buf)-1);
+  if (ret <= 0) {
+    if (ret == HTTPD_SOCK_ERR_TIMEOUT) httpd_resp_send_408(req);
+    return ESP_FAIL;
+  }
+  buf[ret] = '\0';
+  char *pair = strtok(buf, "&");
+  char ssid[64] = {0}, pass[64] = {0};
+  while (pair) {
+    char *eq = strchr(pair, '=');
+    if (eq) {
+      *eq = '\0';
+      char *k = pair; char *v = eq + 1;
+      char dec[128];
+      urldecode(dec, v);
+      if (strcmp(k, "ssid") == 0) strncpy(ssid, dec, sizeof(ssid)-1);
+      else if (strcmp(k, "pass") == 0) strncpy(pass, dec, sizeof(pass)-1);
+    }
+    pair = strtok(NULL, "&");
+  }
+  wifi_config_save(ssid, pass);
+  httpd_resp_set_status(req, "200 OK");
+  httpd_resp_send(req, "OK", 2);
+  return ESP_OK;
+}
+
+// HTTP POST handler - test Wi-Fi connection (form urlencoded: ssid=..&pass=..)
+static esp_err_t wifi_test_handler(httpd_req_t *req)
+{
+  char buf[256];
+  int ret = httpd_req_recv(req, buf, sizeof(buf)-1);
+  if (ret <= 0) {
+    if (ret == HTTPD_SOCK_ERR_TIMEOUT) httpd_resp_send_408(req);
+    return ESP_FAIL;
+  }
+  buf[ret] = '\0';
+  char *pair = strtok(buf, "&");
+  char ssid[64] = {0}, pass[64] = {0};
+  while (pair) {
+    char *eq = strchr(pair, '=');
+    if (eq) {
+      *eq = '\0';
+      char *k = pair; char *v = eq + 1;
+      char dec[128];
+      urldecode(dec, v);
+      if (strcmp(k, "ssid") == 0) strncpy(ssid, dec, sizeof(ssid)-1);
+      else if (strcmp(k, "pass") == 0) strncpy(pass, dec, sizeof(pass)-1);
+    }
+    pair = strtok(NULL, "&");
+  }
+  
+  // Test WiFi connection
+  ESP_LOGI(TAG, "Testing WiFi connection to SSID: %s", ssid);
+  bool test_result = wifi_test_connection(ssid, pass);
+  ESP_LOGI(TAG, "WiFi test result: %s", test_result ? "SUCCESS" : "FAILED");
+  
+  char response[256];
+  if (test_result) {
+    snprintf(response, sizeof(response), "{\"status\":\"success\",\"message\":\"Connected to %s successfully\"}", ssid);
+  } else {
+    snprintf(response, sizeof(response), "{\"status\":\"error\",\"message\":\"Failed to connect to %s\"}", ssid);
+  }
+  
+  ESP_LOGI(TAG, "Sending response: %s", response);
+  httpd_resp_set_type(req, "application/json");
+  httpd_resp_send(req, response, strlen(response));
+  return ESP_OK;
+}
+
 // Inventory control handlers
 static esp_err_t inventory_start_handler(httpd_req_t *req)
 {
-  rfid_start_inventory();
+  rfid_start_inventory_local();
   httpd_resp_send(req, "OK", 2);
   return ESP_OK;
 }
 
 static esp_err_t inventory_stop_handler(httpd_req_t *req)
 {
-  rfid_stop_inventory();
+  rfid_stop_inventory_local();
   httpd_resp_send(req, "OK", 2);
   return ESP_OK;
 }
 
-// Status handler returns JSON with inventory status only
+// Status handler returns JSON with wifi and inventory status
 static esp_err_t status_get_handler(httpd_req_t *req)
 {
-  const char *inv = rfid_get_status();
+  char ssid[64]; char pass[64];
+  wifi_config_load(ssid, sizeof(ssid), pass, sizeof(pass));
+  const char *inv = rfid_get_local_status();  // Use local status only for web server
   const char *last_cmd = rfid_get_last_command();
-  char resp[512];
+  char resp[1024];
+  int configured = (ssid[0] != '\0');
   int len = snprintf(resp, sizeof(resp), 
-    "{\"inventory\":\"%s\",\"last_command\":\"%s\"}", 
-    inv, last_cmd);
+    "{\"inventory\":\"%s\",\"last_command\":\"%s\",\"wifi\":{\"configured\":%d,\"ssid\":\"%s\",\"pass\":\"%s\"}}", 
+    inv, last_cmd, configured, ssid, pass);
   httpd_resp_set_type(req, "application/json");
   return httpd_resp_send(req, resp, len);
 }
@@ -448,7 +586,7 @@ httpd_handle_t start_webserver(void)
    config.stack_size = 8192;
    config.lru_purge_enable = true;
    /* Increase max URI handlers from default (8) to accommodate all endpoints */
-   config.max_uri_handlers = 12;  // Total endpoints
+   config.max_uri_handlers = 14;  // Total endpoints including WiFi test
    httpd_handle_t server = NULL;
 
     if (httpd_start(&server, &config) == ESP_OK) {
@@ -487,6 +625,24 @@ httpd_handle_t start_webserver(void)
             .user_ctx  = NULL
         };
         httpd_register_uri_handler(server, &send);
+
+    // Wi-Fi config endpoint
+    const httpd_uri_t wifi_cfg = {
+      .uri       = "/wifi-config",
+      .method    = HTTP_POST,
+      .handler   = wifi_post_handler,
+      .user_ctx  = NULL
+    };
+    httpd_register_uri_handler(server, &wifi_cfg);
+
+    // Wi-Fi test endpoint
+    const httpd_uri_t wifi_test = {
+      .uri       = "/wifi-test",
+      .method    = HTTP_POST,
+      .handler   = wifi_test_handler,
+      .user_ctx  = NULL
+    };
+    httpd_register_uri_handler(server, &wifi_test);
 
     // Inventory control endpoints
     const httpd_uri_t inv_start = {

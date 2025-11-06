@@ -3,10 +3,15 @@
 
 #include "uart.h"
 #include <stdint.h>
+#include <stdbool.h>
 
 void rfid_init(void);
 void rfid_start_inventory(void);
 void rfid_stop_inventory(void);
+void rfid_start_inventory_local(void);  // Local version (no MQTT)
+void rfid_stop_inventory_local(void);   // Local version (no MQTT)  
+void rfid_start_inventory_mqtt(void);   // MQTT version (with MQTT publishing)
+void rfid_stop_inventory_mqtt(void);    // MQTT version (with MQTT publishing)
 const char* rfid_get_status(void);
 const char* rfid_get_last_command(void);
 void rfid_set_last_command(const char* cmd_description);
@@ -26,5 +31,15 @@ void rfid_process_bytes(const uint8_t *buf, size_t len);
 int rfid_get_tags_json(char *out, int out_len);
 // Reset startup delay for immediate tag processing (used when manually starting inventory)
 void rfid_reset_startup_delay(void);
+
+// Status functions
+const char* rfid_get_local_status(void);   // Local/web server status
+const char* rfid_get_mqtt_status(void);    // MQTT/remote status
+bool rfid_get_mqtt_status_bool(void);      // MQTT status as boolean
+int rfid_get_mqtt_tags_json(char *out, int out_len);  // MQTT tags JSON
+
+// MQTT command handlers
+void rfid_handle_inventory_command(const char* action);
+void rfid_handle_power_command(const char* action, int ant1, int ant2, int ant3, int ant4);
 
 #endif // RFID_H
