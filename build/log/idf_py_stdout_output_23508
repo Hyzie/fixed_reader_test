@@ -1,0 +1,708 @@
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3c0c002ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037c18e
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x1870
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xce8
+load:0x403cb700,len:0x2ed8
+entry 0x403c8918
+[0;32mI (26) boot: ESP-IDF v5.3.3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Nov  7 2025 18:14:32[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot: efuse block revision: v1.3[0m
+[0;32mI (39) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (43) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00180000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=458b8h (284856) map[0m
+[0;32mI (154) esp_image: segment 1: paddr=000558e0 vaddr=3fc9cf00 size=04b40h ( 19264) load[0m
+[0;32mI (159) esp_image: segment 2: paddr=0005a428 vaddr=40374000 size=05bf0h ( 23536) load[0m
+[0;32mI (165) esp_image: segment 3: paddr=00060020 vaddr=42000020 size=b9128h (758056) map[0m
+[0;32mI (302) esp_image: segment 4: paddr=00119150 vaddr=40379bf0 size=132d8h ( 78552) load[0m
+[0;32mI (330) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (330) boot: Disabling RNG early entropy source...[0m
+[0;32mI (342) cpu_start: Multicore app[0m
+[0;32mI (351) cpu_start: Pro cpu start user code[0m
+[0;32mI (351) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (351) app_init: Application information:[0m
+[0;32mI (354) app_init: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (360) app_init: App version:      4489b73-dirty[0m
+[0;32mI (366) app_init: Compile time:     Nov  7 2025 18:35:57[0m
+[0;32mI (372) app_init: ELF file SHA256:  2212136ca...[0m
+[0;32mI (377) app_init: ESP-IDF:          v5.3.3-dirty[0m
+[0;32mI (382) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (387) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (392) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (397) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (404) heap_init: At 3FCAB388 len 0003E388 (248 KiB): RAM[0m
+[0;32mI (410) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (416) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (422) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (430) spi_flash: detected chip: gd[0m
+[0;32mI (433) spi_flash: flash io: dio[0m
+[0;33mW (437) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (450) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (457) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (464) main_task: Started on CPU0[0m
+[0;32mI (474) main_task: Calling app_main()[0m
+[0;32mI (494) uart: queue free spaces: 30[0m
+[0;32mI (494) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (494) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (604) UART: UART RX task started and waiting for data...[0m
+UART RX task created
+[0;32mI (604) ETH: Static IP configured: 192.168.1.100[0m
+[0;32mI (604) ETH: Gateway: 192.168.1.1[0m
+[0;32mI (604) ETH: Netmask: 255.255.255.0[0m
+[0;32mI (614) ETH: DNS servers configured from network_config.h[0m
+[0;32mI (644) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (644) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (654) ETH: Ethernet Started[0m
+[0;32mI (654) pp: pp rom version: e7ae62f[0m
+[0;32mI (654) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (664) wifi:wifi driver task: 3fcc3410, prio:23, stack:6656, core=0[0m
+[0;32mI (674) wifi:wifi firmware version: b0b320f[0m
+[0;32mI (674) wifi:wifi certification version: v7.0[0m
+[0;32mI (674) wifi:config NVS flash: enabled[0m
+[0;32mI (674) wifi:config nano formating: disabled[0m
+[0;32mI (674) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (684) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (684) wifi:Init management short buffer num: 32[0m
+[0;32mI (684) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (694) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (694) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (704) wifi:Init static rx buffer num: 10[0m
+[0;32mI (704) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (714) wifi_init: rx ba win: 6[0m
+[0;32mI (714) wifi_init: accept mbox: 6[0m
+[0;32mI (714) wifi_init: tcpip mbox: 32[0m
+[0;32mI (724) wifi_init: udp mbox: 6[0m
+[0;32mI (724) wifi_init: tcp mbox: 6[0m
+[0;32mI (724) wifi_init: tcp tx win: 5760[0m
+[0;32mI (734) wifi_init: tcp rx win: 5760[0m
+[0;32mI (734) wifi_init: tcp mss: 1440[0m
+[0;32mI (744) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (744) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (754) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (754) phy_init: phy_version 700,8582a7fd,Feb 10 2025,20:13:11[0m
+[0;32mI (794) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (814) wifi:mode : sta (98:3d:ae:9f:b7:80)[0m
+[0;32mI (814) wifi:enable tsf[0m
+[0;32mI (814) WIFI: WiFi module initialized (STA mode, power save disabled)[0m
+[0;32mI (814) WIFI: WiFi started[0m
+[0;32mI (814) WIFI: Found saved WiFi credentials, attempting connection...[0m
+[0;32mI (824) WIFI: Connecting to WiFi SSID: Hydro[0m
+[0;33mW (834) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (834) MQTT: MQTT data buffer initialized (20 entries)[0m
+[0;32mI (844) MQTT: No previous buffer data in NVS[0m
+[0;33mW (844) MQTT: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND, using defaults[0m
+[0;32mI (854) MQTT: MQTT module initialized with broker: mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883[0m
+[0;32mI (864) WEB: Registered /power/set handler[0m
+[0;32mI (874) WEB: Registered /power/get handler[0m
+[0;32mI (874) MAIN: Web server started on Ethernet[0m
+[0;32mI (874) MAIN: System initialized successfully - Ethernet + WiFi + MQTT mode[0m
+[0;32mI (884) main_task: Returned from app_main()[0m
+[0;32mI (944) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (944) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1944) wifi:state: auth -> init (0x200)[0m
+[0;32mI (1954) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1954) WIFI: Retry connecting to WiFi (1/5)[0m
+[0;32mI (2654) ETH: Ethernet Link Up[0m
+[0;32mI (2654) ETH: Ethernet HW Addr 02:00:00:12:34:56[0m
+[0;32mI (2654) esp_netif_handlers: eth ip: 192.168.1.100, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2654) ETH: Ethernet Got IP Address[0m
+[0;32mI (2664) ETH: ~~~~~~~~~~~[0m
+[0;32mI (2664) ETH: ETHIP: 192.168.1.100[0m
+[0;32mI (2674) ETH: ETHMASK: 255.255.255.0[0m
+[0;32mI (2674) ETH: ETHGW: 192.168.1.1[0m
+[0;32mI (2674) ETH: ~~~~~~~~~~~[0m
+[0;32mI (4364) WIFI: Retry connecting to WiFi (2/5)[0m
+[0;32mI (4424) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4424) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (5434) wifi:state: auth -> init (0x200)[0m
+[0;32mI (5444) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (5444) WIFI: Retry connecting to WiFi (3/5)[0m
+[0;32mI (5744) UART: UART sent 9 bytes: TX: 5A 00 01 02 02 00 00 29 59[0m
+[0;32mI (7854) WIFI: Retry connecting to WiFi (4/5)[0m
+[0;32mI (7904) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (7904) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (8964) wifi:state: auth -> init (0x200)[0m
+[0;32mI (8974) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (8974) WIFI: Retry connecting to WiFi (5/5)[0m
+[0;32mI (11384) WIFI: Failed to connect to WiFi after 5 attempts[0m
+[0;32mI (18314) WEB: Testing WiFi connection to SSID: Hydro[0m
+[0;32mI (18314) WIFI: Testing WiFi connection to: Hydro[0m
+[0;32mI (18314) wifi:flush txq[0m
+[0;32mI (18314) wifi:stop sw txq[0m
+[0;32mI (18314) wifi:lmac stop hw txq[0m
+[0;32mI (18824) wifi:mode : sta (98:3d:ae:9f:b7:80)[0m
+[0;32mI (18824) wifi:enable tsf[0m
+[0;32mI (18824) WIFI: WiFi started[0m
+[0;32mI (19374) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (19374) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (20384) wifi:state: auth -> init (0x200)[0m
+[0;32mI (20394) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (20394) WIFI: Failed to connect to WiFi after 5 attempts[0m
+[0;33mW (20394) WIFI: Test connection failed to: Hydro[0m
+[0;32mI (22404) WIFI: Restoring connection to saved WiFi: Hydro[0m
+[0;32mI (23404) WIFI: Connecting to WiFi SSID: Hydro[0m
+[0;33mW (23404) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (23404) WIFI: WiFi test completed. Result: FAILED[0m
+[0;32mI (23404) WEB: WiFi test result: FAILED[0m
+[0;32mI (23404) WEB: Sending response: {"status":"error","message":"Failed to connect to Hydro"}[0m
+[0;32mI (23464) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (23474) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (24484) wifi:state: auth -> init (0x200)[0m
+[0;32mI (24494) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (24494) WIFI: Retry connecting to WiFi (1/5)[0m
+[0;32mI (26904) WIFI: Retry connecting to WiFi (2/5)[0m
+[0;32mI (26954) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (26954) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (27964) wifi:state: auth -> init (0x200)[0m
+[0;32mI (27974) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (27974) WIFI: Retry connecting to WiFi (3/5)[0m
+[0;32mI (30384) WIFI: Retry connecting to WiFi (4/5)[0m
+[0;32mI (30434) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (30434) wifi:state: init -> auth (0xb0)[0m
+[0;33mW (30874) MQTT: Connection monitor: MQTT disconnected[0m
+[0;32mI (30874) MQTT: Connection health: DISCONNECTED, buffer: 0/20, failures: 0[0m
+[0;32mI (31444) wifi:state: auth -> init (0x200)[0m
+[0;32mI (31454) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (31454) WIFI: Retry connecting to WiFi (5/5)[0m
+[0;32mI (33864) WIFI: Failed to connect to WiFi after 5 attempts[0m
+[0;32mI (42304) WEB: Testing WiFi connection to SSID: Z[0m
+[0;32mI (42304) WIFI: Testing WiFi connection to: Z[0m
+[0;32mI (42304) wifi:flush txq[0m
+[0;32mI (42304) wifi:stop sw txq[0m
+[0;32mI (42304) wifi:lmac stop hw txq[0m
+[0;32mI (42834) wifi:mode : sta (98:3d:ae:9f:b7:80)[0m
+[0;32mI (42834) wifi:enable tsf[0m
+[0;32mI (42844) WIFI: WiFi started[0m
+[0;32mI (44544) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (44544) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (44554) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (44564) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (45594) wifi:connected with Z, aid = 1, channel 11, BW20, bssid = f6:67:28:64:6a:a5[0m
+[0;32mI (45594) wifi:security: WPA2-PSK, phy: bgn, rssi: -88[0m
+[0;32mI (45614) wifi:pm start, type: 0[0m
+
+[0;32mI (45614) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (45614) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (45684) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (45684) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (49124) esp_netif_handlers: sta ip: 192.168.43.11, mask: 255.255.255.0, gw: 192.168.43.1[0m
+[0;32mI (49124) WIFI: WiFi connected! Got IP: 192.168.43.11[0m
+[0;32mI (49124) WIFI: Test connection successful to: Z[0m
+[0;32mI (49134) wifi:state: run -> init (0x0)[0m
+[0;32mI (49144) wifi:pm stop, total sleep time: 0 us / 3522329 us[0m
+
+[0;32mI (49144) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (49144) WIFI: Retry connecting to WiFi (1/5)[0m
+[0;32mI (49154) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (49164) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (49174) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (49184) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (49204) wifi:connected with Z, aid = 1, channel 11, BW20, bssid = f6:67:28:64:6a:a5[0m
+[0;32mI (49204) wifi:security: WPA2-PSK, phy: bgn, rssi: -89[0m
+[0;32mI (49204) wifi:pm start, type: 0[0m
+
+[0;32mI (49204) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (49214) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (49274) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (49274) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (50224) esp_netif_handlers: sta ip: 192.168.43.11, mask: 255.255.255.0, gw: 192.168.43.1[0m
+[0;32mI (50224) WIFI: WiFi connected! Got IP: 192.168.43.11[0m
+[0;32mI (50874) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (50874) MQTT: Extracted hostname: '9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud', port: 8883 from URI: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (50884) MQTT: Connecting to MQTT broker: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (50894) MQTT: Client ID: 'esp32_rfid_reader'[0m
+[0;32mI (50894) MQTT: Username: 'helloworld'[0m
+[0;32mI (50904) MQTT: Configuring TLS for MQTTS connection with certificate bundle[0m
+[0;32mI (50914) MQTT: MQTT client started[0m
+[0;32mI (50914) MQTT: Other MQTT event id:7[0m
+[0;32mI (51144) WIFI: Restoring connection to saved WiFi: Hydro[0m
+[0;32mI (51864) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (52144) WIFI: Connecting to WiFi SSID: Hydro[0m
+[0;32mI (52164) WIFI: Already connected to WiFi, disconnecting first...[0m
+[0;32mI (52174) wifi:state: run -> init (0x0)[0m
+[0;32mI (52184) wifi:pm stop, total sleep time: 0 us / 2973236 us[0m
+
+[0;32mI (52184) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;31mE (52184) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x004C[0m
+[0;32mI (52184) WIFI: Retry connecting to WiFi (1/5)[0m
+[0;32mI (52194) esp-tls-mbedtls: Certificate verified.[0m
+[0;31mE (52204) esp-tls: Failed to open new connection[0m
+[0;31mE (52204) transport_base: Failed to open a new connection[0m
+[0;31mE (52214) mqtt_client: Error transport connect[0m
+[0;31mE (52214) MQTT: MQTT Error[0m
+[0;31mE (52224) MQTT: Last error code reported from esp-tls: 0x801a[0m
+[0;31mE (52224) MQTT: Last tls stack error number: 0x4c[0m
+[0;31mE (52234) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (52234) MQTT: MQTT Disconnected[0m
+[0;32mI (52244) wifi:new:<6,0>, old:<11,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (52254) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (53184) wifi:sta is connecting, return error[0m
+[0;31mE (53184) WIFI: Failed to start WiFi connection: ESP_ERR_WIFI_CONN[0m
+[0;32mI (53184) WIFI: WiFi test completed. Result: SUCCESS[0m
+[0;32mI (53184) WEB: WiFi test result: SUCCESS[0m
+[0;32mI (53194) WEB: Sending response: {"status":"success","message":"Connected to Z successfully"}[0m
+[0;32mI (53264) wifi:state: auth -> init (0x200)[0m
+[0;32mI (53274) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (53274) WIFI: Retry connecting to WiFi (2/5)[0m
+[0;32mI (55684) WIFI: Retry connecting to WiFi (3/5)[0m
+[0;32mI (55724) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (55724) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (55754) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (56754) wifi:state: assoc -> init (0x400)[0m
+[0;32mI (56774) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (56774) WIFI: Retry connecting to WiFi (4/5)[0m
+[0;32mI (57244) MQTT: Other MQTT event id:7[0m
+[0;32mI (58314) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (59184) WIFI: Retry connecting to WiFi (5/5)[0m
+[0;32mI (59204) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (59204) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (59224) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (60224) wifi:state: assoc -> init (0x400)[0m
+[0;32mI (60234) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (60234) WIFI: Failed to connect to WiFi after 5 attempts[0m
+[0;32mI (60254) MQTT: MQTT Connected[0m
+[0;32mI (60254) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (60254) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (60264) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (60274) MQTT: Subscribed to legacy topic rfid/commands, msg_id=11782[0m
+[0;32mI (60684) MQTT: MQTT Subscribed, msg_id=3590[0m
+[0;32mI (60914) MQTT: Connection health: OK, buffer: 0/20, failures: 0[0m
+[0;32mI (61134) MQTT: MQTT Subscribed, msg_id=30407[0m
+[0;32mI (61134) MQTT: MQTT Subscribed, msg_id=58728[0m
+[0;32mI (61144) MQTT: MQTT Subscribed, msg_id=11782[0m
+[0;32mI (61144) MQTT: MQTT Published, msg_id=53404[0m
+[0;32mI (74374) MQTT: MQTT Data received[0m
+[0;32mI (74374) MQTT: Topic: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (74374) MQTT: Data: {"action": "get"}[0m
+[0;32mI (74374) MQTT: Processing command - Topic: reader/esp32_rfid_reader/cmd/power, Data: {"action": "get"}[0m
+[0;32mI (74384) MQTT: Executing power command: get[0m
+[0;32mI (74394) UART: UART sent 9 bytes: TX: 5A 00 01 02 02 00 00 29 59[0m
+[0;32mI (74404) MQTT: Published response: {"command":"power","action":"query","status":"success","power":{"ant1":20,"ant2":20,"ant3":10,"ant4":10}}[0m
+[0;32mI (89964) MQTT: MQTT Data received[0m
+[0;32mI (89964) MQTT: Topic: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (89964) MQTT: Data: {"action": "start"}[0m
+[0;32mI (89964) MQTT: Processing command - Topic: reader/esp32_rfid_reader/cmd/power, Data: {"action": "start"}[0m
+[0;32mI (89984) MQTT: Executing power command: start[0m
+[0;32mI (89984) MQTT: Published response: {"command":"power","action":"start","status":"error","message":"Unknown action"}[0m
+[0;32mI (90914) MQTT: Connection health: OK, buffer: 0/20, failures: 0[0m
+[0;32mI (99264) MQTT: MQTT Data received[0m
+[0;32mI (99264) MQTT: Topic: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (99264) MQTT: Data: {"action": "start"}[0m
+[0;32mI (99274) MQTT: Processing command - Topic: reader/esp32_rfid_reader/cmd/rfid, Data: {"action": "start"}[0m
+[0;32mI (99284) MQTT: Executing RFID command: start[0m
+[0;32mI (99284) UART: UART sent 14 bytes: TX: 5A 00 01 02 10 00 05 00 00 00 01 01 F4 87[0m
+RFID inventory started via MQTT - counters reset
+[0;32mI (99304) MQTT: Published response: {"command":"rfid","action":"start","status":"success","message":"Inventory started"}[0m
+MQTT: Skipping batch publish (tags: 0, no changes)
+MQTT: Skipping batch publish (tags: 0, no changes)
+[0;32mI (111224) MQTT: MQTT Data received[0m
+[0;32mI (111224) MQTT: Topic: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (111224) MQTT: Data: {"action": "stop"}[0m
+[0;32mI (111224) MQTT: Processing command - Topic: reader/esp32_rfid_reader/cmd/rfid, Data: {"action": "stop"}[0m
+[0;32mI (111244) MQTT: Executing RFID command: stop[0m
+[0;32mI (111244) UART: UART sent 9 bytes: TX: 5A 00 01 02 11 00 00 2A B3[0m
+RFID stop command sent via MQTT: 5A 00 01 02 11 00 00 2A B3 
+[0;32mI (111254) UART: UART sent 9 bytes: TX: 5A 00 01 02 FF 00 00 88 5A[0m
+RFID fallback stop command sent via MQTT
+[0;32mI (111274) MQTT: Published response: {"command":"rfid","action":"stop","status":"success","message":"Inventory stopped"}[0m
+[0;32mI (120914) MQTT: Connection health: OK, buffer: 0/20, failures: 0[0m
+[0;32mI (150914) MQTT: Connection health: OK, buffer: 0/20, failures: 0[0m
+[0;32mI (180914) MQTT: Connection health: OK, buffer: 0/20, failures: 0[0m
+[0;32mI (202704) UART: UART sent 14 bytes: TX: 5A 00 01 02 10 00 05 00 00 00 01 01 F4 87[0m
+RFID inventory started locally - counters reset
+[0;32mI (210914) MQTT: Connection health: OK, buffer: 0/20, failures: 0[0m
+[0;32mI (223594) UART: UART sent 9 bytes: TX: 5A 00 01 02 11 00 00 2A B3[0m
+RFID stop command sent locally: 5A 00 01 02 11 00 00 2A B3 
+[0;32mI (223594) UART: UART sent 9 bytes: TX: 5A 00 01 02 FF 00 00 88 5A[0m
+RFID fallback stop command sent locally
+[0;32mI (229524) UART: UART sent 9 bytes: TX: 5A 00 01 02 02 00 00 29 59[0m
+[0;32mI (229524) MQTT: Published response: {"command":"power","action":"query","status":"success","power":{"ant1":20,"ant2":20,"ant3":10,"ant4":10}}[0m
+[0;32mI (237514) UART: UART sent 14 bytes: TX: 5A 00 01 02 10 00 05 00 00 00 01 01 F4 87[0m
+RFID inventory started locally - counters reset
+[0;32mI (240914) MQTT: Connection health: OK, buffer: 0/20, failures: 0[0m
+[0;32mI (252664) UART: UART sent 9 bytes: TX: 5A 00 01 02 11 00 00 2A B3[0m
+RFID stop command sent locally: 5A 00 01 02 11 00 00 2A B3 
+[0;32mI (252674) UART: UART sent 9 bytes: TX: 5A 00 01 02 FF 00 00 88 5A[0m
+RFID fallback stop command sent locally
+[0;32mI (270914) MQTT: Connection health: OK, buffer: 0/20, failures: 0[0m
+[0;32mI (280134) UART: UART sent 14 bytes: TX: 5A 00 01 02 10 00 05 00 00 00 01 01 F4 87[0m
+RFID inventory started locally - counters reset
+[0;32mI (291934) UART: UART sent 9 bytes: TX: 5A 00 01 02 11 00 00 2A B3[0m
+RFID stop command sent locally: 5A 00 01 02 11 00 00 2A B3 
+[0;32mI (291934) UART: UART sent 9 bytes: TX: 5A 00 01 02 FF 00 00 88 5A[0m
+RFID fallback stop command sent locally
+[0;32mI (300914) MQTT: Connection health: OK, buffer: 0/20, failures: 0[0m
+[0;32mI (330914) MQTT: Connection health: OK, buffer: 0/20, failures: 0[0m
+[0;32mI (9054) wifi:state: auth -> init (0x200)[0m
+[0;32mI (9064) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (9064) WIFI: Retry connecting to WiFi (3/5)[0m
+[0;32mI (11484) WIFI: Retry connecting to WiFi (4/5)[0m
+[0;32mI (11514) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (11514) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (12524) wifi:state: auth -> init (0x200)[0m
+[0;32mI (12534) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (12534) WIFI: Retry connecting to WiFi (5/5)[0m
+[0;32mI (14954) WIFI: Failed to connect to WiFi after 5 attempts[0m
+[0;33mW (30494) httpd_txrx: httpd_sock_err: error in send : 11[0m
+[0;33mW (30494) httpd_uri: httpd_uri: uri handler execution failed[0m
+[0;33mW (30924) MQTT: Connection monitor: MQTT disconnected[0m
+[0;32mI (30924) MQTT: Connection health: DISCONNECTED, buffer: 0/20, failures: 0[0m
+I BOD: Brownout detector was triggered
+
+
+[0;32mI (302) esp_image: segment 4: paddr=00119150 vaddr=40379b[0;32mI (759) phy_init: phy_version 700,8582a7fd,Feb 10 2025,20:13:11[0m
+[0;32mI (799) wifi:mode : sta (98:3d:ae:9f:b7:80)[0m
+[0;32mI (799) wifi:enable tsf[0m
+[0;32mI (809) WIFI: WiFi module initialized (STA mode, power save disabled)[0m
+[0;32mI (809) WIFI: WiFi started[0m
+[0;32mI (809) WIFI: Found saved WiFi credentials, attempting connection...[0m
+[0;32mI (819) WIFI: Connecting to WiFi SSID: Hydro[0m
+[0;33mW (819) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (829) MQTT: MQTT data buffer initialized (20 entries)[0m
+[0;32mI (829) MQTT: No previous buffer data in NVS[0m
+[0;33mW (839) MQTT: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND, using defaults[0m
+[0;32mI (849) MQTT: MQTT module initialized with broker: mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883[0m
+[0;32mI (859) WEB: Registered /power/set handler[0m
+[0;32mI (859) WEB: Registered /power/get handler[0m
+[0;32mI (869) MAIN: Web server started on Ethernet[0m
+[0;32mI (869) MAIN: System initialized successfully - Ethernet + WiFi + MQTT mode[0m
+[0;32mI (879) main_task: Returned from app_main()[0m
+[0;32mI (889) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (889) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1909) wifi:state: auth -> init (0x200)[0m
+[0;32mI (1919) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1919) WIFI: Retry connecting to WiFi (1/5)[0m
+[0;32mI (2659) ETH: Ethernet Link Up[0m
+[0;32mI (2659) ETH: Ethernet HW Addr 02:00:00:12:34:56[0m
+[0;32mI (2659) esp_netif_handlers: eth ip: 192.168.1.100, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2659) ETH: Ethernet Got IP Address[0m
+[0;32mI (2669) ETH: ~~~~~~~~~~~[0m
+[0;32mI (2669) ETH: ETHIP: 192.168.1.100[0m
+[0;32mI (2679) ETH: ETHMASK: 255.255.255.0[0m
+[0;32mI (2679) ETH: ETHGW: 192.168.1.1[0m
+[0;32mI (2679) ETH: ~~~~~~~~~~~[0m
+[0;32mI (4329) WIFI: Retry connecting to WiFi (2/5)[0m
+[0;32mI (4369) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4379) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (5389) wifi:state: auth -> init (0x200)[0m
+[0;32mI (5399) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (5399) WIFI: Retry connecting to WiFi (3/5)[0m
+[0;32mI (6139) UART: UART sent 9 bytes: TX: 5A 00 01 02 02 00 00 29 59[0m
+[0;32mI (7809) WIFI: Retry connecting to WiFi (4/5)[0m
+[0;32mI (7859) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (7859) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (8869) wifi:state: auth -> init (0x200)[0m
+[0;32mI (8879) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (8879) WIFI: Retry connecting to WiFi (5/5)[0m
+[0;32mI (11289) WIFI: Failed to connect to WiFi after 5 attempts[0m
+[0;32mI (13209) WEB: Testing WiFi connection to SSID: Z[0m
+[0;32mI (13209) WIFI: Testing WiFi connection to: Z[0m
+[0;32mI (13209) wifi:flush txq[0m
+[0;32mI (13209) wifi:stop sw txq[0m
+[0;32mI (13209) wifi:lmac stop hw txq[0m
+[0;32mI (13739) wifi:mode : sta (98:3d:ae:9f:b7:80)[0m
+[0;32mI (13739) wifi:enable tsf[0m
+[0;32mI (13749) WIFI: WiFi started[0m
+[0;33mW (16649) WIFI: Test connection failed to: Z[0m
+[0;32mI (16649) WIFI: Failed to connect to WiFi after 5 attempts[0m
+[0;32mI (18649) WIFI: Restoring connection to saved WiFi: Hydro[0m
+[0;32mI (19649) WIFI: Connecting to WiFi SSID: Hydro[0m
+[0;33mW (19669) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (19669) WIFI: WiFi test completed. Result: FAILED[0m
+[0;32mI (19669) WEB: WiFi test result: FAILED[0m
+[0;32mI (19679) WEB: Sending response: {"status":"error","message":"Failed to connect to Z"}[0m
+[0;32mI (19739) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (19739) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (19759) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (20759) wifi:state: assoc -> init (0x400)[0m
+[0;32mI (20769) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (20769) WIFI: Retry connecting to WiFi (1/5)[0m
+[0;32mI (23179) WIFI: Retry connecting to WiFi (2/5)[0m
+[0;32mI (23219) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (23219) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (23239) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (23239) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (23259) wifi:connected with Hydro, aid = 4, channel 6, BW20, bssid = 6e:94:66:e1:b7:a2[0m
+[0;32mI (23269) wifi:security: WPA2-PSK, phy: bgn, rssi: -77[0m
+[0;32mI (23279) wifi:pm start, type: 0[0m
+
+[0;32mI (23279) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (23279) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (23319) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (25789) esp_netif_handlers: sta ip: 192.168.137.170, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (25789) WIFI: WiFi connected! Got IP: 192.168.137.170[0m
+[0;32mI (26849) WEB: Testing WiFi connection to SSID: Z[0m
+[0;32mI (26849) WIFI: Testing WiFi connection to: Z[0m
+[0;32mI (26849) wifi:state: run -> init (0x0)[0m
+[0;32mI (26859) wifi:pm stop, total sleep time: 0 us / 3578196 us[0m
+
+[0;32mI (26859) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (26859) WIFI: Retry connecting to WiFi (1/5)[0m
+[0;32mI (26869) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (26869) MQTT: Extracted hostname: '9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud', port: 8883 from URI: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (26889) wifi:[0;32mI (26889) MQTT: Connecting to MQTT broker: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m[0m
+flush txq[0;32mI (26899) MQTT: Client ID: 'esp32_rfid_reader'[0m
+
+[0;32mI (26909) MQTT: Username: 'helloworld'[0m
+[0;32mI (26909) wifi:[0;32mI (26909) MQTT: Configuring TLS for MQTTS connection with certificate bundle[0m[0m
+stop sw txq
+[0;32mI (26919) wifi:[0;32mI (26919) MQTT: Other MQTT event id:7[0m[0m
+lmac stop hw txq
+[0;32mI (26919) MQTT: MQTT client started[0m
+[0;32mI (27449) wifi:mode : sta (98:3d:ae:9f:b7:80)[0m
+[0;32mI (27449) wifi:enable tsf[0m
+[0;32mI (27459) WIFI: WiFi started[0m
+[0;32mI (28199) wifi:new:<2,0>, old:<1,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (28199) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (28219) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (28229) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (28249) wifi:connected with Z, aid = 1, channel 2, BW20, bssid = f6:67:28:64:6a:a5[0m
+[0;32mI (28249) wifi:security: WPA2-PSK, phy: bgn, rssi: -86[0m
+[0;32mI (28269) wifi:pm start, type: 0[0m
+
+[0;32mI (28269) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (28409) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (28419) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (29279) esp_netif_handlers: sta ip: 192.168.43.11, mask: 255.255.255.0, gw: 192.168.43.1[0m
+[0;32mI (29279) WIFI: WiFi connected! Got IP: 192.168.43.11[0m
+[0;32mI (29279) WIFI: Test connection successful to: Z[0m
+[0;32mI (29289) wifi:state: run -> init (0x0)[0m
+[0;32mI (29299) wifi:pm stop, total sleep time: 0 us / 1022159 us[0m
+
+[0;32mI (29299) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (29299) WIFI: Retry connecting to WiFi (1/5)[0m
+[0;32mI (29309) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (29309) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (29329) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (29359) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (29379) wifi:connected with Z, aid = 1, channel 2, BW20, bssid = f6:67:28:64:6a:a5[0m
+[0;32mI (29389) wifi:security: WPA2-PSK, phy: bgn, rssi: -78[0m
+[0;32mI (29389) wifi:pm start, type: 0[0m
+
+[0;32mI (29389) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (29399) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (29439) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (29439) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (30409) esp_netif_handlers: sta ip: 192.168.43.11, mask: 255.255.255.0, gw: 192.168.43.1[0m
+[0;32mI (30409) WIFI: WiFi connected! Got IP: 192.168.43.11[0m
+[0;33mW (30929) MQTT: Connection monitor: MQTT disconnected[0m
+[0;32mI (30929) MQTT: Connection health: DISCONNECTED, buffer: 0/20, failures: 0[0m
+[0;32mI (31299) WIFI: Restoring connection to saved WiFi: Hydro[0m
+[0;32mI (31589) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (32299) WIFI: Connecting to WiFi SSID: Hydro[0m
+[0;32mI (32319) WIFI: Already connected to WiFi, disconnecting first...[0m
+[0;32mI (32319) wifi:state: run -> init (0x0)[0m
+[0;32mI (32329) wifi:pm stop, total sleep time: 0 us / 2935697 us[0m
+
+[0;32mI (32329) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;31mE (32339) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x004C[0m
+[0;32mI (32339) WIFI: Retry connecting to WiFi (1/5)[0m
+[0;32mI (32339) esp-tls-mbedtls: Certificate verified.[0m
+[0;31mE (32349) esp-tls: Failed to open new connection[0m
+[0;31mE (32359) transport_base: Failed to open a new connection[0m
+[0;31mE (32359) mqtt_client: Error transport connect[0m
+[0;31mE (32369) MQTT: MQTT Error[0m
+[0;31mE (32369) MQTT: Last error code reported from esp-tls: 0x801a[0m
+[0;31mE (32379) MQTT: Last tls stack error number: 0x4c[0m
+[0;31mE (32379) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (32389) MQTT: MQTT Disconnected[0m
+[0;32mI (32429) wifi:new:<6,0>, old:<2,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (32429) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (32459) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (33339) wifi:sta is connecting, return error[0m
+[0;31mE (33339) WIFI: Failed to start WiFi connection: ESP_ERR_WIFI_CONN[0m
+[0;32mI (33339) WIFI: WiFi test completed. Result: SUCCESS[0m
+[0;32mI (33339) WEB: WiFi test result: SUCCESS[0m
+[0;32mI (33349) WEB: Sending response: {"status":"success","message":"Connected to Z successfully"}[0m
+[0;32mI (33459) wifi:state: assoc -> init (0x400)[0m
+[0;32mI (33469) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (33469) WIFI: Retry connecting to WiFi (2/5)[0m
+[0;32mI (35879) WIFI: Retry connecting to WiFi (3/5)[0m
+[0;32mI (35909) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (35919) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (35929) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (36939) wifi:state: assoc -> init (0x400)[0m
+[0;32mI (36949) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (36949) WIFI: Retry connecting to WiFi (4/5)[0m
+[0;32mI (38129) UART: UART sent 14 bytes: TX: 5A 00 01 02 10 00 05 00 00 00 01 01 F4 87[0m
+RFID inventory started locally - counters reset
+[0;32mI (39359) WIFI: Retry connecting to WiFi (5/5)[0m
+[0;32mI (39399) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (39399) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (39419) wifi:state: auth -> assoc (0x0)[0m
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=85 total=111 (MID 0x12)
+[0;32mI (39889) MQTT: Other MQTT event id:7[0m
+[0;32mI (40419) wifi:state: assoc -> init (0x400)[0m
+[0;32mI (40429) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (40429) WIFI: Failed to connect to WiFi after 5 attempts[0m
+TAG[2] epc=E280F30200000000C460E63E rssi=-52 ant=1 count=25 total=178 (fallback)
+[0;32mI (41119) esp-x509-crt-bundle: Certificate validated[0m
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=163 total=225 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=228 total=319 (MID 0x12)
+[0;32mI (43079) MQTT: MQTT Connected[0m
+[0;32mI (43079) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (43079) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (43089) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (43099) MQTT: Subscribed to legacy topic rfid/commands, msg_id=3992[0m
+[0;32mI (43599) MQTT: MQTT Subscribed, msg_id=54845[0m
+TAG[3] epc=E2801191A503006B99388340 rssi=-48 ant=1 count=21 total=377 (fallback)
+[0;32mI (44139) MQTT: MQTT Subscribed, msg_id=20634[0m
+[0;32mI (44139) MQTT: MQTT Subscribed, msg_id=23902[0m
+[0;32mI (44149) MQTT: MQTT Subscribed, msg_id=3992[0m
+[0;32mI (44149) MQTT: MQTT Published, msg_id=34594[0m
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=292 total=417 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=338 total=489 (MID 0x12)
+[0;32mI (45959) UART: UART event received, type: 0 (count: 500)[0m
+TAG[2] epc=E280F30200000000C460E63E rssi=-48 ant=1 count=82 total=570 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=449 total=646 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=453 total=650 (MID 0x12)
+TAG[2] epc=E280F30200000000C460E63E rssi=-48 ant=1 count=97 total=728 (MID 0x12)
+TAG[3] epc=E2801191A503006B99388340 rssi=-48 ant=1 count=64 total=839 (MID 0x12)
+[0;32mI (51369) UART: UART sent 9 bytes: TX: 5A 00 01 02 11 00 00 2A B3[0m
+RFID stop command sent locally: 5A 00 01 02 11 00 00 2A B3 
+[0;32mI (51369) UART: UART sent 9 bytes: TX: 5A 00 01 02 FF 00 00 88 5A[0m
+RFID fallback stop command sent locally
+[0;32mI (62929) MQTT: Connection health: OK, buffer: 0/20, failures: 0[0m
+[0;32mI (66049) MQTT: MQTT Data received[0m
+[0;32mI (66049) MQTT: Topic: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (66049) MQTT: Data: {"action": "start"}[0m
+[0;32mI (66059) MQTT: Processing command - Topic: reader/esp32_rfid_reader/cmd/rfid, Data: {"action": "start"}[0m
+[0;32mI (66069) MQTT: Executing RFID command: start[0m
+[0;32mI (66069) UART: UART sent 14 bytes: TX: 5A 00 01 02 10 00 05 00 00 00 01 01 F4 87[0m
+RFID inventory started via MQTT - counters reset
+[0;32mI (66089) MQTT: Published response: {"command":"rfid","action":"start","status":"success","message":"Inventory started"}[0m
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=608 total=20 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=646 total=82 (MID 0x12)
+[0;32mI (68629) UART: UART event received, type: 0 (count: 1000)[0m
+RX: 1k packets
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=698 total=160 (MID 0x12)
+[0;32mI (68929) MQTT: Published immediately: reader/esp32_rfid_reader/data/batch[0m
+MQTT: Queued tag batch (355 bytes, 4 tags)
+TAG[2] epc=E280F30200000000C460E63E rssi=-48 ant=1 count=141 total=239 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=790 total=292 (fallback)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=99 total=321 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=866 total=399 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=931 total=484 (MID 0x12)
+[0;32mI (74929) MQTT: Published immediately: reader/esp32_rfid_reader/data/batch[0m
+MQTT: Queued tag batch (433 bytes, 5 tags)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=983 total=558 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=985 total=560 (MID 0x12)
+[0;32mI (76409) UART: UART event received, type: 0 (count: 1500)[0m
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1047 total=643 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1107 total=725 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1161 total=803 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1169 total=814 (MID 0x12)
+[0;32mI (80929) MQTT: Published immediately: reader/esp32_rfid_reader/data/batch[0m
+MQTT: Queued tag batch (434 bytes, 5 tags)
+TAG[2] epc=E280F30200000000C460E63E rssi=-48 ant=1 count=208 total=902 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1296 total=993 (MID 0x12)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=159 total=1027 (fallback)
+TAG[3] epc=E2801191A503006B99388340 rssi=-48 ant=1 count=143 total=1082 (MID 0x12)
+[0;32mI (84229) UART: UART event received, type: 0 (count: 2000)[0m
+RX: 2k packets
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1399 total=1172 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1445 total=1251 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1463 total=1274 (fallback)
+[0;32mI (86929) MQTT: Published immediately: reader/esp32_rfid_reader/data/batch[0m
+MQTT: Queued tag batch (435 bytes, 5 tags)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1507 total=1335 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1576 total=1427 (MID 0x12)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=41 total=1509 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1635 total=1514 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1684 total=1582 (MID 0x12)
+[0;32mI (91999) UART: UART event received, type: 0 (count: 2500)[0m
+[0;32mI (92929) MQTT: Published immediately: reader/esp32_rfid_reader/data/batch[0m
+MQTT: Queued tag batch (435 bytes, 5 tags)
+[0;32mI (92929) MQTT: Connection health: OK, buffer: 0/20, failures: 0[0m
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1730 total=1651 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1788 total=1732 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1840 total=1805 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1851 total=1818 (MID 0x12)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=51 total=1892 (MID 0x12)
+TAG[2] epc=E280F30200000000C460E63E rssi=-48 ant=1 count=355 total=2003 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=1986 total=2018 (fallback)
+[0;32mI (98939) MQTT: Published immediately: reader/esp32_rfid_reader/data/batch[0m
+MQTT: Queued tag batch (435 bytes, 5 tags)
+[0;32mI (99599) UART: UART event received, type: 0 (count: 3000)[0m
+RX: 3k packets
+TAG[2] epc=E280F30200000000C460E63E rssi=-48 ant=1 count=364 total=2114 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2106 total=2190 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2144 total=2238 (fallback)
+TAG[2] epc=E280F30200000000C460E63E rssi=-48 ant=1 count=378 total=2277 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2246 total=2376 (MID 0x12)
+[0;32mI (104939) MQTT: Published immediately: reader/esp32_rfid_reader/data/batch[0m
+MQTT: Queued tag batch (440 bytes, 5 tags)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2309 total=2458 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2311 total=2460 (MID 0x12)
+TAG[2] epc=E280F30200000000C460E63E rssi=-48 ant=1 count=401 total=2559 (MID 0x12)
+[0;32mI (107409) UART: UART event received, type: 0 (count: 3500)[0m
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2439 total=2654 (fallback)
+TAG[1] epc=E28069150000501B289049AC rssi=-48 ant=1 count=305 total=2665 (MID 0x12)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=84 total=2783 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2551 total=2822 (fallback)
+[0;32mI (110939) MQTT: Published immediately: reader/esp32_rfid_reader/data/batch[0m
+MQTT: Queued tag batch (440 bytes, 5 tags)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2593 total=2912 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2644 total=3009 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=95 total=3011 (MID 0x12)
+TAG[3] epc=E2801191A503006B99388340 rssi=-48 ant=1 count=347 total=3123 (MID 0x12)
+[0;32mI (114409) UART: UART event received, type: 0 (count: 4000)[0m
+RX: 4k packets
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2753 total=3195 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=129 total=3301 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2823 total=3404 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2856 total=3509 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=174 total=3517 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2888 total=3613 (fallback)
+[0;32mI (116939) MQTT: Published immediately: reader/esp32_rfid_reader/data/batch[0m
+MQTT: Queued tag batch (592 bytes, 7 tags)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=2924 total=3716 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=260 total=3818 (fallback)
+TAG[6] epc=E28069150000700F68B854D2 rssi=-48 ant=1 count=45 total=3923 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=3031 total=4026 (fallback)
+TAG[3] epc=E2801191A503006B99388340 rssi=-48 ant=1 count=626 total=4128 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=375 total=4233 (fallback)
+[0;32mI (119789) UART: UART event received, type: 0 (count: 4500)[0m
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=402 total=4339 (fallback)
+TAG[6] epc=E28069150000700F68B854D2 rssi=-48 ant=1 count=94 total=4443 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=3208 total=4546 (fallback)
+TAG[4] epc=E2801191A504006DC3EA417B rssi=-48 ant=1 count=460 total=4647 (fallback)
+TAG[6] epc=E28069150000700F68B854D2 rssi=-48 ant=1 count=143 total=4751 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=3318 total=4855 (fallback)
+[0;32mI (122939) MQTT: Published immediately: reader/esp32_rfid_reader/data/batch[0m
+MQTT: Queued tag batch (595 bytes, 7 tags)
+[0;32mI (122939) MQTT: Connection health: OK, buffer: 0/20, failures: 0[0m
+TAG[3] epc=E2801191A503006B99388340 rssi=-48 ant=1 count=819 total=4930 (MID 0x12)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=3359 total=4963 (fallback)
+TAG[3] epc=E2801191A503006B99388340 rssi=-48 ant=1 count=858 total=5066 (fallback)
+TAG[3] epc=E2801191A503006B99388340 rssi=-48 ant=1 count=886 total=5169 (fallback)
+TAG[0] epc=E2806915600002166510B331 rssi=-48 ant=1 count=3467 total=5271 (fallback)
+TAG[3] epc=E2801191A503006B99388340 rssi=-48 ant=1 count=940 total=5375 (fallback)
+[0;32mI (125119) UART: UART event received, type: 0 (count: 5000)[0m
+RX: 5k packets
+[0;32mI (125269) MQTT: MQTT Data received[0m
+[0;32mI (125269) MQTT: Topic: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (125269) MQTT: Data: {"action": "stop"}[0m
+[0;32mI (125279) MQTT: Processing command - Topic: reader/esp32_rfid_reader/cmd/rfid, Data: {"action": "stop"}[0m
+[0;32mI (125289) MQTT: Executing RFID command: stop[0m
+[0;32mI (125289) UART: UART sent 9 bytes: TX: 5A 00 01 02 11 00 00 2A B3[0m
+RFID stop command sent via MQTT: 5A 00 01 02 11 00 00 2A B3 
+[0;32mI (125299) UART: UART sent 9 bytes: TX: 5A 00 01 02 FF 00 00 88 5A[0m
+RFID fallback stop command sent via MQTT
+[0;32mI (125319) MQTT: Published response: {"command":"rfid","action":"stop","status":"success","message":"Inventory stopped"}[0m

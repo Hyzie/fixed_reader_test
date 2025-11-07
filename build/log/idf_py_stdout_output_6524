@@ -1,0 +1,532 @@
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3c0c002ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037c18e
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x1870
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xce8
+load:0x403cb700,len:0x2ed8
+entry 0x403c8918
+[0;32mI (26) boot: ESP-IDF v5.3.3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Nov  7 2025 18:14:32[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot: efuse block revision: v1.3[0m
+[0;32mI (39) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (43) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00180000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=453a8h (283560) map[0m
+[0;32mI (154) esp_image: segment 1: paddr=000553d0 vaddr=3fc9cf00 size=04b40h ( 19264) load[0m
+[0;32mI (158) esp_image: segment 2: paddr=00059f18 vaddr=40374000 size=06100h ( 24832) load[0m
+[0;32mI (165) esp_image: segment 3: paddr=00060020 vaddr=42000020 size=b8b24h (756516) map[0m
+[0;32mI (302) esp_image: segment 4: paddr=00118b4c vaddr=4037a100 size=12dc8h ( 77256) load[0m
+[0;32mI (329) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (329) boot: Disabling RNG early entropy source...[0m
+[0;32mI (341) cpu_start: Multicore app[0m
+[0;32mI (350) cpu_start: Pro cpu start user code[0m
+[0;32mI (350) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (350) app_init: Application information:[0m
+[0;32mI (353) app_init: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (360) app_init: App version:      4489b73-dirty[0m
+[0;32mI (365) app_init: Compile time:     Nov  7 2025 18:35:57[0m
+[0;32mI (371) app_init: ELF file SHA256:  77bc11227...[0m
+[0;32mI (376) app_init: ESP-IDF:          v5.3.3-dirty[0m
+[0;32mI (382) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (386) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (391) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (396) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (403) heap_init: At 3FCAB388 len 0003E388 (248 KiB): RAM[0m
+[0;32mI (409) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (415) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (422) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (429) spi_flash: detected chip: gd[0m
+[0;32mI (432) spi_flash: flash io: dio[0m
+[0;33mW (436) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (450) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (456) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (464) main_task: Started on CPU0[0m
+[0;32mI (474) main_task: Calling app_main()[0m
+[0;32mI (494) uart: queue free spaces: 30[0m
+[0;32mI (494) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (494) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (594) UART: UART RX task started and waiting for data...[0m
+UART RX task created
+[0;32mI (594) ETH: Static IP configured: 192.168.1.100[0m
+[0;32mI (594) ETH: Gateway: 192.168.1.1[0m
+[0;32mI (594) ETH: Netmask: 255.255.255.0[0m
+[0;32mI (604) ETH: DNS servers configured from network_config.h[0m
+[0;32mI (634) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (634) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (644) ETH: Ethernet Started[0m
+[0;32mI (644) pp: pp rom version: e7ae62f[0m
+[0;32mI (644) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (654) wifi:wifi driver task: 3fcc3410, prio:23, stack:6656, core=0[0m
+[0;32mI (664) wifi:wifi firmware version: b0b320f[0m
+[0;32mI (664) wifi:wifi certification version: v7.0[0m
+[0;32mI (664) wifi:config NVS flash: enabled[0m
+[0;32mI (664) wifi:config nano formating: disabled[0m
+[0;32mI (664) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (674) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (674) wifi:Init management short buffer num: 32[0m
+[0;32mI (674) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (684) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (684) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (694) wifi:Init static rx buffer num: 10[0m
+[0;32mI (694) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (704) wifi_init: rx ba win: 6[0m
+[0;32mI (704) wifi_init: accept mbox: 6[0m
+[0;32mI (704) wifi_init: tcpip mbox: 32[0m
+[0;32mI (714) wifi_init: udp mbox: 6[0m
+[0;32mI (714) wifi_init: tcp mbox: 6[0m
+[0;32mI (714) wifi_init: tcp tx win: 5760[0m
+[0;32mI (724) wifi_init: tcp rx win: 5760[0m
+[0;32mI (724) wifi_init: tcp mss: 1440[0m
+[0;32mI (734) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (734) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (744) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (744) phy_init: phy_version 700,8582a7fd,Feb 10 2025,20:13:11[0m
+[0;32mI (784) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (854) wifi:mode : sta (98:3d:ae:9f:b7:80)[0m
+[0;32mI (854) wifi:enable tsf[0m
+[0;32mI (864) WIFI: WiFi module initialized (STA mode, power save disabled)[0m
+[0;32mI (864) WIFI: WiFi started[0m
+[0;32mI (864) WIFI: Found saved WiFi credentials, attempting connection...[0m
+[0;32mI (874) WIFI: Connecting to WiFi SSID: Hydro[0m
+[0;33mW (874) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (884) MQTT: MQTT data buffer initialized (20 entries)[0m
+[0;32mI (884) MQTT: No previous buffer data in NVS[0m
+[0;33mW (894) MQTT: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND, using defaults[0m
+[0;32mI (904) MQTT: MQTT module initialized with broker: mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883[0m
+[0;32mI (914) WEB: Registered /power/set handler[0m
+[0;32mI (914) WEB: Registered /power/get handler[0m
+[0;32mI (924) MAIN: Web server started on Ethernet[0m
+[0;32mI (924) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (934) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (934) MAIN: System initialized successfully - Ethernet + WiFi + MQTT mode[0m
+[0;32mI (944) main_task: Returned from app_main()[0m
+[0;32mI (1934) wifi:state: auth -> init (0x200)[0m
+[0;32mI (1944) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1944) WIFI: Retry connecting to WiFi (1/5)[0m
+[0;32mI (2644) ETH: Ethernet Link Up[0m
+[0;32mI (2644) ETH: Ethernet HW Addr 02:00:00:12:34:56[0m
+[0;32mI (2644) esp_netif_handlers: eth ip: 192.168.1.100, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2644) ETH: Ethernet Got IP Address[0m
+[0;32mI (2654) ETH: ~~~~~~~~~~~[0m
+[0;32mI (2654) ETH: ETHIP: 192.168.1.100[0m
+[0;32mI (2664) ETH: ETHMASK: 255.255.255.0[0m
+[0;32mI (2664) ETH: ETHGW: 192.168.1.1[0m
+[0;32mI (2664) ETH: ~~~~~~~~~~~[0m
+[0;32mI (4354) WIFI: Retry connecting to WiFi (2/5)[0m
+[0;32mI (4404) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4404) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (5424) wifi:state: auth -> init (0x200)[0m
+[0;32mI (5434) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (5434) WIFI: Retry connecting to WiFi (3/5)[0m
+[0;32mI (7844) WIFI: Retry connecting to WiFi (4/5)[0m
+[0;32mI (7894) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (7894) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (8904) wifi:state: auth -> init (0x200)[0m
+[0;32mI (8914) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (8914) WIFI: Retry connecting to WiFi (5/5)[0m
+[0;32mI (11324) WIFI: Failed to connect to WiFi after 5 attempts[0m
+[0;32mI (17344) UART: UART sent 9 bytes: TX: 5A 00 01 02 02 00 00 29 59[0m
+[0;32mI (19254) WEB: Testing WiFi connection to SSID: Hydro[0m
+[0;32mI (19254) WIFI: Testing WiFi connection to: Hydro[0m
+[0;32mI (19254) wifi:flush txq[0m
+[0;32mI (19254) wifi:stop sw txq[0m
+[0;32mI (19254) wifi:lmac stop hw txq[0m
+[0;32mI (19764) wifi:mode : sta (98:3d:ae:9f:b7:80)[0m
+[0;32mI (19764) wifi:enable tsf[0m
+[0;32mI (19764) WIFI: WiFi started[0m
+[0;32mI (20284) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (20284) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (21294) wifi:state: auth -> init (0x200)[0m
+[0;32mI (21304) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (21304) WIFI: Failed to connect to WiFi after 5 attempts[0m
+[0;33mW (21304) WIFI: Test connection failed to: Hydro[0m
+[0;32mI (23314) WIFI: Restoring connection to saved WiFi: Hydro[0m
+[0;32mI (24314) WIFI: Connecting to WiFi SSID: Hydro[0m
+[0;33mW (24314) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (24314) WIFI: WiFi test completed. Result: FAILED[0m
+[0;32mI (24314) WEB: WiFi test result: FAILED[0m
+[0;32mI (24314) WEB: Sending response: {"status":"error","message":"Failed to connect to Hydro"}[0m
+[0;32mI (24374) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (24374) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (25384) wifi:state: auth -> init (0x200)[0m
+[0;32mI (25394) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (25394) WIFI: Retry connecting to WiFi (1/5)[0m
+[0;32mI (27044) WEB: Testing WiFi connection to SSID: Hydro[0m
+[0;32mI (27044) WIFI: Testing WiFi connection to: Hydro[0m
+[0;32mI (27054) wifi:flush txq[0m
+[0;32mI (27054) wifi:stop sw txq[0m
+[0;32mI (27054) wifi:lmac stop hw txq[0m
+[0;32mI (27554) wifi:mode : sta (98:3d:ae:9f:b7:80)[0m
+[0;32mI (27554) wifi:enable tsf[0m
+[0;32mI (27554) WIFI: WiFi started[0m
+[0;32mI (28064) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (28064) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (28074) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (29074) wifi:state: assoc -> init (0x400)[0m
+[0;32mI (29084) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (29084) WIFI: Retry connecting to WiFi (2/5)[0m
+[0;33mW (30934) MQTT: Connection monitor: MQTT disconnected[0m
+[0;32mI (30934) MQTT: Connection health: DISCONNECTED, buffer: 0/20, failures: 0[0m
+[0;32mI (31494) WIFI: Retry connecting to WiFi (3/5)[0m
+[0;32mI (31544) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (31544) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (32554) wifi:state: auth -> init (0x200)[0m
+[0;32mI (32564) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (32564) WIFI: Retry connecting to WiFi (4/5)[0m
+[0;32mI (34974) WIFI: Retry connecting to WiFi (5/5)[0m
+[0;32mI (35024) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (35024) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (36034) wifi:state: auth -> init (0x200)[0m
+[0;32mI (36044) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (36044) WIFI: Failed to connect to WiFi after 5 attempts[0m
+[0;33mW (36044) WIFI: Test connection failed to: Hydro[0m
+[0;32mI (38054) WIFI: Restoring connection to saved WiFi: Hydro[0m
+[0;32mI (39054) WIFI: Connecting to WiFi SSID: Hydro[0m
+[0;33mW (39054) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (39054) WIFI: WiFi test completed. Result: FAILED[0m
+[0;32mI (39054) WEB: WiFi test result: FAILED[0m
+[0;32mI (39054) WEB: Sending response: {"status":"error","message":"Failed to connect to Hydro"}[0m
+[0;32mI (39124) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (39124) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (40134) wifi:state: auth -> init (0x200)[0m
+[0;32mI (40144) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (40144) WIFI: Retry connecting to WiFi (1/5)[0m
+[0;32mI (41984) WEB: Testing WiFi connection to SSID: Hydro[0m
+[0;32mI (41984) WIFI: Testing WiFi connection to: Hydro[0m
+[0;32mI (41984) wifi:flush txq[0m
+[0;32mI (41984) wifi:stop sw txq[0m
+[0;32mI (41984) wifi:lmac stop hw txq[0m
+[0;32mI (42484) wifi:mode : sta (98:3d:ae:9f:b7:80)[0m
+[0;32mI (42484) wifi:enable tsf[0m
+[0;32mI (42484) WIFI: WiFi started[0m
+[0;32mI (43014) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (43014) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (44024) wifi:state: auth -> init (0x200)[0m
+[0;32mI (44034) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (44034) WIFI: Retry connecting to WiFi (2/5)[0m
+[0;32mI (46444) WIFI: Retry connecting to WiFi (3/5)[0m
+[0;32mI (46494) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (46494) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (46504) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (46514) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (46544) wifi:connected with Hydro, aid = 6, channel 6, BW20, bssid = 6e:94:66:e1:b7:a2[0m
+[0;32mI (46544) wifi:security: WPA2-PSK, phy: bgn, rssi: -76[0m
+[0;32mI (46554) wifi:pm start, type: 0[0m
+
+[0;32mI (46554) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (46554) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (46594) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (47564) esp_netif_handlers: sta ip: 192.168.137.170, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (47564) WIFI: WiFi connected! Got IP: 192.168.137.170[0m
+[0;32mI (47564) WIFI: Test connection successful to: Hydro[0m
+[0;32mI (47574) wifi:state: run -> init (0x0)[0m
+[0;32mI (47584) wifi:pm stop, total sleep time: 0 us / 1030391 us[0m
+
+[0;32mI (47584) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (47594) WIFI: Retry connecting to WiFi (1/5)[0m
+[0;32mI (47624) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (47624) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (48634) wifi:state: auth -> init (0x200)[0m
+[0;32mI (48644) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (48644) WIFI: Retry connecting to WiFi (2/5)[0m
+[0;32mI (48934) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (48934) MQTT: MQTT client started[0m
+[0;32mI (48934) MQTT: Other MQTT event id:7[0m
+[0;32mI (49584) WIFI: Restoring connection to saved WiFi: Hydro[0m
+[0;32mI (50584) WIFI: Connecting to WiFi SSID: Hydro[0m
+[0;33mW (50584) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (50584) wifi:sta is connecting, return error[0m
+[0;31mE (50584) WIFI: Failed to start WiFi connection: ESP_ERR_WIFI_CONN[0m
+[0;32mI (50594) WIFI: WiFi test completed. Result: SUCCESS[0m
+[0;32mI (50594) WEB: WiFi test result: SUCCESS[0m
+[0;32mI (50604) WEB: Sending response: {"status":"success","message":"Connected to Hydro successfully"}[0m
+[0;32mI (51054) WIFI: Retry connecting to WiFi (1/5)[0m
+[0;32mI (51104) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (51104) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (52114) wifi:state: auth -> init (0x200)[0m
+[0;32mI (52124) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (52124) WIFI: Retry connecting to WiFi (2/5)[0m
+[0;32mI (54534) WIFI: Retry connecting to WiFi (3/5)[0m
+[0;32mI (54584) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (54584) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (54604) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (55604) wifi:state: assoc -> init (0x400)[0m
+[0;32mI (55614) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (55614) WIFI: Retry connecting to WiFi (4/5)[0m
+[0;31mE (55934) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (55934) esp-tls: Failed to open new connection[0m
+[0;31mE (55934) transport_base: Failed to open a new connection[0m
+[0;31mE (55944) mqtt_client: Error transport connect[0m
+[0;31mE (55944) MQTT: MQTT Error[0m
+[0;31mE (55954) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (55954) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (55964) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (55964) MQTT: MQTT Disconnected[0m
+[0;32mI (58024) WIFI: Retry connecting to WiFi (5/5)[0m
+[0;32mI (58064) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (58064) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (59074) wifi:state: auth -> init (0x200)[0m
+[0;32mI (59084) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (59084) WIFI: Failed to connect to WiFi after 5 attempts[0m
+[0;32mI (60704) WEB: Testing MQTT connection to broker: mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883[0m
+[0;32mI (60704) WEB: Sending MQTT test response: {"status":"success","message":"MQTT configuration valid for mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883"}[0m
+[0;33mW (60934) MQTT: Connection monitor: MQTT disconnected[0m
+[0;32mI (60934) MQTT: Connection health: DISCONNECTED, buffer: 0/20, failures: 0[0m
+[0;32mI (63474) MQTT: Other MQTT event id:7[0m
+[0;32mI (67664) UART: UART sent 9 bytes: TX: 5A 00 01 02 02 00 00 29 59[0m
+[0;31mE (70474) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (70474) esp-tls: Failed to open new connection[0m
+[0;31mE (70474) transport_base: Failed to open a new connection[0m
+[0;31mE (70484) mqtt_client: Error transport connect[0m
+[0;31mE (70484) MQTT: MQTT Error[0m
+[0;31mE (70494) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (70494) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (70504) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (70504) MQTT: MQTT Disconnected[0m
+[0;33mW (70514) mqtt_client: Publish: Losing qos0 data when client not connected[0m
+[0;32mI (70524) MQTT: Published response: {"command":"power","action":"query","status":"success","power":{"ant1":20,"ant2":20,"ant3":10,"ant4":10}}[0m
+[0;32mI (78014) MQTT: Other MQTT event id:7[0m
+[0;31mE (85014) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (85014) esp-tls: Failed to open new connection[0m
+[0;31mE (85014) transport_base: Failed to open a new connection[0m
+[0;31mE (85024) mqtt_client: Error transport connect[0m
+[0;31mE (85024) MQTT: MQTT Error[0m
+[0;31mE (85034) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (85034) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (85044) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (85044) MQTT: MQTT Disconnected[0m
+[0;33mW (90934) MQTT: Connection monitor: MQTT disconnected[0m
+[0;32mI (90934) MQTT: Connection health: DISCONNECTED, buffer: 0/20, failures: 0[0m
+[0;32mI (92554) MQTT: Other MQTT event id:7[0m
+[0;31mE (99554) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (99554) esp-tls: Failed to open new connection[0m
+[0;31mE (99554) transport_base: Failed to open a new connection[0m
+[0;31mE (99564) mqtt_client: Error transport connect[0m
+[0;31mE (99564) MQTT: MQTT Error[0m
+[0;31mE (99574) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (99574) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (99584) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (99584) MQTT: MQTT Disconnected[0m
+[0;32mI (107094) MQTT: Other MQTT event id:7[0m
+[0;31mE (114094) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (114094) esp-tls: Failed to open new connection[0m
+[0;31mE (114094) transport_base: Failed to open a new connection[0m
+[0;31mE (114104) mqtt_client: Error transport connect[0m
+[0;31mE (114104) MQTT: MQTT Error[0m
+[0;31mE (114114) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (114114) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (114124) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (114134) MQTT: MQTT Disconnected[0m
+[0;33mW (120934) MQTT: Connection monitor: MQTT disconnected[0m
+[0;32mI (120934) MQTT: Connection health: DISCONNECTED, buffer: 0/20, failures: 0[0m
+[0;32mI (121634) MQTT: Other MQTT event id:7[0m
+[0;31mE (128634) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (128634) esp-tls: Failed to open new connection[0m
+[0;31mE (128634) transport_base: Failed to open a new connection[0m
+[0;31mE (128644) mqtt_client: Error transport connect[0m
+[0;31mE (128644) MQTT: MQTT Error[0m
+[0;31mE (128654) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (128654) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (128664) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (128674) MQTT: MQTT Disconnected[0m
+[0;32mI (136174) MQTT: Other MQTT event id:7[0m
+[0;31mE (143174) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (143174) esp-tls: Failed to open new connection[0m
+[0;31mE (143174) transport_base: Failed to open a new connection[0m
+[0;31mE (143184) mqtt_client: Error transport connect[0m
+[0;31mE (143184) MQTT: MQTT Error[0m
+[0;31mE (143194) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (143194) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (143204) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (143214) MQTT: MQTT Disconnected[0m
+[0;32mI (150714) MQTT: Other MQTT event id:7[0m
+[0;33mW (150934) MQTT: Connection monitor: MQTT disconnected[0m
+[0;32mI (150934) MQTT: Connection health: DISCONNECTED, buffer: 0/20, failures: 0[0m
+[0;31mE (157714) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (157714) esp-tls: Failed to open new connection[0m
+[0;31mE (157714) transport_base: Failed to open a new connection[0m
+[0;31mE (157724) mqtt_client: Error transport connect[0m
+[0;31mE (157724) MQTT: MQTT Error[0m
+[0;31mE (157734) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (157734) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (157744) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (157754) MQTT: MQTT Disconnected[0m
+[0;32mI (165254) MQTT: Other MQTT event id:7[0m
+[0;31mE (172254) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (172254) esp-tls: Failed to open new connection[0m
+[0;31mE (172254) transport_base: Failed to open a new connection[0m
+[0;31mE (172264) mqtt_client: Error transport connect[0m
+[0;31mE (172264) MQTT: MQTT Error[0m
+[0;31mE (172274) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (172274) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (172284) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (172294) MQTT: MQTT Disconnected[0m
+[0;32mI (179794) MQTT: Other MQTT event id:7[0m
+[0;33mW (180934) MQTT: Connection monitor: MQTT disconnected[0m
+[0;32mI (180934) MQTT: Connection health: DISCONNECTED, buffer: 0/20, failures: 0[0m
+[0;31mE (186794) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (186794) esp-tls: Failed to open new connection[0m
+[0;31mE (186794) transport_base: Failed to open a new connection[0m
+[0;31mE (186804) mqtt_client: Error transport connect[0m
+[0;31mE (186804) MQTT: MQTT Error[0m
+[0;31mE (186814) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (186814) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (186824) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (186834) MQTT: MQTT Disconnected[0m
+[0;32mI (194334) MQTT: Other MQTT event id:7[0m
+[0;31mE (201334) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (201334) esp-tls: Failed to open new connection[0m
+[0;31mE (201334) transport_base: Failed to open a new connection[0m
+[0;31mE (201344) mqtt_client: Error transport connect[0m
+[0;31mE (201344) MQTT: MQTT Error[0m
+[0;31mE (201354) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (201354) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (201364) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (201374) MQTT: MQTT Disconnected[0m
+[0;32mI (208874) MQTT: Other MQTT event id:7[0m
+[0;33mW (210934) MQTT: Connection monitor: MQTT disconnected[0m
+[0;32mI (210934) MQTT: Connection health: DISCONNECTED, buffer: 0/20, failures: 0[0m
+[0;31mE (215874) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (215874) esp-tls: Failed to open new connection[0m
+[0;31mE (215874) transport_base: Failed to open a new connection[0m
+[0;31mE (215884) mqtt_client: Error transport connect[0m
+[0;31mE (215884) MQTT: MQTT Error[0m
+[0;31mE (215894) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (215894) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (215904) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (215914) MQTT: MQTT Disconnected[0m
+[0;32mI (223414) MQTT: Other MQTT event id:7[0m
+[0;31mE (230414) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (230414) esp-tls: Failed to open new connection[0m
+[0;31mE (230414) transport_base: Failed to open a new connection[0m
+[0;31mE (230424) mqtt_client: Error transport connect[0m
+[0;31mE (230424) MQTT: MQTT Error[0m
+[0;31mE (230434) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (230434) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (230444) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (230454) MQTT: MQTT Disconnected[0m
+[0;32mI (237954) MQTT: Other MQTT event id:7[0m
+[0;33mW (240934) MQTT: Connection monitor: MQTT disconnected[0m
+[0;32mI (240934) MQTT: Connection health: DISCONNECTED, buffer: 0/20, failures: 0[0m
+[0;31mE (244954) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (244954) esp-tls: Failed to open new connection[0m
+[0;31mE (244954) transport_base: Failed to open a new connection[0m
+[0;31mE (244964) mqtt_client: Error transport connect[0m
+[0;31mE (244964) MQTT: MQTT Error[0m
+[0;31mE (244974) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (244974) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (244984) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (244994) MQTT: MQTT Disconnected[0m
+[0;32mI (252494) MQTT: Other MQTT event id:7[0m
+[0;31mE (259494) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (259494) esp-tls: Failed to open new connection[0m
+[0;31mE (259494) transport_base: Failed to open a new connection[0m
+[0;31mE (259504) mqtt_client: Error transport connect[0m
+[0;31mE (259504) MQTT: MQTT Error[0m
+[0;31mE (259514) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (259514) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (259524) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (259534) MQTT: MQTT Disconnected[0m
+[0;32mI (267034) MQTT: Other MQTT event id:7[0m
+[0;33mW (270934) MQTT: Connection monitor: MQTT disconnected[0m
+[0;32mI (270934) MQTT: Connection health: DISCONNECTED, buffer: 0/20, failures: 0[0m
+[0;31mE (274034) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (274034) esp-tls: Failed to open new connection[0m
+[0;31mE (274034) transport_base: Failed to open a new connection[0m
+[0;31mE (274044) mqtt_client: Error transport connect[0m
+[0;31mE (274044) MQTT: MQTT Error[0m
+[0;31mE (274054) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (274054) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (274064) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (274074) MQTT: MQTT Disconnected[0m
+[0;32mI (281574) MQTT: Other MQTT event id:7[0m
+[0;31mE (288574) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (288574) esp-tls: Failed to open new connection[0m
+[0;31mE (288574) transport_base: Failed to open a new connection[0m
+[0;31mE (288584) mqtt_client: Error transport connect[0m
+[0;31mE (288584) MQTT: MQTT Error[0m
+[0;31mE (288594) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (288594) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (288604) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (288614) MQTT: MQTT Disconnected[0m
+[0;32mI (296114) MQTT: Other MQTT event id:7[0m
+[0;33mW (300934) MQTT: Connection monitor: MQTT disconnected[0m
+[0;32mI (300934) MQTT: Connection health: DISCONNECTED, buffer: 0/20, failures: 0[0m
+[0;31mE (303114) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (303114) esp-tls: Failed to open new connection[0m
+[0;31mE (303114) transport_base: Failed to open a new connection[0m
+[0;31mE (303124) mqtt_client: Error transport connect[0m
+[0;31mE (303124) MQTT: MQTT Error[0m
+[0;31mE (303134) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (303134) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (303144) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (303154) MQTT: MQTT Disconnected[0m
+[0;32mI (310654) MQTT: Other MQTT event id:7[0m
+[0;31mE (317654) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (317654) esp-tls: Failed to open new connection[0m
+[0;31mE (317654) transport_base: Failed to open a new connection[0m
+[0;31mE (317664) mqtt_client: Error transport connect[0m
+[0;31mE (317664) MQTT: MQTT Error[0m
+[0;31mE (317674) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (317674) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (317684) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (317694) MQTT: MQTT Disconnected[0m
+[0;32mI (325194) MQTT: Other MQTT event id:7[0m
+[0;33mW (330934) MQTT: Connection monitor: MQTT disconnected[0m
+[0;32mI (330934) MQTT: Connection health: DISCONNECTED, buffer: 0/20, failures: 0[0m
+[0;31mE (332194) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (332194) esp-tls: Failed to open new connection[0m
+[0;31mE (332194) transport_base: Failed to open a new connection[0m
+[0;31mE (332204) mqtt_client: Error transport connect[0m
+[0;31mE (332204) MQTT: MQTT Error[0m
+[0;31mE (332214) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (332214) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (332224) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (332234) MQTT: MQTT Disconnected[0m
+[0;32mI (339734) MQTT: Other MQTT event id:7[0m
+[0;31mE (346734) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (346734) esp-tls: Failed to open new connection[0m
+[0;31mE (346734) transport_base: Failed to open a new connection[0m
+[0;31mE (346744) mqtt_client: Error transport connect[0m
+[0;31mE (346744) MQTT: MQTT Error[0m
+[0;31mE (346754) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (346754) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (346764) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (346774) MQTT: MQTT Disconnected[0m
+[0;32mI (354274) MQTT: Other MQTT event id:7[0m
+[0;33mW (360934) MQTT: Connection monitor: MQTT disconnected[0m
+[0;32mI (360934) MQTT: Connection health: DISCONNECTED, buffer: 0/20, failures: 0[0m
+[0;31mE (361274) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (361274) esp-tls: Failed to open new connection[0m
+[0;31mE (361274) transport_base: Failed to open a new connection[0m
+[0;31mE (361284) mqtt_client: Error transport connect[0m
+[0;31mE (361284) MQTT: MQTT Error[0m
+[0;31mE (361294) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (361294) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (361304) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (361314) MQTT: MQTT Disconnected[0m
+[0;32mI (368814) MQTT: Other MQTT event id:7[0m
+[0;31mE (375814) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (375814) esp-tls: Failed to open new connection[0m
+[0;31mE (375814) transport_base: Failed to open a new connection[0m
+[0;31mE (375824) mqtt_client: Error transport connect[0m
+[0;31mE (375824) MQTT: MQTT Error[0m
+[0;31mE (375834) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (375834) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (375844) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (375854) MQTT: MQTT Disconnected[0m

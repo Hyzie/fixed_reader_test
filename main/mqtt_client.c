@@ -17,6 +17,7 @@
 #include "rfid.h"
 #include "cJSON.h"
 
+
 // Global variables for throttling
 static uint64_t s_last_publish_time = 0;
 static const uint64_t PUBLISH_INTERVAL_MS = 500;  // Publish every 500ms to balance real-time vs stability
@@ -118,6 +119,12 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
             ESP_LOGE(TAG, "Last tls stack error number: 0x%x", event->error_handle->esp_tls_stack_err);
             ESP_LOGE(TAG, "Last captured errno : %d (%s)",  event->error_handle->esp_transport_sock_errno,
                      strerror(event->error_handle->esp_transport_sock_errno));
+            
+            // Special handling for DNS resolution errors
+            if (event->error_handle->esp_tls_last_esp_err == 0x8001) {
+                ESP_LOGE(TAG, "DNS resolution failed - check broker URI and network connectivity");
+                ESP_LOGE(TAG, "Current broker URI: '%s'", s_mqtt_config.broker_uri);
+            }
         } else if (event->error_handle->error_type == MQTT_ERROR_TYPE_CONNECTION_REFUSED) {
             ESP_LOGE(TAG, "Connection refused error: 0x%x", event->error_handle->connect_return_code);
         } else {
@@ -166,10 +173,42 @@ void mqtt_init(void)
     ESP_LOGI(TAG, "MQTT module initialized with broker: %s", s_mqtt_config.broker_uri);
 }
 
+// Helper function to validate and clean broker URI
+static void mqtt_validate_broker_uri(char* broker_uri)
+{
+    if (!broker_uri || strlen(broker_uri) == 0) {
+        return;
+    }
+    
+    // Remove any leading/trailing whitespace
+    char* start = broker_uri;
+    while (*start == ' ' || *start == '\t' || *start == '\n' || *start == '\r') {
+        start++;
+    }
+    
+    char* end = broker_uri + strlen(broker_uri) - 1;
+    while (end > start && (*end == ' ' || *end == '\t' || *end == '\n' || *end == '\r')) {
+        *end = '\0';
+        end--;
+    }
+    
+    // Move cleaned string to beginning if needed
+    if (start != broker_uri) {
+        memmove(broker_uri, start, strlen(start) + 1);
+    }
+    
+    // Log the cleaned URI for debugging
+    ESP_LOGI(TAG, "Cleaned broker URI: '%s' (length: %d)", broker_uri, strlen(broker_uri));
+}
+
 void mqtt_set_config(const mqtt_config_t* config)
 {
     if (config) {
         memcpy(&s_mqtt_config, config, sizeof(mqtt_config_t));
+        
+        // Clean and validate the broker URI
+        mqtt_validate_broker_uri(s_mqtt_config.broker_uri);
+        
         ESP_LOGI(TAG, "MQTT config updated: broker=%s, client_id=%s", 
                  s_mqtt_config.broker_uri, s_mqtt_config.client_id);
     }
@@ -185,6 +224,13 @@ void mqtt_get_config(mqtt_config_t* config)
 int mqtt_save_config(const mqtt_config_t* config)
 {
     if (!config) return -1;
+
+    // Validate and log config before saving
+    ESP_LOGI(TAG, "Saving MQTT config:");
+    ESP_LOGI(TAG, "  broker_uri: '%s' (len: %d)", config->broker_uri, strlen(config->broker_uri));
+    ESP_LOGI(TAG, "  client_id: '%s'", config->client_id);
+    ESP_LOGI(TAG, "  username: '%s'", config->username);
+    ESP_LOGI(TAG, "  password: '%s'", config->password);
 
     nvs_handle_t h;
     esp_err_t err = nvs_open(NVS_NAMESPACE, NVS_READWRITE, &h);
@@ -229,7 +275,9 @@ int mqtt_load_config(mqtt_config_t* config)
     // Load all config fields (only override if they exist in NVS)
     required_size = sizeof(config->broker_uri);
     esp_err_t ret = nvs_get_str(h, "broker_uri", config->broker_uri, &required_size);
-    if (ret != ESP_OK && ret != ESP_ERR_NVS_NOT_FOUND) {
+    if (ret == ESP_OK) {
+        ESP_LOGI(TAG, "Loaded broker_uri from NVS: '%s' (len: %d)", config->broker_uri, strlen(config->broker_uri));
+    } else if (ret != ESP_ERR_NVS_NOT_FOUND) {
         ESP_LOGW(TAG, "Failed to load broker_uri: %s", esp_err_to_name(ret));
     }
     
@@ -269,6 +317,62 @@ int mqtt_load_config(mqtt_config_t* config)
     return 0;
 }
 
+// Helper function to extract hostname from URI for DNS testing
+static bool mqtt_extract_hostname(const char* uri, char* hostname, size_t hostname_size, int* port)
+{
+    if (!uri || !hostname || hostname_size == 0) {
+        return false;
+    }
+    
+    // Find protocol separator
+    const char* proto_end = strstr(uri, "://");
+    if (!proto_end) {
+        return false;
+    }
+    
+    const char* host_start = proto_end + 3;
+    const char* host_end = strchr(host_start, ':');
+    const char* path_start = strchr(host_start, '/');
+    
+    // Determine where hostname ends
+    if (host_end && (!path_start || host_end < path_start)) {
+        // Port specified
+        size_t host_len = host_end - host_start;
+        if (host_len >= hostname_size) {
+            return false;
+        }
+        strncpy(hostname, host_start, host_len);
+        hostname[host_len] = '\0';
+        
+        // Extract port
+        if (port) {
+            *port = atoi(host_end + 1);
+        }
+    } else if (path_start) {
+        // No port, but path exists
+        size_t host_len = path_start - host_start;
+        if (host_len >= hostname_size) {
+            return false;
+        }
+        strncpy(hostname, host_start, host_len);
+        hostname[host_len] = '\0';
+        
+        if (port) {
+            *port = (strncmp(uri, "mqtts://", 8) == 0) ? 8883 : 1883;
+        }
+    } else {
+        // No port, no path
+        strncpy(hostname, host_start, hostname_size - 1);
+        hostname[hostname_size - 1] = '\0';
+        
+        if (port) {
+            *port = (strncmp(uri, "mqtts://", 8) == 0) ? 8883 : 1883;
+        }
+    }
+    
+    return true;
+}
+
 void mqtt_connect(void)
 {
     if (!wifi_is_connected()) {
@@ -278,6 +382,16 @@ void mqtt_connect(void)
 
     if (strlen(s_mqtt_config.broker_uri) == 0) {
         ESP_LOGW(TAG, "MQTT broker URI not configured");
+        return;
+    }
+    
+    // Extract and validate hostname from URI
+    char hostname[128];
+    int port;
+    if (mqtt_extract_hostname(s_mqtt_config.broker_uri, hostname, sizeof(hostname), &port)) {
+        ESP_LOGI(TAG, "Extracted hostname: '%s', port: %d from URI: '%s'", hostname, port, s_mqtt_config.broker_uri);
+    } else {
+        ESP_LOGE(TAG, "Failed to extract hostname from URI: '%s'", s_mqtt_config.broker_uri);
         return;
     }
 
@@ -301,25 +415,42 @@ void mqtt_connect(void)
     s_mqtt_connecting = true;  // Set connecting state
     s_connection_start_time = esp_timer_get_time() / 1000ULL; // Store start time in ms
 
-    esp_mqtt_client_config_t mqtt_cfg = {
-        .broker.address.uri = s_mqtt_config.broker_uri,
-        .broker.verification.certificate = NULL,  // Use default CA certificates
-        .broker.verification.skip_cert_common_name_check = false,
-        .broker.verification.use_global_ca_store = false,
-        .broker.verification.crt_bundle_attach = esp_crt_bundle_attach,
-        
-        // Optimized for maximum stability and zero data loss
-        .session.keepalive = 60,                    // Optimal keepalive for stability
-        .session.disable_clean_session = false,    // Clean session for reliability  
-        .session.disable_keepalive = false,        // Enable keepalive
-        .network.timeout_ms = 30000,               // Longer timeout for stability
-        .network.refresh_connection_after_ms = 0,  // Disable auto refresh
-        .network.reconnect_timeout_ms = 5000,      // Fast reconnection
-        .buffer.size = 16384,                      // Large input buffer 
-        .buffer.out_size = 32768,                  // Very large output buffer for queuing
-        .task.priority = 5,                        // Higher task priority
-        .task.stack_size = 8192,                   // Larger stack for stability
-    };
+    // Add debugging for broker URI
+    ESP_LOGI(TAG, "Connecting to MQTT broker: '%s'", s_mqtt_config.broker_uri);
+    ESP_LOGI(TAG, "Client ID: '%s'", s_mqtt_config.client_id);
+    ESP_LOGI(TAG, "Username: '%s'", s_mqtt_config.username);
+
+    esp_mqtt_client_config_t mqtt_cfg = {0};  // Initialize to zero
+    
+    // Configure broker address
+    mqtt_cfg.broker.address.uri = s_mqtt_config.broker_uri;
+    
+    // Configure TLS for MQTTS
+    if (strncmp(s_mqtt_config.broker_uri, "mqtts://", 8) == 0) {
+        ESP_LOGI(TAG, "Configuring TLS for MQTTS connection with certificate bundle");
+        mqtt_cfg.broker.verification.use_global_ca_store = false;
+        mqtt_cfg.broker.verification.crt_bundle_attach = esp_crt_bundle_attach;
+        mqtt_cfg.broker.verification.skip_cert_common_name_check = false;
+        mqtt_cfg.broker.verification.certificate = NULL;
+    }
+    
+    // Session configuration
+    mqtt_cfg.session.keepalive = 60;
+    mqtt_cfg.session.disable_clean_session = false;
+    mqtt_cfg.session.disable_keepalive = false;
+    
+    // Network configuration  
+    mqtt_cfg.network.timeout_ms = 30000;
+    mqtt_cfg.network.refresh_connection_after_ms = 0;
+    mqtt_cfg.network.reconnect_timeout_ms = 5000;
+    
+    // Buffer configuration
+    mqtt_cfg.buffer.size = 16384;
+    mqtt_cfg.buffer.out_size = 32768;
+    
+    // Task configuration
+    mqtt_cfg.task.priority = 5;
+    mqtt_cfg.task.stack_size = 8192;
 
     // Set client ID
     if (strlen(s_mqtt_config.client_id) > 0) {
@@ -482,7 +613,7 @@ void mqtt_process_command(const char* topic, int topic_len, const char* data, in
                 mqtt_publish_response("{\"command\":\"power\",\"action\":\"status\",\"status\":\"success\",\"power_state\":\"on\",\"message\":\"RFID module is powered on\"}");
             } else if (strcmp(action->valuestring, "get") == 0) {
                 // Get detailed antenna power levels
-                rfid_handle_power_command("query", 0, 0, 0, 0);
+                rfid_handle_power_command("get", 0, 0, 0, 0);
             } else {
                 rfid_handle_power_command(action->valuestring, 0, 0, 0, 0);
             }

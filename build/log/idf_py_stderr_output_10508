@@ -1,0 +1,10 @@
+CMake Error at D:/esp/esp-idf-v5.3.3/tools/cmake/build.cmake:288 (message):
+  Failed to resolve component 'esp_crt_bundle'.
+Call Stack (most recent call first):
+  D:/esp/esp-idf-v5.3.3/tools/cmake/build.cmake:324 (__build_resolve_and_add_req)
+  D:/esp/esp-idf-v5.3.3/tools/cmake/build.cmake:627 (__build_expand_requirements)
+  D:/esp/esp-idf-v5.3.3/tools/cmake/project.cmake:717 (idf_build_process)
+  CMakeLists.txt:7 (project)
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed

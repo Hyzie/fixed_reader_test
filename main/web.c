@@ -6,8 +6,10 @@
 #include "wifi_config.h"
 #include "wifi.h"
 #include "mqtt_client.h"
+#include "mqtt_config.h"
 #include "rfid.h"
 #include <stdlib.h>
+#include "esp_random.h"
 
 static const char *TAG = "WEB";
 
@@ -49,6 +51,24 @@ static const char* HTML_CONTENT = R"rawliteral(
       </div>
     </form>
     <div id="wifiTestResult" style="margin-top:10px; padding:10px; border-radius:4px; display:none;"></div>
+
+    <h3>MQTT Configuration</h3>
+    <form id="mqttForm" onsubmit="saveMqtt(event)">
+      <label>Broker URI
+        <input type="text" id="broker_uri" placeholder="mqtt://broker.example.com:1883">
+      </label>
+      <label>Username
+        <input type="text" id="mqtt_username" placeholder="MQTT Username (optional)">
+      </label>
+      <label>Password
+        <input type="password" id="mqtt_password" placeholder="MQTT Password (optional)">
+      </label>
+      <div class="row">
+        <button type="button" onclick="testMqtt()" style="background:#ff9800">Test Connection</button>
+        <button type="submit">Save MQTT</button>
+      </div>
+    </form>
+    <div id="mqttTestResult" style="margin-top:10px; padding:10px; border-radius:4px; display:none;"></div>
 
     <h3>RFID Controls</h3>
     <div class="row">
@@ -113,6 +133,10 @@ static const char* HTML_CONTENT = R"rawliteral(
         statusText += `WiFi: ${json.wifi.configured ? 'Configured' : 'Not configured'}`;
         if (json.wifi.configured) {
           statusText += ` (${json.wifi.ssid})`;
+        }
+        statusText += `\nMQTT: ${json.mqtt.configured ? 'Configured' : 'Not configured'}`;
+        if (json.mqtt.configured) {
+          statusText += ` (${json.mqtt.status})`;
         }
         document.getElementById('status').textContent = statusText;
       }catch(e){ 
@@ -197,6 +221,16 @@ static const char* HTML_CONTENT = R"rawliteral(
       fetchStatus();
     }
 
+    async function saveMqtt(e){
+      e.preventDefault();
+      const broker_uri = encodeURIComponent(document.getElementById('broker_uri').value);
+      const username = encodeURIComponent(document.getElementById('mqtt_username').value);
+      const password = encodeURIComponent(document.getElementById('mqtt_password').value);
+      const body = `broker_uri=${broker_uri}&username=${username}&password=${password}`;
+      await fetch('/mqtt-config', { method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body });
+      fetchStatus();
+    }
+
     async function testWifi(){
       const ssid = document.getElementById('ssid').value;
       const pass = document.getElementById('pass').value;
@@ -248,6 +282,62 @@ static const char* HTML_CONTENT = R"rawliteral(
         }
       } catch (error) {
         resultDiv.textContent = 'Error testing connection: ' + error.message;
+        resultDiv.style.background = '#e53935';
+      }
+    }
+
+    async function testMqtt(){
+      const broker_uri = document.getElementById('broker_uri').value;
+      const username = document.getElementById('mqtt_username').value;
+      const password = document.getElementById('mqtt_password').value;
+      const resultDiv = document.getElementById('mqttTestResult');
+      
+      console.log('Testing MQTT with broker:', broker_uri);
+      
+      if (!broker_uri) {
+        resultDiv.textContent = 'Please enter broker URI';
+        resultDiv.style.display = 'block';
+        resultDiv.style.background = '#e53935';
+        return;
+      }
+      
+      // Show testing message
+      resultDiv.textContent = 'Testing MQTT connection... Please wait (up to 15 seconds)';
+      resultDiv.style.display = 'block';
+      resultDiv.style.background = '#ff9800';
+      
+      try {
+        const body = `broker_uri=${encodeURIComponent(broker_uri)}&username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`;
+        console.log('Sending MQTT test request with body:', body);
+        
+        const response = await fetch('/mqtt-test', { 
+          method:'POST', 
+          headers:{'Content-Type':'application/x-www-form-urlencoded'}, 
+          body 
+        });
+        
+        console.log('MQTT Response status:', response.status);
+        
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+        
+        const responseText = await response.text();
+        console.log('MQTT Raw response:', responseText);
+        
+        const result = JSON.parse(responseText);
+        console.log('MQTT Parsed result:', result);
+        
+        resultDiv.textContent = result.message;
+        if (result.status === 'success') {
+          resultDiv.style.background = '#4caf50';
+          console.log('MQTT Test successful - button should be green');
+        } else {
+          resultDiv.style.background = '#e53935';
+          console.log('MQTT Test failed - button should be red');
+        }
+      } catch (error) {
+        resultDiv.textContent = 'Error testing MQTT connection: ' + error.message;
         resultDiv.style.background = '#e53935';
       }
     }
@@ -307,6 +397,11 @@ static const char* HTML_CONTENT = R"rawliteral(
         if (json && json.wifi) {
           if (json.wifi.ssid) document.getElementById('ssid').value = json.wifi.ssid;
           if (json.wifi.pass) document.getElementById('pass').value = json.wifi.pass;
+        }
+        if (json && json.mqtt) {
+          if (json.mqtt.broker_uri) document.getElementById('broker_uri').value = json.mqtt.broker_uri;
+          if (json.mqtt.username) document.getElementById('mqtt_username').value = json.mqtt.username;
+          if (json.mqtt.password) document.getElementById('mqtt_password').value = json.mqtt.password;
         }
       }catch(e){}
       // Load current power settings
@@ -456,6 +551,128 @@ static esp_err_t wifi_test_handler(httpd_req_t *req)
   return ESP_OK;
 }
 
+// HTTP POST handler - save MQTT config (form urlencoded: broker_uri=..&username=..&password=..)
+static esp_err_t mqtt_post_handler(httpd_req_t *req)
+{
+  char buf[512];
+  int ret = httpd_req_recv(req, buf, sizeof(buf)-1);
+  if (ret <= 0) {
+    if (ret == HTTPD_SOCK_ERR_TIMEOUT) httpd_resp_send_408(req);
+    return ESP_FAIL;
+  }
+  buf[ret] = '\0';
+  char *pair = strtok(buf, "&");
+  char broker_uri[128] = {0}, username[64] = {0}, password[64] = {0};
+  while (pair) {
+    char *eq = strchr(pair, '=');
+    if (eq) {
+      *eq = '\0';
+      char *k = pair; char *v = eq + 1;
+      char dec[128];
+      urldecode(dec, v);
+      if (strcmp(k, "broker_uri") == 0) strncpy(broker_uri, dec, sizeof(broker_uri)-1);
+      else if (strcmp(k, "username") == 0) strncpy(username, dec, sizeof(username)-1);
+      else if (strcmp(k, "password") == 0) strncpy(password, dec, sizeof(password)-1);
+    }
+    pair = strtok(NULL, "&");
+  }
+  
+  ESP_LOGI(TAG, "Received MQTT config from web:");
+  ESP_LOGI(TAG, "  broker_uri: '%s' (len: %d)", broker_uri, strlen(broker_uri));
+  ESP_LOGI(TAG, "  username: '%s' (len: %d)", username, strlen(username));
+  ESP_LOGI(TAG, "  password: '%s' (len: %d)", password, strlen(password));
+
+  // Create MQTT config structure
+  mqtt_config_t config = {0};
+  strncpy(config.broker_uri, broker_uri, sizeof(config.broker_uri)-1);
+  strncpy(config.username, username, sizeof(config.username)-1);
+  strncpy(config.password, password, sizeof(config.password)-1);
+  
+  // Set default client ID and topics
+  snprintf(config.client_id, sizeof(config.client_id), "esp32_rfid_%06X", (unsigned int)(esp_random() & 0xFFFFFF));
+  snprintf(config.publish_topic, sizeof(config.publish_topic), "reader/%s/data", config.client_id);
+  snprintf(config.subscribe_topic, sizeof(config.subscribe_topic), "reader/%s/cmd", config.client_id);
+  
+  ESP_LOGI(TAG, "Final config before save:");
+  ESP_LOGI(TAG, "  broker_uri: '%s'", config.broker_uri);
+  ESP_LOGI(TAG, "  client_id: '%s'", config.client_id);
+  
+  // Save MQTT configuration
+  mqtt_save_config(&config);
+  mqtt_set_config(&config);
+  
+  ESP_LOGI(TAG, "MQTT config saved: broker=%s, user=%s", broker_uri, username);
+  
+  httpd_resp_set_status(req, "200 OK");
+  httpd_resp_send(req, "OK", 2);
+  return ESP_OK;
+}
+
+// HTTP POST handler - test MQTT connection
+static esp_err_t mqtt_test_handler(httpd_req_t *req)
+{
+  char buf[512];
+  int ret = httpd_req_recv(req, buf, sizeof(buf)-1);
+  if (ret <= 0) {
+    if (ret == HTTPD_SOCK_ERR_TIMEOUT) httpd_resp_send_408(req);
+    return ESP_FAIL;
+  }
+  buf[ret] = '\0';
+  char *pair = strtok(buf, "&");
+  char broker_uri[128] = {0}, username[64] = {0}, password[64] = {0};
+  while (pair) {
+    char *eq = strchr(pair, '=');
+    if (eq) {
+      *eq = '\0';
+      char *k = pair; char *v = eq + 1;
+      char dec[128];
+      urldecode(dec, v);
+      if (strcmp(k, "broker_uri") == 0) strncpy(broker_uri, dec, sizeof(broker_uri)-1);
+      else if (strcmp(k, "username") == 0) strncpy(username, dec, sizeof(username)-1);
+      else if (strcmp(k, "password") == 0) strncpy(password, dec, sizeof(password)-1);
+    }
+    pair = strtok(NULL, "&");
+  }
+  
+  ESP_LOGI(TAG, "Testing MQTT connection to broker: %s", broker_uri);
+  
+  // Perform basic validation
+  bool test_result = false;
+  char error_msg[128] = {0};
+  
+  if (strlen(broker_uri) == 0) {
+    strcpy(error_msg, "Broker URI is required");
+  } else if (strncmp(broker_uri, "mqtt://", 7) != 0 && strncmp(broker_uri, "mqtts://", 8) != 0) {
+    strcpy(error_msg, "Broker URI must start with mqtt:// or mqtts://");
+  } else if (strstr(broker_uri, "://") == NULL) {
+    strcpy(error_msg, "Invalid broker URI format");
+  } else {
+    // Basic format validation passed
+    test_result = true;
+    
+    // Additional validation for common issues
+    if (strstr(broker_uri, " ") != NULL) {
+      strcpy(error_msg, "Broker URI contains spaces");
+      test_result = false;
+    } else if (strlen(broker_uri) > 120) {
+      strcpy(error_msg, "Broker URI too long");
+      test_result = false;
+    }
+  }
+  
+  char response[256];
+  if (test_result) {
+    snprintf(response, sizeof(response), "{\"status\":\"success\",\"message\":\"MQTT configuration format valid for %s\"}", broker_uri);
+  } else {
+    snprintf(response, sizeof(response), "{\"status\":\"error\",\"message\":\"Validation failed: %s\"}", error_msg);
+  }
+  
+  ESP_LOGI(TAG, "Sending MQTT test response: %s", response);
+  httpd_resp_set_type(req, "application/json");
+  httpd_resp_send(req, response, strlen(response));
+  return ESP_OK;
+}
+
 // Inventory control handlers
 static esp_err_t inventory_start_handler(httpd_req_t *req)
 {
@@ -471,18 +688,27 @@ static esp_err_t inventory_stop_handler(httpd_req_t *req)
   return ESP_OK;
 }
 
-// Status handler returns JSON with wifi and inventory status
+// Status handler returns JSON with wifi, mqtt and inventory status
 static esp_err_t status_get_handler(httpd_req_t *req)
 {
   char ssid[64]; char pass[64];
   wifi_config_load(ssid, sizeof(ssid), pass, sizeof(pass));
+  
+  mqtt_config_t mqtt_cfg = {0};
+  mqtt_get_config(&mqtt_cfg);
+  
   const char *inv = rfid_get_local_status();  // Use local status only for web server
   const char *last_cmd = rfid_get_last_command();
+  const char *mqtt_status = mqtt_get_status();
+  
   char resp[1024];
-  int configured = (ssid[0] != '\0');
+  int wifi_configured = (ssid[0] != '\0');
+  int mqtt_configured = (mqtt_cfg.broker_uri[0] != '\0');
+  
   int len = snprintf(resp, sizeof(resp), 
-    "{\"inventory\":\"%s\",\"last_command\":\"%s\",\"wifi\":{\"configured\":%d,\"ssid\":\"%s\",\"pass\":\"%s\"}}", 
-    inv, last_cmd, configured, ssid, pass);
+    "{\"inventory\":\"%s\",\"last_command\":\"%s\",\"wifi\":{\"configured\":%d,\"ssid\":\"%s\",\"pass\":\"%s\"},\"mqtt\":{\"configured\":%d,\"broker_uri\":\"%s\",\"username\":\"%s\",\"password\":\"%s\",\"status\":\"%s\"}}", 
+    inv, last_cmd, wifi_configured, ssid, pass, mqtt_configured, mqtt_cfg.broker_uri, mqtt_cfg.username, mqtt_cfg.password, mqtt_status);
+  
   httpd_resp_set_type(req, "application/json");
   return httpd_resp_send(req, resp, len);
 }
@@ -586,7 +812,7 @@ httpd_handle_t start_webserver(void)
    config.stack_size = 8192;
    config.lru_purge_enable = true;
    /* Increase max URI handlers from default (8) to accommodate all endpoints */
-   config.max_uri_handlers = 14;  // Total endpoints including WiFi test
+   config.max_uri_handlers = 16;  // Total endpoints including WiFi test and MQTT
    httpd_handle_t server = NULL;
 
     if (httpd_start(&server, &config) == ESP_OK) {
@@ -643,6 +869,24 @@ httpd_handle_t start_webserver(void)
       .user_ctx  = NULL
     };
     httpd_register_uri_handler(server, &wifi_test);
+
+    // MQTT config endpoint
+    const httpd_uri_t mqtt_cfg = {
+      .uri       = "/mqtt-config",
+      .method    = HTTP_POST,
+      .handler   = mqtt_post_handler,
+      .user_ctx  = NULL
+    };
+    httpd_register_uri_handler(server, &mqtt_cfg);
+
+    // MQTT test endpoint
+    const httpd_uri_t mqtt_test = {
+      .uri       = "/mqtt-test",
+      .method    = HTTP_POST,
+      .handler   = mqtt_test_handler,
+      .user_ctx  = NULL
+    };
+    httpd_register_uri_handler(server, &mqtt_test);
 
     // Inventory control endpoints
     const httpd_uri_t inv_start = {

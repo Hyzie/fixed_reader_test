@@ -1,0 +1,495 @@
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3c0c002ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037c18e
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x1870
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xce8
+load:0x403cb700,len:0x2ed8
+entry 0x403c8918
+[0;32mI (26) boot: ESP-IDF v5.3.3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Nov  7 2025 18:14:32[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot: efuse block revision: v1.3[0m
+[0;32mI (39) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (43) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00180000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=458a8h (284840) map[0m
+[0;32mI (154) esp_image: segment 1: paddr=000558d0 vaddr=3fc9cf00 size=04b40h ( 19264) load[0m
+[0;32mI (159) esp_image: segment 2: paddr=0005a418 vaddr=40374000 size=05c00h ( 23552) load[0m
+[0;32mI (165) esp_image: segment 3: paddr=00060020 vaddr=42000020 size=b9124h (758052) map[0m
+[0;32mI (302) esp_image: segment 4: paddr=0011914c vaddr=40379c00 size=132c8h ( 78536) load[0m
+[0;32mI (330) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (330) boot: Disabling RNG early entropy source...[0m
+[0;32mI (342) cpu_start: Multicore app[0m
+[0;32mI (351) cpu_start: Pro cpu start user code[0m
+[0;32mI (351) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (351) app_init: Application information:[0m
+[0;32mI (354) app_init: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (360) app_init: App version:      4489b73-dirty[0m
+[0;32mI (366) app_init: Compile time:     Nov  7 2025 18:35:57[0m
+[0;32mI (372) app_init: ELF file SHA256:  5074a20e5...[0m
+[0;32mI (377) app_init: ESP-IDF:          v5.3.3-dirty[0m
+[0;32mI (382) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (387) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (392) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (397) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (404) heap_init: At 3FCAB388 len 0003E388 (248 KiB): RAM[0m
+[0;32mI (410) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (416) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (422) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (430) spi_flash: detected chip: gd[0m
+[0;32mI (433) spi_flash: flash io: dio[0m
+[0;33mW (437) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (450) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (457) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (464) main_task: Started on CPU0[0m
+[0;32mI (474) main_task: Calling app_main()[0m
+[0;32mI (494) uart: queue free spaces: 30[0m
+[0;32mI (494) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (494) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (604) UART: UART RX task started and waiting for data...[0m
+UART RX task created
+[0;32mI (604) ETH: Static IP configured: 192.168.1.100[0m
+[0;32mI (604) ETH: Gateway: 192.168.1.1[0m
+[0;32mI (604) ETH: Netmask: 255.255.255.0[0m
+[0;32mI (614) ETH: DNS servers configured from network_config.h[0m
+[0;32mI (644) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (644) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (654) ETH: Ethernet Started[0m
+[0;32mI (654) pp: pp rom version: e7ae62f[0m
+[0;32mI (654) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (664) wifi:wifi driver task: 3fcc3410, prio:23, stack:6656, core=0[0m
+[0;32mI (674) wifi:wifi firmware version: b0b320f[0m
+[0;32mI (674) wifi:wifi certification version: v7.0[0m
+[0;32mI (674) wifi:config NVS flash: enabled[0m
+[0;32mI (674) wifi:config nano formating: disabled[0m
+[0;32mI (674) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (684) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (684) wifi:Init management short buffer num: 32[0m
+[0;32mI (684) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (694) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (694) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (704) wifi:Init static rx buffer num: 10[0m
+[0;32mI (704) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (714) wifi_init: rx ba win: 6[0m
+[0;32mI (714) wifi_init: accept mbox: 6[0m
+[0;32mI (714) wifi_init: tcpip mbox: 32[0m
+[0;32mI (724) wifi_init: udp mbox: 6[0m
+[0;32mI (724) wifi_init: tcp mbox: 6[0m
+[0;32mI (724) wifi_init: tcp tx win: 5760[0m
+[0;32mI (734) wifi_init: tcp rx win: 5760[0m
+[0;32mI (734) wifi_init: tcp mss: 1440[0m
+[0;32mI (744) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (744) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (754) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (754) phy_init: phy_version 700,8582a7fd,Feb 10 2025,20:13:11[0m
+[0;32mI (794) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (884) wifi:mode : sta (98:3d:ae:9f:b7:80)[0m
+[0;32mI (884) wifi:enable tsf[0m
+[0;32mI (894) WIFI: WiFi module initialized (STA mode, power save disabled)[0m
+[0;32mI (894) WIFI: WiFi started[0m
+[0;32mI (894) WIFI: Found saved WiFi credentials, attempting connection...[0m
+[0;32mI (904) WIFI: Connecting to WiFi SSID: Hydro[0m
+[0;33mW (904) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (914) MQTT: MQTT data buffer initialized (20 entries)[0m
+[0;32mI (914) MQTT: No previous buffer data in NVS[0m
+[0;33mW (924) MQTT: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND, using defaults[0m
+[0;32mI (924) MQTT: MQTT module initialized with broker: mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883[0m
+[0;32mI (944) WEB: Registered /power/set handler[0m
+[0;32mI (944) WEB: Registered /power/get handler[0m
+[0;32mI (954) MAIN: Web server started on Ethernet[0m
+[0;32mI (954) MAIN: System initialized successfully - Ethernet + WiFi + MQTT mode[0m
+[0;32mI (954) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (974) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (974) main_task: Returned from app_main()[0m
+[0;32mI (1984) wifi:state: auth -> init (0x200)[0m
+[0;32mI (1994) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1994) WIFI: Retry connecting to WiFi (1/5)[0m
+[0;32mI (2654) ETH: Ethernet Link Up[0m
+[0;32mI (2654) ETH: Ethernet HW Addr 02:00:00:12:34:56[0m
+[0;32mI (2654) esp_netif_handlers: eth ip: 192.168.1.100, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2654) ETH: Ethernet Got IP Address[0m
+[0;32mI (2664) ETH: ~~~~~~~~~~~[0m
+[0;32mI (2664) ETH: ETHIP: 192.168.1.100[0m
+[0;32mI (2674) ETH: ETHMASK: 255.255.255.0[0m
+[0;32mI (2674) ETH: ETHGW: 192.168.1.1[0m
+[0;32mI (2674) ETH: ~~~~~~~~~~~[0m
+[0;32mI (4404) WIFI: Retry connecting to WiFi (2/5)[0m
+[0;32mI (4434) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4444) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (4464) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (4504) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (4524) wifi:connected with Hydro, aid = 8, channel 6, BW20, bssid = 6e:94:66:e1:b7:a2[0m
+[0;32mI (4524) wifi:security: WPA2-PSK, phy: bgn, rssi: -77[0m
+[0;32mI (4534) wifi:pm start, type: 0[0m
+
+[0;32mI (4534) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (4534) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (4544) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (5554) esp_netif_handlers: sta ip: 192.168.137.170, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (5554) WIFI: WiFi connected! Got IP: 192.168.137.170[0m
+[0;32mI (10144) UART: UART sent 9 bytes: TX: 5A 00 01 02 02 00 00 29 59[0m
+[0;32mI (10954) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (10954) MQTT: Extracted hostname: '9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud', port: 8883 from URI: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (10964) MQTT: Connecting to MQTT broker: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (10974) MQTT: Client ID: 'esp32_rfid_reader'[0m
+[0;32mI (10974) MQTT: Username: 'helloworld'[0m
+[0;32mI (10984) MQTT: Configuring TLS for MQTTS connection[0m
+[0;32mI (10984) MQTT: MQTT client started[0m
+[0;32mI (10994) MQTT: Other MQTT event id:7[0m
+[0;31mE (11704) esp-tls-mbedtls: global_cacert is NULL[0m
+[0;31mE (11704) esp-tls-mbedtls: Failed to set client configurations, returned [0x0103] (ESP_ERR_INVALID_STATE)[0m
+[0;31mE (11714) esp-tls: create_ssl_handle failed[0m
+[0;31mE (11714) esp-tls: Failed to open new connection[0m
+[0;31mE (11724) transport_base: Failed to open a new connection[0m
+[0;31mE (11734) mqtt_client: Error transport connect[0m
+[0;31mE (11734) MQTT: MQTT Error[0m
+[0;31mE (11734) MQTT: Last error code reported from esp-tls: 0x103[0m
+[0;31mE (11744) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (11754) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (11754) MQTT: MQTT Disconnected[0m
+[0;32mI (11904) wifi:<ba-add>idx:0 (ifx:0, 6e:94:66:e1:b7:a2), tid:0, ssn:6, winSize:64[0m
+[0;32mI (19254) MQTT: Other MQTT event id:7[0m
+[0;32mI (20994) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (20994) MQTT: Extracted hostname: '9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud', port: 8883 from URI: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (21004) MQTT: Stopping existing MQTT client[0m
+[0;32mI (21334) wifi:<ba-add>idx:1 (ifx:0, 6e:94:66:e1:b7:a2), tid:1, ssn:4, winSize:64[0m
+[0;31mE (21844) esp-tls-mbedtls: global_cacert is NULL[0m
+[0;31mE (21844) esp-tls-mbedtls: Failed to set client configurations, returned [0x0103] (ESP_ERR_INVALID_STATE)[0m
+[0;31mE (21854) esp-tls: create_ssl_handle failed[0m
+[0;31mE (21854) esp-tls: Failed to open new connection[0m
+[0;31mE (21864) transport_base: Failed to open a new connection[0m
+[0;31mE (21864) mqtt_client: Error transport connect[0m
+[0;31mE (21874) MQTT: MQTT Error[0m
+[0;31mE (21874) MQTT: Last error code reported from esp-tls: 0x103[0m
+[0;31mE (21884) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (21884) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (21894) MQTT: MQTT Disconnected[0m
+[0;32mI (22894) MQTT: Connecting to MQTT broker: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (22894) MQTT: Client ID: 'esp32_rfid_reader'[0m
+[0;32mI (22894) MQTT: Username: 'helloworld'[0m
+[0;32mI (22894) MQTT: Configuring TLS for MQTTS connection[0m
+[0;32mI (22904) MQTT: MQTT client started[0m
+[0;32mI (22904) MQTT: Other MQTT event id:7[0m
+[0;31mE (24504) esp-tls-mbedtls: global_cacert is NULL[0m
+[0;31mE (24504) esp-tls-mbedtls: Failed to set client configurations, returned [0x0103] (ESP_ERR_INVALID_STATE)[0m
+[0;31mE (24514) esp-tls: create_ssl_handle failed[0m
+[0;31mE (24514) esp-tls: Failed to open new connection[0m
+[0;31mE (24524) transport_base: Failed to open a new connection[0m
+[0;31mE (24534) mqtt_client: Error transport connect[0m
+[0;31mE (24534) MQTT: MQTT Error[0m
+[0;31mE (24534) MQTT: Last error code reported from esp-tls: 0x103[0m
+[0;31mE (24544) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (24554) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (24554) MQTT: MQTT Disconnected[0m
+[0;33mW (30904) MQTT: Connection monitor: MQTT disconnected[0m
+[0;32mI (30904) MQTT: Connection health: DISCONNECTED, buffer: 0/20, failures: 0[0m
+[0;32mI (32054) MQTT: Other MQTT event id:7[0m
+[0;32mI (32904) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (32904) MQTT: Extracted hostname: '9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud', port: 8883 from URI: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (32914) MQTT: Stopping existing MQTT client[0m
+[0;31mE (34754) esp-tls-mbedtls: global_cacert is NULL[0m
+[0;31mE (34754) esp-tls-mbedtls: Failed to set client configurations, returned [0x0103] (ESP_ERR_INVALID_STATE)[0m
+[0;31mE (34754) esp-tls: create_ssl_handle failed[0m
+[0;31mE (34764) esp-tls: Failed to open new connection[0m
+[0;31mE (34764) transport_base: Failed to open a new connection[0m
+[0;31mE (34774) mqtt_client: Error transport connect[0m
+[0;31mE (34774) MQTT: MQTT Error[0m
+[0;31mE (34784) MQTT: Last error code reported from esp-tls: 0x103[0m
+[0;31mE (34784) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (34794) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (34804) MQTT: MQTT Disconnected[0m
+[0;32mI (35804) MQTT: Connecting to MQTT broker: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (35804) MQTT: Client ID: 'esp32_rfid_reader'[0m
+[0;32mI (35804) MQTT: Username: 'helloworld'[0m
+[0;32mI (35804) MQTT: Configuring TLS for MQTTS connection[0m
+[0;32mI (35814) MQTT: MQTT client started[0m
+[0;32mI (35814) MQTT: Other MQTT event id:7[0m
+[0;31mE (43054) esp-tls-mbedtls: global_cacert is NULL[0m
+[0;31mE (43054) esp-tls-mbedtls: Failed to set client configurations, returned [0x0103] (ESP_ERR_INVALID_STATE)[0m
+[0;31mE (43054) esp-tls: create_ssl_handle failed[0m
+[0;31mE (43064) esp-tls: Failed to open new connection[0m
+[0;31mE (43064) transport_base: Failed to open a new connection[0m
+[0;31mE (43074) mqtt_client: Error transport connect[0m
+[0;31mE (43074) MQTT: MQTT Error[0m
+[0;31mE (43074) MQTT: Last error code reported from esp-tls: 0x103[0m
+[0;31mE (43084) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (43094) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (43094) MQTT: MQTT Disconnected[0m
+[0;32mI (43814) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (43814) MQTT: Extracted hostname: '9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud', port: 8883 from URI: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (43824) MQTT: Stopping existing MQTT client[0m
+[0;32mI (46604) MQTT: Connecting to MQTT broker: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (46604) MQTT: Client ID: 'esp32_rfid_reader'[0m
+[0;32mI (46604) MQTT: Username: 'helloworld'[0m
+[0;32mI (46604) MQTT: Configuring TLS for MQTTS connection[0m
+[0;32mI (46614) MQTT: MQTT client started[0m
+[0;32mI (46614) MQTT: Other MQTT event id:7[0m
+[0;31mE (47344) esp-tls-mbedtls: global_cacert is NULL[0m
+[0;31mE (47344) esp-tls-mbedtls: Failed to set client configurations, returned [0x0103] (ESP_ERR_INVALID_STATE)[0m
+[0;31mE (47344) esp-tls: create_ssl_handle failed[0m
+[0;31mE (47354) esp-tls: Failed to open new connection[0m
+[0;31mE (47354) transport_base: Failed to open a new connection[0m
+[0;31mE (47364) mqtt_client: Error transport connect[0m
+[0;31mE (47374) MQTT: MQTT Error[0m
+[0;31mE (47374) MQTT: Last error code reported from esp-tls: 0x103[0m
+[0;31mE (47374) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (47384) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (47394) MQTT: MQTT Disconnected[0m
+[0;32mI (54614) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (54614) MQTT: Extracted hostname: '9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud', port: 8883 from URI: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (54624) MQTT: Stopping existing MQTT client[0m
+[0;32mI (55894) MQTT: Connecting to MQTT broker: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (55894) MQTT: Client ID: 'esp32_rfid_reader'[0m
+[0;32mI (55894) MQTT: Username: 'helloworld'[0m
+[0;32mI (55894) MQTT: Configuring TLS for MQTTS connection[0m
+[0;32mI (55904) MQTT: MQTT client started[0m
+[0;32mI (55904) MQTT: Other MQTT event id:7[0m
+[0;31mE (58714) esp-tls-mbedtls: global_cacert is NULL[0m
+[0;31mE (58714) esp-tls-mbedtls: Failed to set client configurations, returned [0x0103] (ESP_ERR_INVALID_STATE)[0m
+[0;31mE (58714) esp-tls: create_ssl_handle failed[0m
+[0;31mE (58724) esp-tls: Failed to open new connection[0m
+[0;31mE (58724) transport_base: Failed to open a new connection[0m
+[0;31mE (58734) mqtt_client: Error transport connect[0m
+[0;31mE (58734) MQTT: MQTT Error[0m
+[0;31mE (58734) MQTT: Last error code reported from esp-tls: 0x103[0m
+[0;31mE (58744) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (58754) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (58754) MQTT: MQTT Disconnected[0m
+[0;33mW (61904) MQTT: Connection monitor: MQTT disconnected[0m
+[0;32mI (61904) MQTT: Connection health: DISCONNECTED, buffer: 0/20, failures: 0[0m
+[0;32mI (63764) MQTT: Other MQTT event id:7[0m
+[0;31mE (64444) esp-tls-mbedtls: global_cacert is NULL[0m
+[0;31mE (64444) esp-tls-mbedtls: Failed to set client configurations, returned [0x0103] (ESP_ERR_INVALID_STATE)[0m
+[0;31mE (64444) esp-tls: create_ssl_handle failed[0m
+[0;31mE (64454) esp-tls: Failed to open new connection[0m
+[0;31mE (64454) transport_base: Failed to open a new connection[0m
+[0;31mE (64464) mqtt_client: Error transport connect[0m
+[0;31mE (64474) MQTT: MQTT Error[0m
+[0;31mE (64474) MQTT: Last error code reported from esp-tls: 0x103[0m
+[0;31mE (64484) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (64484) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (64494) MQTT: MQTT Disconnected[0m
+[0;32mI (65904) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (65904) MQTT: Extracted hostname: '9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud', port: 8883 from URI: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (65914) MQTT: Stopping existing MQTT client[0m
+[0;32mI (67994) MQTT: Connecting to MQTT broker: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (67994) MQTT: Client ID: 'esp32_rfid_reader'[0m
+[0;32mI (67994) MQTT: Username: 'helloworld'[0m
+[0;32mI (67994) MQTT: Configuring TLS for MQTTS connection[0m
+[0;32mI (68004) MQTT: MQTT client started[0m
+[0;32mI (68004) MQTT: Other MQTT event id:7[0m
+[0;31mE (75014) esp-tls: couldn't get hostname for :9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (75014) esp-tls: Failed to open new connection[0m
+[0;31mE (75014) transport_base: Failed to open a new connection[0m
+[0;31mE (75024) mqtt_client: Error transport connect[0m
+[0;31mE (75024) MQTT: MQTT Error[0m
+[0;31mE (75034) MQTT: Last error code reported from esp-tls: 0x8001[0m
+[0;31mE (75034) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (75044) MQTT: Last captured errno : 0 (Success)[0m
+[0;31mE (75044) MQTT: DNS resolution failed - check broker URI and network connectivity[0m
+[0;31mE (75054) MQTT: Current broker URI: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;33mW (75064) MQTT: MQTT Disconnected[0m
+[0;32mI (76004) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (76004) MQTT: Extracted hostname: '9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud', port: 8883 from URI: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (76014) MQTT: Stopping existing MQTT client[0m
+[0;32mI (78574) MQTT: Connecting to MQTT broker: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (78574) MQTT: Client ID: 'esp32_rfid_reader'[0m
+[0;32mI (78574) MQTT: Username: 'helloworld'[0m
+[0;32mI (78574) MQTT: Configuring TLS for MQTTS connection[0m
+[0;32mI (78584) MQTT: MQTT client started[0m
+[0;32mI (78584) MQTT: Other MQTT event id:7[0m
+[0;31mE (79294) esp-tls-mbedtls: global_cacert is NULL[0m
+[0;31mE (79294) esp-tls-mbedtls: Failed to set client configurations, returned [0x0103] (ESP_ERR_INVALID_STATE)[0m
+[0;31mE (79294) esp-tls: create_ssl_handle failed[0m
+[0;31mE (79304) esp-tls: Failed to open new connection[0m
+[0;31mE (79304) transport_base: Failed to open a new connection[0m
+[0;31mE (79314) mqtt_client: Error transport connect[0m
+[0;31mE (79314) MQTT: MQTT Error[0m
+[0;31mE (79324) MQTT: Last error code reported from esp-tls: 0x103[0m
+[0;31mE (79324) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (79334) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (79344) MQTT: MQTT Disconnected[0m
+[0;32mI (86584) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (86584) MQTT: Extracted hostname: '9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud', port: 8883 from URI: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (86594) MQTT: Stopping existing MQTT client[0m
+[0;32mI (87844) MQTT: Connecting to MQTT broker: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (87844) MQTT: Client ID: 'esp32_rfid_reader'[0m
+[0;32mI (87844) MQTT: Username: 'helloworld'[0m
+[0;32mI (87844) MQTT: Configuring TLS for MQTTS connection[0m
+[0;32mI (87854) MQTT: MQTT client started[0m
+[0;32mI (87854) MQTT: Other MQTT event id:7[0m
+[0;31mE (90354) esp-tls-mbedtls: global_cacert is NULL[0m
+[0;31mE (90354) esp-tls-mbedtls: Failed to set client configurations, returned [0x0103] (ESP_ERR_INVALID_STATE)[0m
+[0;31mE (90354) esp-tls: create_ssl_handle failed[0m
+[0;31mE (90364) esp-tls: Failed to open new connection[0m
+[0;31mE (90364) transport_base: Failed to open a new connection[0m
+[0;31mE (90374) mqtt_client: Error transport connect[0m
+[0;31mE (90374) MQTT: MQTT Error[0m
+[0;31mE (90384) MQTT: Last error code reported from esp-tls: 0x103[0m
+[0;31mE (90384) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (90394) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (90394) MQTT: MQTT Disconnected[0m
+[0;33mW (93854) MQTT: Connection monitor: MQTT disconnected[0m
+[0;32mI (93854) MQTT: Connection health: DISCONNECTED, buffer: 0/20, failures: 0[0m
+[0;32mI (95404) MQTT: Other MQTT event id:7[0m
+[0;31mE (97014) esp-tls-mbedtls: global_cacert is NULL[0m
+[0;31mE (97014) esp-tls-mbedtls: Failed to set client configurations, returned [0x0103] (ESP_ERR_INVALID_STATE)[0m
+[0;31mE (97014) esp-tls: create_ssl_handle failed[0m
+[0;31mE (97024) esp-tls: Failed to open new connection[0m
+[0;31mE (97024) transport_base: Failed to open a new connection[0m
+[0;31mE (97034) mqtt_client: Error transport connect[0m
+[0;31mE (97034) MQTT: MQTT Error[0m
+[0;31mE (97044) MQTT: Last error code reported from esp-tls: 0x103[0m
+[0;31mE (97044) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (97054) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (97064) MQTT: MQTT Disconnected[0m
+[0;32mI (97854) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (97854) MQTT: Extracted hostname: '9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud', port: 8883 from URI: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (97864) MQTT: Stopping existing MQTT client[0m
+[0;32mI (100564) MQTT: Connecting to MQTT broker: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (100564) MQTT: Client ID: 'esp32_rfid_reader'[0m
+[0;32mI (100564) MQTT: Username: 'helloworld'[0m
+[0;32mI (100564) MQTT: Configuring TLS for MQTTS connection[0m
+[0;32mI (100574) MQTT: MQTT client started[0m
+[0;32mI (100574) MQTT: Other MQTT event id:7[0m
+[0;31mE (105204) esp-tls-mbedtls: global_cacert is NULL[0m
+[0;31mE (105204) esp-tls-mbedtls: Failed to set client configurations, returned [0x0103] (ESP_ERR_INVALID_STATE)[0m
+[0;31mE (105204) esp-tls: create_ssl_handle failed[0m
+[0;31mE (105214) esp-tls: Failed to open new connection[0m
+[0;31mE (105214) transport_base: Failed to open a new connection[0m
+[0;31mE (105224) mqtt_client: Error transport connect[0m
+[0;31mE (105224) MQTT: MQTT Error[0m
+[0;31mE (105234) MQTT: Last error code reported from esp-tls: 0x103[0m
+[0;31mE (105234) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (105244) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (105244) MQTT: MQTT Disconnected[0m
+[0;32mI (108574) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (108574) MQTT: Extracted hostname: '9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud', port: 8883 from URI: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (108584) MQTT: Stopping existing MQTT client[0m
+[0;32mI (111254) MQTT: Connecting to MQTT broker: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (111254) MQTT: Client ID: 'esp32_rfid_reader'[0m
+[0;32mI (111254) MQTT: Username: 'helloworld'[0m
+[0;32mI (111254) MQTT: Configuring TLS for MQTTS connection[0m
+[0;32mI (111264) MQTT: MQTT client started[0m
+[0;32mI (111264) MQTT: Other MQTT event id:7[0m
+[0;31mE (111954) esp-tls-mbedtls: global_cacert is NULL[0m
+[0;31mE (111954) esp-tls-mbedtls: Failed to set client configurations, returned [0x0103] (ESP_ERR_INVALID_STATE)[0m
+[0;31mE (111964) esp-tls: create_ssl_handle failed[0m
+[0;31mE (111964) esp-tls: Failed to open new connection[0m
+[0;31mE (111974) transport_base: Failed to open a new connection[0m
+[0;31mE (111984) mqtt_client: Error transport connect[0m
+[0;31mE (111984) MQTT: MQTT Error[0m
+[0;31mE (111984) MQTT: Last error code reported from esp-tls: 0x103[0m
+[0;31mE (111994) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (111994) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (112004) MQTT: MQTT Disconnected[0m
+[0;32mI (119264) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (119264) MQTT: Extracted hostname: '9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud', port: 8883 from URI: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (119274) MQTT: Stopping existing MQTT client[0m
+[0;32mI (120504) MQTT: Connecting to MQTT broker: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (120504) MQTT: Client ID: 'esp32_rfid_reader'[0m
+[0;32mI (120504) MQTT: Username: 'helloworld'[0m
+[0;32mI (120504) MQTT: Configuring TLS for MQTTS connection[0m
+[0;32mI (120514) MQTT: MQTT client started[0m
+[0;32mI (120514) MQTT: Other MQTT event id:7[0m
+[0;31mE (123014) esp-tls-mbedtls: global_cacert is NULL[0m
+[0;31mE (123014) esp-tls-mbedtls: Failed to set client configurations, returned [0x0103] (ESP_ERR_INVALID_STATE)[0m
+[0;31mE (123024) esp-tls: create_ssl_handle failed[0m
+[0;31mE (123024) esp-tls: Failed to open new connection[0m
+[0;31mE (123034) transport_base: Failed to open a new connection[0m
+[0;31mE (123044) mqtt_client: Error transport connect[0m
+[0;31mE (123044) MQTT: MQTT Error[0m
+[0;31mE (123044) MQTT: Last error code reported from esp-tls: 0x103[0m
+[0;31mE (123054) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (123054) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (123064) MQTT: MQTT Disconnected[0m
+[0;33mW (124514) MQTT: Connection monitor: MQTT disconnected[0m
+[0;32mI (124514) MQTT: Connection health: DISCONNECTED, buffer: 0/20, failures: 0[0m
+[0;32mI (130514) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (130514) MQTT: Extracted hostname: '9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud', port: 8883 from URI: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (130524) MQTT: Stopping existing MQTT client[0m
+[0;32mI (131564) MQTT: Connecting to MQTT broker: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (131564) MQTT: Client ID: 'esp32_rfid_reader'[0m
+[0;32mI (131564) MQTT: Username: 'helloworld'[0m
+[0;32mI (131564) MQTT: Configuring TLS for MQTTS connection[0m
+[0;32mI (131574) MQTT: MQTT client started[0m
+[0;32mI (131574) MQTT: Other MQTT event id:7[0m
+[0;31mE (134174) esp-tls-mbedtls: global_cacert is NULL[0m
+[0;31mE (134184) esp-tls-mbedtls: Failed to set client configurations, returned [0x0103] (ESP_ERR_INVALID_STATE)[0m
+[0;31mE (134184) esp-tls: create_ssl_handle failed[0m
+[0;31mE (134184) esp-tls: Failed to open new connection[0m
+[0;31mE (134194) transport_base: Failed to open a new connection[0m
+[0;31mE (134204) mqtt_client: Error transport connect[0m
+[0;31mE (134204) MQTT: MQTT Error[0m
+[0;31mE (134204) MQTT: Last error code reported from esp-tls: 0x103[0m
+[0;31mE (134214) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (134224) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (134224) MQTT: MQTT Disconnected[0m
+[0;32mI (139234) MQTT: Other MQTT event id:7[0m
+[0;31mE (140834) esp-tls-mbedtls: global_cacert is NULL[0m
+[0;31mE (140834) esp-tls-mbedtls: Failed to set client configurations, returned [0x0103] (ESP_ERR_INVALID_STATE)[0m
+[0;31mE (140844) esp-tls: create_ssl_handle failed[0m
+[0;31mE (140844) esp-tls: Failed to open new connection[0m
+[0;31mE (140854) transport_base: Failed to open a new connection[0m
+[0;31mE (140854) mqtt_client: Error transport connect[0m
+[0;31mE (140864) MQTT: MQTT Error[0m
+[0;31mE (140864) MQTT: Last error code reported from esp-tls: 0x103[0m
+[0;31mE (140874) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (140874) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (140884) MQTT: MQTT Disconnected[0m
+[0;32mI (141574) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (141574) MQTT: Extracted hostname: '9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud', port: 8883 from URI: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (141584) MQTT: Stopping existing MQTT client[0m
+[0;32mI (144384) MQTT: Connecting to MQTT broker: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (144384) MQTT: Client ID: 'esp32_rfid_reader'[0m
+[0;32mI (144384) MQTT: Username: 'helloworld'[0m
+[0;32mI (144384) MQTT: Configuring TLS for MQTTS connection[0m
+[0;32mI (144394) MQTT: MQTT client started[0m
+[0;32mI (144394) MQTT: Other MQTT event id:7[0m
+[0;31mE (147284) esp-tls-mbedtls: global_cacert is NULL[0m
+[0;31mE (147284) esp-tls-mbedtls: Failed to set client configurations, returned [0x0103] (ESP_ERR_INVALID_STATE)[0m
+[0;31mE (147294) esp-tls: create_ssl_handle failed[0m
+[0;31mE (147294) esp-tls: Failed to open new connection[0m
+[0;31mE (147304) transport_base: Failed to open a new connection[0m
+[0;31mE (147304) mqtt_client: Error transport connect[0m
+[0;31mE (147314) MQTT: MQTT Error[0m
+[0;31mE (147314) MQTT: Last error code reported from esp-tls: 0x103[0m
+[0;31mE (147324) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (147324) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (147334) MQTT: MQTT Disconnected[0m
+[0;32mI (152394) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (152394) MQTT: Extracted hostname: '9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud', port: 8883 from URI: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (152404) MQTT: Stopping existing MQTT client[0m
+[0;32mI (155834) MQTT: Connecting to MQTT broker: 'mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883'[0m
+[0;32mI (155834) MQTT: Client ID: 'esp32_rfid_reader'[0m
+[0;32mI (155834) MQTT: Username: 'helloworld'[0m
+[0;32mI (155844) MQTT: Configuring TLS for MQTTS connection[0m
+[0;32mI (155844) MQTT: MQTT client started[0m
+[0;32mI (155844) MQTT: Other MQTT event id:7[0m
+[0;33mW (155844) MQTT: Connection monitor: MQTT disconnected[0m
+[0;32mI (155864) MQTT: Connection health: DISCONNECTED, buffer: 0/20, failures: 0[0m
+[0;31mE (158554) esp-tls-mbedtls: global_cacert is NULL[0m
+[0;31mE (158554) esp-tls-mbedtls: Failed to set client configurations, returned [0x0103] (ESP_ERR_INVALID_STATE)[0m
+[0;31mE (158554) esp-tls: create_ssl_handle failed[0m
+[0;31mE (158564) esp-tls: Failed to open new connection[0m
+[0;31mE (158564) transport_base: Failed to open a new connection[0m
+[0;31mE (158574) mqtt_client: Error transport connect[0m
+[0;31mE (158574) MQTT: MQTT Error[0m
+[0;31mE (158584) MQTT: Last error code reported from esp-tls: 0x103[0m
+[0;31mE (158584) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (158594) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (158594) MQTT: MQTT Disconnected[0m

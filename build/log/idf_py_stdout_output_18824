@@ -1,0 +1,217 @@
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3c0c002ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037c18e
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x1870
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xce8
+load:0x403cb700,len:0x2ed8
+entry 0x403c8918
+[0;32mI (26) boot: ESP-IDF v5.3.3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Nov  7 2025 18:14:32[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot: efuse block revision: v1.3[0m
+[0;32mI (39) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (43) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00180000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=453a8h (283560) map[0m
+[0;32mI (154) esp_image: segment 1: paddr=000553d0 vaddr=3fc9cf00 size=04b40h ( 19264) load[0m
+[0;32mI (158) esp_image: segment 2: paddr=00059f18 vaddr=40374000 size=06100h ( 24832) load[0m
+[0;32mI (165) esp_image: segment 3: paddr=00060020 vaddr=42000020 size=b8b28h (756520) map[0m
+[0;32mI (302) esp_image: segment 4: paddr=00118b50 vaddr=4037a100 size=12dc8h ( 77256) load[0m
+[0;32mI (329) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (329) boot: Disabling RNG early entropy source...[0m
+[0;32mI (341) cpu_start: Multicore app[0m
+[0;32mI (350) cpu_start: Pro cpu start user code[0m
+[0;32mI (350) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (350) app_init: Application information:[0m
+[0;32mI (353) app_init: Project name:     esp32-w5500-uart-control[0m
+[0;32mI (360) app_init: App version:      4489b73-dirty[0m
+[0;32mI (365) app_init: Compile time:     Nov  7 2025 18:35:57[0m
+[0;32mI (371) app_init: ELF file SHA256:  a13101b29...[0m
+[0;32mI (376) app_init: ESP-IDF:          v5.3.3-dirty[0m
+[0;32mI (381) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (386) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (391) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (396) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (403) heap_init: At 3FCAB388 len 0003E388 (248 KiB): RAM[0m
+[0;32mI (409) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (415) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (422) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (429) spi_flash: detected chip: gd[0m
+[0;32mI (432) spi_flash: flash io: dio[0m
+[0;33mW (436) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (449) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (456) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (464) main_task: Started on CPU0[0m
+[0;32mI (474) main_task: Calling app_main()[0m
+[0;32mI (494) uart: queue free spaces: 30[0m
+[0;32mI (494) UART: UART initialized on TXD=17, RXD=18, baud=115200[0m
+[0;32mI (494) RFID: RFID module initialized (stub)[0m
+Starting UART RX task...
+[0;32mI (594) UART: UART RX task started and waiting for data...[0m
+UART RX task created
+[0;32mI (594) ETH: Static IP configured: 192.168.1.100[0m
+[0;32mI (594) ETH: Gateway: 192.168.1.1[0m
+[0;32mI (594) ETH: Netmask: 255.255.255.0[0m
+[0;32mI (604) ETH: DNS servers configured from network_config.h[0m
+[0;32mI (634) esp_eth.netif.netif_glue: 02:00:00:12:34:56[0m
+[0;32mI (634) esp_eth.netif.netif_glue: ethernet attached to netif[0m
+[0;32mI (644) ETH: Ethernet Started[0m
+[0;32mI (644) pp: pp rom version: e7ae62f[0m
+[0;32mI (644) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (654) wifi:wifi driver task: 3fcc3410, prio:23, stack:6656, core=0[0m
+[0;32mI (664) wifi:wifi firmware version: b0b320f[0m
+[0;32mI (664) wifi:wifi certification version: v7.0[0m
+[0;32mI (664) wifi:config NVS flash: enabled[0m
+[0;32mI (664) wifi:config nano formating: disabled[0m
+[0;32mI (664) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (674) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (674) wifi:Init management short buffer num: 32[0m
+[0;32mI (674) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (684) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (684) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (694) wifi:Init static rx buffer num: 10[0m
+[0;32mI (694) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (704) wifi_init: rx ba win: 6[0m
+[0;32mI (704) wifi_init: accept mbox: 6[0m
+[0;32mI (704) wifi_init: tcpip mbox: 32[0m
+[0;32mI (714) wifi_init: udp mbox: 6[0m
+[0;32mI (714) wifi_init: tcp mbox: 6[0m
+[0;32mI (714) wifi_init: tcp tx win: 5760[0m
+[0;32mI (724) wifi_init: tcp rx win: 5760[0m
+[0;32mI (724) wifi_init: tcp mss: 1440[0m
+[0;32mI (734) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (734) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (744) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (744) phy_init: phy_version 700,8582a7fd,Feb 10 2025,20:13:11[0m
+[0;32mI (784) wifi:mode : sta (98:3d:ae:9f:b7:80)[0m
+[0;32mI (784) wifi:enable tsf[0m
+[0;32mI (784) WIFI: WiFi module initialized (STA mode, power save disabled)[0m
+[0;32mI (794) WIFI: WiFi started[0m
+[0;32mI (794) WIFI: Found saved WiFi credentials, attempting connection...[0m
+[0;32mI (804) WIFI: Connecting to WiFi SSID: Hydro[0m
+[0;33mW (804) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (814) MQTT: MQTT data buffer initialized (20 entries)[0m
+[0;32mI (814) MQTT: No previous buffer data in NVS[0m
+[0;33mW (824) MQTT: nvs_open read failed: ESP_ERR_NVS_NOT_FOUND, using defaults[0m
+[0;32mI (824) MQTT: MQTT module initialized with broker: mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883[0m
+[0;32mI (844) WEB: Registered /power/set handler[0m
+[0;32mI (844) WEB: Registered /power/get handler[0m
+[0;32mI (844) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (854) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (864) MAIN: Web server started on Ethernet[0m
+[0;32mI (864) MAIN: System initialized successfully - Ethernet + WiFi + MQTT mode[0m
+[0;32mI (874) main_task: Returned from app_main()[0m
+[0;32mI (1874) wifi:state: auth -> init (0x200)[0m
+[0;32mI (1884) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1884) WIFI: Retry connecting to WiFi (1/5)[0m
+[0;32mI (2644) ETH: Ethernet Link Up[0m
+[0;32mI (2644) ETH: Ethernet HW Addr 02:00:00:12:34:56[0m
+[0;32mI (2644) esp_netif_handlers: eth ip: 192.168.1.100, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2644) ETH: Ethernet Got IP Address[0m
+[0;32mI (2654) ETH: ~~~~~~~~~~~[0m
+[0;32mI (2654) ETH: ETHIP: 192.168.1.100[0m
+[0;32mI (2664) ETH: ETHMASK: 255.255.255.0[0m
+[0;32mI (2664) ETH: ETHGW: 192.168.1.1[0m
+[0;32mI (2664) ETH: ~~~~~~~~~~~[0m
+[0;32mI (4294) WIFI: Retry connecting to WiFi (2/5)[0m
+[0;32mI (4324) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4324) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (4334) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (4354) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (4444) wifi:connected with Hydro, aid = 1, channel 6, BW20, bssid = 6e:94:66:e1:b7:a2[0m
+[0;32mI (4444) wifi:security: WPA2-PSK, phy: bgn, rssi: -76[0m
+[0;32mI (4444) wifi:pm start, type: 0[0m
+
+[0;32mI (4444) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (4454) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (4534) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (5604) UART: UART sent 9 bytes: TX: 5A 00 01 02 02 00 00 29 59[0m
+[0;32mI (10464) esp_netif_handlers: sta ip: 192.168.137.170, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (10464) WIFI: WiFi connected! Got IP: 192.168.137.170[0m
+[0;32mI (10864) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (10864) MQTT: MQTT client started[0m
+[0;32mI (10864) MQTT: Other MQTT event id:7[0m
+[0;32mI (12244) WEB: Testing MQTT connection to broker: mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883[0m
+[0;32mI (12244) WEB: Sending MQTT test response: {"status":"success","message":"MQTT configuration valid for mqtts://9f9bbeafeb6a45d6b8dd97ca6951480d.s1.eu.hivemq.cloud:8883"}[0m
+[0;32mI (13844) wifi:<ba-add>idx:0 (ifx:0, 6e:94:66:e1:b7:a2), tid:0, ssn:6, winSize:64[0m
+[0;31mE (19374) esp-tls-mbedtls: mbedtls_ssl_handshake returned -0x7280[0m
+[0;32mI (19374) esp-tls-mbedtls: Certificate verified.[0m
+[0;31mE (19374) esp-tls: Failed to open new connection[0m
+[0;31mE (19384) transport_base: Failed to open a new connection[0m
+[0;31mE (19394) mqtt_client: Error transport connect[0m
+[0;31mE (19394) MQTT: MQTT Error[0m
+[0;31mE (19394) MQTT: Last error code reported from esp-tls: 0x801a[0m
+[0;31mE (19404) MQTT: Last tls stack error number: 0x7280[0m
+[0;31mE (19414) MQTT: Last captured errno : 0 (Success)[0m
+[0;33mW (19414) MQTT: MQTT Disconnected[0m
+[0;32mI (20864) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (20864) MQTT: Stopping existing MQTT client[0m
+[0;32mI (22914) MQTT: MQTT client started[0m
+[0;32mI (22914) MQTT: Other MQTT event id:7[0m
+[0;32mI (25924) wifi:<ba-add>idx:1 (ifx:0, 6e:94:66:e1:b7:a2), tid:1, ssn:5, winSize:64[0m
+[0;32mI (28804) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (30914) MQTT: Connection monitor: MQTT disconnected[0m
+[0;32mI (30914) MQTT: Connection health: DISCONNECTED, buffer: 0/20, failures: 0[0m
+[0;31mE (40374) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (40374) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=119[0m
+[0;31mE (40374) MQTT: MQTT Error[0m
+[0;31mE (40384) MQTT: Last error code reported from esp-tls: 0x8008[0m
+[0;31mE (40384) MQTT: Last tls stack error number: 0x0[0m
+[0;31mE (40394) MQTT: Last captured errno : 0 (Success)[0m
+[0;31mE (40394) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -2[0m
+[0;31mE (40404) mqtt_client: MQTT connect failed[0m
+[0;33mW (40414) MQTT: MQTT Disconnected[0m
+[0;32mI (40914) MAIN: WiFi connected, attempting MQTT connection...[0m
+[0;32mI (40914) MQTT: Stopping existing MQTT client[0m
+[0;32mI (43914) MQTT: MQTT client started[0m
+[0;32mI (43914) MQTT: Other MQTT event id:7[0m
+[0;32mI (47254) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (49794) MQTT: MQTT Connected[0m
+[0;32mI (49794) MQTT: Subscribed to RFID commands: reader/esp32_rfid_reader/cmd/rfid[0m
+[0;32mI (49794) MQTT: Subscribed to power commands: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (49804) MQTT: Subscribed to inventory commands: reader/esp32_rfid_reader/cmd/inventory[0m
+[0;32mI (49814) MQTT: Subscribed to legacy topic rfid/commands, msg_id=62830[0m
+[0;32mI (50404) MQTT: MQTT Subscribed, msg_id=49296[0m
+[0;32mI (51024) MQTT: MQTT Subscribed, msg_id=51098[0m
+[0;32mI (51024) MQTT: MQTT Subscribed, msg_id=58903[0m
+[0;32mI (51024) MQTT: MQTT Subscribed, msg_id=62830[0m
+[0;32mI (51034) MQTT: MQTT Published, msg_id=58169[0m
+[0;32mI (51964) UART: UART sent 14 bytes: TX: 5A 00 01 02 10 00 05 00 00 00 01 01 F4 87[0m
+RFID inventory started locally - counters reset
+[0;32mI (56294) UART: UART sent 9 bytes: TX: 5A 00 01 02 11 00 00 2A B3[0m
+RFID stop command sent locally: 5A 00 01 02 11 00 00 2A B3 
+[0;32mI (56294) UART: UART sent 9 bytes: TX: 5A 00 01 02 FF 00 00 88 5A[0m
+RFID fallback stop command sent locally
+[0;32mI (61914) MQTT: Connection health: OK, buffer: 0/20, failures: 0[0m
+[0;32mI (64234) UART: UART sent 19 bytes: TX: 5A 00 01 02 01 00 0A 01 14 02 14 03 0A 04 0A FF 01 50 8F[0m
+[0;32mI (64234) RFID: RFID power set to ant1=20 ant2=20 ant3=10 ant4=10[0m
+[0;32mI (64244) MQTT: Published response: {"command":"power","action":"set","status":"success","power":{"ant1":20,"ant2":20,"ant3":10,"ant4":10}}[0m
+[0;32mI (93914) MQTT: Connection health: OK, buffer: 0/20, failures: 0[0m
+[0;32mI (94434) MQTT: MQTT Data received[0m
+[0;32mI (94434) MQTT: Topic: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (94434) MQTT: Data: {"action": "query"}[0m
+[0;32mI (94444) MQTT: Processing command - Topic: reader/esp32_rfid_reader/cmd/power, Data: {"action": "query"}[0m
+[0;32mI (94454) MQTT: Executing power command: query[0m
+[0;32mI (94454) UART: UART sent 9 bytes: TX: 5A 00 01 02 02 00 00 29 59[0m
+[0;32mI (94464) MQTT: Published response: {"command":"power","action":"query","status":"success","power":{"ant1":20,"ant2":20,"ant3":20,"ant4":20}}[0m
+[0;32mI (102934) MQTT: MQTT Data received[0m
+[0;32mI (102934) MQTT: Topic: reader/esp32_rfid_reader/cmd/power[0m
+[0;32mI (102934) MQTT: Data: {"action": "query"}[0m
+[0;32mI (102944) MQTT: Processing command - Topic: reader/esp32_rfid_reader/cmd/power, Data: {"action": "query"}[0m
+[0;32mI (102954) MQTT: Executing power command: query[0m
+[0;32mI (102954) UART: UART sent 9 bytes: TX: 5A 00 01 02 02 00 00 29 59[0m
+[0;32mI (102964) MQTT: Published response: {"command":"power","action":"query","status":"success","power":{"ant1":20,"ant2":20,"ant3":10,"ant4":10}}[0m
+[0;32mI (123914) MQTT: Connection health: OK, buffer: 0/20, failures: 0[0m
