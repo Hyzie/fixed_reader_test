@@ -3,20 +3,25 @@
 
 cmake_minimum_required(VERSION 3.5)
 
+# If CMAKE_DISABLE_SOURCE_CHANGES is set to true and the source directory is an
+# existing directory in our source tree, calling file(MAKE_DIRECTORY) on it
+# would cause a fatal error, even though it would be a no-op.
+if(NOT EXISTS "D:/esp/esp-idf-v5.3.3/components/bootloader/subproject")
+  file(MAKE_DIRECTORY "D:/esp/esp-idf-v5.3.3/components/bootloader/subproject")
+endif()
 file(MAKE_DIRECTORY
-  "D:/esp/esp-idf/esp-idf-v5.2.2/components/bootloader/subproject"
-  "D:/esp/esp32_w5500_idf/fixed_reader_test/build/bootloader"
-  "D:/esp/esp32_w5500_idf/fixed_reader_test/build/bootloader-prefix"
-  "D:/esp/esp32_w5500_idf/fixed_reader_test/build/bootloader-prefix/tmp"
-  "D:/esp/esp32_w5500_idf/fixed_reader_test/build/bootloader-prefix/src/bootloader-stamp"
-  "D:/esp/esp32_w5500_idf/fixed_reader_test/build/bootloader-prefix/src"
-  "D:/esp/esp32_w5500_idf/fixed_reader_test/build/bootloader-prefix/src/bootloader-stamp"
+  "D:/esp/fixed_reader_test/build/bootloader"
+  "D:/esp/fixed_reader_test/build/bootloader-prefix"
+  "D:/esp/fixed_reader_test/build/bootloader-prefix/tmp"
+  "D:/esp/fixed_reader_test/build/bootloader-prefix/src/bootloader-stamp"
+  "D:/esp/fixed_reader_test/build/bootloader-prefix/src"
+  "D:/esp/fixed_reader_test/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "D:/esp/esp32_w5500_idf/fixed_reader_test/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "D:/esp/fixed_reader_test/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "D:/esp/esp32_w5500_idf/fixed_reader_test/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "D:/esp/fixed_reader_test/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

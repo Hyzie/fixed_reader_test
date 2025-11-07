@@ -1,6 +1,0 @@
-[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
-[0;33m--- Using \\.\COM8 instead...[0m
-[0;33m--- esp-idf-monitor 1.8.0 on \\.\COM8 115200[0m
-[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
-[0m--- 0x4037408c: [0;33m_WindowOverflow8[0m[0m at [0;32mD:/esp/esp-idf/esp-idf-v5.2.2/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2116[0m
-[0m

@@ -1,6 +1,0 @@
-[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
-[0;33m--- Using \\.\COM8 instead...[0m
-[0;33m--- esp-idf-monitor 1.8.0 on \\.\COM8 115200[0m
-[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
-[0m--- 0x4209a8bc: [0;33m_svfprintf_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/svfprintf.c[0m[0m:[1;31m1766[0m
-[0m
