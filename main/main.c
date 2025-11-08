@@ -28,10 +28,10 @@ static void mqtt_task(void *pvParameters)
     while (1) {
         uint32_t now = xTaskGetTickCount() * portTICK_PERIOD_MS;
         
-        // Check if WiFi is connected and MQTT should connect (with retry delay)
-        if (wifi_is_connected() && !mqtt_is_connected() && !mqtt_is_connecting()) {
+        // Check if Ethernet is connected and MQTT should connect (with retry delay)
+        if (eth_is_connected() && !mqtt_is_connected() && !mqtt_is_connecting()) {
             if ((now - last_connection_attempt) >= CONNECTION_RETRY_INTERVAL_MS) {
-                ESP_LOGI(TAG, "WiFi connected, attempting MQTT connection...");
+                ESP_LOGI(TAG, "Ethernet connected, attempting MQTT connection...");
                 mqtt_connect();
                 last_connection_attempt = now;
             }
@@ -72,11 +72,11 @@ void app_main(void)
     
     uart_start_rx_task();
     
-    // Initialize Ethernet for web configuration interface
+    // Initialize Ethernet (for both web server and MQTT communication)
     eth_init();
     
-    // Initialize WiFi (for MQTT communication)
-    wifi_init();
+    // Initialize WiFi (optional - can be disabled if only using Ethernet)
+    // wifi_init();
     
     // Initialize MQTT client
     mqtt_init();
@@ -92,5 +92,5 @@ void app_main(void)
     // Start a task to handle MQTT connectivity and batch publishing (larger stack for JSON buffers)
     xTaskCreate(mqtt_task, "mqtt_task", 8192, NULL, 5, NULL);
     
-    ESP_LOGI(TAG, "System initialized successfully - Ethernet + WiFi + MQTT mode");
+    ESP_LOGI(TAG, "System initialized successfully - Ethernet mode (Web Server + MQTT)");
 }

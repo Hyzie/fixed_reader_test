@@ -17,6 +17,9 @@
 
 static const char *TAG = "ETH";
 
+// Ethernet connection status
+static bool s_eth_connected = false;
+
 // --- Cấu hình chân cho W5500 ---
 #define PIN_SCLK  36
 #define PIN_MOSI  37
@@ -41,6 +44,7 @@ static void eth_event_handler(void *arg, esp_event_base_t event_base,
         break;
     case ETHERNET_EVENT_DISCONNECTED:
         ESP_LOGI(TAG, "Ethernet Link Down");
+        s_eth_connected = false;
         break;
     case ETHERNET_EVENT_START:
         ESP_LOGI(TAG, "Ethernet Started");
@@ -66,6 +70,9 @@ static void got_ip_event_handler(void *arg, esp_event_base_t event_base,
     ESP_LOGI(TAG, "ETHMASK: " IPSTR, IP2STR(&ip_info->netmask));
     ESP_LOGI(TAG, "ETHGW: " IPSTR, IP2STR(&ip_info->gw));
     ESP_LOGI(TAG, "~~~~~~~~~~~");
+
+    // Mark Ethernet as connected
+    s_eth_connected = true;
 
     // Spawn a connectivity test task to verify Internet access (non-blocking)
     // xTaskCreate(connectivity_test_task, "eth_connect_test", 4096, NULL, 5, NULL);
@@ -158,4 +165,9 @@ void eth_init(void)
 
     // Start Ethernet
     ESP_ERROR_CHECK(esp_eth_start(eth_handle));
+}
+
+bool eth_is_connected(void)
+{
+    return s_eth_connected;
 }
